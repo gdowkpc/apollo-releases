@@ -1,0 +1,6 @@
+Apollo Passive Receive GitHub-release-authority nonproduction resolver fixture.
+
+This file is deliberately not an Apollo runtime, installer, executable, or
+production release payload.  Its ZIP exists only to exercise anonymous GitHub
+asset metadata and root-custody-equivalent download verification before any
+physical node can be configured for GitHub release authority.
