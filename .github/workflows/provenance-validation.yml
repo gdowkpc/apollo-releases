@@ -2,16 +2,8 @@ name: Release provenance validation
 
 on:
   pull_request:
-    paths:
-      - 'provenance/**'
-      - 'scripts/validate_provenance.js'
-      - '.github/workflows/provenance-validation.yml'
   push:
     branches: [main]
-    paths:
-      - 'provenance/**'
-      - 'scripts/validate_provenance.js'
-      - '.github/workflows/provenance-validation.yml'
   workflow_dispatch:
 
 permissions:
