@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v0.1.0-early.39-build.40",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "3b2785d14899151d70aa5b5c68b2a41282841810"
+  },
+  "release": {
+    "version": "0.1.0-early.39",
+    "build": 40,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-0.1.0-early.39-build.40-linux-arm64.zip",
+    "byte_size": 17792101,
+    "sha256": "79fab091554088e8ab31dc57d334670b06746fd7e61e62fce4e3aa35cc11f305",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #88 independently reviewed at head d6a2912f3daee51f5f0be97ea296c55bc15c23c8 from base 42596ad9d23f15524f6ea048f795fa6227c7c40b; merged to gdowkpc/apollo main as 3b2785d14899151d70aa5b5c68b2a41282841810.",
+      "Exact-head release-security-contract run 31848569834 completed successfully for d6a2912f3daee51f5f0be97ea296c55bc15c23c8.",
+      "Exact merged source built on Linux arm64 with declared UTC timestamp 2026-08-14T23:14:11.142Z and matching local RTL-SDR runtime inventory.",
+      "ZIP SHA-256 and byte size were independently verified as 79fab091554088e8ab31dc57d334670b06746fd7e61e62fce4e3aa35cc11f305 and 17792101; unzip integrity test passed.",
+      "Extracted release manifest binds source commit 3b2785d14899151d70aa5b5c68b2a41282841810, version 0.1.0-early.39, build 40, Linux arm64, and executable SHA-256 0fd8eeea31e4ea018318ac8a066ccdd3db7991746151623030d48d3eed00a8c4.",
+      "Committed and packaged audio/audio_analyze.py SHA-256 is 7fe7b4898a78251f3f3b54c87ed9eacde92b361555de6d82478326f7b0e5dd0d.",
+      "Focused source gate reproduced 75 passing checks; six Linux-only portable-materialization checks were expected skips on the Windows review host."
+    ]
+  }
+}
