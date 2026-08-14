@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v0.1.0-early.38-build.39",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ab77832b1085eeb5665a437e77fffef498df0c7c"
+  },
+  "release": {
+    "version": "0.1.0-early.38",
+    "build": 39,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-0.1.0-early.38-build.39-linux-arm64.zip",
+    "byte_size": 17789024,
+    "sha256": "996de4bab00d8d9fb771e58ffd6b28780665891cf20834338aaef6b127b35e1a",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #85 reviewed head 9888ab5cbcac1994929159d8238737fb25edda45; merged to gdowkpc/apollo main as ab77832b1085eeb5665a437e77fffef498df0c7c.",
+      "Portable directory inventory SHA-256: f36cea47d083417b681ac6e8cf5684797eaa783773fb3e214b484bfbc862104e.",
+      "Committed and packaged audio/audio_analyze.py SHA-256: 7fe7b4898a78251f3f3b54c87ed9eacde92b361555de6d82478326f7b0e5dd0d.",
+      "Two isolated Linux ARM64 builds with one declared timestamp produced byte-identical ZIPs with the recorded SHA-256.",
+      "ARM64 release, custody, package, GitHub authority, and legacy V2 subset: 78/78 PASS.",
+      "ARM64 full suite: 405 PASS; three unchanged Windows-platform assertions failed and one Windows-only skip remained; no candidate file caused those results.",
+      "Exact-head GitHub Actions release-security-contract run 31839680195 completed successfully for 9888ab5cbcac1994929159d8238737fb25edda45.",
+      "Qualification materialized and verified the package only; no Apollo node installation or activation occurred."
+    ]
+  }
+}
