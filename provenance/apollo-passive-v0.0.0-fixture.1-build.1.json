@@ -1,0 +1,33 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v0.0.0-fixture.1-build.1",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "064991d909133c6098493d8642b61d970d860944"
+  },
+  "release": {
+    "version": "0.0.0-fixture.1",
+    "build": 1,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-0.0.0-fixture.1-build.1-linux-arm64.zip",
+    "byte_size": 492,
+    "sha256": "7408908ccc96a54f707b0aa7fb54f556148aa59a461f34abe25d975235362bfd",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "NONPRODUCTION resolver/API/download fixture only; contains no Apollo runtime or executable payload.",
+      "Apollo source commit 064991d909133c6098493d8642b61d970d860944 was the protected source baseline used for live resolver qualification."
+    ]
+  }
+}
