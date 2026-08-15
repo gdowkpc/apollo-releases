@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.41",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "495aaf070624737fddcd4d130bbfeeeb87f595bc"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 41,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.41-linux-arm64.zip",
+    "byte_size": 17807355,
+    "sha256": "eb715f80d4cea6f6801a5ce4875d6ac2eef20d2d4d327bc8ac611a81c4e82809",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PRs #90, #91, and #92 merged Contract V1.1 lifecycle integration, Apollo 1.0 platform identities, and qualified CJ-1 parity; final source commit is 495aaf070624737fddcd4d130bbfeeeb87f595bc.",
+      "The checked PR #92 tree 27eef46e03a4207c076448eadf6f314c0313b5e4 equals the final merge tree; workflow run 31901451930 passed.",
+      "Frozen Contract V1.1 corpus SHA-256 is 01ceb3926f93d5fa2aa328ea64e232b1763079a9135806b62cc6ab1c3fe5eb87; exact final matrix passed Pi 30/30, Windows 30/30, and CJ-1 30/30, total 90/90.",
+      "Full Apollo Passive Receive source suite passed 433 tests with zero failures and six expected platform skips; production lifecycle/reset tests passed.",
+      "Exact ZIP SHA-256 and byte size are eb715f80d4cea6f6801a5ce4875d6ac2eef20d2d4d327bc8ac611a81c4e82809 and 17807355; archive verification passed.",
+      "Extracted identity binds version 1.0.0, build 41, source 495aaf070624737fddcd4d130bbfeeeb87f595bc, executable SHA-256 4cbe537874700cfc01eef90da8e52e028584ab1622c0d8fa2c9a82d2b7754524, and rtl_fm SHA-256 4f1f51447e1c98ddefbd69056522c33068f42b1be7f520998ee83d03bc5bcc6d.",
+      "The exact artifact is active on apollo-pi.local with the expected version/build/source, healthy services, preserved configuration, localhost-only operation, and reporting disabled.",
+      "Garrett intentionally closed additional physical CTCSS testing after judging the existing Contract V1.1, physical Pi, durable no-tone, lifecycle, regression, corpus, and provenance evidence sufficient; this is not a release blocker."
+    ]
+  }
+}
