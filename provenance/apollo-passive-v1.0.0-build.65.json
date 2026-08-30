@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.65",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "0954bf4b1bce719408822ea358c04a02b4c6aa3b"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 65,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.65-linux-arm64.zip",
+    "byte_size": 17836718,
+    "sha256": "888128aac919c6e3f9f4929b54be9a497438836ce095a34dcc147019d02ca0cc",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo source commit 0954bf4b1bce719408822ea358c04a02b4c6aa3b replaces the recovery-controller signing registry with the compiled gdowkpc/apollo-releases immutable GitHub authority; no Pi deployment or activation occurred.",
+      "Focused GitHub authority, managed recovery, controller, installer, and bootstrap suite passed 50 tests with zero failures and two expected Windows-native skips.",
+      "Portable-package, materialization, and release-security suite passed 46 tests with zero failures and six expected native-archive skips on the Windows source host.",
+      "Native package was built on apollo-kd6kpc-5 (Linux aarch64, Node v20.19.2) using /home/pi/apollo-linux-runtime; rtl_power SHA-256 e6bdf3a1ba496be04b4afa53e04cd5a67d2c0c535250db5150e8426fa758d568 and rtl_fm SHA-256 4f1f51447e1c98ddefbd69056522c33068f42b1be7f520998ee83d03bc5bcc6d.",
+      "Exact ZIP SHA-256 is 888128aac919c6e3f9f4929b54be9a497438836ce095a34dcc147019d02ca0cc and byte size is 17836718; embedded release identity is version 1.0.0, build 65, Linux arm64, and source 0954bf4b1bce719408822ea358c04a02b4c6aa3b.",
+      "Build 65 is a release candidate only. No server candidate, capability grant, credential recovery, node registration, queue operation, or production reporting path was invoked."
+    ]
+  }
+}
