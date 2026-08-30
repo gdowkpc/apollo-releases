@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.67",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c22cca1db9408a71388ad5f6947d82b584dd1053"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 67,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.67-linux-arm64.zip",
+    "byte_size": 17836809,
+    "sha256": "8202d730d6a71c728aee31bc8565cc85ce1acfa2e66d331fd4798aa6012831b3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo source commit c22cca1db9408a71388ad5f6947d82b584dd1053 changes Build 67 so NOAA preflight is a visible local diagnostic and cannot veto a valid configured spectrum scan.",
+      "Focused NOAA validation, startup recovery, and manifest suite passed 40 tests with zero failures on the source host.",
+      "Native package was built on apollo-kd6kpc-5 (Linux aarch64, Node v20.19.2) from a clean detached checkout of c22cca1db9408a71388ad5f6947d82b584dd1053 using /home/pi/apollo-linux-runtime.",
+      "The packaged RTL runtime retained rtl_power SHA-256 e6bdf3a1ba496be04b4afa53e04cd5a67d2c0c535250db5150e8426fa758d568 and rtl_fm SHA-256 4f1f51447e1c98ddefbd69056522c33068f42b1be7f520998ee83d03bc5bcc6d.",
+      "Exact ZIP SHA-256 is 8202d730d6a71c728aee31bc8565cc85ce1acfa2e66d331fd4798aa6012831b3 and byte size is 17836809; embedded identity is version 1.0.0, build 67, Linux arm64, and source c22cca1db9408a71388ad5f6947d82b584dd1053.",
+      "Build 67 does not change node UUID, node location, credentials, server authorization, retained submission queue, or production reporting."
+    ]
+  }
+}
