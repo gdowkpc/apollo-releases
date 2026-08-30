@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.68",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ddec97f513c4798b50af49881df77f92ccdff8d0"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 68,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.68-linux-arm64.zip",
+    "byte_size": 17837618,
+    "sha256": "9204928ada5e341bd94ab647b4c2412f6189a2edda19c2d251504fe39366a87d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo source commit ddec97f513c4798b50af49881df77f92ccdff8d0 contains the node-agent socket audio-evidence repair and the qualified Pi dashboard improvements for configured bands, spectrum support details, and stable technical-detail expansion.",
+      "The complete source suite passed 529 tests with zero failures; 10 skips are explicit and no test was cancelled.",
+      "Native focused qualification on apollo-kd6kpc-5 (Debian 13 aarch64, Node v20.19.2) passed 129 tests with zero failures from a clean detached checkout of ddec97f513c4798b50af49881df77f92ccdff8d0.",
+      "The ZIP was built natively on apollo-kd6kpc-5 using the existing /home/pi/apollo-linux-runtime RTL runtime and canonical timestamp 2026-08-30T18:10:01.000Z.",
+      "Exact ZIP SHA-256 is 9204928ada5e341bd94ab647b4c2412f6189a2edda19c2d251504fe39366a87d and byte size is 17837618; embedded identity is version 1.0.0, build 68, Linux arm64, and source ddec97f513c4798b50af49881df77f92ccdff8d0.",
+      "Build 68 preserves the existing node UUID, credential state, receiver configuration, location, retained observation queue, and non-enrollment node-agent behavior. It does not enable production reporting."
+    ]
+  }
+}
