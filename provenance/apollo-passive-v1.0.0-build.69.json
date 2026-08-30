@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.69",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ea470757099b684cfb49c59ceee540d034f309ae"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 69,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.69-linux-arm64.zip",
+    "byte_size": 17837061,
+    "sha256": "80732046dbac96d77616b1ac2f1f020d92e0203d8e9befef1fc140d6d0bbf7ac",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source ea470757099b684cfb49c59ceee540d034f309ae contains only PR 108 socket-audio transport repair plus release build metadata when compared with Build 67 source fa6ecc84f6834d976a37aaf3e26f1ae0dd90dfd6.",
+      "Focused source coverage passed 91 tests with zero failures: node-agent socket audio, receiver audio wiring, protected observation delivery, credential boundaries, and durable audio queue semantics.",
+      "Native focused coverage on apollo-kd6kpc-5 (Debian 13 aarch64, Node v20.19.2) passed with zero failures from a clean detached checkout of ea470757099b684cfb49c59ceee540d034f309ae.",
+      "The ZIP was built natively on apollo-kd6kpc-5 using the existing /home/pi/apollo-linux-runtime RTL runtime at 2026-08-30T18:16:20.000Z.",
+      "Exact ZIP SHA-256 is 80732046dbac96d77616b1ac2f1f020d92e0203d8e9befef1fc140d6d0bbf7ac and byte size is 17837061; embedded identity is version 1.0.0, build 69, Linux arm64, and source ea470757099b684cfb49c59ceee540d034f309ae.",
+      "Build 69 does not change node UUID, credential state, receiver configuration, location, retained observation queue, enrollment behavior, or production-reporting policy."
+    ]
+  }
+}
