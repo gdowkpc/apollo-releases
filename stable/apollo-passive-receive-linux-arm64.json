@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 81,
-  "source_commit": "577266717d92420ca25a6ef53b42f7441e50d4b5",
-  "published_at": "2026-08-31T01:41:22Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.81",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.81/ApolloPassiveReceive-1.0.0-build.81-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.81-linux-arm64.zip",
-  "byte_size": 17869710,
-  "sha256": "d2b75f1dc155d7121c5ebd16a8b9c09cc1282a8f1fa6dbc162d22112a15f83f0",
-  "short_release_notes": "Owner-initiated Windows and Pi distribution candidate. Uses a fixed root-owned systemd path trigger for Pi installation while preserving NoNewPrivileges, the bounded request, 14 dB no-reference fallback, durable queues, owner location, and transactional rollback. No silent installation."
+  "build": 82,
+  "source_commit": "738fa91361449c2d4792125e13ac2260b7a604e0",
+  "published_at": "2026-08-31T01:58:32Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.82",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.82/ApolloPassiveReceive-1.0.0-build.82-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.82-linux-arm64.zip",
+  "byte_size": 17870003,
+  "sha256": "7fcd70118b96d78a83498b188d1770204b02fd834648facc055df9144385fbf5",
+  "short_release_notes": "Owner-initiated Windows and Pi distribution candidate. Adds exact idempotent node-agent reuse and bounded retry after an expired request while retaining the root path trigger, NoNewPrivileges, 14 dB fallback, durable queues, owner location, and rollback. No silent installation."
 }
