@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.77",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ddff516fcbd0c4e6e1e380303afcb8ce1604eaf8"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 77,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.77-linux-arm64.zip",
+    "byte_size": 17869722,
+    "sha256": "0925a90ee2e74246d2ca99fc6feddf532ecb576c08311dd46bb88d9593284fdf",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source ddff516fcbd0c4e6e1e380303afcb8ce1604eaf8 is the merge commit for Apollo PR 109 and includes the reviewed Windows and Pi distribution-readiness candidate.",
+      "The integrated Apollo Passive Receive suite passed 645 tests with 635 passes, zero failures, and 10 skips; focused Pi node-agent recovery and audio authorization scripts passed 19 and 35 checks respectively.",
+      "The Linux arm64 ZIP was built natively on apollo-kd6kpc-5 from a clean bundle checkout of the canonical source using the already-qualified Build 76 RTL runtime.",
+      "Exact Linux arm64 ZIP SHA-256 is 0925a90ee2e74246d2ca99fc6feddf532ecb576c08311dd46bb88d9593284fdf and byte size is 17869722.",
+      "Embedded identity is Apollo Passive Receive 1.0.0 Build 77, Linux arm64, source ddff516fcbd0c4e6e1e380303afcb8ce1604eaf8, with principal executable SHA-256 d80b3251fdb0cbd743b9e2bbadab3a73786464d785f0902cb211f6875faf1c78.",
+      "The update contract preserves UUID, credential, public identity, owner location, scan configuration, observation queue, and audio queue and uses the existing bounded activation, health-validation, and rollback path."
+    ]
+  }
+}
