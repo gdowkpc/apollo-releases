@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.84",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "d0de263ebec461055f0e6094c943ebbbac258708"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 84,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.84-linux-arm64.zip",
+    "byte_size": 17870480,
+    "sha256": "3ab5cefb54c05c74377d560e571d8f6527656dc39f439ab56cfa5738e2d7a010",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source d0de263ebec461055f0e6094c943ebbbac258708 is Apollo PR 116 merged after its release-security contract check passed.",
+      "The integrated Apollo Passive Receive suite passed 655 tests with 645 passes, zero failures, and 10 skips; focused restore, persistence, and publisher coverage passed 25 of 25.",
+      "Physical Build 83 qualification bounded the cold-start restore to 500 records and identified exactly two malformed recent JSONL lines while the final historical record remained valid.",
+      "Build 84 skips and reports malformed historical display records without rewriting the append-only evidence file; reporting and audio queues, active RF state, credentials, identity, and configuration remain separate and untouched.",
+      "The Linux arm64 ZIP was built natively on apollo-kd6kpc-5 from a clean complete bundle of canonical source d0de263ebec461055f0e6094c943ebbbac258708 using the qualified hash-bound RTL runtime.",
+      "Exact Linux arm64 ZIP SHA-256 is 3ab5cefb54c05c74377d560e571d8f6527656dc39f439ab56cfa5738e2d7a010 and byte size is 17870480.",
+      "Embedded Linux identity is Apollo Passive Receive 1.0.0 Build 84, source d0de263ebec461055f0e6094c943ebbbac258708, with principal executable SHA-256 02969464d496b30cc435559f29b917b7624eb88606941336207308d90f7d5402.",
+      "The Windows x64 ZIP was built from the same canonical source with SHA-256 f47bfa6086dd8e9faf1abe66271f0c11bff9110068a5178571c80fc83ae47bb9, byte size 14943370, and principal executable SHA-256 ff8105195e8087424cb01d9b0577e4918180fc60bc35a0bae066117345afe257."
+    ]
+  }
+}
