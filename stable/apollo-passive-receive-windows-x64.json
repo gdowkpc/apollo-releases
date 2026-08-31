@@ -4,13 +4,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "1.0.0",
-  "build": 80,
-  "source_commit": "d2f2ccba1469409f944c1800e3d3b4b6a05e7d24",
-  "published_at": "2026-08-31T01:26:31Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.80",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.80/ApolloPassiveReceive-1.0.0-build.80-windows-x64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.80-windows-x64.zip",
-  "byte_size": 14995061,
-  "sha256": "6c13afdd31c5bfc5c2885bb08b44934e6aa0983340af7a4afd729cc9486100f2",
-  "short_release_notes": "Owner-initiated Windows and Pi distribution candidate. Adds the exact fixed update-request inbox to the Pi receiver service sandbox while retaining the zero-argument privileged launch, 14 dB no-reference fallback, durable queues, owner location, and transactional rollback. No silent installation."
+  "build": 81,
+  "source_commit": "577266717d92420ca25a6ef53b42f7441e50d4b5",
+  "published_at": "2026-08-31T01:41:22Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.81",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.81/ApolloPassiveReceive-1.0.0-build.81-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.81-windows-x64.zip",
+  "byte_size": 14995050,
+  "sha256": "f866a37a702d35df11c7bb123ad5a3324a1fecddde5822c1453592c64773497b",
+  "short_release_notes": "Owner-initiated Windows and Pi distribution candidate. Uses a fixed root-owned systemd path trigger for Pi installation while preserving NoNewPrivileges, the bounded request, 14 dB no-reference fallback, durable queues, owner location, and transactional rollback. No silent installation."
 }
