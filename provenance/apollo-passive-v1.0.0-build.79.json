@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.79",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ee28e73305efde2e5626a42a02a2e9278f88ef35"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 79,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.79-linux-arm64.zip",
+    "byte_size": 17869712,
+    "sha256": "5e549f806f9ca58ed8435d593c918d58bf2ff60948e9b24f36d753532ccf8e1d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source ee28e73305efde2e5626a42a02a2e9278f88ef35 is Apollo PR 111 merged after its release-security contract check passed.",
+      "The integrated Apollo Passive Receive suite passed 647 tests with 637 passes, zero failures, and 10 skips; focused Pi node-agent recovery and audio authorization scripts passed 19 and 35 checks respectively.",
+      "Build 79 makes the Pi update launcher and its root wrapper use the exact zero-argument sudoers contract while continuing to reject all caller arguments; the protected bootstrap manifest pins wrapper SHA-256 b55b60a9feaffec6062ce1af51624c353bf2f2d5935b64463218a1f105fcdaa5.",
+      "The Linux arm64 ZIP was built natively on apollo-kd6kpc-5 from a clean bundle checkout of canonical source ee28e73305efde2e5626a42a02a2e9278f88ef35 using the qualified RTL runtime.",
+      "Exact Linux arm64 ZIP SHA-256 is 5e549f806f9ca58ed8435d593c918d58bf2ff60948e9b24f36d753532ccf8e1d and byte size is 17869712.",
+      "Embedded Linux identity is Apollo Passive Receive 1.0.0 Build 79, source ee28e73305efde2e5626a42a02a2e9278f88ef35, with principal executable SHA-256 bcb16c2d26e44a9cd109a752613be3e8bb26355898ffd9afd5c8a8cfe7d50f64.",
+      "The Windows x64 ZIP was built from the same canonical source with SHA-256 ee8d747e91b6736f2a5c66b0214c5675b8339686d631e4c9b882b214f5b0cb06, byte size 14995055, and principal executable SHA-256 4096033a59aefc595d781ea10bdd31ab53f18af5501771c81799415de8f73076."
+    ]
+  }
+}
