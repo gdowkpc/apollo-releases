@@ -1,0 +1,16 @@
+{
+  "schema_version": "apollo-stable-release-v1",
+  "product_id": "apollo-passive-receive",
+  "platform": "windows",
+  "architecture": "x64",
+  "version": "1.0.0",
+  "build": 78,
+  "source_commit": "0441b495f4c703e490bc3d30346df98a410b760c",
+  "published_at": "2026-08-31T00:53:53Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.78",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.78/ApolloPassiveReceive-1.0.0-build.78-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.78-windows-x64.zip",
+  "byte_size": 14995067,
+  "sha256": "1b567f1537393a9b84c0bec7a0c863f3e8a509a333562afe085e47dcf1964d8a",
+  "short_release_notes": "Owner-initiated Windows and Pi distribution candidate. Adds bounded recovery, exact 14 dB no-reference fallback, durable evidence queues, protected same-node authorization recovery, owner location, transactional update rollback, and repaired stable update discovery. No silent installation."
+}
