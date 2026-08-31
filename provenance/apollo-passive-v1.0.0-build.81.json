@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.81",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "577266717d92420ca25a6ef53b42f7441e50d4b5"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 81,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.81-linux-arm64.zip",
+    "byte_size": 17869710,
+    "sha256": "d2b75f1dc155d7121c5ebd16a8b9c09cc1282a8f1fa6dbc162d22112a15f83f0",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source 577266717d92420ca25a6ef53b42f7441e50d4b5 is Apollo PR 113 merged after its release-security contract check passed.",
+      "The integrated Apollo Passive Receive suite passed 650 tests with 640 passes, zero failures, and 10 skips; focused Pi node-agent recovery and audio authorization scripts passed 19 and 35 checks respectively.",
+      "A physical Build 78 owner-install attempt proved that NoNewPrivileges correctly blocks setuid sudo from the receiver. Build 81 preserves that boundary: the receiver verifies a fixed root-owned systemd.path trigger, writes only the bounded request, and the existing controller runs in an independent root service.",
+      "The Linux arm64 ZIP was built natively on apollo-kd6kpc-5 from a clean bundle checkout of canonical source 577266717d92420ca25a6ef53b42f7441e50d4b5 using the qualified RTL runtime.",
+      "Exact Linux arm64 ZIP SHA-256 is d2b75f1dc155d7121c5ebd16a8b9c09cc1282a8f1fa6dbc162d22112a15f83f0 and byte size is 17869710.",
+      "Embedded Linux identity is Apollo Passive Receive 1.0.0 Build 81, source 577266717d92420ca25a6ef53b42f7441e50d4b5, with principal executable SHA-256 8c6043de8ce55718b2ea5245b935eefbe3a4aa9cfee682de8087b236cdb977d2.",
+      "The Windows x64 ZIP was built from the same canonical source with SHA-256 f866a37a702d35df11c7bb123ad5a3324a1fecddde5822c1453592c64773497b, byte size 14995050, and principal executable SHA-256 abd293c0d7d5bf17319fad90e767347e61487185a7c0f5d9cc62fcda87efadb5."
+    ]
+  }
+}
