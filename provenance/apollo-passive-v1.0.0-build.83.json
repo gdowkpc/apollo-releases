@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.83",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "23451c60080d446d465141eda28c8bc84c267f61"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 83,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.83-linux-arm64.zip",
+    "byte_size": 17870409,
+    "sha256": "28277680704e1bc20fb6a0523613a7fe84e5711e4bf0e9a8d823b0c29b3061f2",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source 23451c60080d446d465141eda28c8bc84c267f61 is Apollo PR 115 merged after its release-security contract check passed.",
+      "The integrated Apollo Passive Receive suite passed 654 tests with 644 passes, zero failures, and 10 skips; the focused observation store and persistence suite passed 20 of 20.",
+      "A physical Build 82 cold reboot on apollo-kd6kpc-5 reproduced a bounded startup failure: the service read the complete 256472681-byte observations.jsonl before opening its API and restarted repeatedly while the node agent, SDR USB device, identity, queues, and update watcher remained healthy.",
+      "Build 83 restores and retains only the newest 500 in-memory observations needed by the bounded dashboard, deduplication, and recent survey correlation; regression coverage proves the append-only evidence file remains byte-identical.",
+      "The Linux arm64 ZIP was built natively on apollo-kd6kpc-5 from a clean complete bundle of canonical source 23451c60080d446d465141eda28c8bc84c267f61 using the qualified hash-bound RTL runtime.",
+      "Exact Linux arm64 ZIP SHA-256 is 28277680704e1bc20fb6a0523613a7fe84e5711e4bf0e9a8d823b0c29b3061f2 and byte size is 17870409.",
+      "Embedded Linux identity is Apollo Passive Receive 1.0.0 Build 83, source 23451c60080d446d465141eda28c8bc84c267f61, with principal executable SHA-256 621d6cd4ba22b4a1e97d8dc5aa3eb9ad704dfcb7099ff94d54dff6a6573b510a.",
+      "The Windows x64 ZIP was built from the same canonical source with SHA-256 6a0abebcd4a36a4863ae3b502b60b55a80e8391845915aa3c065a409da2838b9, byte size 14943313, and principal executable SHA-256 7fe6994a554ceb8db913afff3bb6225a779ba770678fa184b2a7ba0a4d1c41a0."
+    ]
+  }
+}
