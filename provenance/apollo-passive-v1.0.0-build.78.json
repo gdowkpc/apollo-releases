@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.78",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "0441b495f4c703e490bc3d30346df98a410b760c"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 78,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.78-linux-arm64.zip",
+    "byte_size": 17869727,
+    "sha256": "f1f525e447a7c42899b5e6202f95000cc5652a70401c8dcdce5bea0099044b95",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source 0441b495f4c703e490bc3d30346df98a410b760c is Apollo PR 110 merged on top of the distribution-readiness source from PR 109.",
+      "The integrated Apollo Passive Receive suite passed 647 tests with 637 passes, zero failures, and 10 skips; focused Pi node-agent recovery and audio authorization scripts passed 19 and 35 checks respectively.",
+      "A real Build 77 publication attempt exposed and Build 78 repairs the bounded anonymous-client wiring and strict descriptor serialization defects; the repaired CLI resolved the live immutable Build 77 authority and wrote a schema-valid descriptor.",
+      "The Linux arm64 ZIP was built natively on apollo-kd6kpc-5 from a clean bundle checkout of canonical source 0441b495f4c703e490bc3d30346df98a410b760c using the qualified RTL runtime.",
+      "Exact Linux arm64 ZIP SHA-256 is f1f525e447a7c42899b5e6202f95000cc5652a70401c8dcdce5bea0099044b95 and byte size is 17869727.",
+      "Embedded identity is Apollo Passive Receive 1.0.0 Build 78, Linux arm64, source 0441b495f4c703e490bc3d30346df98a410b760c, with principal executable SHA-256 aaaee4915c8920090f3cc64fa519f0bbf50bfc38681151f57a54685e62eb2dc2."
+    ]
+  }
+}
