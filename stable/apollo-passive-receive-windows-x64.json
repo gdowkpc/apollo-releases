@@ -4,13 +4,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "1.0.0",
-  "build": 82,
-  "source_commit": "738fa91361449c2d4792125e13ac2260b7a604e0",
-  "published_at": "2026-08-31T01:58:32Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.82",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.82/ApolloPassiveReceive-1.0.0-build.82-windows-x64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.82-windows-x64.zip",
-  "byte_size": 14995374,
-  "sha256": "98300299937bb53a9d59d01464d144c0f61b077f20a347479b7e86c737cc5016",
-  "short_release_notes": "Owner-initiated Windows and Pi distribution candidate. Adds exact idempotent node-agent reuse and bounded retry after an expired request while retaining the root path trigger, NoNewPrivileges, 14 dB fallback, durable queues, owner location, and rollback. No silent installation."
+  "build": 84,
+  "source_commit": "d0de263ebec461055f0e6094c943ebbbac258708",
+  "published_at": "2026-08-31T02:44:04Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.84",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.84/ApolloPassiveReceive-1.0.0-build.84-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.84-windows-x64.zip",
+  "byte_size": 14943370,
+  "sha256": "f47bfa6086dd8e9faf1abe66271f0c11bff9110068a5178571c80fc83ae47bb9",
+  "short_release_notes": "Cold-start distribution repair. Bounds in-memory history to 500 records and skips and reports malformed historical display lines without rewriting append-only evidence. Preserves the protected update path, identity, queues, configuration, 14 dB fallback, and owner-initiated installation."
 }
