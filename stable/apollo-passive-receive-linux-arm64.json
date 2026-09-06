@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 98,
-  "source_commit": "134c7e820809c9c3a76bbb43a21528c82b07c064",
-  "published_at": "2026-09-06T16:01:33Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.98",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.98/ApolloPassiveReceive-1.0.0-build.98-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.98-linux-arm64.zip",
-  "byte_size": 17890959,
-  "sha256": "0a8ecafb89443ff477770b8ea74d1bc4383b00d664b9ef2d84320e32effc96be",
-  "short_release_notes": "Build 98 changes KA9Q SDR acquisition to an explicit receiver frequency grid and removes local RepeaterBook candidate resolution. Native RF evidence continues through the normal server-authority, node-agent and sender path. Canonical matching remains on the server.\n\nManaged update only. Existing target-based KA9Q configurations require an explicit receiver-coverage plan prepared while delivery is paused; no automatic target-list conversion or missing-plan fallback. The updater preserves managed rollback state; configuration rollback requires the preserved preimage.\n\nSource: 134c7e820809c9c3a76bbb43a21528c82b07c064\n"
+  "build": 99,
+  "source_commit": "0b0b80857eb56f0499e52237db84882f05da49d7",
+  "published_at": "2026-09-06T16:21:51Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.99",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.99/ApolloPassiveReceive-1.0.0-build.99-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.99-linux-arm64.zip",
+  "byte_size": 17891243,
+  "sha256": "09a19aed6745328bd5f60fb1b377ccb7ea3369dfafc8029894403a6b2f3bfe20",
+  "short_release_notes": "Build 99 retains explicit receiver RF coverage and server-only matching, and reduces full-grid maintenance latency by dispatching independent channel commands in bounded groups of eight. Native RF evidence continues through the normal server-authority, node-agent and sender path. Canonical matching remains on the server.\n\nManaged update only. Existing target-based KA9Q configurations require an explicit receiver-coverage plan prepared while delivery is paused; no automatic target-list conversion or missing-plan fallback. The updater preserves managed rollback state; configuration rollback requires the preserved preimage.\n\nSource: 0b0b80857eb56f0499e52237db84882f05da49d7\n"
 }
