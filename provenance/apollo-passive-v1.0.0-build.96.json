@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.96",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "5694e4c56fa2fa5d2ba6d3bb6077915fa3b3066d"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 96,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.96-linux-arm64.zip",
+    "byte_size": 17890417,
+    "sha256": "442c54dd099562c5c90446eb86f788bace9bdf7019ffa2a7221c9a2cfcb05cc3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source 5694e4c56fa2fa5d2ba6d3bb6077915fa3b3066d is pushed to canonical Apollo and verified in clean GitHub and native Linux clones. It retains periodic physical provenance renewal, authority, shared owner UI and KA9Q startup fixes.",
+      "Focused source regression: 191 passes, one Windows-host skip for the Linux-only real umask test. Native Linux qualification separately executes the umask test. Native channel tests prove quiet display bins create no events, adjacent RTP channels remain distinct, missing or reset counters fail closed and matching PCM is required without inventing CTCSS or SNR.",
+      "Full native channel-frame to normal node-agent observation/audio sender test passes. Unknown SNR and frequency uncertainty remain null. The existing strict production envelope is retained; detailed SSRC/RTP evidence remains in the durable local event.",
+      "Fresh Linux qualification, actual ZIP materialization and actual ARM64 executable/agent isolated QEMU startup and Local Only/provenance smoke checks passed. Individual logs are retained in the qualification artifact directory.",
+      "The earlier baseline Windows same-event audio recapture assertion remains disclosed; it reproduces on the unchanged predecessor. This release does not change Windows scheduling.",
+      "No KA9Q, SDRplay or RTL runtime is bundled or changed. No RF settings, canonical matching, credentials, authority gates or release signing changes. Organic production acceptance remains the next device validation step."
+    ]
+  }
+}
