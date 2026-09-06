@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 84,
-  "source_commit": "d0de263ebec461055f0e6094c943ebbbac258708",
-  "published_at": "2026-08-31T02:44:04Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.84",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.84/ApolloPassiveReceive-1.0.0-build.84-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.84-linux-arm64.zip",
-  "byte_size": 17870480,
-  "sha256": "3ab5cefb54c05c74377d560e571d8f6527656dc39f439ab56cfa5738e2d7a010",
-  "short_release_notes": "Cold-start distribution repair. Bounds in-memory history to 500 records and skips and reports malformed historical display lines without rewriting append-only evidence. Preserves the protected update path, identity, queues, configuration, 14 dB fallback, and owner-initiated installation."
+  "build": 93,
+  "source_commit": "b2be587844b207202c210cb90476a82e4d7aedc5",
+  "published_at": "2026-09-06T02:23:58Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.93",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.93/ApolloPassiveReceive-1.0.0-build.93-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.93-linux-arm64.zip",
+  "byte_size": 17888426,
+  "sha256": "d19f33b4fd14c9cb7e7a83229bc4cb175b0e28e1bbdef9e26defd580e61dfbbb",
+  "short_release_notes": "Apollo Passive Receive 1.0.0 Build 93 for Linux ARM64 adds guarded managed-release adoption for enrolled source installations and retains receiver provenance and server reporting authority.\n\nThis is a managed-update package. KA9Q, SDRplay and RTL runtime tools are not bundled. It is not a fresh installer. Installing the successor and enabling Live reporting remain separate operations.\n\nSource: b2be587844b207202c210cb90476a82e4d7aedc5\nQualification includes actual ARM64 executable startup, Local Only and KA9Q/RSP1B provenance checks, Pi/archive tests, protected adoption, normal update, rollback, interruption and authority rejection tests."
 }
