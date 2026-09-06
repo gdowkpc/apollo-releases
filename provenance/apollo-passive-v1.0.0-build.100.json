@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.100",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "a3a45be9942c9c9f65b23b9007c6139b139b1566"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 100,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.100-linux-arm64.zip",
+    "byte_size": 17897236,
+    "sha256": "b871cdf193616e94e061fde6ab7ec86bf0f84ea233ceb537d61655f3898ebdf8",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source a3a45be9942c9c9f65b23b9007c6139b139b1566 descends from KA9Q recovery checkpoint 980faeb7415c96e1d4bf3e97ad23df1b225348cc; verified in a fresh canonical GitHub clone and a clean native Linux clone.",
+      "Fresh Windows-host full receiver regression: 834 passes, 26 platform/package skips, two unchanged-parent failures: hard-coded manifest Build 90 assertion and Windows same-event audio recapture. These remain known limitations, not passing tests.",
+      "Fresh native Linux focused receiver, reporting, planning, recovery and zero-target regression: 211 passes, zero failures or skips. Portable archive qualification: seven passes. Packaged ARM64 executable and node agent passed isolated QEMU startup and KA9Q provenance smoke without hardware, credentials or external networking.",
+      "Separate Windows-host focused post-build-100 regression: 103 passes and one skip; Pi/owner/archive: 91 passes; legacy worker and SDR diagnostic boundaries: 22 passes; shared Flutter UI: 77 passes and clean analysis. Counts describe separate overlapping runs.",
+      "Zero-target test exercises real operational KA9Q planner, command controller, SSRC allocator, receiver manager, health, event store and payload path with simulated physical I/O: 166 coverage channels, 165 quiet advancing channels and one measured event with generation-bound PCM.",
+      "Retained migration input, accepted setup configuration, exact archived preimage, current node configuration and all 166 frequencies/SSRCs establish coverage-driven acquisition. First-class local candidate resolution is absent; historical SDR worker and heard-event submission entrypoints are isolated to diagnostics. Uniden and CJ-1 remain target-based.",
+      "Read-only retained production payloads are identity-neutral. Four synthetic in-memory fixtures against the deployed server matcher preserve duplicate-frequency ambiguity without production submissions or database writes. SSRC/source-generation details remain local under the existing frozen wire contract.",
+      "Preserves known server authority refusal diagnostics while keeping local receiver readiness fail-closed. No reporting grant, credential, location, matching policy, KA9Q pin, SDRplay dependency, RF threshold, service or hardware change is included.",
+      "Hardware recovery qualification remains pending normal managed activation and fresh receiver/authority evidence. Shared Flutter UI and historical entrypoint changes are source-qualified separately; the ARM64 passive receiver ZIP does not redeploy the independent owner-web application."
+    ]
+  }
+}
