@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.98",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "134c7e820809c9c3a76bbb43a21528c82b07c064"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 98,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.98-linux-arm64.zip",
+    "byte_size": 17890959,
+    "sha256": "0a8ecafb89443ff477770b8ea74d1bc4383b00d664b9ef2d84320e32effc96be",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source 134c7e820809c9c3a76bbb43a21528c82b07c064 pushed to canonical Apollo and verified in fresh GitHub and clean native Linux clones; source PR 117.",
+      "351 Windows-host Apollo regression passes with 10 platform/package skips; 87 shared owner and Pi contract passes. Fresh native Linux: 189 passes, no skips. Portable archive qualification: seven passes, no skips. Isolated packaged ARM64 executable and agent startup/provenance smoke passed.",
+      "Zero-target KA9Q startup; explicit 166-channel RF grid covers positions absent from historical directory records; directory identity and expected tone fields rejected by channel plan. Poisoned local repeater metadata cannot enter Windows or Linux SDR observation envelopes.",
+      "Guarded explicit coverage migration preserves observation window and archives exact preimage before atomic retirement of directory target fields. Existing shared owner presentation displays channels without a target count.",
+      "Offline synthetic catalog fixtures run against the deployed server matcher prove identity-free server candidate lookup, measured-tone comparisons and duplicate-frequency ambiguity. No synthetic production submission.",
+      "Preserves native KA9Q CTCSS, SSRC ownership, multicast PT119, physical receiver provenance, normal sender and server authority. No signing, KA9Q update, enrollment or scanner/CJ-1 runtime changes."
+    ]
+  }
+}
