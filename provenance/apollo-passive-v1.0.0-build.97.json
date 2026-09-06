@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.97",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "396d3552e322ecdddb8753b4d2632cd109a97441"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 97,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.97-linux-arm64.zip",
+    "byte_size": 17890794,
+    "sha256": "0112021ee91763d35449db11bc3cf9eafd6cb80786847ecf5a466a2f71047597",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source 396d3552e322ecdddb8753b4d2632cd109a97441 pushed to canonical Apollo and verified in clean GitHub and native Linux clones.",
+      "203 focused tests pass with one Windows-host skip for the real Linux umask test; fresh native Linux runs that test and sender/socket/KA9Q/server/authority/service/Contract v1 tests. Archive materialization and ARM64 packaged executable and agent smoke passed.",
+      "Normal native channel formation through the actual socket client validates the observation UUID, receiver adapter and audio association. Retained retry test proves unchanged durable evidence and idempotency key, identical outbound retry and correct audio UUID. Mismatched UUID fails before socket connection.",
+      "Corrects only the outbound local RF ID to the existing deterministic UUID; known legacy RTL adapter default is corrected from recorded KA9Q/RSP1B evidence. Unknown native bandwidth remains null for new observations.",
+      "Preserves physical receiver provenance renewal, shared owner UI, native RTP/PCM evidence and KA9Q startup repair. No signing, credential, matching, RF or KA9Q changes.",
+      "Previously disclosed Windows same-event audio recapture assertion reproduces on the unchanged predecessor; Windows scheduling is not changed."
+    ]
+  }
+}
