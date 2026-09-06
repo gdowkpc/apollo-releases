@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 93,
-  "source_commit": "b2be587844b207202c210cb90476a82e4d7aedc5",
-  "published_at": "2026-09-06T02:23:58Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.93",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.93/ApolloPassiveReceive-1.0.0-build.93-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.93-linux-arm64.zip",
-  "byte_size": 17888426,
-  "sha256": "d19f33b4fd14c9cb7e7a83229bc4cb175b0e28e1bbdef9e26defd580e61dfbbb",
-  "short_release_notes": "Apollo Passive Receive 1.0.0 Build 93 for Linux ARM64 adds guarded managed-release adoption for enrolled source installations and retains receiver provenance and server reporting authority.\n\nThis is a managed-update package. KA9Q, SDRplay and RTL runtime tools are not bundled. It is not a fresh installer. Installing the successor and enabling Live reporting remain separate operations.\n\nSource: b2be587844b207202c210cb90476a82e4d7aedc5\nQualification includes actual ARM64 executable startup, Local Only and KA9Q/RSP1B provenance checks, Pi/archive tests, protected adoption, normal update, rollback, interruption and authority rejection tests."
+  "build": 94,
+  "source_commit": "4babb46ca7a5b647c5f53022e2fef45a9b692522",
+  "published_at": "2026-09-06T03:42:09Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.94",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.94/ApolloPassiveReceive-1.0.0-build.94-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.94-linux-arm64.zip",
+  "byte_size": 17889001,
+  "sha256": "bad2c4530bb9355a910ab51e5e7a589a6d71fcf83c34612d7f47de70e9ef8bb9",
+  "short_release_notes": "Apollo Passive Receive 1.0.0 Build 94 for Linux ARM64 renews receiver provenance from fresh physical USB and runtime readiness checks. Missing or unready hardware holds reporting through the existing server authority path.\n\nThis corrective successor addresses Build 93 provenance expiry during continuous operation. Build 93 bytes remain unchanged. This is a managed update, not a fresh installer; KA9Q, SDRplay and RTL tools are not bundled.\n\nSource: 4babb46ca7a5b647c5f53022e2fef45a9b692522\n"
 }
