@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 99,
-  "source_commit": "0b0b80857eb56f0499e52237db84882f05da49d7",
-  "published_at": "2026-09-06T16:21:51Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.99",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.99/ApolloPassiveReceive-1.0.0-build.99-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.99-linux-arm64.zip",
-  "byte_size": 17891243,
-  "sha256": "09a19aed6745328bd5f60fb1b377ccb7ea3369dfafc8029894403a6b2f3bfe20",
-  "short_release_notes": "Build 99 retains explicit receiver RF coverage and server-only matching, and reduces full-grid maintenance latency by dispatching independent channel commands in bounded groups of eight. Native RF evidence continues through the normal server-authority, node-agent and sender path. Canonical matching remains on the server.\n\nManaged update only. Existing target-based KA9Q configurations require an explicit receiver-coverage plan prepared while delivery is paused; no automatic target-list conversion or missing-plan fallback. The updater preserves managed rollback state; configuration rollback requires the preserved preimage.\n\nSource: 0b0b80857eb56f0499e52237db84882f05da49d7\n"
+  "build": 101,
+  "source_commit": "6448c34c814cd138c0c92f5b73f98263e86984c4",
+  "published_at": "2026-09-06T18:12:09Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.101",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.101/ApolloPassiveReceive-1.0.0-build.101-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.101-linux-arm64.zip",
+  "byte_size": 17897429,
+  "sha256": "3019b11a398b7fd262dffe3de45cd3f475c390701d9e104a40811ea17a7853a5",
+  "short_release_notes": "Build 101 recognizes native KA9Q negative-infinite FM SNR as explicit quiet evidence while still requiring advancing input and complete channel contracts. This corrects Build 100 readiness being held UNKNOWN on normal quiet channels. Missing and malformed telemetry remain unavailable; reporting remains subject to current provenance and legitimate server authority.\n\nManaged ARM64 update only. KA9Q/SDRplay versions, RF coverage, gain, multicast, credentials and location remain unchanged. Physical activation and hardware fault qualification require the normal approval and managed release path.\n\nSource: 6448c34c814cd138c0c92f5b73f98263e86984c4\n"
 }
