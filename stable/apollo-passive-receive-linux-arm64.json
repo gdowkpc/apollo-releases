@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 99,
-  "source_commit": "0b0b80857eb56f0499e52237db84882f05da49d7",
-  "published_at": "2026-09-06T16:21:51Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.99",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.99/ApolloPassiveReceive-1.0.0-build.99-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.99-linux-arm64.zip",
-  "byte_size": 17891243,
-  "sha256": "09a19aed6745328bd5f60fb1b377ccb7ea3369dfafc8029894403a6b2f3bfe20",
-  "short_release_notes": "Build 99 retains explicit receiver RF coverage and server-only matching, and reduces full-grid maintenance latency by dispatching independent channel commands in bounded groups of eight. Native RF evidence continues through the normal server-authority, node-agent and sender path. Canonical matching remains on the server.\n\nManaged update only. Existing target-based KA9Q configurations require an explicit receiver-coverage plan prepared while delivery is paused; no automatic target-list conversion or missing-plan fallback. The updater preserves managed rollback state; configuration rollback requires the preserved preimage.\n\nSource: 0b0b80857eb56f0499e52237db84882f05da49d7\n"
+  "build": 100,
+  "source_commit": "a3a45be9942c9c9f65b23b9007c6139b139b1566",
+  "published_at": "2026-09-06T17:44:54Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.100",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.100/ApolloPassiveReceive-1.0.0-build.100-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.100-linux-arm64.zip",
+  "byte_size": 17897236,
+  "sha256": "b871cdf193616e94e061fde6ab7ec86bf0f84ea233ceb537d61655f3898ebdf8",
+  "short_release_notes": "Build 100 adds bounded per-channel KA9Q forward-progress recovery and retains coverage-driven SDR acquisition with server-only canonical matching. It repairs receiver reconstruction, binds evidence to the current receiver generation, and preserves reachable server refusal diagnostics while keeping reporting fail-closed.\n\nManaged ARM64 update only. KA9Q and SDRplay versions, receiver coverage, multicast and RF behavior remain pinned. Hardware fault recovery is source-qualified and requires controlled device qualification after managed activation. The separate owner-web application is not replaced by this package.\n\nSource: a3a45be9942c9c9f65b23b9007c6139b139b1566\n"
 }
