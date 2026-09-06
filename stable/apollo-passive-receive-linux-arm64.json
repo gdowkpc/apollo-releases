@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 95,
-  "source_commit": "e7336e015c844db6bfe388950a273c9047bf8390",
-  "published_at": "2026-09-06T04:00:54Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.95",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.95/ApolloPassiveReceive-1.0.0-build.95-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.95-linux-arm64.zip",
-  "byte_size": 17889133,
-  "sha256": "5221d37d06bf42947c82781320f25ecfadaeb91037282e2222cff416c4be5991",
-  "short_release_notes": "Apollo Passive Receive 1.0.0 Build 95 for Linux ARM64 keeps KA9Q evidence capture on the measured owned RF channel. The generic spectral carrier estimate remains evidence and no longer becomes an unowned capture request. It retains Build 94 periodic physical receiver-provenance renewal.\n\nManaged update only; no KA9Q, SDRplay or RTL runtime changes. No local canonical repeater matching.\n\nSource: e7336e015c844db6bfe388950a273c9047bf8390\n"
+  "build": 96,
+  "source_commit": "5694e4c56fa2fa5d2ba6d3bb6077915fa3b3066d",
+  "published_at": "2026-09-06T04:28:04Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.96",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.96/ApolloPassiveReceive-1.0.0-build.96-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.96-linux-arm64.zip",
+  "byte_size": 17890417,
+  "sha256": "442c54dd099562c5c90446eb86f788bace9bdf7019ffa2a7221c9a2cfcb05cc3",
+  "short_release_notes": "Apollo Passive Receive Build 96 tracks KA9Q reception from advancing per-channel RTP counters and requires matching captured PCM before audio reporting. Diagnostic IF display bins no longer merge separate channels or manufacture signal-to-noise evidence. Unknown native measurements remain unknown.\n\nManaged update only. Retains periodic physical provenance renewal and the permanent server-authority/node-agent/normal-sender path. No KA9Q or RF changes.\n\nSource: 5694e4c56fa2fa5d2ba6d3bb6077915fa3b3066d\n"
 }
