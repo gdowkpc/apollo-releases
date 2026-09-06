@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.101",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "6448c34c814cd138c0c92f5b73f98263e86984c4"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 101,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.101-linux-arm64.zip",
+    "byte_size": 17897429,
+    "sha256": "3019b11a398b7fd262dffe3de45cd3f475c390701d9e104a40811ea17a7853a5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source 6448c34c814cd138c0c92f5b73f98263e86984c4 is the scoped native quiet-SNR correction descending from the approved Build 100 source a3a45be9942c9c9f65b23b9007c6139b139b1566. Source PR 119 targets main and retains its unmerged release ancestry.",
+      "Build 100 installed normally and every package file matched its approved immutable ZIP. All 166 native input counters advanced, but quiet FM SNR -inf was parsed as unavailable, preventing current receiver provenance. The server correctly kept existing requested Live in Local Only/Paused. No fault injection or authority override occurred.",
+      "Preserves explicit native negative-infinite SNR as a local JSON-safe status flag. Numeric missing SNR remains null. Full channel contracts, current input progression, generation boundaries, bounded recovery and server authority remain required. No RF threshold, coverage, gain, dependency, KA9Q version or wire-contract change.",
+      "Retained native 166-channel snapshot replay gives Build 100 131 healthy and 35 UNKNOWN channels; this correction yields 166 healthy and 166 valid with no receiver commands. The retained native fixture, malformed/NaN negatives, frozen-input rejection and two full-grid zero-target scenarios pass.",
+      "Focused Windows-host KA9Q/reporting/release regression: 215 passes, eight platform/package skips. Fresh canonical clone full receiver suite: 838 passes, 26 skips, two unchanged baseline failures (manifest Build 90 assertion and Windows same-event audio recapture). Counts describe overlapping runs.",
+      "Fresh native Linux source clone: 217 focused tests passed, no failures/skips. Seven portable archive tests passed. The exact packaged ARM64 executable and agent passed isolated QEMU startup and KA9Q fail-closed provenance smoke without credentials, hardware or external networking.",
+      "Physical activation and Live reporting of this successor remain pending separate owner approval. Build 100 remains intact and fail-closed on Node 03; stable was returned to the exact Build 99 descriptor through PR 39. No Build 101 publication, signing, installation, identity change or receiver auto-switch is included in qualification.",
+      "Source PR 119 release-security-contract passes. Its separate Linux x86_64 Flutter candidate job fails on three curly_braces_in_flow_control_structures lint findings in unchanged browser_binding.dart (lines 105, 170, 176); that file is byte-identical to Build 100. This does not qualify or publish a Linux desktop UI candidate. The ARM64 passive-receiver package checks above pass."
+    ]
+  }
+}
