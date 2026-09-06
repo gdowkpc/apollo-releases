@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 97,
-  "source_commit": "396d3552e322ecdddb8753b4d2632cd109a97441",
-  "published_at": "2026-09-06T05:05:16Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.97",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.97/ApolloPassiveReceive-1.0.0-build.97-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.97-linux-arm64.zip",
-  "byte_size": 17890794,
-  "sha256": "0112021ee91763d35449db11bc3cf9eafd6cb80786847ecf5a466a2f71047597",
-  "short_release_notes": "Build 97 corrects the normal sender/node-agent event-ID contract. The outbound envelope uses the existing deterministic observation UUID shared with audio, while retained evidence and idempotency keys remain unchanged. Known legacy RTL adapter defaults are corrected from recorded KA9Q/RSP1B evidence.\n\nManaged update only. Retains authority, physical provenance renewal, shared owner UI and native KA9Q capture. No RF or KA9Q changes.\n\nSource: 396d3552e322ecdddb8753b4d2632cd109a97441\n"
+  "build": 98,
+  "source_commit": "134c7e820809c9c3a76bbb43a21528c82b07c064",
+  "published_at": "2026-09-06T16:01:33Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.98",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.98/ApolloPassiveReceive-1.0.0-build.98-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.98-linux-arm64.zip",
+  "byte_size": 17890959,
+  "sha256": "0a8ecafb89443ff477770b8ea74d1bc4383b00d664b9ef2d84320e32effc96be",
+  "short_release_notes": "Build 98 changes KA9Q SDR acquisition to an explicit receiver frequency grid and removes local RepeaterBook candidate resolution. Native RF evidence continues through the normal server-authority, node-agent and sender path. Canonical matching remains on the server.\n\nManaged update only. Existing target-based KA9Q configurations require an explicit receiver-coverage plan prepared while delivery is paused; no automatic target-list conversion or missing-plan fallback. The updater preserves managed rollback state; configuration rollback requires the preserved preimage.\n\nSource: 134c7e820809c9c3a76bbb43a21528c82b07c064\n"
 }
