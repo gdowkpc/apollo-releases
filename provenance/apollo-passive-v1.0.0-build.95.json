@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.95",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e7336e015c844db6bfe388950a273c9047bf8390"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 95,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.95-linux-arm64.zip",
+    "byte_size": 17889133,
+    "sha256": "5221d37d06bf42947c82781320f25ecfadaeb91037282e2222cff416c4be5991",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source e7336e015c844db6bfe388950a273c9047bf8390 is pushed to canonical Apollo, freshly cloned from GitHub and verified in a clean native Linux build checkout. It retains Build 94 provenance renewal, server authority and KA9Q startup fixes.",
+      "Backend, sender and receiver regression: 101 passes. The new regression proves a shifted spectral estimate does not change the measured KA9Q capture-channel frequency, and unowned frequencies still fail closed.",
+      "Fresh native Linux source qualification: 81 passes. Actual ZIP materialization: 7 passes. Actual ARM64 executable and packaged agent pass isolated QEMU startup and Local Only/KA9Q provenance smoke checks.",
+      "Unchanged Pi Contract, service, collector and archive paths passed 84 tests during Build 94 qualification in this completion task. The previously disclosed baseline Windows audio-recapture test failure remains outside the ARM64 frequency selection change.",
+      "Real Node 03 Build 94 runtime proved current matching physical receiver provenance beyond the former five-minute expiry and canonical Active-to-Paused authority with continuing receiver cycles. Production RF acceptance remains a device qualification step after installation.",
+      "This managed-update ZIP does not bundle KA9Q, SDRplay or RTL runtime. The fix selects the measured receiver channel for capture without local RepeaterBook matching, RF reconfiguration, synthetic evidence or weakened ownership checks."
+    ]
+  }
+}
