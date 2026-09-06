@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 102,
-  "source_commit": "cc345fd9a4c0cd31d6791b4a62f4af4923272b8c",
-  "published_at": "2026-09-06T20:05:59Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.102",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.102/ApolloPassiveReceive-1.0.0-build.102-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.102-linux-arm64.zip",
-  "byte_size": 17898631,
-  "sha256": "6202eb83b5eac1025c654c19ca405f138f19d26a5c79450246b44e516e4e60c5",
-  "short_release_notes": "Build 102 corrects KA9Q status polling bursts and quiet FM squelch hysteresis readiness. It preserves the target-free 166-channel coverage bank, native tone evidence, bounded recovery and server-only matching. Managed ARM64 update only. Independent owner web assets add explicit RF coverage.\n\nSource: cc345fd9a4c0cd31d6791b4a62f4af4923272b8c\n"
+  "build": 103,
+  "source_commit": "6e0bf8aa838e6b5e513830ac90d48f49de09d26b",
+  "published_at": "2026-09-06T23:57:39Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.103",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.103/ApolloPassiveReceive-1.0.0-build.103-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.103-linux-arm64.zip",
+  "byte_size": 17899704,
+  "sha256": "de07798f582ab35fc6e3c8e25e35c689c121f7924432be380116d372f8c1bfc6",
+  "short_release_notes": "Build 103 corrects active KA9Q PCM acquisition budgets and adds bounded packet/frame/pipe diagnostics. Required audio, target-free coverage, native CTCSS, quiet FM behavior, recovery and server-only matching remain unchanged. Managed ARM64 update only.\n\nSource: 6e0bf8aa838e6b5e513830ac90d48f49de09d26b\n"
 }
