@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.94",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "4babb46ca7a5b647c5f53022e2fef45a9b692522"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 94,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.94-linux-arm64.zip",
+    "byte_size": 17889001,
+    "sha256": "bad2c4530bb9355a910ab51e5e7a589a6d71fcf83c34612d7f47de70e9ef8bb9",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source 4babb46ca7a5b647c5f53022e2fef45a9b692522 is committed, pushed, freshly cloned from canonical GitHub, and verified in a separate clean native Linux build checkout; lineage retains the qualified KA9Q startup and shared owner surface.",
+      "Backend, sender and receiver provenance regression: 100 passes. Periodic renewal crosses five minutes and blocks missing USB, unavailable probes, unready services and mismatched pin without RF mutation.",
+      "Fresh native Linux source qualification: 80 passes including actual restrictive-umask agent activation, controller, Contract v1, backend and receiver tests. Actual ZIP materialization: 7 passes.",
+      "Actual packaged ARM64 executable and packaged Python agent pass isolated QEMU startup, Local Only and KA9Q provenance checks without RF or credentials.",
+      "Windows/release regression matrix: 96 passes, one Linux-only skip covered by native Linux qualification, and one pre-existing Windows audio recapture failure reproduced identically in the unchanged baseline. That Windows behavior is unchanged by this ARM64 fix.",
+      "Managed update package only; no KA9Q, SDRplay or RTL runtime bundled. Build 93 remains immutable. Build 94 corrects its demonstrated startup-only provenance expiry defect while retaining server freshness and authorization enforcement."
+    ]
+  }
+}
