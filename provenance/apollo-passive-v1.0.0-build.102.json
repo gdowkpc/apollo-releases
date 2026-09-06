@@ -1,0 +1,43 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.102",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "cc345fd9a4c0cd31d6791b4a62f4af4923272b8c"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 102,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.102-linux-arm64.zip",
+    "byte_size": 17898631,
+    "sha256": "6202eb83b5eac1025c654c19ca405f138f19d26a5c79450246b44e516e4e60c5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source cc345fd9a4c0cd31d6791b4a62f4af4923272b8c; source PR https://github.com/gdowkpc/apollo/pull/120. Descends from qualified Build 101 source 6448c34c814cd138c0c92f5b73f98263e86984c4. Clean canonical fresh clone used for qualification and build.",
+      "Architecture audit confirms channel_plan.js creates 166 FM channels from 145.300-146.950 MHz inclusive at 10 kHz, center 146.075 MHz and input rate 2 MHz. Zero RepeaterBook targets. Energy-first acquisition is optional, not required. SDR canonical matching remains server-only; native CTCSS is measured evidence.",
+      "Read-only native evidence: 166-helper status bursts failed before multicast setup, then Build 101 waited 60 s against a 60 s channel lease. Observed actions 10 and 11 followed this control outage. Original eight actions lack retained per-action evidence and remain individually unclassified. Eight-wide native poll read 187 retained SSRC entries in 2.305 s with zero failures.",
+      "Bound status helper concurrency to eight and retry control reads after the existing 10 s retry interval. Control unavailable remains fail-closed. Channel reconstruction, adapter reconstruction, generations, degraded/backoff and immediate clearing on confirmed healthy progress are retained. No receiver-process or hardware restart rung added.",
+      "Pinned native FM code suppresses output through squelch hysteresis while advancing channel RTP time. Preserve explicit negative-infinite output level and require advancing channel clock for this quiet case. Native 166-channel replay: parent 165 HEALTHY/one UNKNOWN, candidate 166 HEALTHY/all contracts valid. Missing/malformed evidence stays UNKNOWN; frozen input/clock and active output stall remain faults.",
+      "Bound recovery history by count/bytes and keep parsed channel details once in diagnostics. Protect the existing 1 MiB owner gateway limit. Shared UI adds the coverage range; synthetic compiled browser verified RSP1B, 166 channels and Live/Active presentation. UI fixture is not physical receiver or production delivery proof.",
+      "Fresh Windows full suite: 874 tests, 846 passed, 26 skipped, two unchanged parent failures (fixed Build 90 manifest assertion and Windows same-event CTCSS-eligible audio recapture). Both reproduced on exact Build 101 parent; affected tests/implementation unchanged. Focused mixed/recovery suite 28 passed; legacy/owner boundary 31 passed.",
+      "Fresh native Linux focused suite: 225 passed, zero failures/skips. Portable archive suite: seven passed. Exact ARM64 packaged executable and agent passed isolated QEMU startup and fail-closed KA9Q provenance without credentials, RF hardware or external networking. Shared UI analysis clean and 78 tests passed; compiled web build passed.",
+      "Release-security CI passed. Linux desktop candidate CI stops on three pre-existing curly-braces lints in browser_binding.dart:105,170,176; that file is unchanged from Build 101. This is an ARM64 managed receiver candidate, not qualification of a Linux desktop release.",
+      "Read-only production proof: sixteen retained Node 03 observations have null submitted repeater/state/callsign/expected-tone identity. Server EvidenceMatcher and PdoRepeaterCatalog remain authoritative. Four in-memory server fixtures preserve ambiguous duplicate-frequency results. No synthetic evidence was sent to intake or production rows changed.",
+      "Separate compiled owner-web artifact ApolloOwnerWeb-build.102-cc345fd.zip; 15189176 bytes; SHA-256 b7a05407aaa9c5886afaa80ee54532ac278189de2a02120e36834edcdb27c07e. Closed gateway import set and file inventory included. Deployment uses the existing independent owner-web release path; it is not an ARM64 receiver source-only deployment.",
+      "Node 03 remains Build 101 unchanged during this audit. Identity, credential, location, RF config, KA9Q pin and all five service PIDs preserved. At 19:55 UTC readiness was unconfirmed and requested Live was legitimately Local Only/Paused; no new organic production row. Physical qualification, normal publication/allowlist and activation require new exact-head/artifact approval. No signing, upgrade, authority bypass or fault injection."
+    ]
+  }
+}
