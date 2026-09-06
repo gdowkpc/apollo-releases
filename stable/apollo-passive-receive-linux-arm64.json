@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "1.0.0",
-  "build": 96,
-  "source_commit": "5694e4c56fa2fa5d2ba6d3bb6077915fa3b3066d",
-  "published_at": "2026-09-06T04:28:04Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.96",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.96/ApolloPassiveReceive-1.0.0-build.96-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.96-linux-arm64.zip",
-  "byte_size": 17890417,
-  "sha256": "442c54dd099562c5c90446eb86f788bace9bdf7019ffa2a7221c9a2cfcb05cc3",
-  "short_release_notes": "Apollo Passive Receive Build 96 tracks KA9Q reception from advancing per-channel RTP counters and requires matching captured PCM before audio reporting. Diagnostic IF display bins no longer merge separate channels or manufacture signal-to-noise evidence. Unknown native measurements remain unknown.\n\nManaged update only. Retains periodic physical provenance renewal and the permanent server-authority/node-agent/normal-sender path. No KA9Q or RF changes.\n\nSource: 5694e4c56fa2fa5d2ba6d3bb6077915fa3b3066d\n"
+  "build": 97,
+  "source_commit": "396d3552e322ecdddb8753b4d2632cd109a97441",
+  "published_at": "2026-09-06T05:05:16Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.97",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.97/ApolloPassiveReceive-1.0.0-build.97-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.97-linux-arm64.zip",
+  "byte_size": 17890794,
+  "sha256": "0112021ee91763d35449db11bc3cf9eafd6cb80786847ecf5a466a2f71047597",
+  "short_release_notes": "Build 97 corrects the normal sender/node-agent event-ID contract. The outbound envelope uses the existing deterministic observation UUID shared with audio, while retained evidence and idempotency keys remain unchanged. Known legacy RTL adapter defaults are corrected from recorded KA9Q/RSP1B evidence.\n\nManaged update only. Retains authority, physical provenance renewal, shared owner UI and native KA9Q capture. No RF or KA9Q changes.\n\nSource: 396d3552e322ecdddb8753b4d2632cd109a97441\n"
 }
