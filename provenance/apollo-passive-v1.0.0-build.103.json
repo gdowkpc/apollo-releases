@@ -1,0 +1,42 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.103",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "6e0bf8aa838e6b5e513830ac90d48f49de09d26b"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 103,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.103-linux-arm64.zip",
+    "byte_size": 17899704,
+    "sha256": "de07798f582ab35fc6e3c8e25e35c689c121f7924432be380116d372f8c1bfc6",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source 6e0bf8aa838e6b5e513830ac90d48f49de09d26b; https://github.com/gdowkpc/apollo/pull/121. Descends from qualified Build 102 cc345fd9a4c0cd31d6791b4a62f4af4923272b8c. Clean canonical fresh clone and clean native Linux clone used for qualification/build.",
+      "Pinned pcmrecord startup/status acquisition consumed the one-second launch-timed PCM probe while its success gate required a full second of decoded PCM. Organic passive diagnostic: first PCM at 527 ms, 16000 bytes rejected; a second bounded capture allowing acquisition delay yielded 33920 bytes and passed the unchanged 32000-byte minimum. No channel commands or intake traffic.",
+      "KA9Q now opts into a decoded-byte recording budget. The original duration-plus-three-second absolute deadline, byte cap, minimum duration, clean exit, stream contract, exclusive operation queue, ownership and generation checks remain. No global receiver timeout or recovery-ladder changes.",
+      "API-only per-channel PCM diagnostics distinguish session-accepted RTP packets, native decoded frames, stdout bytes, acquisition/chunk latency, helper reaping, stream identity and generation. Failed delivery diagnostics are retained in bounded recovery history. Staging/sender counters remain separate; diagnostic history never grants current readiness.",
+      "Deterministic tests reproduce the old capture deadline and verify delayed PCM, silent/frozen timeout, fresh/reaped helpers, fragmented diagnostics and RTP wrap, old-generation rejection, wrong-session/format failure, active adapter rebuild, foreign ownership, and serialized delivery probes across 166 active coverage channels.",
+      "Zero-target full-grid integration carries delayed child PCM through the native event/store boundary into canonical WAV staging. Retained WAV bytes/hash and observation association agree; payload has no repeater/callsign identity. Required-audio staging failure remains suppressing. No fixture contacts intake.",
+      "Windows full applicable suite: 883 tests, 855 passed, 26 skipped, two unchanged parent failures. Both manifest fixed-Build-90 assertion and Windows same-event recapture assertion reproduced on exact Build 102 parent. Final serial run has no cancellation. Earlier parallel host-load timeout was resolved by serial qualification without runtime timeout changes.",
+      "Fresh native Linux focused suite: 239 passed, no failures/skips. Archive tests: seven passed. Exact packaged ARM64 executable and node agent passed isolated QEMU startup and fail-closed KA9Q provenance checks without RF, credentials or external networking. Legacy/owner/scanner boundary suite: 31 passed.",
+      "Release-security CI passed. Unrelated Linux desktop candidate CI retains three unchanged browser_binding.dart brace-style findings at lines 105, 170 and 176. No Flutter, owner-web, Windows DSP, Uniden/CJ-1, authority, native CTCSS, coverage or KA9Q pin changes.",
+      "Original five retained repairs were active 145.370 MHz delivery faults; no per-probe byte/latency history existed. Later read-only snapshot at 22:44 UTC also found 146.840 MHz recurrence, seven channel repairs and one automatic adapter rebuild. All service PIDs and radiod source invocation stayed unchanged. Live request was legitimately Local Only/Paused for unconfirmed readiness.",
+      "Operational qualification remains pending: no new organic production observation, audio persistence or server matching after this candidate. Exact-head/artifact approval is required before normal immutable publication, allowlist and managed Node 03 activation. Required audio must stage and a fresh organic event must reach production before PASS. No signing or bypass."
+    ]
+  }
+}
