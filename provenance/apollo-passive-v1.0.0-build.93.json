@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v1.0.0-build.93",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "b2be587844b207202c210cb90476a82e4d7aedc5"
+  },
+  "release": {
+    "version": "1.0.0",
+    "build": 93,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-1.0.0-build.93-linux-arm64.zip",
+    "byte_size": 17888426,
+    "sha256": "d19f33b4fd14c9cb7e7a83229bc4cb175b0e28e1bbdef9e26defd580e61dfbbb",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact Apollo source b2be587844b207202c210cb90476a82e4d7aedc5 is committed, pushed and verified in fresh Windows and native Linux checkouts; it descends from qualified source 81d3f96c4b358192f3d7a934b7ae53e0c09e9e9d.",
+      "Focused release, authority, bootstrap and Windows release regression: 149 passes, zero failures; subsequent changed-path and fresh-checkout qualification also passed.",
+      "Pi Contract v1, service, collector and real Pi archive tests: 81 passes, zero failures.",
+      "Final ARM64 artifact passed the normal controller update and rollback scenarios in isolated Linux namespaces: each 39 passes, zero failures, one independent bootstrap case skipped.",
+      "Protected adoption and staging qualification under umask 077: 39 passes, zero failures, one independent artifact scenario skipped; exact existing executable modes and bytes restore on failure.",
+      "QEMU executes the actual ARM64 packaged backend with the packaged node agent; startup, fail-closed Local Only and KA9Q/RSP1B provenance smoke checks passed without a receiver or credentials.",
+      "Physical baseline adoption succeeded without replacing the source runtime or restarting services. Identity, credential artifact, public identity, canonical location, receiver configuration and KA9Q configuration hashes stayed unchanged; reporting remained Local Only and the observation spool stayed empty.",
+      "This managed-update ARM64 ZIP does not include KA9Q, SDRplay, RTL runtime tools or a fresh installer. Successor installation and production Live reporting are separate gates."
+    ]
+  }
+}
