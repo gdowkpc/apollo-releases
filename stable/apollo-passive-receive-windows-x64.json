@@ -4,13 +4,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "1.0.0",
-  "build": 84,
-  "source_commit": "d0de263ebec461055f0e6094c943ebbbac258708",
-  "published_at": "2026-08-31T02:44:04Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.84",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.84/ApolloPassiveReceive-1.0.0-build.84-windows-x64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.84-windows-x64.zip",
-  "byte_size": 14943370,
-  "sha256": "f47bfa6086dd8e9faf1abe66271f0c11bff9110068a5178571c80fc83ae47bb9",
-  "short_release_notes": "Cold-start distribution repair. Bounds in-memory history to 500 records and skips and reports malformed historical display lines without rewriting append-only evidence. Preserves the protected update path, identity, queues, configuration, 14 dB fallback, and owner-initiated installation."
+  "build": 123,
+  "source_commit": "1959b2535e8a27d1660a5bacb007fae225611003",
+  "published_at": "2026-09-10T04:17:21Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.123",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.123/ApolloPassiveReceive-1.0.0-build.123-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.123-windows-x64.zip",
+  "byte_size": 15012724,
+  "sha256": "d6159086e7e6ca51cb501a19dbe1a05cc0497d8da332116a5233dbf23dad6837",
+  "short_release_notes": "Adds owner-initiated newer-only stable updates to the Build 116 analog RTL-SDR release line. Run the installer once to enable the Windows update helper. Identity, settings and pending reports are retained. Installation requires the owner to choose Update and confirm. Equal or older builds are not installed. Package checks passed; a physical installed-service update and a new receiver soak remain unverified."
 }
