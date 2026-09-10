@@ -4,13 +4,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "1.0.0",
-  "build": 123,
-  "source_commit": "1959b2535e8a27d1660a5bacb007fae225611003",
-  "published_at": "2026-09-10T04:17:21Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.123",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.123/ApolloPassiveReceive-1.0.0-build.123-windows-x64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.123-windows-x64.zip",
-  "byte_size": 15012724,
-  "sha256": "d6159086e7e6ca51cb501a19dbe1a05cc0497d8da332116a5233dbf23dad6837",
-  "short_release_notes": "Adds owner-initiated newer-only stable updates to the Build 116 analog RTL-SDR release line. Run the installer once to enable the Windows update helper. Identity, settings and pending reports are retained. Installation requires the owner to choose Update and confirm. Equal or older builds are not installed. Package checks passed; a physical installed-service update and a new receiver soak remain unverified."
+  "build": 126,
+  "source_commit": "75f2d6b4877be1697350e97065f4cc83e0731429",
+  "published_at": "2026-09-10T14:59:03Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.126",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.126/ApolloPassiveReceive-1.0.0-build.126-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.126-windows-x64.zip",
+  "byte_size": 15012813,
+  "sha256": "fe90d6c28013cdac735264b16a75d402a933b7574260c1384c8dda160c4d0f2e",
+  "short_release_notes": "Adds automatic identification of the selected RTL-SDR Blog V3 and V4 receiver from exact native helper metadata. Generic, rewritten, manufacturer-only, and missing descriptors remain unknown. Settings, identity, and queued reports are retained. Updates remain owner initiated. Package checks passed; installed-service update qualification and a new-receiver RF soak remain pending."
 }
