@@ -4,13 +4,13 @@
   "platform": "windows",
   "architecture": "x64",
   "version": "1.0.0",
-  "build": 126,
-  "source_commit": "75f2d6b4877be1697350e97065f4cc83e0731429",
-  "published_at": "2026-09-10T14:59:03Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.126",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.126/ApolloPassiveReceive-1.0.0-build.126-windows-x64.zip",
-  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.126-windows-x64.zip",
-  "byte_size": 15012813,
-  "sha256": "fe90d6c28013cdac735264b16a75d402a933b7574260c1384c8dda160c4d0f2e",
-  "short_release_notes": "Adds automatic identification of the selected RTL-SDR Blog V3 and V4 receiver from exact native helper metadata. Generic, rewritten, manufacturer-only, and missing descriptors remain unknown. Settings, identity, and queued reports are retained. Updates remain owner initiated. Package checks passed; installed-service update qualification and a new-receiver RF soak remain pending."
+  "build": 130,
+  "source_commit": "588c61f2acba1a81ce15cd98fa3416d7964b7605",
+  "published_at": "2026-09-10T17:24:26Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v1.0.0-build.130",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v1.0.0-build.130/ApolloPassiveReceive-1.0.0-build.130-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-1.0.0-build.130-windows-x64.zip",
+  "byte_size": 15012984,
+  "sha256": "08b48741b756543737063e56180d0115b23b73951bd83c4e6e9c59b70c36b53b",
+  "short_release_notes": "Requires functional update-checker qualification before packaging. Retains the Windows Build126 receiver behavior, owner-initiated updates, and existing node state. Package and updater checks passed; physical installation/update/rollback and a new RF soak were not run for this build."
 }
