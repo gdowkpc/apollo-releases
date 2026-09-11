@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.4-build.145",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e9d93716c8be62c494f7056da6d8a0c000dc00ab"
+  },
+  "release": {
+    "version": "2.1.4",
+    "build": 145,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.4-build.145-linux-arm64.zip",
+    "byte_size": 17916934,
+    "sha256": "285300e2b1f7a44e2d71d4364e1f8651f65d614e095753351aa55834b4b70ae3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source e9d93716c8be62c494f7056da6d8a0c000dc00ab resolves the Build 144 packaged-runtime startup fault: a packaged executable now obtains version, build, and channel from its adjacent release identity sidecar before validating packaged provenance. Apollo PR #132 passed the required release-security contract.",
+      "Focused release regression: central release identity and packaged-sidecar bootstrap tests 4 passed. The central verifier emitted version 2.1.4, build 145, early-tester, prepared_unpublished.",
+      "A clean native-Linux checkout at the exact merged commit materialized the Linux ARM64 portable ZIP using the previously qualified RTL runtime. Its embedded release identity and an independent SHA-256 verification match this record.",
+      "Production node apollo-kd6kpc-13 was restored to its pre-existing qualification service after Build 144 exposed the startup defect. Build 145 activation and hardware continuity are deliberately verified after normal managed activation; no credential, node identity, local configuration, or queued-data change is included."
+    ]
+  }
+}
