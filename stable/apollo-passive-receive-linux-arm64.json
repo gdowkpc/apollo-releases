@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "2.1.4",
-  "build": 144,
-  "source_commit": "846854f8352d4ab9c5f17aab496fd81508aaf190",
-  "published_at": "2026-09-11T05:47:23Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.1.4-build.144",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.1.4-build.144/ApolloPassiveReceive-2.1.4-build.144-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.1.4-build.144-linux-arm64.zip",
-  "byte_size": 17916847,
-  "sha256": "306cb7353adf1b4305d2a2bfc6e17417e4c66074b84d7c7074e8fbab613f96df",
-  "short_release_notes": "Apollo Passive Receive 2.1.4 / Build 144 for Linux ARM64. Adds geographic repeater-profile download support and shows the precise profile-download error code when a download fails. The managed update preserves node identity, credentials, local configuration, and queued observations."
+  "build": 145,
+  "source_commit": "e9d93716c8be62c494f7056da6d8a0c000dc00ab",
+  "published_at": "2026-09-11T14:58:34Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.1.4-build.145",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.1.4-build.145/ApolloPassiveReceive-2.1.4-build.145-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.1.4-build.145-linux-arm64.zip",
+  "byte_size": 17916934,
+  "sha256": "285300e2b1f7a44e2d71d4364e1f8651f65d614e095753351aa55834b4b70ae3",
+  "short_release_notes": "Apollo Passive Receive 2.1.4 / Build 145 for Linux ARM64. Repairs packaged release startup and includes geographic repeater-profile download support with actionable download error codes. The managed update preserves node identity, credentials, local configuration, and queued observations."
 }
