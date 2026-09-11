@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.4-build.151",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "77c75e10c79381cf9b2152f2c06aa5ac485008fa"
+  },
+  "release": {
+    "version": "2.1.4",
+    "build": 151,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.4-build.151-linux-arm64.zip",
+    "byte_size": 17909944,
+    "sha256": "6a732782b0e94c3a479a135dd74d0b7eb9f167b1535e8d932477cd7e6b7ad641",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Build 151 retains Build 150 behavior and requires the separately qualified Build 147 controller migration before node-agent payload activation.",
+      "The migration backs up the exact legacy controller module, installs the mode-safe controller module, and refuses any unexpected preimage.",
+      "Focused controller-migration, node-agent payload, fresh-node ownership, managed-release recovery, and portable-package regressions passed: 82 tests, 0 failures.",
+      "A clean native Linux ARM64 checkout built this exact ZIP. ZIP integrity, embedded version/build/source identity, canonical inventory, and SHA-256 were independently verified.",
+      "Node 13 validated this exact extracted Build 151 package through the migrated controller; the payload retained the Build 147-compatible enrollment marker forbidden while both node services remained active."
+    ]
+  }
+}
