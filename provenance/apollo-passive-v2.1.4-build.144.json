@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.4-build.144",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "846854f8352d4ab9c5f17aab496fd81508aaf190"
+  },
+  "release": {
+    "version": "2.1.4",
+    "build": 144,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.4-build.144-linux-arm64.zip",
+    "byte_size": 17916847,
+    "sha256": "306cb7353adf1b4305d2a2bfc6e17417e4c66074b84d7c7074e8fbab613f96df",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source 846854f8352d4ab9c5f17aab496fd81508aaf190 merges the completed geographic-profile download path, explicit profile-download error code presentation, and central release identity 2.1.4 Build 144. Apollo PRs #130 and #131 passed the required release-security contract.",
+      "Focused source regression: release identity tests 3 passed; band-plan API, data, and live UI tests 16 passed. The release verifier emitted version 2.1.4, build 144, early-tester, prepared_unpublished.",
+      "The ARM64 portable ZIP was materialized from the exact source commit. Archive integrity, embedded release identity, and an independent SHA-256 verification matched this record before publication.",
+      "Pre-activation production baseline: node apollo-kd6kpc-13 is ARM64, its passive-receive service is active, and the running executable is immutable Build 143. Build 144 hardware and RF continuity evidence will be recorded after normal managed activation; no credential, node identity, local configuration, or queued-data change is included in this release."
+    ]
+  }
+}
