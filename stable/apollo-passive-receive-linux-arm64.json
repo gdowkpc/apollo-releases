@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "2.1.4",
-  "build": 147,
-  "source_commit": "4646edfaab5b4a5e18f3c96652ad0195ccd2f290",
-  "published_at": "2026-09-11T15:22:56Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.1.4-build.147",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.1.4-build.147/ApolloPassiveReceive-2.1.4-build.147-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.1.4-build.147-linux-arm64.zip",
-  "byte_size": 17916961,
-  "sha256": "9349361aa559eedf129f1e6bfcbd58f4d67ecf2c21ddae48876fc0f07d422c38",
-  "short_release_notes": "Apollo Passive Receive 2.1.4 / Build 147 for Linux ARM64. Uses the canonical public band-plan manifest and supports its published international 70 cm profile ranges while retaining the 440-448 MHz U.S. default sweep. The managed update preserves node identity, credentials, local configuration, and queued observations."
+  "build": 150,
+  "source_commit": "83bf7e64e3ed812c6d53b0fd00c50cfd8a502fbe",
+  "published_at": "2026-09-11T17:05:33Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.1.4-build.150",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.1.4-build.150/ApolloPassiveReceive-2.1.4-build.150-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.1.4-build.150-linux-arm64.zip",
+  "byte_size": 17953200,
+  "sha256": "1c76d6bd468db0e9d42f0549a5d28e66315f30623eeb6c7728e70bf1f694ff96",
+  "short_release_notes": "Build 150 replaces the unusable empty Build 149 release. It retains Build 148 KA9Q activation behavior and restores Build 147 managed-controller compatibility. The managed update preserves node identity, credentials, local configuration, and queued observations."
 }
