@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.4-build.146",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "878fa45c2ff1ad9c2c281dd15d74b74a3b3bcaa8"
+  },
+  "release": {
+    "version": "2.1.4",
+    "build": 146,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.4-build.146-linux-arm64.zip",
+    "byte_size": 17916961,
+    "sha256": "27b75184b29d06bca976f684e5685ab620742c654c800c62709158bbf2487fbb",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source 878fa45c2ff1ad9c2c281dd15d74b74a3b3bcaa8 makes the public Apollo band-plan manifest the shared default and restores the supported 420-450 MHz custom 70 cm validation window required by published profiles, while preserving the 440-448 MHz U.S. default sweep.",
+      "Focused band-plan, API, and configuration regressions passed 21/21. The checked-in catalog and the live canonical public catalog, containing 15 profiles, validate under the shared runtime schema.",
+      "A clean native-Linux checkout at the exact merged commit materialized the Linux ARM64 portable ZIP using the previously qualified RTL runtime. Its embedded release identity and independent SHA-256 verification match this record.",
+      "Normal managed activation and dashboard download verification on apollo-kd6kpc-13 follow publication. No credential, node identity, local configuration, or queued-data change is included."
+    ]
+  }
+}
