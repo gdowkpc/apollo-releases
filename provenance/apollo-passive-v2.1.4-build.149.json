@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.4-build.149",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8a04f9218cd8065926a38dae21c9ac9cba2647ea"
+  },
+  "release": {
+    "version": "2.1.4",
+    "build": 149,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.4-build.149-linux-arm64.zip",
+    "byte_size": 17953180,
+    "sha256": "ab6db1b24ec4abaa111361fdd3720204ce131f864baac3469beccd108068b8ea",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source commit 8a04f9218cd8065926a38dae21c9ac9cba2647ea retains Build 148 KA9Q activation behavior and emits the Build 147-compatible node-agent enrollment marker forbidden.",
+      "Targeted node-agent payload, fresh-node ownership, managed-release recovery, KA9Q receiver selection, dashboard, and evidence-forwarder regressions passed: 147 tests, 0 failures.",
+      "A clean native Linux ARM64 checkout built this exact ZIP. ZIP integrity, embedded version/build/source identity, canonical inventory, and SHA-256 were independently verified.",
+      "The exact Build 147 controller implementation loaded this extracted Build 149 package and accepted its node-agent payload with enrollment forbidden. Fresh-node owner enrollment remains required by the separate fresh-node descriptor."
+    ]
+  }
+}
