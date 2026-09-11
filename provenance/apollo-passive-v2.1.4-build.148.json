@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.4-build.148",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ce60a86c2022d42d3de6fc0a050ff5a699e6c13e"
+  },
+  "release": {
+    "version": "2.1.4",
+    "build": 148,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.4-build.148-linux-arm64.zip",
+    "byte_size": 17953208,
+    "sha256": "5c19dd6f211034c8ff685462689c6c443285a2f6e14c0068fd38929860b338d3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact source commit ce60a86c2022d42d3de6fc0a050ff5a699e6c13e adds a pre-activation KA9Q compatibility gate so an RTL-only package cannot replace a saved KA9Q/SDRplay receiver configuration.",
+      "Targeted managed-release recovery, KA9Q receiver selection, dashboard, and evidence-forwarder regressions passed: 89 tests, 0 failures.",
+      "A clean native Linux ARM64 checkout built this exact ZIP. ZIP integrity, embedded version/build/source identity, canonical inventory, and SHA-256 were independently verified.",
+      "A nonpersistent isolated process on apollo-kd6kpc-13 loaded this exact package with the preserved node configuration and reported receiver_kind ka9q and SDRplay RSP1B via KA9Q radiod without acquiring the live receiver."
+    ]
+  }
+}
