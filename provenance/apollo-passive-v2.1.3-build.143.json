@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.3-build.143",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "39566fe821ab46ad41f0655fd33600acafe350d2"
+  },
+  "release": {
+    "version": "2.1.3",
+    "build": 143,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.3-build.143-linux-arm64.zip",
+    "byte_size": 17905539,
+    "sha256": "2b6c1248fdfe2148573d468d6a66169e688499c96c5ba8f4ca9427f3bfd7cd0a",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source 39566fe821ab46ad41f0655fd33600acafe350d2. Focused update, update-route, bootstrap, controller, release-identity and server tests: 67 passed. Package archive integrity and embedded ARM64 release identity were verified before deployment.",
+      "Node apollo-kd6kpc-13: exact artifact SHA-256 and ZIP integrity verified before activation. The packaged executable passed an isolated loopback dashboard/API probe, then the live service activated the packaged executable and returned Apollo Passive Receive 2.1.3 Build 143.",
+      "After activation, node 13's KA9Q SDRplay RSP1B receiver remained healthy and sweeping its 166-channel configured range. The node UUID, credentials, local configuration and queued data were retained. Reporting remains local-only/disabled and is not asserted as production delivery evidence.",
+      "No signing key, signature manifest or signing workflow is used. The immutable release tag, GitHub asset and this provenance record provide the managed ARM64 authority binding."
+    ]
+  }
+}
