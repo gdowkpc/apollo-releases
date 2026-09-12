@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.4-build.166",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f3376395a63e913cb640d584d6c4bd2e88bace1a"
+  },
+  "release": {
+    "version": "2.2.4",
+    "build": 166,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.4-build.166-linux-arm64.zip",
+    "byte_size": 17928426,
+    "sha256": "786c22c2459afc6476b0bc06e3051dd137dc7950cc5f969623657c4dfac1b459",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Focused direct-provisioned identity, dashboard receiver-state, and GitHub-authorized activation checks passed for source f3376395a63e913cb640d584d6c4bd2e88bace1a.",
+      "Linux ARM64 materialization passed all 55 package checks, including closed inventory, extraction, mode, release-identity, and SHA-256 verification.",
+      "KD6KPC-13 was confirmed sweeping after bounded KA9Q radiod recovery; deployment and owner acceptance of this successor remain pending."
+    ]
+  }
+}
