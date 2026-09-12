@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.4-build.162",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e0ce61b7abc367fb466539a856f8e05af700c80b"
+  },
+  "release": {
+    "version": "2.2.4",
+    "build": 162,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.4-build.162-linux-arm64.zip",
+    "byte_size": 17928088,
+    "sha256": "8ba650da185046395fc9a1b1fa5f487050e009b42b225c2906d03445cc996131",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "KA9Q profile and receiver-manager regressions passed, including the bounded profile-settling state that remains sweeping rather than raising a false receiver alert.",
+      "Linux ARM64 ZIP materialization verified the closed inventory, release identity, filename, byte size, and SHA-256 from the recorded source commit.",
+      "KD6KPC-13 received Build 161 and completed 2 meter plus 70 centimeter RF acceptance before this dashboard-state correction."
+    ]
+  }
+}
