@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.1.5-build.154",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "96f036c82c2d0f12a84f849a14ac407235f2dbef"
+  },
+  "release": {
+    "version": "2.1.5",
+    "build": 154,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.1.5-build.154-linux-arm64.zip",
+    "byte_size": 17947194,
+    "sha256": "9703273a68bfae4fcb86111857e6bdaf1c19c36cbee317e18a00ae82307a1cec",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Linux ARM64 only: dashboard polling, cached provisioning, durable state, and socket-authorization regressions passed (43 Node tests and 9 Python socket tests).",
+      "A clean native Linux ARM64 checkout built and independently verified this exact ZIP, including its version, build, source commit, inventory, and SHA-256.",
+      "The managed-release authority suite retains one pre-existing receiver_configuration_invalid fixture failure on both the release parent and this source; it is not caused by Build 154."
+    ]
+  }
+}
