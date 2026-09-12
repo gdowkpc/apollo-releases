@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.4-build.161",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "bb397b1f84d0ab4ffd089c406bb3685bfc2f7237"
+  },
+  "release": {
+    "version": "2.2.4",
+    "build": 161,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.4-build.161-linux-arm64.zip",
+    "byte_size": 17927806,
+    "sha256": "048e6ae257d6f11f4b941ed4a45e10db2bbba766120e654e832e2e8f33247f6d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "KA9Q profile regressions passed for the rounded active profile, follow-on profile transitions, and the managed Pi request/result path binding.",
+      "Linux ARM64 ZIP materialization verified the closed inventory, release identity, filename, byte size, and SHA-256 from the recorded source commit.",
+      "KD6KPC-13 live acceptance is required before the public Downloads card advances from Build 159."
+    ]
+  }
+}
