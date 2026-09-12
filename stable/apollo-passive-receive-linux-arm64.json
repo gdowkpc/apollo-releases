@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "2.2.4",
-  "build": 158,
-  "source_commit": "a9a419c94534dbb09b58279ab1b1521f84bcbcb8",
-  "published_at": "2026-09-12T18:34:54Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.2.4-build.158",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.2.4-build.158/ApolloPassiveReceive-2.2.4-build.158-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.2.4-build.158-linux-arm64.zip",
-  "byte_size": 17927346,
-  "sha256": "654d1a42f67e52bc90a7a4e9700199bec2c22306e71ca442c27a63c12f6c22a6",
-  "short_release_notes": "KA9Q passive-receiver compatibility hotfix: legacy receiver-level controlled profile-switch capability now enables its available sweep plans, profile activation, and profile apply path consistently. CJ-1 is unchanged."
+  "build": 159,
+  "source_commit": "0d6199c6e0e98e1553ae5640db7b6dbe7a9eb8fe",
+  "published_at": "2026-09-12T18:44:59Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.2.4-build.159",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.2.4-build.159/ApolloPassiveReceive-2.2.4-build.159-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.2.4-build.159-linux-arm64.zip",
+  "byte_size": 17927504,
+  "sha256": "cf7769468506e199cc3618818ac35fdbb9c8c33c02dd3b8870b39543b766b51c",
+  "short_release_notes": "Corrects the KA9Q configuration-load regression in Build 158: established single-span inputs retain their active profile while multi-band transitions remain bounded. CJ-1 is unchanged."
 }
