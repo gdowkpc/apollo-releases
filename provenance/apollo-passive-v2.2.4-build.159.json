@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.4-build.159",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "0d6199c6e0e98e1553ae5640db7b6dbe7a9eb8fe"
+  },
+  "release": {
+    "version": "2.2.4",
+    "build": 159,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.4-build.159-linux-arm64.zip",
+    "byte_size": 17927504,
+    "sha256": "cf7769468506e199cc3618818ac35fdbb9c8c33c02dd3b8870b39543b766b51c",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "KA9Q profile compatibility regressions passed, including preservation of an established single-span active input profile on load.",
+      "A native Linux ARM64 build from the recorded source commit produced this ZIP; independent ZIP, identity, filename, byte-size, and SHA-256 checks passed.",
+      "Post-activation receiver health and reporting verification is required on the target node."
+    ]
+  }
+}
