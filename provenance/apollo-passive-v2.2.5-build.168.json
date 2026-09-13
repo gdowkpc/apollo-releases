@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.5-build.168",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c75bde2a7cdae3f5f094e70aae2e231c2d49cca5"
+  },
+  "release": {
+    "version": "2.2.5",
+    "build": 168,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.5-build.168-linux-arm64.zip",
+    "byte_size": 17947819,
+    "sha256": "5bb9c801976bc77a6d0db9acef369bd4bef8ae8cbaf832160ee043408ebaf992",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Focused direct-provisioned identity, dashboard UI, node-agent release, protected-controller, and managed-release recovery checks passed for the release source.",
+      "The Linux ARM64 ZIP was built from source commit c75bde2a7cdae3f5f094e70aae2e231c2d49cca5 and passed archive, manifest, and embedded node-agent identity verification.",
+      "This release packages the direct-provisioned Pi identity reconciliation fix and retains the separately managed KA9Q radiod runtime; physical receiver and reporting acceptance remain post-install checks."
+    ]
+  }
+}
