@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.7-build.171",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "4d04737e586a232fe17ec974c14a79075d03b701"
+  },
+  "release": {
+    "version": "2.2.7",
+    "build": 171,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.7-build.171-linux-arm64.zip",
+    "byte_size": 17992941,
+    "sha256": "2d7fa5704a8b415a4cd9140a323ef0717780a32be97f52569950eb5e1a0f26d6",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "The merged Apollo source at 4d04737e586a232fe17ec974c14a79075d03b701 passed the required release-security contract check.",
+      "Focused direct-provision identity, LAN gateway, release-identity, and portable-package tests passed before packaging.",
+      "The Linux ARM64 ZIP passed archive integrity validation and its manifest, byte size, SHA-256, native-runtime inventory, and node-agent payload hash match this record.",
+      "The package embeds version 2.2.7, build 171, and source commit 4d04737e586a232fe17ec974c14a79075d03b701; owner-authorized Pi acceptance testing follows stable publication."
+    ]
+  }
+}
