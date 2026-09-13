@@ -4,13 +4,13 @@
   "platform": "linux",
   "architecture": "arm64",
   "version": "2.2.5",
-  "build": 167,
-  "source_commit": "78ba28bad13b3a341cc47881e340e0eb57dae02e",
-  "published_at": "2026-09-13T00:38:59Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.2.5-build.167",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.2.5-build.167/ApolloPassiveReceive-2.2.5-build.167-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.2.5-build.167-linux-arm64.zip",
-  "byte_size": 17947039,
-  "sha256": "323a0f90ff1cbcb37280606da5bb4168055890e2473eaf1a1af7d52820196fa2",
-  "short_release_notes": "Enables required KA9Q profile switching for broad-sweep SDR plans, preserves saved receiver settings during managed activation, and uses generic receiver-attention wording. CJ-1 is unchanged."
+  "build": 168,
+  "source_commit": "c75bde2a7cdae3f5f094e70aae2e231c2d49cca5",
+  "published_at": "2026-09-13T01:37:24Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.2.5-build.168",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.2.5-build.168/ApolloPassiveReceive-2.2.5-build.168-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.2.5-build.168-linux-arm64.zip",
+  "byte_size": 17947819,
+  "sha256": "5bb9c801976bc77a6d0db9acef369bd4bef8ae8cbaf832160ee043408ebaf992",
+  "short_release_notes": "Corrects direct-provisioned Pi identity reconciliation and improves actionable Pi recovery feedback. Preserves the separately managed KA9Q radiod runtime. After installation, recover the existing Pi node once using its owner account; receiver and reporting acceptance remain post-install checks."
 }
