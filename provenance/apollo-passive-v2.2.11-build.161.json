@@ -1,0 +1,34 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.11-build.161",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "fe63f1a383bb85c5d4d671cee7f255efeb66eb7e"
+  },
+  "release": {
+    "version": "2.2.11",
+    "build": 161,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.11-build.161-linux-arm64.zip",
+    "byte_size": 18120459,
+    "sha256": "70faadd0f95a26e09ed27f1aac1d16ee6167eba7a0772871bed6434e7aa92483",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo source commit fe63f1a383bb85c5d4d671cee7f255efeb66eb7e passed the targeted protected-controller and dashboard-status test suites.",
+      "The Linux ARM64 ZIP was built on the approved Pi runner and passed archive integrity validation; its byte size, SHA-256, native-runtime inventory, and principal executable hash match this record.",
+      "Node 03 accepted the exact package through the protected controller, restarted successfully, and exposed a current KA9Q spectrum with 238 display bins and eight candidates."
+    ]
+  }
+}
