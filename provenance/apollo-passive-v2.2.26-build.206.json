@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.26-build.206",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "892026955fb0aac228884f1027743de76dc26b69"
+  },
+  "release": {
+    "version": "2.2.26",
+    "build": 206,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.26-build.206-linux-arm64.zip",
+    "byte_size": 18371797,
+    "sha256": "81f03bb665c4178012a37348338d89747cf34925998786262a6e9716703be1c3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact Apollo source commit 892026955fb0aac228884f1027743de76dc26b69 was independently built twice on the approved native ARM64 runner; both archives hashed to 81f03bb665c4178012a37348338d89747cf34925998786262a6e9716703be1c3.",
+      "The retained artifact is 18,371,797 bytes and embeds version 2.2.26, Build 206, Linux ARM64, and the exact source commit.",
+      "Artifact verification passed with protected-controller manifest SHA-256 a8f2d51e4773fa376418bd3012017f38d04a65661edc31f67733b8660bf3c36f and packaged radiod SHA-256 50dec57023fdc202a24e560dbef79768f0102336dd665f4da1192c68a7ddf9fa.",
+      "Root authorization and recovery, isolated fresh-node preenrollment, and intended unprivileged ownership qualification gates passed before publication."
+    ]
+  }
+}
