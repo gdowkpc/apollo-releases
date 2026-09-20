@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.28-build.208",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "a5398a3523683b94513fef3b08f7a45e39a3f63c"
+  },
+  "release": {
+    "version": "2.2.28",
+    "build": 208,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.28-build.208-linux-arm64.zip",
+    "byte_size": 18425803,
+    "sha256": "076c97882ee6057deaac19a211bcdfc6508443b4e47d97fcd8e3d086497f0e89",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact Apollo source commit a5398a3523683b94513fef3b08f7a45e39a3f63c was independently built twice on approved native ARM64 hardware; both Build 208 archives hashed to 076c9782ee6057deaac19a211bcdfc6508443b4e47d97fcd8e3d086497f0e89.",
+      "The retained artifact is 18,425,803 bytes and embeds version 2.2.28, Build 208, Linux ARM64, and the exact source commit.",
+      "Artifact inventory/provenance verification passed with protected-controller manifest SHA-256 8fcf76efd64b9021b6dd913785273641eeb99bf322c13f19d70f0aa341129397 and packaged radiod SHA-256 50dec57023fdc202a24e560dbef79768f0102336dd665f4da1192c68a7ddf9fa.",
+      "The approved apollo-physical-arm64-tester GitHub workflow completed source, Flutter, ARM64 reproducibility, and loopback smoke qualification for commit a5398a3523683b94513fef3b08f7a45e39a3f63c.",
+      "Release-security, convergence, protected-controller, provenance, receiver, and reporting qualification suites passed on the native ARM64 runner."
+    ]
+  }
+}
