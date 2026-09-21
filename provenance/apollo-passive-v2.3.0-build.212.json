@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.0-build.212",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "28e0c9f522f42fc120d326e225f44f52a1b68dcd"
+  },
+  "release": {
+    "version": "2.3.0",
+    "build": 212,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.0-build.212-linux-arm64.zip",
+    "byte_size": 18443667,
+    "sha256": "7eb8c96e634c67d38828d1c090c97a6cbec613d6ec9b07d411dc36a81bbe815d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact Apollo source commit 28e0c9f522f42fc120d326e225f44f52a1b68dcd was independently built twice on the approved native ARM64 runner apollo-kd6kpc-14; both Build 212 archives hashed to 7eb8c96e634c67d38828d1c090c97a6cbec613d6ec9b07d411dc36a81bbe815d.",
+      "The retained artifact is 18,443,667 bytes and embeds version 2.3.0, Build 212, Linux ARM64, and the exact source commit.",
+      "Artifact inventory and provenance verification passed with protected-controller manifest SHA-256 e3246dd0531576710d1128d8a236c982626fdd1636c4fb0ee38f0af2fd931218 and packaged radiod SHA-256 50dec57023fdc202a24e560dbef79768f0102336dd665f4da1192c68a7ddf9fa.",
+      "Native qualification passed the root security and convergence suite, isolated clean-node fixture, unprivileged ownership gate, and 80 Airspy/controller tests with zero failures.",
+      "Airspy discovery regressions prove that published 2 m spectrum and candidates remain within 144.000 through 148.000 MHz while the physical capture contract remains unchanged."
+    ]
+  }
+}
