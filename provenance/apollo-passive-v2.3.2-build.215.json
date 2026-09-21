@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.2-build.215",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "2cb6297acc92962547a983351e1db6db608f89c6"
+  },
+  "release": {
+    "version": "2.3.2",
+    "build": 215,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.2-build.215-linux-arm64.zip",
+    "byte_size": 18493760,
+    "sha256": "6d14d03a99b98eb428a1ac6eb130e7a0ef1939643d084f49e8f96f93438d9796",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo source commit 2cb6297acc92962547a983351e1db6db608f89c6 is the protected-main merge of the reviewed Build 215 allocation atop qualified integrated source 50488166a031a57c6d01591362fc08d444a18379.",
+      "The retained 18,493,760-byte artifact was built on approved native ARM64 runner apollo-kd6kpc-14 and embeds Apollo 2.3.2 Build 215, Linux ARM64, and source commit 2cb6297acc92962547a983351e1db6db608f89c6.",
+      "Independent artifact extraction and portable-package verification passed with artifact SHA-256 6d14d03a99b98eb428a1ac6eb130e7a0ef1939643d084f49e8f96f93438d9796, package inventory SHA-256 7bb739ba024442960686e2309d081f2316a0b60bb4c2dd50e78f2f0bc7ed121d, and 50 protected controller inventory entries.",
+      "The packaged protected-controller manifest SHA-256 is 87be39518687ba4bf3d429eb153f6acc820675127ff916551e15ad2c9b765af0; controller-generation bootstrap, transition, and provenance modules are present and hash-bound.",
+      "Native ARM64 package-contract, DPL pipeline, protected controller, update, and rollback qualification passed; universal runtime selection remains RTL-SDR, Airspy R2, and KA9Q SDRplay RSP1B readiness."
+    ]
+  }
+}
