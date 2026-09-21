@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.30-build.210",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "54200b039d529b8e46ba0d82ed505a1bb6696ebc"
+  },
+  "release": {
+    "version": "2.2.30",
+    "build": 210,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.30-build.210-linux-arm64.zip",
+    "byte_size": 18429088,
+    "sha256": "52a91e1bf3c9a404eca42ab40de8c101ea4d2d97dadb6203e672e8aac584061f",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact Apollo source commit 54200b039d529b8e46ba0d82ed505a1bb6696ebc was independently built twice on the approved native ARM64 runner at the same checkout path; both Build 210 archives hashed to 52a91e1bf3c9a404eca42ab40de8c101ea4d2d97dadb6203e672e8aac584061f.",
+      "The retained artifact is 18,429,088 bytes and embeds version 2.2.30, Build 210, Linux ARM64, and the exact source commit.",
+      "Artifact inventory/provenance verification passed with protected-controller manifest SHA-256 156be314a8819c6db79066d68aae91655df4308eb25320da9ebe2c0ce5e0860d and packaged radiod SHA-256 50dec57023fdc202a24e560dbef79768f0102336dd665f4da1192c68a7ddf9fa.",
+      "The approved apollo-physical-arm64-tester native workflow built the receiver-neutral Linux ARM64 package with RTL-SDR, Airspy R2, and SDRplay/KA9Q runtime declarations; the central KA9Q 2026.09.20-1-trixie1 provenance contract is packaged, ENABLE_FOBOS=0 and source-build requirements remain declared.",
+      "Root-scoped protected-controller and convergence suites, isolated fresh-node preenrollment, and the intended unprivileged rollback/ownership test passed on the native ARM64 runner."
+    ]
+  }
+}
