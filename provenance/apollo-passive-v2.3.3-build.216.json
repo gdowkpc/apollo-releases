@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.3-build.216",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "3a9d6133966627c8c371f16bfe94e6a30b05c30b"
+  },
+  "release": {
+    "version": "2.3.3",
+    "build": 216,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.3-build.216-linux-arm64.zip",
+    "byte_size": 18546742,
+    "sha256": "63d6213f7559c41d7078769221300a92f1ed55e273b3d4d83a83db5e5f12fc3a",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #274 merged the reviewed Airspy per-segment front-end and RF activation-health corrections as 9e31f09a8cd77ed318d9033bf4abac0a344be34d; PR #278 allocated Apollo 2.3.3 Build 216 through protected main as source 3a9d6133966627c8c371f16bfe94e6a30b05c30b. Both required release-security checks passed.",
+      "The 18,546,742-byte universal Linux ARM64 ZIP was built on approved runner apollo-kd6kpc-14 from clean source 3a9d6133966627c8c371f16bfe94e6a30b05c30b with RTL-SDR, Airspy R2, SDRplay RSP1B readiness, and KA9Q radiod. Its SHA-256 is 63d6213f7559c41d7078769221300a92f1ed55e273b3d4d83a83db5e5f12fc3a.",
+      "An independent rebuild at the same canonical source path, with identical timestamp and inputs, produced a byte-identical ZIP. A checkout at a different absolute path produced a different pkg executable; cross-path bitwise reproducibility is not claimed.",
+      "Independent extraction and portable-directory verification passed: 121 packaged files, package inventory SHA-256 2d231a52f2746f54615175c1bfd900f4310eb018d4375f1d9657262c05dfa631, 50 protected controller inventory entries, and protected manifest SHA-256 282f59b007b40473ac6d7097534c622ed55b515fa22ead241fce29ad3dda9a22.",
+      "Prescribed Linux release-security groups, native ARM64 Airspy/package/protected-controller/update tests, and real-systemd historical-transition fixture passed. One extra KA9Q output-range test failed identically on the retained Build 215 source and changes no Build 216-touched KA9Q file. No production node was contacted during package qualification."
+    ]
+  }
+}
