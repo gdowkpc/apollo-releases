@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.4-build.217",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "b0abf0720bd3c80143fc6145e4b96d592804197e"
+  },
+  "release": {
+    "version": "2.3.4",
+    "build": 217,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.4-build.217-linux-arm64.zip",
+    "byte_size": 18574147,
+    "sha256": "e9ac2ec207fc6a1398641c43ba1de1415f5ad791efe86857a169d6185e713a0f",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #292 merged the protected Airspy policy correction; PR #295 allocated Apollo 2.3.4 Build 217 from origin/main b0abf0720bd3c80143fc6145e4b96d592804197e. The required release-security-contract check passed on the reviewed allocation head. Build 216 RF corrections remain in source.",
+      "Approved aarch64 runner apollo-kd6kpc-14 built one receiver-neutral ZIP with RTL-SDR, Airspy R2, SDRplay RSP1B readiness, and KA9Q radiod. Two builds at the same canonical source path and timestamp were byte-identical: SHA-256 e9ac2ec207fc6a1398641c43ba1de1415f5ad791efe86857a169d6185e713a0f, 18,574,147 bytes.",
+      "Final ZIP extraction verified 121 packaged files, package inventory SHA-256 bbcbf83236027f9b62cf7e86db69e74386ef21e1b843cef30069dc69fc311753, 50 protected-controller entries, protected manifest SHA-256 dce7e31dc8c5505aba5aa8165d81c0ce8b7ede2cb5462c19e9e080caa6bfc23a, and the packaged Airspy policy against its packaged controller.",
+      "Native ARM64 package tests: 129 passed, 3 skipped; receiver tests: 81 passed; broader controller tests: 284 passed, 2 skipped; selected recovery tests: 24 passed, 5 skipped. All groups had zero failures. ARM64 ELF and principal dynamic-dependency checks passed. No production node was contacted during qualification."
+    ]
+  }
+}
