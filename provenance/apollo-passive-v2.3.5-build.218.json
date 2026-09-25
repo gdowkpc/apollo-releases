@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.5-build.218",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "bc5f1898908ee6146765a3f93435c74e948209df"
+  },
+  "release": {
+    "version": "2.3.5",
+    "build": 218,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.5-build.218-linux-arm64.zip",
+    "byte_size": 18577519,
+    "sha256": "dcd65148ebc4ecc072a9f71e238e4f743a89f5c2629a1529ba9d2985eb751ae7",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #303 merged the genuine sampled-spectrum publication correction; PR #304 allocated Apollo 2.3.5 Build 218 from protected origin/main bc5f1898908ee6146765a3f93435c74e948209df. The required release-security-contract check passed on the reviewed allocation head. Universal Pi Updater 1.0.25 remained unchanged.",
+      "Approved aarch64 runner apollo-kd6kpc-14 built one receiver-neutral ZIP with RTL-SDR, Airspy R2, SDRplay RSP1B readiness, and KA9Q radiod. Two native builds from the same frozen source and canonical timestamp were byte-identical: SHA-256 dcd65148ebc4ecc072a9f71e238e4f743a89f5c2629a1529ba9d2985eb751ae7, 18,577,519 bytes.",
+      "Final ZIP extraction verified 121 packaged files, package inventory SHA-256 59ad260b73f60b27568ea17036179fa3e20e35d44995f2957a2376f39d5b4934, 50 protected-controller entries, protected manifest SHA-256 749c57a7a1e5575f4e0eb468e73f946765e2916c63fb6d1e267c3761b041a29f, and the packaged Airspy policy against its packaged controller.",
+      "Extracted-package regression passed using packaged Airspy code at the five-second status cadence: sampled spectrum survived all three segment transitions with original segment identity and real UTC sample time, then expired as stale. Native ARM64 package: 129 passed, 3 skipped; receiver: 83 passed; controller: 284 passed, 2 skipped; recovery: 25 passed, 7 skipped. Zero failures. ARM64 ELF and principal dependency checks passed. No production node was contacted."
+    ]
+  }
+}
