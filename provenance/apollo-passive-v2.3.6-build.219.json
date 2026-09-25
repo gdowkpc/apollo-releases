@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.6-build.219",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c7b40d8d7db9d52175310c179654f4c3d3253437"
+  },
+  "release": {
+    "version": "2.3.6",
+    "build": 219,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.6-build.219-linux-arm64.zip",
+    "byte_size": 18598043,
+    "sha256": "1e2b300f1ede28b4e8e14c9e5c1d439c7152183584b3e8e132da5667d9ca5860",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Application RSP1B target contract PR #310 and generic legacy-baseline updater PR #311 merged through protected main; updater 1.0.29 was physically ARM64-qualified, production-signed, published immutable, and independently verified. PR #313 allocated Apollo 2.3.6 Build 219 through protected main at source c7b40d8d7db9d52175310c179654f4c3d3253437; its required release-security-contract check passed on the reviewed exact head.",
+      "Approved aarch64 runner apollo-kd6kpc-14 built one receiver-neutral ARM64 ZIP from the frozen protected-main source with RTL-SDR, Airspy R2, SDRplay RSP1B readiness, and KA9Q radiod. Two native builds with identical inputs and canonical timestamp were byte-identical: SHA-256 1e2b300f1ede28b4e8e14c9e5c1d439c7152183584b3e8e132da5667d9ca5860, 18,598,043 bytes.",
+      "Clean extracted package verified 123 file hashes and modes, 52 protected-controller entries, protected manifest SHA-256 e71c80daa1d38766f46576b0d05583814f6c8195c885d14dca496ee4286aa8d3, packaged Airspy policy/controller consistency, and packaged RSP1B/KA9Q service and genuine RF-progress health contracts. AArch64 ELF and principal dependency checks passed.",
+      "Native ARM64 qualification: package 148 passed, 3 skipped; receiver 83 passed; protected controller 303 passed, 2 skipped; recovery 25 passed, 8 skipped; RTL-specific 22 passed; release identity 4 passed. The packaged five-second sampled-spectrum regression passed. Zero failures in these release gates.",
+      "The private Build 191 ZIP was hash-checked in updater and Build 219 qualification, never committed or published. Extracted updater 1.0.29 plus Build 219 verified legacy identity, packaged target service/health, all target modes, and restoration of the Build 191 release link and preserved receiver bytes. Live KD6KPC-13 and KD6KPC-3 candidate RF plus clean Pi installation remain separate release-candidate gates."
+    ]
+  }
+}
