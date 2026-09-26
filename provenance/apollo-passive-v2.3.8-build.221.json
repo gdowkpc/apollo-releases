@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.8-build.221",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "d8a4b8048c8e217201619cb0504feb2a12b02723"
+  },
+  "release": {
+    "version": "2.3.8",
+    "build": 221,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.8-build.221-linux-arm64.zip",
+    "byte_size": 18629657,
+    "sha256": "f0fd58c8f81611d5300cab9a1abfe091550df6fac0361bc836c8dfd2ea4ea4ee",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #327 and Build 221 allocation PR #328 merged through protected main; release-security-contract passed. Exact source is d8a4b8048c8e217201619cb0504feb2a12b02723. Registry assigned Apollo 2.3.8 Build 221, prepared_unpublished, with next available build 222.",
+      "Physical ARM64 runner apollo-kd6kpc-14 built the receiver-neutral ZIP twice at one canonical source path and timestamp with byte-identical SHA-256 f0fd58c8f81611d5300cab9a1abfe091550df6fac0361bc836c8dfd2ea4ea4ee, 18,629,657 bytes. Package has 124 files and 53 protected-controller entries; protected manifest SHA-256 aacfe4d17d737a0993a29154558b9a83f7238cd95d3fdf34c2b3a7d7d3b8b327.",
+      "Physical target-state qualification workflow 36251084848 passed against this exact ZIP, private Build 191 ZIP SHA-256 5e13e701be9d44004085db08cc1dabccc9cc272e5742f47012f28c9f13582d98, and the two exact disabled Apollo drop-ins retained from KD6KPC-13. Private legacy evidence was neither committed nor published.",
+      "Production clean-install and generic-upgrade entrypoints used the same packaged target-state materializer in root-owned isolated Pi filesystems. The legacy path authenticated and removed the disabled drop-ins, generated the signed RSP1B/KA9Q profile, preserved node-owned bytes, and restored exact Build 191 state on rollback; clean install reached setup-required.",
+      "Native ARM64 package, protected-controller, receiver, RTL, release, and security tests passed: 49/49 and 125/125 selected tests, zero failures. KD6KPC-13 RSP1B and KD6KPC-3 Airspy live RF health remain separate deployment gates; this package qualification does not assert live-node success."
+    ]
+  }
+}
