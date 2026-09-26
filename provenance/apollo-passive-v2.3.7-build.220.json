@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.7-build.220",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "63836cc642f97f24540e16169d0780c33cdb7a01"
+  },
+  "release": {
+    "version": "2.3.7",
+    "build": 220,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.7-build.220-linux-arm64.zip",
+    "byte_size": 18629499,
+    "sha256": "680cd10a0dba426baae5d2ac64b74d9bb0bc361b5af3257635c6c0722b0d6cd5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #326 merged through protected main at 63836cc642f97f24540e16169d0780c33cdb7a01 after release-security-contract passed. The Build 220 registry remains prepared_unpublished at version 2.3.7/build 220; the earlier candidate was superseded and this artifact was rebuilt from the exact merged source.",
+      "Approved physical ARM64 runner apollo-kd6kpc-14 produced one receiver-neutral ZIP twice at the canonical build path and timestamp with byte-identical SHA-256 680cd10a0dba426baae5d2ac64b74d9bb0bc361b5af3257635c6c0722b0d6cd5, 18,629,499 bytes. Package includes RTL-SDR, Airspy R2, SDRplay RSP1B/KA9Q runtimes; 124 package files and 53 protected-controller inventory entries; protected manifest SHA-256 dc55745a496cb3c04cbf62726400b0c3ae2b066c9f46900fbc7152e247b666c1.",
+      "Physical target-state qualification workflow 36243237435 passed against this exact ZIP and private Build 191 ZIP SHA-256 5e13e701be9d44004085db08cc1dabccc9cc272e5742f47012f28c9f13582d98. Production clean-install and generic-upgrade entrypoints ran inside root-owned isolated Pi filesystems through the same packaged target-state materializer.",
+      "Signed package-owned files matched; profile-derived RSP1B and setup-required states matched their authenticated contracts; preserved node-owned bytes stayed stable; obsolete predecessor files were removed; and failed activation restored Build 191. The private Build 191 ZIP was neither committed nor published.",
+      "Native ARM64 selected package, controller, receiver, convergence, rollback, RTL, and release-security tests passed: 104 passed, 6 skipped, 0 failed under the production root staging context. Live KD6KPC-13 RSP1B and KD6KPC-3 Airspy receiver/RF qualification remain deployment gates; package qualification does not assert live-node RF success."
+    ]
+  }
+}
