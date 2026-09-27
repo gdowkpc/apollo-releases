@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.12-build.225",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "d50a7372e3bd64ddd85137c5e1c15821a0aee503"
+  },
+  "release": {
+    "version": "2.3.12",
+    "build": 225,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.12-build.225-linux-arm64.zip",
+    "byte_size": 18835987,
+    "sha256": "3f2bdc59699bae40a5bf134b2faf3f6eda9e0dd8fb4c1b3bc8f294160560a76b",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #347 corrected legacy RSP1B exact-serial identity and target-native RF progress; PR #345 allocated Apollo 2.3.12 Build 225. Both passed release-security-contract and merged through protected main. Frozen source is d50a7372e3bd64ddd85137c5e1c15821a0aee503.",
+      "KD6KPC-14 built the receiver-neutral ZIP twice from the same frozen source path and timestamp; both were byte-identical at SHA-256 3f2bdc59699bae40a5bf134b2faf3f6eda9e0dd8fb4c1b3bc8f294160560a76b, 18,835,987 bytes. The release manifest hashes to b2223a732db66735e324517a16f372975f96fa95e998aa29e1a821e7444a8c63 and protected manifest to 4d16b541aa652e4532a606aebffb21493e1a5e63d490b81581b4d965e34a7bfb.",
+      "Physical ARM64 target-state qualification workflow 36343323952 passed against the exact ZIP and private Build 191 evidence SHA-256 5e13e701be9d44004085db08cc1dabccc9cc272e5742f47012f28c9f13582d98: packaged clean install, legacy RSP1B convergence and rollback, isolated SDRplay module loading, and real systemd profile-apply write. Private evidence and SDRplay API inputs were not published.",
+      "KD6KPC-14 focused receiver tests passed 59/59, root-context target-state tests 15/15, and portable-package/controller tests 89/89. The signed target retains RTL-SDR, Airspy R2 and SDRplay RSP1B/KA9Q profiles; the SDRplay vendor API remains an external prerequisite.",
+      "Live KD6KPC-13 RSP1B and KD6KPC-3 Airspy RF qualification remain separate deployment gates. Publication does not assert live-node success."
+    ]
+  }
+}
