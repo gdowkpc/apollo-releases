@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.11-build.224",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "717f2a893c5b67e22bfab882de1e004bd3791374"
+  },
+  "release": {
+    "version": "2.3.11",
+    "build": 224,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.11-build.224-linux-arm64.zip",
+    "byte_size": 18698801,
+    "sha256": "3cc36096f13c1d7f4ebc92c4980b7e4a1ab49f152c69d48bb791c209f5aaea20",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #342 corrected package-owned KA9Q SDRplay module closure and the restrictive profile-apply write path; PR #343 allocated Apollo 2.3.11 Build 224. Both passed release-security-contract and merged through protected main. Exact source is 717f2a893c5b67e22bfab882de1e004bd3791374.",
+      "KD6KPC-14 built the receiver-neutral ZIP twice from one frozen source path and timestamp, byte-identical SHA-256 3cc36096f13c1d7f4ebc92c4980b7e4a1ab49f152c69d48bb791c209f5aaea20, 18,698,801 bytes. It contains 132 inventoried files; protected manifest SHA-256 is 199fcf095b9c1114005116e0e8e7a6a66c284c023b8a3076fe18c6e04a1274ea. KA9Q Airspy, RTL-SDR, and SDRplay modules are target-owned; the separately licensed SDRplay API remains an external prerequisite and is not in the ZIP.",
+      "Physical ARM64 package/protected-controller/security tests passed 156/156; receiver/target-state tests passed 162 with seven expected historical-fixture skips and zero failures; root-context target-state tests passed 15/15.",
+      "Physical target-state qualification workflow 36332443580 passed against the exact ZIP and retained private Build 191 ZIP SHA-256 5e13e701be9d44004085db08cc1dabccc9cc272e5742f47012f28c9f13582d98. It exercised production packaged clean install, legacy RSP1B convergence and rollback, isolated extracted-package SDRplay module loading, and a real systemd profile-apply write under ProtectSystem=strict. Private SDRplay development inputs and Build 191 evidence were neither committed nor published.",
+      "This universal package retains RTL-SDR, Airspy R2, and SDRplay RSP1B/KA9Q profiles. Live KD6KPC-13 RSP1B and KD6KPC-3 Airspy RF qualification remain separate deployment gates; publication does not assert live-node success."
+    ]
+  }
+}
