@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.10-build.223",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "7df2597dbc01a1b54784a44e75d96571a97a1e77"
+  },
+  "release": {
+    "version": "2.3.10",
+    "build": 223,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.10-build.223-linux-arm64.zip",
+    "byte_size": 18665534,
+    "sha256": "551501282abe189bf2138528aee71b02493d108a3c2f56d37c17c374ccd25d86",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #339 packaged the authenticated KA9Q presets and corrected generic rollback metadata; PR #340 prepared updater 1.0.41; PR #341 assigned the Build 223 identity and receiver release gates. Each merged through protected main after release-security-contract passed. Exact application source is 7df2597dbc01a1b54784a44e75d96571a97a1e77.",
+      "Physical ARM64 runner apollo-kd6kpc-14 built the receiver-neutral ZIP twice from one frozen source path and timestamp with byte-identical SHA-256 551501282abe189bf2138528aee71b02493d108a3c2f56d37c17c374ccd25d86, 18,665,534 bytes. The ZIP contains 129 package files; protected-controller bootstrap manifest SHA-256 is 0d5db97e6860e123aaa99b136e413dd3806a69d32a89fdef25c76f2a224e3bc0. Packaged KA9Q presets SHA-256 is 024b4d4d9a232c9001d9bd53ecdd23cfba849a34a6af7a738c4ac209fac2e87c.",
+      "Physical ARM64 package/protected-controller/security tests passed 155/155; receiver/target-state/updater tests passed 162 with seven historical-fixture skips and zero failures; root-context target-state tests passed 15/15.",
+      "Physical target-state qualification workflow 36329160364 passed 2/2 tests against the exact ZIP, retained private Build 191 ZIP SHA-256 5e13e701be9d44004085db08cc1dabccc9cc272e5742f47012f28c9f13582d98, and authenticated disabled Apollo drop-ins. It exercised packaged clean install and legacy RSP1B upgrade through the same materializer, profile-specific state, and rollback. Private node evidence was neither committed nor published.",
+      "The one universal ARM64 package includes RTL-SDR, Airspy R2, and SDRplay RSP1B/KA9Q runtime profiles. Live KD6KPC-13 RSP1B and KD6KPC-3 Airspy RF qualification are separate deployment gates; immutable publication does not assert live-node success."
+    ]
+  }
+}
