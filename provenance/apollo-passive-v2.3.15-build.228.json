@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.15-build.228",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "95ff44061b9a479345a6fe8b553d3ad5cf1df27e"
+  },
+  "release": {
+    "version": "2.3.15",
+    "build": 228,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.15-build.228-linux-arm64.zip",
+    "byte_size": 18837484,
+    "sha256": "dd6dd97a80112130d513286f5e9b082b0beaccf80f0d46dfa61941a5d68e3ae4",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #354 corrected the packaged RSP1B target-native health observation of genuine sampled RF during sweeping; PR #355 prepared Apollo 2.3.15 Build 228. Both passed release-security-contract and merged through protected main. Frozen source is 95ff44061b9a479345a6fe8b553d3ad5cf1df27e.",
+      "KD6KPC-14 built the receiver-neutral ARM64 ZIP twice from the same canonical source path, inputs, and UTC timestamp. Both were byte-identical at SHA-256 dd6dd97a80112130d513286f5e9b082b0beaccf80f0d46dfa61941a5d68e3ae4, 18,837,484 bytes. Release manifest SHA-256 is 7aa87770871dced82f9fda6ae44b349a2d3c61d3a2ad343b83252a1303eec06a; protected manifest SHA-256 is 5a2343fbd66d950db3b614c0e02693c054d3d45ea03e34a404d1c9de34aeb011.",
+      "Physical ARM64 target-state qualification workflow 36360132818 passed against this exact ZIP and the private Build 191 fixture: production clean install, legacy RSP1B convergence and rollback, isolated SDRplay module loading, and systemd profile-apply write.",
+      "KD6KPC-14 passed 141 selected native receiver and package tests with one platform skip, 52 Airspy/RTL/profile tests, and 15 target-state root tests. The SDRplay vendor API remains an external prerequisite and private build inputs are not published.",
+      "Live KD6KPC-13 RSP1B and KD6KPC-3 Airspy RF qualification remain separate deployment gates. Publication does not assert live-node success."
+    ]
+  }
+}
