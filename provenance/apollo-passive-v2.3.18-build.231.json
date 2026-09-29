@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.18-build.231",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "dc0e434a9ba5375b9794611961de31136d11e574"
+  },
+  "release": {
+    "version": "2.3.18",
+    "build": 231,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.18-build.231-linux-arm64.zip",
+    "byte_size": 18851228,
+    "sha256": "0a2f224f3debf3f04433a1a8a75704826aef7a90338b3c79979d017ae473114d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #376 introduced the target-owned persistent KA9Q RTL-SDR profile; PR #378 assigned Apollo 2.3.18 Build 231. Both passed release-security-contract and merged through protected main at source dc0e434a9ba5375b9794611961de31136d11e574.",
+      "KD6KPC-14 built the receiver-neutral ARM64 ZIP twice from the same frozen source path, native runtime inputs, and UTC timestamp. Both 18,851,228-byte ZIPs were byte-identical at SHA-256 0a2f224f3debf3f04433a1a8a75704826aef7a90338b3c79979d017ae473114d. Release-manifest SHA-256 is b5e625343f5fe355efe1dbf650c73586f09e31acc524dcf9206429fd266ef32f; protected-controller manifest SHA-256 is 55e57fb4a96c2083fad757d8e36c4edd7aabe1bb71e66196d90bba67e35bd180.",
+      "Physical ARM64 target-state workflow 36521017297 passed against this exact ZIP and private Build 191 evidence: production clean install, legacy convergence and rollback, isolated packaged RSP1B module/profile-apply checks, and root-extracted RTL runtime inventory verification as the unprivileged service user.",
+      "KD6KPC-14 passed 122 relevant native package, protected-controller, receiver, and security tests with no failures; three optional tests skipped because they require a different immutable artifact or are separately exercised by the physical package workflow. The SDRplay vendor API remains an external prerequisite; private Build 191 evidence and SDRplay build inputs are not published.",
+      "Live KD6KPC-13 RTL-SDR and KD6KPC-3 Airspy RF qualification remain separate deployment gates. Publication does not assert live-node success."
+    ]
+  }
+}
