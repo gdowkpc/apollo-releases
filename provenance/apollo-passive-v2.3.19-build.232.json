@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.19-build.232",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c4b16d0c3657ce97c6ac615e0a35bf141c93722f"
+  },
+  "release": {
+    "version": "2.3.19",
+    "build": 232,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.19-build.232-linux-arm64.zip",
+    "byte_size": 18855730,
+    "sha256": "9522d2b3e8e4214188d28779ec233e0df30c28514ec38d1651cf5640b441fd01",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #389 introduced the generic RTL/KA9Q startup correction and merged through protected main; PR #390 assigned Apollo 2.3.19 Build 232. Protected-main source is c4b16d0c3657ce97c6ac615e0a35bf141c93722f.",
+      "KD6KPC-14 built the receiver-neutral ARM64 ZIP twice from the same frozen source path, native runtime inputs, and UTC timestamp. Both 18,855,730-byte ZIPs were byte-identical at SHA-256 9522d2b3e8e4214188d28779ec233e0df30c28514ec38d1651cf5640b441fd01. Release-manifest SHA-256 is 41887c49e636fc32e53fe85029226f3796467b59cc192ab50a5bf183f8ebf617; protected-controller manifest SHA-256 is 5348ca76d694ae52f9ef2f4aa694537c67748c03330923b245607f15fb23a24f.",
+      "The merged-source native scoped suite passed 175 tests with 0 failures and 6 documented skips. The extracted package verifier passed Build 232/source identity, package inventory, protected-controller manifest, and receiver-backend contract checks.",
+      "Live KD6KPC-13 and KD6KPC-3 RF qualification remain deployment gates and are not asserted by publication. Private Build 191 evidence and proprietary SDRplay inputs are not published."
+    ]
+  }
+}
