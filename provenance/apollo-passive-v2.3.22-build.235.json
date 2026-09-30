@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.22-build.235",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e6275987748463c64d0c165a6de1a6aa60658198"
+  },
+  "release": {
+    "version": "2.3.22",
+    "build": 235,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.22-build.235-linux-arm64.zip",
+    "byte_size": 18859552,
+    "sha256": "9e4227bcbd79e1af50288f2d1ccb5d027cc6ae1e2d6d81fac8d6653d22989276",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR #400 consolidates KA9Q native status/measurement delivery, shutdown, selected-plan RF health and rollback service-stop fixes. Approved PR #401 assigns Apollo 2.3.22 Build 235 and updater 1.0.59. Both required release-security-contract checks passed and both exact heads merged through protected main at source e6275987748463c64d0c165a6de1a6aa60658198.",
+      "KD6KPC-14 built twice through the canonical physical ARM64 build path using frozen runtime inputs and UTC timestamp 2026-09-30T13:00:00.000Z. Both 18,859,552-byte ZIPs match SHA-256 9e4227bcbd79e1af50288f2d1ccb5d027cc6ae1e2d6d81fac8d6653d22989276.",
+      "Physical production clean-install, authenticated private legacy convergence, obsolete-file removal and rollback passed: 2 tests, zero skips. Isolated RSP1B module/dependency-load and real-systemd profile-apply write passed; root-installed RTL runtime service-user readability passed. Private historical ZIP and proprietary API inputs are not published.",
+      "Native KA9Q status/spectrum stream through Apollo and the actual packaged target RF-health provider passed, both in Node and the embedded ARM64 executable. This uses synthetic frontend test equipment and is not physical receiver RF qualification.",
+      "Extracted package verifies all 137 entries and 53 protected files including modes. Release manifest SHA-256 2c206f1c8155ad171da1db2ed76d4653f914fde9b88b25c86b8039f41d628bd0; protected manifest SHA-256 9fa482370f791b45f1b965e775896cf59f8fd3d78b710449971670a8f6795cd2; principal executable SHA-256 be4dc7b48f43e035e3c9672f2834013c019fdf10b1f6dd6039b3b0a3ea0989f6.",
+      "Physical ARM64 application/package/receiver regressions passed 218 tests with zero skips. Extracted target-state/rollback passed 65 tests with zero skips. Full native updater suite passed 293 tests with zero skips; counts overlap and are not an aggregate unique-test total.",
+      "Build 235 and updater 1.0.59 are receiver-neutral. Live KD6KPC-13 RTL-SDR and KD6KPC-3 Airspy RF qualification remain deployment gates. Publication does not assert public-beta GO. SDRplay/RSP1B live qualification remains experimental/deferred."
+    ]
+  }
+}
