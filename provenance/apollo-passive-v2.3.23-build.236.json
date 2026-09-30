@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.23-build.236",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "0bb5bbb9ac7210d42f99a433b088e51727978a24"
+  },
+  "release": {
+    "version": "2.3.23",
+    "build": 236,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.23-build.236-linux-arm64.zip",
+    "byte_size": 18860419,
+    "sha256": "4078942a6fa5d1c900b1035d5db9e7802f068ff06a02d7fc1e7f0cd6c2a25ad5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR #402 aligns KA9Q configure-before-observe startup with upstream and separates measured RF readiness from audio delivery. Approved PR #403 assigns Apollo 2.3.23 Build 236. Both required release-security-contract checks passed and exact heads merged through protected main at source 0bb5bbb9ac7210d42f99a433b088e51727978a24.",
+      "KD6KPC-14 built twice at the canonical physical ARM64 path using frozen native runtime inputs and UTC timestamp 2026-09-30T16:00:00.000Z. Both 18,860,419-byte ZIPs match SHA-256 4078942a6fa5d1c900b1035d5db9e7802f068ff06a02d7fc1e7f0cd6c2a25ad5. Independently copied ZIP matches the same hash.",
+      "Physical production clean-install, authenticated private legacy convergence, obsolete-file removal and rollback passed: two tests, zero skips. Isolated RSP1B module/dependency load and real-systemd profile-apply write passed; root-installed RTL service-user readability passed. Private historical ZIP and proprietary API inputs are not published.",
+      "Extracted final-ZIP native radiod/tune/pcmrecord with initially untuned synthetic test frontend passed both 3-channel and production-sized 223-channel pipelines, in Node and embedded ARM64 app code. Three genuine measured captures advance; frozen evidence replay fails the packaged target health provider. This is test equipment, not physical receiver RF qualification.",
+      "All 137 package entries and 53 protected entries verify including modes and packaged service/controller contract. Release manifest SHA-256 3a169b6f729bbdcb28f35afb1b52ac79545d06335e2717e37ec10afefa0dc348; protected manifest SHA-256 9fa482370f791b45f1b965e775896cf59f8fd3d78b710449971670a8f6795cd2; principal executable SHA-256 90e87d30927e0cad39e039e5925c423cb1a24fc5d8443a4660531b09ce1eba85.",
+      "Physical ARM64 application/package/receiver/security regressions passed 260 tests, zero failures, cancellations or skips. The first run's 30-second harness timeout in the unchanged CTCSS suite was resolved by the final 120-second test-process allowance; all 14 isolated CTCSS tests passed. No receiver deployment-health deadlines were changed.",
+      "Universal Pi Updater is unchanged. Build 236 is receiver-neutral. Live KD6KPC-13 RTL-SDR and KD6KPC-3 Airspy RF qualification remain deployment gates; publication does not assert public-beta GO. SDRplay/RSP1B live qualification remains experimental/deferred. No deployment nodes were contacted during release production."
+    ]
+  }
+}
