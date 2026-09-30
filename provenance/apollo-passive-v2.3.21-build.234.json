@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.21-build.234",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "cb0c85571179bcceb56f32fa7cfc4978d7f3d935"
+  },
+  "release": {
+    "version": "2.3.21",
+    "build": 234,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.21-build.234-linux-arm64.zip",
+    "byte_size": 18857568,
+    "sha256": "759272ce51663cf370905f087f0b1fe7c9f2de7287a55d2d0c387f4a76e403ae",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #398 binds KA9Q startup to the existing canonical node-agent identity and clears false running state after initialization failure. PR #399 assigns Apollo 2.3.21 Build 234. Approved exact heads merged through protected main at source cb0c85571179bcceb56f32fa7cfc4978d7f3d935.",
+      "Required release-security-contract checks passed: https://github.com/gdowkpc/apollo/actions/runs/36663345311 and https://github.com/gdowkpc/apollo/actions/runs/36664119691 . No updater changes or RF-health weakening.",
+      "KD6KPC-14 built twice through the same canonical ARM64 checkout with identical frozen runtime inputs and UTC timestamp. Both 18,857,568-byte ZIPs match SHA-256 759272ce51663cf370905f087f0b1fe7c9f2de7287a55d2d0c387f4a76e403ae.",
+      "Physical production clean-install, private legacy upgrade/convergence and rollback passed: https://github.com/gdowkpc/apollo/actions/runs/36664784878 . Isolated RSP1B module-load/systemd-write and root-installed RTL runtime readability passed. Private historical ZIP and proprietary API inputs are not published.",
+      "Final native source/package/controller/receiver/startup suite passed 262 tests with no failures/skips. Extracted inventory verifies 137 package entries and 53 protected entries; manifest SHA-256 211a064bf8e9ed850d31d8d8da4d9506cda306ec2539e300d8f9d7ff318438d4; protected manifest SHA-256 46eef9b670e43c7fab484e359f47d23b966ca9adf3929ac5451226d801a2cff7.",
+      "Universal Pi Updater 1.0.58 remains unchanged. Live KD6KPC-13 RTL-SDR and KD6KPC-3 Airspy RF qualification remain deployment gates. Publication does not assert live RF or public-beta GO; SDRplay/RSP1B live qualification remains experimental/deferred."
+    ]
+  }
+}
