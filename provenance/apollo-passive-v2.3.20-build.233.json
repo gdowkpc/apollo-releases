@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.20-build.233",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "861902c24653689e3787fa76fb6582aa73f5cbec"
+  },
+  "release": {
+    "version": "2.3.20",
+    "build": 233,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.20-build.233-linux-arm64.zip",
+    "byte_size": 18856950,
+    "sha256": "39d46bf0c81dd3f3dff66aec0fde3abab3f002f55fa0b0759c3d95b3940a05c7",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #395 corrected authenticated systemd-mask snapshot/materialization/rollback handling; PR #396 assigned Apollo 2.3.20 Build 233. Both merged through protected main at source 861902c24653689e3787fa76fb6582aa73f5cbec.",
+      "KD6KPC-14 built the receiver-neutral ARM64 ZIP twice from the canonical checkout, identical frozen native inputs and UTC timestamp. Both 18,856,950-byte ZIPs match SHA-256 39d46bf0c81dd3f3dff66aec0fde3abab3f002f55fa0b0759c3d95b3940a05c7.",
+      "Physical production clean-install and real private Build 191 upgrade/convergence/rollback gates passed: https://github.com/gdowkpc/apollo/actions/runs/36656418714 . Isolated RSP1B module-load/systemd-write and root-installed RTL runtime readability gates passed. Private historical artifacts and proprietary API inputs are not published.",
+      "Final native source/package/controller/receiver qualification passed 172 tests, zero failures/skips. Clean extraction verifies 137 package entries and 53 protected entries; manifest SHA-256 0c4496af3f910ea756394526d4e6a824eb2f4097d0fb2552a36e2f105ed2122e and protected manifest SHA-256 46eef9b670e43c7fab484e359f47d23b966ca9adf3929ac5451226d801a2cff7.",
+      "Updater 1.0.57 passed full physical ARM64/extracted-package qualification and production signing/publication at https://github.com/gdowkpc/apollo/actions/runs/36655717245 . Fresh independent download verified production signature, capsule, 66-file source/mode inventory and ZIP SHA-256 66248c819a0e22ec6ed57023a10db209adaf20e1dd56b8f181f7b1e8f85963bc.",
+      "Live KD6KPC-13 RTL-SDR and KD6KPC-3 Airspy RF qualification remain deployment gates. This publication does not assert live receiver health or public-beta GO. SDRplay/RSP1B live qualification remains experimental/deferred."
+    ]
+  }
+}
