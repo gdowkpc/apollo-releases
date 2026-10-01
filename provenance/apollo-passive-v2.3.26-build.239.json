@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.26-build.239",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "1ab7db4ebbe14b8a6621906e5bfec99d8b7374cc"
+  },
+  "release": {
+    "version": "2.3.26",
+    "build": 239,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.26-build.239-linux-arm64.zip",
+    "byte_size": 18879869,
+    "sha256": "ae08d649e7e4ee04ae0fa6f5c8109349769bfb2bf296cd62c13db67b4413a68d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved exact-head PR #421 f6d557b4f00a819ba32b791387e6d1ed7f48f864 passed release-security-contract (36913537003) and merged at 21d5b80f75ba464cd6b817f2c5ab96abbab6a2b3. The only application behavior change is deriving RTL window profiles from the stable configured 25 kHz grid, rather than the prior derived frequency list.",
+      "Approved version-only PR #422 head 5ffad69f6150ff81fa1debfb0e7dfc1668ee35c2 passed release-security-contract (36941274644). Frozen protected-main source is 1ab7db4ebbe14b8a6621906e5bfec99d8b7374cc. No channel lifecycle, Avahi, KA9Q, updater, or RF-health policy change is included.",
+      "KD6KPC-14 canonical native ARM64 builds twice with timestamp 2026-10-01T20:00:00.000Z are byte-identical: 18,879,869 bytes; SHA-256 ae08d649e7e4ee04ae0fa6f5c8109349769bfb2bf296cd62c13db67b4413a68d. Independently transferred archive matches. Physical evidence: /var/tmp/apollo-arm64-workflows/build239.csGKbz.",
+      "Exact extracted candidate: 139 package entries and 54 protected-controller entries, hashes/modes, release identity, canonical configuration and service/controller contract PASS. Manifest SHA-256 3cbdb1041d35d4f4b20a58378db36bb35f51d3fb5b75497d75a4862c5fc03a3b; protected manifest 71bfa24ab6137ea1c53db7b947fcc5d77f212201d9c323c66dc0b69084f8ca09; principal executable ff6b72e4a05ad53bc8075e30d1adb7a0557af1092d7ca3ab33785e5853095de1.",
+      "Actual production clean-install and private authenticated legacy-upgrade/convergence/injected-rollback fixture: 2 PASS, zero failures/skips. Same packaged materializer, signed profile state, preserved node data, predecessor restoration and inactive diagnostic archival verified with unchanged immutable updater 1.0.66.",
+      "Isolated extracted RSP1B module/dependency/systemd-write closure: 1 PASS; root-installed RTL inventory/service-user readability: 1 PASS; extracted target-native RTL/RSP1B RF-health regressions: 26 PASS; native KA9Q pipeline and embedded ARM64 target-health qualification: 2 + 2 PASS. All zero failures/skips.",
+      "Physical ARM64 application/package/receiver/security matrix: 279 PASS, zero failures/skips. Includes repeated RTL slices preserving configured 25 kHz spacing and stable 89/71-channel windows across two sequences; unchanged windows do not become 10 kHz/223 channels, trigger repeated same-window teardown, or mutate permanent configuration.",
+      "Updater 1.0.66 is unchanged, production authority/archive verified, archive SHA-256 5d5f4eed25f20f7d455dc7c7ba66fed6cb202aa33c6ca0960955b112309539ff. Private legacy evidence and SDRplay API build inputs are not published. Live RTL RF qualification remains outstanding; package qualification is not public-beta GO. No deployment node contacted during build/qualification."
+    ]
+  }
+}
