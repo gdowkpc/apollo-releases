@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.25-build.238",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "679b3bbdc6ad6cbb3b6c9ca16304b9147f958234"
+  },
+  "release": {
+    "version": "2.3.25",
+    "build": 238,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.25-build.238-linux-arm64.zip",
+    "byte_size": 18879687,
+    "sha256": "c290664a29902d633e2ee3ccd46e8c059f2d4ceed5831edaaa0e49ddb5532598",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR #418 removes obsolete updater construction fallbacks and simplifies target-native operational RF health. Optional KA9Q/Avahi diagnostics remain visible without vetoing valid identity, running radiod, fresh samples, advancing successful sweeps and configured-plan progress. Exact-head release-security-contract passed.",
+      "Version-only PR #419 passed release-security-contract (36900989670), merged through protected main, and allocated Apollo 2.3.25 / Build 238. Frozen candidate source: 679b3bbdc6ad6cbb3b6c9ca16304b9147f958234, descending from published Build 237 source.",
+      "KD6KPC-14 canonical native ARM64 builds twice with timestamp 2026-10-01T18:00:00.000Z are byte-identical: 18,879,687 bytes, SHA-256 c290664a29902d633e2ee3ccd46e8c059f2d4ceed5831edaaa0e49ddb5532598. Independently transferred ZIP matches. Evidence: /var/tmp/apollo-arm64-workflows/build238.fByoEQ.",
+      "Approved test-only PR #420 head 073b7d51aee00de1dc639afa6a45f75402606d50 passed release-security-contract (36903248201) and merged at 3a569df9f9aca495fa5f96bd789cf50a419867fe. Only the rollback test oracle differs from candidate source. Candidate ZIP, production code and updater are unchanged; no rebuild performed.",
+      "Exact candidate production clean-install and retained legacy generic-upgrade entrypoints converge through the same packaged materializer: 2 passed, zero failures/skips. Package-owned base, signed profile-derived state, canonical node-owned preservation and injected-failure rollback pass. Active predecessor state restores; inactive disabled diagnostics remain intact and attributable outside active systemd paths.",
+      "Package/controller contract and all hashes/modes verify: 139 package entries and 54 protected-controller entries. Manifest SHA-256 b781b554702e730dd18e7e6fa33afb96d8bead12c52b0de9e14d1b5971031163; protected manifest SHA-256 71bfa24ab6137ea1c53db7b947fcc5d77f212201d9c323c66dc0b69084f8ca09; executable SHA-256 00b345381963f785ba8dcaccb1046fc36e999a438b743cacdb4ca64b9f1dd16f.",
+      "Extracted RSP1B module/dependency and systemd write closure passes; installed RTL service-user readability passes; actual packaged RTL/RSP1B health provider: 26 passed. Native KA9Q synthetic pipeline and embedded ARM64 target health: 2 + 2 passed. ARM64 application/package/receiver/security: 278 passed. Retention/unknown-active rejection: 6 passed. All zero failures/skips.",
+      "Physical requalification evidence: /var/tmp/apollo-arm64-workflows/build238-requalification.CM3UzJ. Authenticated immutable updater 1.0.66 used by production fixture, archive SHA-256 5d5f4eed25f20f7d455dc7c7ba66fed6cb202aa33c6ca0960955b112309539ff. Private legacy evidence and proprietary SDRplay API inputs are not published.",
+      "Receiver-neutral ARM64 release supports packaged RTL-SDR, Airspy and RSP1B profiles. No deployment nodes contacted during qualification. Live RTL/Airspy RF remains a deployment gate; synthetic package qualification is not public-beta GO. RSP1B live qualification remains experimental/deferred. No new build, updater, permit, receipt or migration architecture."
+    ]
+  }
+}
