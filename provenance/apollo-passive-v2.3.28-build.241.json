@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.28-build.241",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "717052555ff33546d02c34c45489cf718638d678"
+  },
+  "release": {
+    "version": "2.3.28",
+    "build": 241,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.28-build.241-linux-arm64.zip",
+    "byte_size": 18888439,
+    "sha256": "1373b06b923c9593aa501f6ddbfb78920a1220af792ce9cfbe7c67d9f25268a1",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved NOAA startup/reference PR #429 merged 074ea57aaccd3844d6256c8f0c6c4fde6d186dcf. Approved version-only PR #430 merged 2604d32cc884bc12206be336b3a3c74a4b994ad7. Build 241 remains prepared/unpublished. Source descends from published Build 240 ec1415cb37a5f301ad512a75e35a2f14a700ad91.",
+      "Approved PR #431 exact head e216f5fb392a776bd286b0b48303dbe665d25ffa passed release-security-contract (37053610887) and merged into frozen protected main 717052555ff33546d02c34c45489cf718638d678. Native automatic NOAA gain is validated session state, not a rewrite of preserved owner configuration. Deliberate settings persistence remains unchanged.",
+      "KD6KPC-14 canonical native ARM64 builds twice at timestamp 2026-10-02T20:00:00.000Z are byte-identical: 18,888,439 bytes, SHA-256 1373b06b923c9593aa501f6ddbfb78920a1220af792ce9cfbe7c67d9f25268a1. Independent local transfer matches. Evidence /var/tmp/apollo-arm64-workflows/build241.H9AWKk. Earlier unpublished candidate superseded.",
+      "Final extracted ZIP identity, closed 141-file inventory, exact modes and protected-controller payload verify. Protected bootstrap has 54 payload entries plus its manifest. Release manifest SHA-256 27fbe99ba7e2812a80eb75f1560b26f0f50110d630d578dced60bdf828c7141d; protected manifest 9cc172de30d98522a2a4d088f9663ca3bfd158407c1bdc1429352ea7429fb1d4; principal 426adfbb32ec3ab1e13d8514d36792edfbc6a9f37eb7876eabae79c0c246c420.",
+      "Actual production clean-install and authenticated private Build 191 upgrade/convergence/injected rollback: 2 PASS, zero failures/skips. Root-owned staging uses production privileges, signed updater 1.0.68 and real disabled drop-ins. Profile-derived state, preserved bytes/metadata, predecessor restoration and inactive diagnostic archival verify.",
+      "Final isolated RSP1B module/dependency/systemd-write closure: 1 PASS. Root-installed RTL inventory/service-user readability: 1 PASS. Extracted packaged RTL/RSP1B target-native health regressions: 29 PASS. Native KA9Q source pipeline and embedded ARM64 application pipeline: 2 + 2 PASS, zero failures/skips, including packaged native RTL gain export.",
+      "Frozen-main physical ARM64 application/package/receiver matrix: 339 PASS, zero failures/skips. Includes NOAA gain/readback/reference/advisory/startup preservation, stable grids, receiver selection, RTL/RSP1B health, Airspy discovery/manual/dashboard and canonical node configuration. NOAA advisory is not a deployment RF-health veto or normal-plan progress.",
+      "Qualification workflow 37052166173 stopped before tests because runner lacked gh. Equivalent physical gate commands ran manually with independently downloaded production-verified updater 1.0.68 inputs and locked dependencies installed. This is manual physical qualification, not a passing claim for that workflow. Updater source/package was not changed.",
+      "Private legacy ZIP and proprietary SDRplay API build inputs are not published. KD6KPC-13 and KD6KPC-3 were not contacted during preparation. Live NOAA/receiver validation remains separate. Publication requires exact-head release-authority approval; no deployment is authorized by this provenance record."
+    ]
+  }
+}
