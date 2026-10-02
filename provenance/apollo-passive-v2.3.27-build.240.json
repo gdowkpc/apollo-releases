@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.27-build.240",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ec1415cb37a5f301ad512a75e35a2f14a700ad91"
+  },
+  "release": {
+    "version": "2.3.27",
+    "build": 240,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.27-build.240-linux-arm64.zip",
+    "byte_size": 18878438,
+    "sha256": "8d3fef6cbde243d2a5871bd686b2816947e5425ca4e2bb7f698b162796e81e84",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR #423 passed release-security-contract and physical ARM64 qualification; merged f52593ee5bd4254718353e6ce1b6308da517ec4c. Target-native deployment liveness uses genuine sampled successful sweeps in each required window, separate from later operational monitoring. No signal-presence or repeated-cycle commit requirement.",
+      "Approved version-only PR #424 merged 7295cd742684354b191e756333a2aa007087ade7. Approved test-only PR #425 head 63d73335dad1dc6b1eba806abab542ec2acaffe5 passed release-security-contract (36951953493); resulting frozen protected main ec1415cb37a5f301ad512a75e35a2f14a700ad91. Build 240 remained prepared and unpublished.",
+      "KD6KPC-14 canonical native ARM64 builds twice with timestamp 2026-10-02T01:00:00.000Z are byte-identical: 18,878,438 bytes; SHA-256 8d3fef6cbde243d2a5871bd686b2816947e5425ca4e2bb7f698b162796e81e84. Independently transferred archive matches. Final physical evidence: /var/tmp/apollo-arm64-workflows/build240.Gs4F1M. Earlier candidate superseded.",
+      "Exact extracted final candidate: 139 package entries and 54 protected-controller entries; hashes, modes, release identity, canonical configuration and service contract PASS. Manifest b894dd889c4b9694a1022d205ec963f2368faa3b0f60727ec03976680253fa8c; protected manifest 9cc172de30d98522a2a4d088f9663ca3bfd158407c1bdc1429352ea7429fb1d4; principal 0c0e45d5389dd1e34183bfcaea0112ade029db04332e2fad6b766bd8751772ce.",
+      "Actual production clean-install and authenticated private Build 191 upgrade/convergence/injected-rollback fixture: 2 PASS, zero failures/skips. Same packaged target materializer; signed profile state, node-owned preservation, predecessor restoration and inactive diagnostic archival verified with signed immutable updater 1.0.67.",
+      "Final extracted RSP1B module/dependency/systemd-write closure: 1 PASS; root-installed RTL inventory/service-user readability: 1 PASS; extracted RTL/RSP1B target-health regressions: 29 PASS; native KA9Q pipeline and embedded ARM64 qualification: 2 + 2 PASS. All zero failures/skips.",
+      "Final physical ARM64 application/package/receiver/security matrix: 284 PASS, zero failures/skips. Includes stable configured grid, receiver profile closure, startup liveness, post-startup monitoring separation, preservation, package and security regressions. Runner confirmed frozen checkout clean and candidate_physical_package_gates=PASS.",
+      "Updater 1.0.67 published and independently verified: source 7295cd742684354b191e756333a2aa007087ade7, ZIP ae04f64a9a619042e00436bcb6651109474862cf20d94360a2655adb6d152705, production signature/capsule/68-file manifest PASS. Full physical/signing workflow 36950825686 PASS. Retained Build 237 Airspy compatibility adapter is isolated and unchanged.",
+      "Private legacy evidence and proprietary SDRplay API build inputs are not published. No deployment node contacted during this preparation. Live RTL and Airspy qualification remains outstanding; package qualification alone is not public-beta GO. Publication requires separate exact-head approval."
+    ]
+  }
+}
