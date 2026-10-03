@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.30-build.243",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "93b02de4bf96d7ce84e8567783130358ca6eb033"
+  },
+  "release": {
+    "version": "2.3.30",
+    "build": 243,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.30-build.243-linux-arm64.zip",
+    "byte_size": 18889628,
+    "sha256": "e3f925596c9b0dc73b0d5265b74df7d74c7e145f8b13211759e46df8f1a4a121",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved application PR #436 exact head 99ee9344d8504c9ecdef9de7176ff551d64fca64 passed release-security-contract (37080732819) and merged ddc15497eae2ae9942053621758e7c2d9294a29f. Bundles genuine three-second Airspy clips, registered friendly-name display, transient retune authority handling and RTL reporting renewal through existing server authority.",
+      "Approved version-only PR #437 exact head 8313ab453dcb1d4bf1c0a933f329a15b7f2ea14c passed release-security-contract (37081322519) and merged into frozen protected main 93b02de4bf96d7ce84e8567783130358ca6eb033. Source descends from published Build 242; updater 1.0.69 is unchanged.",
+      "KD6KPC-14 canonical native ARM64 builds twice at timestamp 2026-10-03T00:25:00.000Z are byte-identical: 18,889,628 bytes, SHA-256 e3f925596c9b0dc73b0d5265b74df7d74c7e145f8b13211759e46df8f1a4a121. Independent local transfer matches. Physical evidence /var/tmp/apollo-arm64-workflows/build243.1iQTEY.",
+      "Final extracted ZIP identity, 141-file package inventory, exact modes and protected-controller payload verify. Protected bootstrap contains 54 payload entries plus its manifest. Release manifest SHA-256 d1aa6c5deac310f1d6fe9e9a7753ce9bcb299b37b3a073c17b060b7c971ef96a; protected manifest dd923461e8fa00c7f109b0ff0fae08eb2a66312aa88171b14b208396778e2323; principal 2aeff3928c606566494ddd17ae15f05cdc8e55316eae041a8e4ccc41a8de172f.",
+      "Physical ARM64 application/package/receiver matrix: 348 PASS. Actual production clean-install and authenticated private Build 191 upgrade/convergence/injected rollback: 2 PASS with root-owned staging, verified production updater 1.0.69 and retained disabled drop-ins. Preservation, profile state, restoration and diagnostic archival verify.",
+      "Isolated RSP1B runtime closure: 1 PASS. Root-installed RTL inventory/service readability: 1 PASS. Actual extracted Airspy observations, reporter, dashboard and integration: 47 PASS. Reporting/audio/socket core: 91 PASS. Focused Linux/registered-RTL server regressions: 5 PASS with 31 unrelated test names excluded. Native KA9Q source and embedded ARM64 pipelines: 2 + 2 PASS.",
+      "Physical gates ran manually against the exact canonical ZIP and extracted production package. All named release gates have zero failures. Broader server/Windows-audio comparison at approved PR head retained nine unchanged baseline failures, with no new failures; it is not represented as a full-suite pass. No private legacy ZIP, proprietary SDRplay API inputs or node credentials are published.",
+      "Live RF, actual new three-second audio uploads and evidence Review visibility remain post-publication node checks. This release does not fix the separate RTL derived-spectrum rendering issue. Already-queued intact two-second Airspy clips remain uploadable without alteration; server revocation/expiry and stale-RF delivery guards remain enforced. Publication requires exact-head authority approval and authorizes no deployment."
+    ]
+  }
+}
