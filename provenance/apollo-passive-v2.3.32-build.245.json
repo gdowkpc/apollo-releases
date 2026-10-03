@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.32-build.245",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "219e9159d3a692e1d140613b448bbbc1f4de78a0"
+  },
+  "release": { "version": "2.3.32", "build": 245, "platform": "linux", "architecture": "arm64" },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.32-build.245-linux-arm64.zip",
+    "byte_size": 18894124,
+    "sha256": "91a0e524bb105b150a485c84b3550ab0a7f8f2e761aab44d242e858575a71019",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Protected-main PR #442 adds bounded periodic Airspy audio-queue draining using the existing reporting authority and provenance guards. PR #443 dispatches verified native KA9Q evidence independently of physical RTL-SDR identity, retaining matching PCM and channel evidence requirements.",
+      "Approved version-only PR #444 head 24d35e4a121fdee47f400025c2f7e41ac4f0301f passed release-security-contract (37129891116); merge 219e9159d3a692e1d140613b448bbbc1f4de78a0 is the frozen application source. Updater 1.0.69 unchanged.",
+      "Two canonical KD6KPC-14 ARM64 builds at 2026-10-03T14:40:00.000Z are byte-identical: 18,894,124 bytes, SHA-256 91a0e524bb105b150a485c84b3550ab0a7f8f2e761aab44d242e858575a71019. Independent Windows transfer matches. Physical evidence /var/tmp/apollo-arm64-workflows/build245.rRMlDL.",
+      "Independent extraction verifies exact identity, 142 package files, 55 protected-controller entries and exact file modes. Release manifest SHA-256 4db5bf8a498fbaedf00ec428aadc9698b7218731d2b046b5ff98e4a690ee48f6; protected manifest dd923461e8fa00c7f109b0ff0fae08eb2a66312aa88171b14b208396778e2323; principal 98a676cf5bae11a8bd42d71381bf692b016b0ac606689fc8c98c996006f98563.",
+      "Physical ARM64 application/package/receiver matrix: 376 PASS. Production clean/private legacy convergence and rollback: 2 PASS with root-owned staging and verified production updater 1.0.69. Isolated RSP1B and root-installed RTL closure: 1 + 1 PASS. Actual extracted Airspy observations/reporter/dashboard/integration: 51 PASS.",
+      "Native KA9Q source and embedded ARM64 pipelines: 2 + 2 PASS. Reporting/audio/socket core: 91 PASS. Focused Linux/registered-RTL server regressions: 5 PASS; 31 unrelated test names excluded. Native RTP evidence reaches authenticated observation and three-second audio delivery without requiring CTCSS; quiet/stationary or invalid channel evidence does not create events.",
+      "Approved test-only PR #445 head 67750553f8c8d452d9b402d3454710c701e08234 passed release-security-contract (37130502567), merged 6f59a0fba65b8ebac901bc470c072f596939b0cf. Physical qualification used its complete signed RTL fixture; the original ARM64 fixture omitted required receiver configuration. Candidate production files and ZIP remain unchanged.",
+      "The broader extra source matrix retains 12 failures reproduced on unchanged baseline modules; no full-suite pass is asserted. Selected package/receiver/reporting gates pass. Manual physical qualification is not represented as a hosted release-workflow pass.",
+      "No private node evidence, credentials or proprietary SDRplay API inputs are distributed. No scan-plan, squelch/gain, reporting-grant, service-topology or updater changes are included. SDRplay API/service remains an external prerequisite; live RF, audio acknowledgment and protected Review-page visibility are post-publication node checks."
+    ]
+  }
+}
