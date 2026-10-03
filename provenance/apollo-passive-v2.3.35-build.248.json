@@ -1,0 +1,22 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": { "full_name": "gdowkpc/apollo-releases", "repository_id": 1334398301, "owner_login": "gdowkpc", "owner_id": 3979668 },
+  "release_tag": "apollo-passive-v2.3.35-build.248",
+  "source": { "repository": "gdowkpc/apollo", "commit": "cc80ea7ed42ac1a523db90635b34fe6741f4a669" },
+  "release": { "version": "2.3.35", "build": 248, "platform": "linux", "architecture": "arm64" },
+  "package": { "filename": "ApolloPassiveReceive-2.3.35-build.248-linux-arm64.zip", "byte_size": 18895674, "sha256": "01f67254ab29bad2a561b42000dda1f4580f9d28ed0685517be75c30d02df3a5", "package_type": "portable_zip" },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected-main source cc80ea7ed42ac1a523db90635b34fe6741f4a669 contains approved spectrum fix PR #449 and version-only PR #450. Descends from published Build 247 source a39f741f561f10124219be75d2e51e58de6361c9. Updater 1.0.69 unchanged.",
+      "PR #449 exact head ae02d8c70a09e842daab2952aa96d8c49ace5be4 and PR #450 exact head 4c18a94e9d94276f4ad1158508a3b8a10ac95d31 passed release-security-contract. Both merged through protected main. 173 focused receiver/UI/RF/contract/package tests also passed on physical ARM64 at the fix head.",
+      "Two canonical native KD6KPC-14 ARM64 builds at 2026-10-03T18:30:00.000Z are byte-identical: 18,895,674 bytes, SHA-256 01f67254ab29bad2a561b42000dda1f4580f9d28ed0685517be75c30d02df3a5. Independent Windows transfer matches. Physical evidence /var/tmp/apollo-arm64-workflows/build248.XnN6AZ.",
+      "Independent extraction verifies source/version/build, 142 package entries, 55 protected-controller entries, hashes and modes. Release manifest 9e031a1abaa8a77fd36040e4f83fb29e461db727a14177894d46414ff9db7860; protected manifest dd923461e8fa00c7f109b0ff0fae08eb2a66312aa88171b14b208396778e2323; principal 2e72e0abec44f0d723d055766b844461c31605f795d49d7079214b8aa8deaa59.",
+      "Physical application/package/receiver/UI matrix: 393 PASS, no skips. Production clean/private Build 191 convergence and rollback: 2 PASS with root staging and verified updater 1.0.69. Isolated RSP1B and installed RTL closure: 1 + 1 PASS. Source remained clean.",
+      "Extracted Airspy observations/reporter/dashboard/integration: 51 PASS. Native KA9Q source and embedded-package pipelines: 2 + 2 PASS. Reporting/audio/socket core: 91 PASS. Physical runner/package qualification, not live deployment-node RF proof.",
+      "Actual extracted ARM64 executable served the production UI for graph regression: relative measured channel-power caption, missing measurements unavailable, no invented plot endpoints, no frontend fallback. Synthetic graph inputs only; no artificial production RF.",
+      "Presentation-only correction plots finite per-channel KA9Q BASEBAND_POWER at actual channel frequencies rather than repeating shared IF_POWER and inventing edge floors. Existing analysis/detection, thresholds, gain, RF health, scheduling and service topology unchanged. This is not an FFT-spectrum or calibrated-dBm claim.",
+      "No deployment node contacted or changed during qualification. No updater, KA9Q pin, kernel, reporting authority or credentials changed. SDRplay API/service remains external; RSP1B live qualification remains experimental. DMR/FM implementation is separate and not included."
+    ]
+  }
+}
