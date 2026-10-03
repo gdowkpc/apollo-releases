@@ -1,0 +1,21 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": { "full_name": "gdowkpc/apollo-releases", "repository_id": 1334398301, "owner_login": "gdowkpc", "owner_id": 3979668 },
+  "release_tag": "apollo-passive-v2.3.34-build.247",
+  "source": { "repository": "gdowkpc/apollo", "commit": "a39f741f561f10124219be75d2e51e58de6361c9" },
+  "release": { "version": "2.3.34", "build": 247, "platform": "linux", "architecture": "arm64" },
+  "package": { "filename": "ApolloPassiveReceive-2.3.34-build.247-linux-arm64.zip", "byte_size": 18895310, "sha256": "207bf955a237a3a5d5361e1859977919d45d98112823bda8969b4ebfe6f2c40a", "package_type": "portable_zip" },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner-approved protected-main source a39f741f561f10124219be75d2e51e58de6361c9 includes PR #446 dashboard payload correction and merged Build 247 identity. Superseded Build 246 PR #447 was closed, not allocated or published. Source descends from published Build 245. Updater 1.0.69 unchanged.",
+      "PR #446 exact head b6deafe43477648664be4df0dd04a7f35451bf9e passed release-security-contract and merged as a2a5bb3bff55f52ee8fd66b848f88891b7617663. Frozen main build-and-validate passed. Dashboard change projects bounded summaries and retrieves full diagnostics explicitly without mutating RF/reporting evidence.",
+      "Two canonical KD6KPC-14 native ARM64 builds at 2026-10-03T16:35:00.000Z are byte-identical: 18,895,310 bytes, SHA-256 207bf955a237a3a5d5361e1859977919d45d98112823bda8969b4ebfe6f2c40a. Independent Windows transfer matches. Physical evidence /var/tmp/apollo-arm64-workflows/build247.A0S0xT.",
+      "Independent extraction verifies exact source/build identity, 142 package entries, 55 protected-controller entries and file modes. Release manifest SHA-256 57825f7c8e46bdc06148be62108365f38493d52eda7b8777373deac8133bea0d; protected manifest dd923461e8fa00c7f109b0ff0fae08eb2a66312aa88171b14b208396778e2323; principal a01a180d3c3dc9538c588d9d82c43c64dd8055b6ffbc82a18dccfcc7b5985ff4.",
+      "Physical ARM64 application/package/receiver/dashboard matrix: 387 PASS. Focused server HTTP/reporting tests: 6 PASS, 31 unrelated names excluded. Production clean/private Build 191 convergence and rollback: 2 PASS using root-owned staging and verified production updater 1.0.69. Isolated RSP1B and installed RTL closure: 1 + 1 PASS.",
+      "Extracted Airspy observations/reporter/dashboard/integration: 51 PASS. Native KA9Q source and embedded package pipelines: 2 + 2 PASS. Reporting/audio/socket core: 91 PASS. Source checkout remained unmodified throughout qualification. These are physical-runner/package results, not live receiver qualification or a hosted release-workflow claim.",
+      "Actual extracted ARM64 ApolloPassiveReceive executable HTTP regression passed: a 1,600,351-byte detail response yields a 15,627-byte live summary; full diagnostic fields remain accessible on demand and persisted evidence bytes remain unchanged. Packaged UI includes the detail endpoint. Synthetic qualification fixture, not artificial production RF.",
+      "No deployment node contacted or changed for this candidate. No KA9Q production pin, kernel, gain, scan-plan, service-topology, reporting-authority or updater changes. SDRplay API/service remains external and live RSP1B qualification experimental. No claim of real three-second audio acknowledgment or Review-page delivery is made by package qualification."
+    ]
+  }
+}
