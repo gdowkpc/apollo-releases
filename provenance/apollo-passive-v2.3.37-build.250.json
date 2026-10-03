@@ -1,0 +1,21 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": { "full_name": "gdowkpc/apollo-releases", "repository_id": 1334398301, "owner_login": "gdowkpc", "owner_id": 3979668 },
+  "release_tag": "apollo-passive-v2.3.37-build.250",
+  "source": { "repository": "gdowkpc/apollo", "commit": "9a4dea6989c003ad24c6e44089afcb049173782a" },
+  "release": { "version": "2.3.37", "build": 250, "platform": "linux", "architecture": "arm64" },
+  "package": { "filename": "ApolloPassiveReceive-2.3.37-build.250-linux-arm64.zip", "byte_size": 18896123, "sha256": "155d8fcec0827278e0f80a836564ca9d7658af2eac09e75c74661767db2f23b6", "package_type": "portable_zip" },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected-main 9a4dea6989c003ad24c6e44089afcb049173782a contains profile-selection UI PR #453 and version-only PR #454. Updater 1.0.69 unchanged.",
+      "PR #453 exact head 2b169b083547c61df4007c6fb6eca0324e473ff6 and PR #454 exact head ed59833a0b4ea665418e5ccee31d91c292a8e8cc passed release-security-contract and merged through protected main.",
+      "Two canonical KD6KPC-14 native ARM64 builds at 2026-10-03T20:40:00.000Z are byte-identical: 18,896,123 bytes, SHA-256 155d8fcec0827278e0f80a836564ca9d7658af2eac09e75c74661767db2f23b6. Independent Windows transfer matches. Evidence /var/tmp/apollo-arm64-workflows/build250.Z3nAM9.",
+      "Independent extraction verifies exact identity, 142 package entries, 55 protected entries, hashes and modes. Release manifest b9b30fcbe0bf3ed4acc8d032fbcb4f9f4a74ef7208da36fca953083f7fb625f4; protected manifest dd923461e8fa00c7f109b0ff0fae08eb2a66312aa88171b14b208396778e2323; principal 78bd280a4ffd0e16670826f8b8d261cd3940e4d38234fe409c47913dd929f778.",
+      "Physical application/package/receiver/UI matrix: 433 PASS, zero failures/skips. Test-only PR #455 exact head 2c0f92dd8b9ebef5b84bf6d63c830c50d09d95b4 isolates mocked API hardware identity from runner sysfs; security passed and merged as e6aff883dc6c9d79d55781480568693225da0bc7. Qualification used that test correction against the unchanged candidate artifact and original frozen production source.",
+      "Production clean/private predecessor convergence and rollback: 2 PASS with root staging and authenticated updater 1.0.69. RSP1B isolated and installed RTL closure: 1 + 1 PASS. Extracted Airspy: 51 PASS. Native KA9Q source and embedded ARM64 pipelines: 2 + 2 PASS. Embedded recovery: 34 PASS. Reporting/audio/socket core: 91 PASS. Focused Linux/registered-RTL server gates: 6 PASS; 31 unrelated names excluded.",
+      "Actual extracted ARM64 executable served the UI used by three passing profile-selection regressions: selection populates editable ranges, Save sends the selected plan, and signed range restrictions remain enforced. Selecting alone does not persist settings or change reception.",
+      "No deployment node contacted during Build 250 preparation or qualification. No updater, receiver driver, KA9Q pin, kernel, gain, service topology, reporting authority or credentials changed. Live node RF qualification remains pending after publication; no server delivery success asserted. SDRplay API remains external and live RSP1B qualification experimental."
+    ]
+  }
+}
