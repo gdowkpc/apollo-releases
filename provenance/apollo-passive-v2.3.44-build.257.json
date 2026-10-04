@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.44-build.257",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "785c20f55c2da3511882a316866ac0f046c806ab"
+  },
+  "release": {
+    "version": "2.3.44",
+    "build": 257,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.44-build.257-linux-arm64.zip",
+    "byte_size": 18902409,
+    "sha256": "a44a02cbe5cc2be573f7f06409e3d3675fe3728e9015a100ce154eea95288aa9",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 785c20f55c2da3511882a316866ac0f046c806ab contains PR #470 bounded RF activity evidence and PR #471 version-only identity. Published Build 256 source 3a0d034208efe22aff9b5bfda82ca63cdb9dbf5d is an ancestor. Required release-security-contract runs 37229110348 and 37237789267 passed at the approved feature and identity heads.",
+      "Two native ARM64 builds on KD6KPC-14 from one clean checkout at 2026-10-04T21:57:55.000Z produced byte-identical packages: 18,902,409 bytes, SHA-256 a44a02cbe5cc2be573f7f06409e3d3675fe3728e9015a100ce154eea95288aa9. Private build257.V1jsRv retains source identity, input hashes, logs and both artifacts.",
+      "Physical packaged qualification run 37238355280 passed at the exact frozen source and artifact hash: eight tests, zero failures/skips. Production clean/Build191 convergence and rollback (2), isolated RSP1B module/profile closure (1), root-installed RTL inventory (1), native KA9Q source health (2), embedded package health (2); fixture cleanup passed.",
+      "Physical candidate-source core qualification: 565 receiver/reporting/package/RF-health tests passed with no skips; focused server checks 5 passed (33 intentionally filtered), audio regression 8 passed. Actual extracted candidate Airspy activity/reporting payload: 42 tests passed with no skips, using package-root imports outside the checkout module paths.",
+      "Independent Windows artifact audit passed: exact SHA-256 and byte count, ZIP CRCs, source/release/platform identity, 143 declared file modes, 54 protected-controller file hashes/modes, eight AArch64 native ELF hashes, and RTL/Airspy/RSP1B receiver profile declarations.",
+      "Unchanged native receiver inputs come from the hash-verified immutable Build 256 ZIP. Its eight KA9Q executables/modules were rebuilt with NATIVE=0 and target-owned module paths. KA9Q pin remains 2026.09.20-1-trixie1, source 8f6a05b3b4b5ee5c85ff556f64af918e561786b4. No receiver driver or gain change in this release.",
+      "Published updater 1.0.70 was independently signature/artifact verified by the physical fixture and is unchanged by this activity delivery. Server validator, nullable linked-summary migration, runtime and protected review projection were deployed and independently verified before this candidate was prepared.",
+      "Activity summaries and bounded post-report milestones are supporting timing evidence, not confirmed conversations or ID-only classification. Initial report/audio, existing authorization, matching and review authority remain unchanged; no new deployment/RF/eligibility gate. No deployment node was contacted; synthetic native/package tests are not live node RF or end-to-end linked-summary delivery proof. Private SDRplay/predecessor inputs are not published."
+    ]
+  }
+}
