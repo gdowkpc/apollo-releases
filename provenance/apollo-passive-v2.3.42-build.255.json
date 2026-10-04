@@ -1,0 +1,22 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": { "full_name": "gdowkpc/apollo-releases", "repository_id": 1334398301, "owner_login": "gdowkpc", "owner_id": 3979668 },
+  "release_tag": "apollo-passive-v2.3.42-build.255",
+  "source": { "repository": "gdowkpc/apollo", "commit": "bb47f816c74cefe67c8ef48405216cbe0c30eb11" },
+  "release": { "version": "2.3.42", "build": 255, "platform": "linux", "architecture": "arm64" },
+  "package": { "filename": "ApolloPassiveReceive-2.3.42-build.255-linux-arm64.zip", "byte_size": 18898200, "sha256": "862dfcd9169707fa84a83a4e1d6f039b6f8777d7f4568e602bf290573ba2064f", "package_type": "portable_zip" },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main bb47f816c74cefe67c8ef48405216cbe0c30eb11 contains approved prompt quiet-window PR #465 and version-only PR #466. Published Build 254 source 5848c7127eaad67ff748c897d25aefb70bce94db is an ancestor. Updater 1.0.69 unchanged.",
+      "PR #465 approved head 5202591ec497d86edb3fed9279408d113a18342a passed release-security-contract run 37175477350. PR #466 approved head e55a8d03c2da0cc343cdfade9770f724b593ce9d passed security run 37196547164. Both merged through protected main without bypass.",
+      "Two canonical KD6KPC-14 ARM64 builds at 2026-10-04T11:00:00.000Z are byte-identical: 18,898,200 bytes, SHA-256 862dfcd9169707fa84a83a4e1d6f039b6f8777d7f4568e602bf290573ba2064f. Independent Windows transfer matches. Evidence /var/tmp/apollo-arm64-workflows/build255.agpaDa.",
+      "Independent extraction verifies identity/source, 142 package files and 55 protected-controller entries, hashes and modes. Release manifest 007471f3745ba5211bcd08e052aa78def3b96fb8db8d3de5e51126506f3a9688; protected manifest 6e326438a21a494738f7d93877e4e8d982013ecdb047ca56a39188d2ad619338; principal 59fd7dd61bac6ffaf680af4c11255d7d8e72b6aca9949c584ec37d62f12ada5c.",
+      "Physical ARM64 core application/package/receiver/UI matrix: 505 PASS, zero failures/skips. Production empty-root/private predecessor convergence and rollback: 2 PASS using published updater 1.0.69. Isolated RSP1B closure and installed RTL runtime closure: 1 + 1 PASS. Extracted Airspy observation/reporting: 51 PASS.",
+      "Actual candidate native KA9Q and embedded ARM64 pipelines: 2 + 2 PASS. Embedded recovery: 35 PASS. Reporting/audio/socket core: 91 PASS. Extracted-updater health/canonical-boundary: 32 PASS. Linux server subset: 6 PASS, 31 unrelated names excluded.",
+      "Extracted catalog/controller regressions: 56 PASS; package contracts: 60 PASS; sealed ARM64 Save/API harness: 6 PASS. No required-case failures/skips. Shared UI bytes match frozen source. Evidence sealed-api.2EWRTw under candidate root.",
+      "Prompt-window regressions from embedded ARM64 receiver and manager: 41 + 31 PASS. Independently extracted Airspy/controller matrix: 87 PASS. Proves fresh quiet windows proceed promptly, intentional profile polling retains input baseline, later measured input advancement remains necessary, stale/missing input fails, and candidate/audio extensions remain bounded.",
+      "Neither deployment node contacted. No updater, gain, DSP, KA9Q pin, channel lifecycle, service account, reporting authority or credential changes. Private predecessor ZIP and proprietary SDRplay inputs are not published. Native tests use synthetic lab input, not physical candidate RF. Live RTL/Airspy timing validation follows publication; RSP1B remains experimental."
+    ]
+  }
+}
