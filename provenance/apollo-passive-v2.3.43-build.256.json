@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.43-build.256",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "3a0d034208efe22aff9b5bfda82ca63cdb9dbf5d"
+  },
+  "release": {
+    "version": "2.3.43",
+    "build": 256,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.43-build.256-linux-arm64.zip",
+    "byte_size": 18897840,
+    "sha256": "a4b3646291a29fd448edbc4c7c77766dc0ee19bcff6103b423a50dcd3b9221cc",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 3a0d034208efe22aff9b5bfda82ca63cdb9dbf5d contains exact-head approved PR #467 (KA9Q portability and carrier-evidence regression) and PR #468 (release identity). Both merged through protected main without bypass. Published Build 255 source bb47f816c74cefe67c8ef48405216cbe0c30eb11 is an ancestor.",
+      "PR #468 approved head d231155011e71983460e8db06e150c572dd502c2 passed required release-security-contract run 37215715216. Canonical final packaged ARM64 qualification run 37217181917 succeeded at source 3a0d034208efe22aff9b5bfda82ca63cdb9dbf5d with the exact final ZIP hash.",
+      "Two clean ARM64 builds on KD6KPC-14 at 2026-10-04T16:29:38.000Z produced byte-identical ZIPs: 18,897,840 bytes, SHA-256 a4b3646291a29fd448edbc4c7c77766dc0ee19bcff6103b423a50dcd3b9221cc. Independent Windows copy verifies SHA-256, ZIP CRCs, source/release identity and eight KA9Q ELF hashes. Evidence build256-final.bh8mGQ retained privately.",
+      "All eight KA9Q executables/modules rebuilt from clean pinned source with explicit NATIVE=0, overriding inherited NATIVE=1. Compile log has no -march/-mcpu/-mtune flags. Airspy manual-gain patch, RTL gain patch/export, target module path and retained SDRplay native-input hashes verified.",
+      "Final physical ARM64 packaged qualification: eight tests PASS, zero failures/skips, fixture cleanup PASS. Covers clean/Build191 convergence (2), isolated RSP1B module/profile closure (1), root-installed RTL inventory readable by service user (1), synthesized source KA9Q health (2) and embedded KA9Q health (2). Published Universal Pi Updater 1.0.69 unchanged.",
+      "Carrier evidence already uses selected-channel SNR with matching PCM. New regression rejects strong frontend/off-channel power without channel carrier, and requires channel carrier plus CTCSS/DCS for tone-qualified evidence. Zero-target fixture corrected and required by CI.",
+      "KA9Q pin remains 2026.09.20-1-trixie1, source 8f6a05b3b4b5ee5c85ff556f64af918e561786b4. No October 4 NCO repin, receiver-node deployment, restart, reporting authority, gain or updater change. Synthetic packaged tests do not prove physical adjacent-channel rejection, CTCSS/DCS RF performance or other-CPU execution. Proprietary SDRplay inputs and private predecessor archives are not published."
+    ]
+  }
+}
