@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.47-build.260",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "88ec5daca13516c2eed10cda07b8546166c06a77"
+  },
+  "release": {
+    "version": "2.3.47",
+    "build": 260,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.47-build.260-linux-arm64.zip",
+    "byte_size": 18934865,
+    "sha256": "3b9ab806b4326788b7a09f22615536148065148c109b31c3671e9e0a9610da38",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 88ec5daca13516c2eed10cda07b8546166c06a77 contains approved PR #476 Airspy observation-dwell correction and version-only PR #477. Published Build 259 source cd62740758162560c93ee52498f4de64dc0aa92a is an ancestor. Required security runs 37331879178 and 37332706620 passed on approved exact heads; merged trees matched reviewed trees.",
+      "Two native ARM64 builds on KD6KPC-14 produced byte-identical ZIPs: 18,934,865 bytes, SHA-256 3b9ab806b4326788b7a09f22615536148065148c109b31c3671e9e0a9610da38. Evidence build260.vAjxzg retains clean frozen source, authenticated native-input hashes, canonical timestamp, logs and both artifacts.",
+      "Physical packaged workflow 37334144950 passed at exact source/ZIP: ten tests, zero failures/skips. Clean/legacy convergence and rollback (2), isolated RSP1B module/systemd write (1), RTL service-user inventory (1), native KA9Q pipelines (3), embedded package pipelines (3), and cleanup passed. Published updater 1.0.70 signature/artifact verified unchanged.",
+      "Final candidate-source core receiver/reporting/package/health qualification: 687 passed, no skips/failures. Focused Linux server: 5 passed, 33 deliberately excluded by the test-name filter. Audio regressions: 8 passed. Release registry and four identity tests passed on the frozen source.",
+      "Actual extracted controller/reporting regressions: 79 passed, zero failures/skips. Actual extracted NOAA startup helper: 8 passed. Existing strict identity, valid geometry, advancing native input, freshness, process cleanup and correction/readback protections remain unchanged.",
+      "Delayed third-window native radiod bench used the actual extracted Build 260 controller with synthetic input. Three windows accepted 7/7/8 measured sweeps and completed one cycle; third-window validated arming occurred after 4139 ms. Retuning/settling does not consume the observation dwell; absent/invalid samples remain bounded failures. This is not live USB/antenna RF qualification.",
+      "Independent ZIP audit passed: exact hash/bytes, CRCs, source/release/platform identity, 152 declared modes, 54 protected-controller hashes/modes, eight native AArch64 ELF hashes and universal RTL/Airspy/RSP1B profiles. Packaged Airspy controller bytes exactly match frozen source.",
+      "Native binaries are reused from the hash-verified immutable Build 259 package because their source/pin is unchanged. Permanent settings, credentials, reporting authority, gain, KA9Q pin, RTL/RSP1B behavior and updater 1.0.70 are unchanged. No health predicate, Avahi behavior or channel-lifecycle optimization was added.",
+      "Neither deployment node was contacted during candidate qualification or provenance preparation. Live Airspy RF qualification remains outstanding. Private predecessor/SDRplay API inputs, credentials and signing inputs are not published. No new updater, authorization, receipt, recovery or migration architecture."
+    ]
+  }
+}
