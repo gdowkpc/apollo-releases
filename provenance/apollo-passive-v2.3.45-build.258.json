@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.45-build.258",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "fe3a9ae52754313cc6a69d3766f396ba9a8d8e3c"
+  },
+  "release": {
+    "version": "2.3.45",
+    "build": 258,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.45-build.258-linux-arm64.zip",
+    "byte_size": 18934595,
+    "sha256": "90d70c73651fe58de0f17029d6c9a2fdad11e09488fe3ba4f75f4a938582cf12",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main fe3a9ae52754313cc6a69d3766f396ba9a8d8e3c contains approved automatic NOAA correction PR #472 and version-only PR #473. Published Build 257 source 785c20f55c2da3511882a316866ac0f046c806ab is an ancestor. Required release-security-contract runs 37250163735 and 37250769031 passed at the approved exact heads.",
+      "Two native ARM64 builds on KD6KPC-14 produced byte-identical packages: 18,934,595 bytes, SHA-256 90d70c73651fe58de0f17029d6c9a2fdad11e09488fe3ba4f75f4a938582cf12. Builder evidence build258.e49eSW retains clean source, native-input hashes, canonical timestamp, logs and both artifacts.",
+      "Physical packaged workflow 37251513545 passed at the exact source and ZIP: eight tests, zero failures/skips. Production clean/legacy convergence and rollback (2), isolated RSP1B module/systemd write (1), root-installed RTL service-user inventory (1), native KA9Q health (2), embedded package health (2), and cleanup passed. Published updater 1.0.70 signature/artifact verified unchanged.",
+      "Exact identity head native ARM64/root qualification passed 341 checks: four identity, 285 source/package, 28 target-state/clean-starter and 24 Python lifecycle checks. Final candidate-source core receiver/reporting/package/health: 682 passed, no skips. Focused server: 5 passed, 33 intentionally filtered. Audio regression: 8 passed.",
+      "Actual final extracted candidate controller/reporting modules: 45 tests passed; extracted NOAA production startup helper: 8 passed. Tests cover receiver binding, native readback, residual verification, timeout/process cleanup, runtime restoration and optional diagnostic write failure without vetoing reception. Synthetic reports are not live NOAA RF proof.",
+      "Independent Windows artifact audit passed: exact hash/bytes, ZIP CRCs, source/release/platform identity, 152 declared modes, 54 protected-controller hashes/modes, eight native AArch64 ELF hashes and universal RTL/Airspy/RSP1B profile declarations. Both startup helper and probe are present in the actual ZIP.",
+      "Native receiver binaries were retained from the hash-verified immutable Build 257 ZIP. KA9Q pin 8f6a05b3b4b5ee5c85ff556f64af918e561786b4 and existing gain policy are unchanged. Automatic correction affects generated runtime configuration only, is verified against the same NOAA reference, and never transfers to different hardware or writes permanent settings/secrets.",
+      "No deployment node was contacted. Live NOAA correction and reference-node RF/reporting remain separately qualified after publication. NOAA is a bounded field reference, not an absolute calibration authority or new operational-health veto. Private predecessor/SDRplay inputs are not published. No updater release, new authorization, reporting gate or receipt architecture."
+    ]
+  }
+}
