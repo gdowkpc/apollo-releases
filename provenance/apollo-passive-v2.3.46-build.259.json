@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.46-build.259",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "cd62740758162560c93ee52498f4de64dc0aa92a"
+  },
+  "release": {
+    "version": "2.3.46",
+    "build": 259,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.46-build.259-linux-arm64.zip",
+    "byte_size": 18934779,
+    "sha256": "21dde92b1e521dcd5f9c45b5aadeb4d21d62aa42e27af773b5cb624d833f6865",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main cd62740758162560c93ee52498f4de64dc0aa92a contains approved PR #474 RTL channel-bank/NOAA identity fixes and version-only PR #475. Published Build 258 source fe3a9ae52754313cc6a69d3766f396ba9a8d8e3c remains an ancestor. Required security runs 37254705555 and 37256348121 passed on approved exact heads; merged trees matched reviewed trees.",
+      "Two native ARM64 builds on KD6KPC-14 produced byte-identical packages: 18,934,779 bytes, SHA-256 21dde92b1e521dcd5f9c45b5aadeb4d21d62aa42e27af773b5cb624d833f6865. Evidence build259.sCYd2b retains clean source, native-input hashes, canonical timestamp, build logs and both ZIPs.",
+      "Physical packaged workflow 37256774120 passed at exact source/ZIP: ten tests, zero failures/skips. Clean/legacy convergence and rollback (2), isolated RSP1B module/systemd write (1), RTL service-user inventory (1), native KA9Q pipelines (3), embedded package pipelines (3), and cleanup passed. Published updater 1.0.70 signature/artifact verified unchanged.",
+      "Final candidate-source core receiver/reporting/package/health qualification: 685 passed, no skips/failures. Focused Linux server: 5 passed, 33 intentionally filtered. Audio regressions: 8 passed. Release registry verification and four identity tests passed on the frozen source.",
+      "Actual final extracted controller/reporting modules: 47 tests passed. Actual extracted NOAA startup helper: 8 passed. Receiver identity binding, native correction readback, residual verification, process cleanup, runtime restoration and optional advisory behavior remain covered. No live NOAA RF qualification is claimed.",
+      "Independent downloaded-from-builder ZIP audit passed: exact hash/bytes, CRCs, source/release/platform identity, 152 declared modes, 54 protected-controller hashes/modes, eight native AArch64 ELF hashes, universal RTL/Airspy/RSP1B profiles and packaged NOAA helper/probe presence.",
+      "Native disjoint-range regression processes 52.810-53.100 and 53.800-53.990 MHz through 11/8 channel banks over two complete cycles; unchanged banks remain stable and the 25 kHz grid/permanent settings remain unchanged. Missing power/stalled input still fails liveness. This synthetic frontend is not live USB/antenna proof.",
+      "NOAA resolves canonical RTL hardware serial without requiring a redundant serial field; absent/malformed/conflicting identities still fail. Native serial/readback/residual verification remains strict. Native receiver binaries are from hash-verified immutable Build 258; KA9Q pin 8f6a05b3b4b5ee5c85ff556f64af918e561786b4, gain/reporting policy and updater 1.0.70 are unchanged.",
+      "Neither deployment node was contacted. Live receiver/antenna and NOAA behavior require separate controlled rollout. Private predecessor/SDRplay API inputs, credentials and signing inputs are not published. No updater release, new authorization, health gate, receipt or migration architecture."
+    ]
+  }
+}
