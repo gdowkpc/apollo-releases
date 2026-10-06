@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.53-build.266",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "58b059738624b43d0bde04995916b9b6c8f6a34d"
+  },
+  "release": {
+    "version": "2.3.53",
+    "build": 266,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.53-build.266-linux-arm64.zip",
+    "byte_size": 18981644,
+    "sha256": "13b2a649d8de0b0dceff5ce75cdcfef9e6aa90117a537a613f8b0373a5392ce3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 58b059738624b43d0bde04995916b9b6c8f6a34d contains approved DMR PR #485 and version-only PR #490. Published Build 265 source 5f6aaccd6d23cc6487ff8fa07cca5e5d479e01f1 is an ancestor. Security run 37461442931 passed on approved PR #490 head 7c37b224abcb4cf9745b903c2e6a4dfd05ad7e61.",
+      "Two native ARM64 builds on KD6KPC-14 are byte-identical: 18,981,644 bytes, SHA-256 13b2a649d8de0b0dceff5ce75cdcfef9e6aa90117a537a613f8b0373a5392ce3. Frozen source, deterministic timestamp, authenticated Build 265 native inputs, both ZIPs and extraction retained. KA9Q pin unchanged.",
+      "Physical workflow https://github.com/gdowkpc/apollo/actions/runs/37462241659 passed on exact source/ZIP: ten tests, zero failures/skips. Clean/private predecessor convergence and rollback, isolated RSP1B module load/profile-apply systemd write, RTL service-user inventory and native KA9Q through embedded package health passed with signed updater 1.0.70.",
+      "Native DMR/audio/reporting/storage suite: 157 passed. Actual compiled ARM64 executable DMR suite: 23 passed. Six synthetic 16/24/48 kHz cold/warm worker cases completed within the 400 ms advisory budget: cold 175.4-190.4 ms, warm 40.5-47.4 ms; event-loop heartbeats continued with maximum gap 5.5 ms. No raw PCM retained.",
+      "Receiver/package/core UI: 616 passed. Root preservation/rollback: 21 passed. Dashboard/update/bootstrap/security contracts: 61 passed. Extracted root/systemd dashboard: 28 passed. Focused Linux/RTL/update server routes: six passed, 32 unrelated tests intentionally name-filtered. Native audio/CTCSS: eight passed. NOAA startup: nine passed. Identity/policy: eight passed. Counts overlap; not a unique test total.",
+      "Extracted Airspy controller plus packaged native KA9Q processed three complete five-window synthetic cycles: 15 window captures, 15 spectrum packets, 75 status packets, no sample stall. Intentional stale/geometry rejection diagnostics retained. Synthetic input is not antenna RF or end-to-end reporting proof.",
+      "Independent transferred ZIP audit passed exact size/SHA-256/CRC/source, safe unique paths, 164 declared modes, 54 protected-controller hashes/modes, eight KA9Q AArch64 runtime hashes, executable integrity, presets, universal profiles and ten exact packaged-source comparisons including DMR modules and Airspy reporting.",
+      "Neither deployment node contacted during candidate qualification. Live Airspy/RTL RF, real DMR/FM transmissions and authenticated delivery of advisory clues remain separate post-publication checks. SDRplay/RSP1B remains experimental. No updater, KA9Q pin, scan-plan, credential, gain/AGC, service-user, reporting-authority or RF-health-rule changes.",
+      "DMR classification is advisory only, using the existing owned flat multicast PCM off the scanning/reporting event loop. No extra tuning/capture or awaited classifier completion. Strong clues use the existing intake shape; unfinished, weak or failed classification remains unknown. No private evidence, proprietary API build inputs, credentials or signing material published."
+    ]
+  }
+}
