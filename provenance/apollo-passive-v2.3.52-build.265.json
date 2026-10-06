@@ -1,0 +1,41 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.52-build.265",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "5f6aaccd6d23cc6487ff8fa07cca5e5d479e01f1"
+  },
+  "release": {
+    "version": "2.3.52",
+    "build": 265,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.52-build.265-linux-arm64.zip",
+    "byte_size": 18969019,
+    "sha256": "7b7edeaecc4bdadfaad3a8c1bc3eff8bb98b4c21a45e040c0d2e56e40ae4b438",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 5f6aaccd6d23cc6487ff8fa07cca5e5d479e01f1 contains approved dashboard fix PR #488 and identity PR #489. Security runs 37403849074 and 37405069545 passed on approved exact heads. Published Build 264 source 70874a5a8ec4f7be4296b7c6f09a85e914c87554 is an ancestor; no unrelated source changes.",
+      "Two native ARM64 builds on KD6KPC-14 are byte-identical: 18,969,019 bytes, SHA-256 7b7edeaecc4bdadfaad3a8c1bc3eff8bb98b4c21a45e040c0d2e56e40ae4b438. Evidence build265.XmsDTA retains frozen source, timestamp, authenticated published Build 264 native inputs, both ZIPs and extraction. KA9Q pin unchanged.",
+      "Physical workflow 37406135567 passed at the exact source/ZIP: ten tests, zero failures/skips. Clean/private predecessor convergence and rollback, isolated RSP1B module/systemd write, RTL service-user access and native KA9Q through embedded package health passed with signed updater 1.0.70.",
+      "Final extracted ARM64/root dashboard suite: 59 passed, zero failures/skips. Unprivileged account/private updater, protected launcher custody, real independent systemd handoff, exact canonical preflight/apply, failure propagation, no retry and no retired-route revival tested. Not a real owner-button node update.",
+      "Native reporting/adapter/audit/store: 126 passed. Extracted embedded-executable reporting: 14 passed. Receiver/reporting/package/health: 692 passed, zero failures/skips. Focused server routes: six passed, 32 unrelated tests name-filtered. Audio/CTCSS: eight passed. Registry: four passed. Counts overlap; not a unique total.",
+      "Extracted controller/reporting/NOAA/analyzer: 84 passed. NOAA startup: nine passed. Extracted root dashboard subset: 28 passed. Update contracts: 61 passed. Root preservation/rollback: 21 passed.",
+      "Exact extracted Airspy controller plus packaged radiod/protocol processed three complete five-window Oregon cycles with synthetic loopback noise: 15 accepted spectra, three per window, advancing input samples; UHF 1476/3376 bins at 1000 Hz. Synthetic input is not antenna RF proof.",
+      "Independent ZIP audit passed hash/size/CRC/source, 162 modes, 54 protected-controller hashes/modes, eight KA9Q AArch64 hashes, universal profiles and six source-byte comparisons including corrected dashboard provider. Retained trace and workflow log retrieved after builder SSH reauthorization.",
+      "Neither deployment node contacted during candidate qualification. Live Airspy/RTL RF and organic evidence/audio reporting remain separate post-publication checks. SDRplay/RSP1B remains experimental. No updater, gain/AGC, service-user, scan-plan, credential, reporting-authority or RF-health-rule changes.",
+      "Unprivileged readiness no longer inspects the intentionally root-private updater. The independent root job still verifies installed updater authority, signed target and exact canonical preflight/apply. No permissions widened. No private evidence, API build inputs, credentials or signing material published."
+    ]
+  }
+}
