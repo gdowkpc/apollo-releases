@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.54-build.267",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "2b4c4c2498086e7a6f5a3bbffbb108f829262ed8"
+  },
+  "release": {
+    "version": "2.3.54",
+    "build": 267,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.54-build.267-linux-arm64.zip",
+    "byte_size": 18982241,
+    "sha256": "7d1ad6a58935760748cc3bbe082319ee6cc99c814d615c564948e6ca3b299f37",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 2b4c4c2498086e7a6f5a3bbffbb108f829262ed8 contains approved dashboard PR #491 and version-only PR #492. Published Build 266 source 58b059738624b43d0bde04995916b9b6c8f6a34d is an ancestor. Required security run 37553165077 passed on approved PR #492 head 2410b92086454cc4e5e5ab698681d16ad5c417b6.",
+      "Two native ARM64 builds are byte-identical: 18,982,241 bytes, SHA-256 7d1ad6a58935760748cc3bbe082319ee6cc99c814d615c564948e6ca3b299f37. Frozen source, deterministic timestamp, authenticated Build 266 native inputs, both ZIPs and extraction retained. Production KA9Q pin unchanged.",
+      "Physical workflow https://github.com/gdowkpc/apollo/actions/runs/37554022824 passed at exact source and artifact: ten passes, zero failures/skips. Packaged clean/private predecessor convergence and rollback, RSP1B module/profile-apply systemd write, RTL service-user inventory, native KA9Q and embedded package health passed with published signed updater 1.0.70.",
+      "Core/extracted qualification: 942 passes, zero failures; 45 cases deliberately excluded by focused name filters. Receiver/package/UI 622; root preservation/rollback 21; dashboard/update contracts 62; extracted root/systemd dashboard 28; focused server routes six; native CTCSS eight; NOAA preparation nine. Identity/policy preparation eight also passed. Counts can overlap and are not unique test totals.",
+      "DMR/audio/reporting/storage 157 passed; actual compiled ARM64 executable DMR 23 passed. Synthetic 16/24/48 kHz cold/warm worker cases completed within the 400 ms advisory budget: cold 174.6-188.8 ms, warm 40.7-47.3 ms; event-loop heartbeats continued, maximum gap 5.8 ms. No raw PCM retained.",
+      "Actual extracted HTML and Airspy reporting adapter matched frozen source. Six extracted UI regressions passed for manual-check Settings placement, measured spectrum, live forwarder reporting state, disabled/held/inactive distinctions, active eligibility and truthful local-history wording. Static transport vocabulary does not override current authorization booleans.",
+      "Extracted controller and packaged native KA9Q processed three complete five-window synthetic cycles: 15 captures, 15 spectrum packets, 75 status packets and no sample stall. Intentional stale/geometry rejection diagnostics retained. Synthetic input is not antenna RF or end-to-end reporting proof.",
+      "Independent transferred ZIP audit passed exact size/SHA-256/CRC/source, safe unique paths, 164 declared modes, 54 protected hashes/modes, eight native KA9Q AArch64 hashes, executable integrity, presets, universal profiles and 11 exact packaged-source comparisons. No rebuild after qualification.",
+      "Scope is dashboard presentation and current reporting-state projection only. No RF logic, health-rule, updater, credential, scan-plan, gain/AGC, service-user or reporting-authority changes. Neither deployment node contacted during qualification. RTL/Airspy physical RF and server delivery remain post-publication checks; SDRplay/RSP1B remains experimental. No private configuration, credentials or signing material published."
+    ]
+  }
+}
