@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.55-build.268",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "87b0e1cb255680ae19c18b8a27d5c89aee6ede0f"
+  },
+  "release": {
+    "version": "2.3.55",
+    "build": 268,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.55-build.268-linux-arm64.zip",
+    "byte_size": 18982205,
+    "sha256": "2afd179e42fb730aa5185cea70d578d8084d59cae9e0f44caca58b90075b0255",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen protected main 87b0e1cb255680ae19c18b8a27d5c89aee6ede0f contains approved fix PR #493 and version-only PR #494. Both exact-head release-security-contract checks passed. Published Build 267 source 2b4c4c2498086e7a6f5a3bbffbb108f829262ed8 is an ancestor. Only six reviewed fix/identity files differ.",
+      "Scope: application-owned Airspy activation allowance 60 to 120 seconds for two bounded NOAA probes, cold radiod startup and status publication. Identity, freshness, independently observed RF advancement and required-window liveness remain unchanged. No updater, gain, plan, credential, reporting authority, channel-lifecycle or production KA9Q pin change.",
+      "Two native ARM64 builds are byte-identical: 18,982,205 bytes; SHA-256 2afd179e42fb730aa5185cea70d578d8084d59cae9e0f44caca58b90075b0255. Frozen source, deterministic timestamp, authenticated unchanged native inputs and extracted package retained. No rebuild after qualification.",
+      "Physical workflow https://github.com/gdowkpc/apollo/actions/runs/37562258977 passed at exact source and artifact using verified signed updater 1.0.70: packaged clean/private predecessor convergence and rollback, RSP1B module/profile-apply systemd write, RTL service-user runtime inventory, native packaged KA9Q stream and embedded Apollo health. Builder tests are not physical receiver RF proof.",
+      "Native core/extracted qualification: 1,007 aggregate passes, zero failures; 45 cases deliberately excluded by focused name filters. Counts overlap, not unique test totals. Includes root preservation/rollback, receiver/package/dashboard/reporting/audio, compiled ARM64 executable, NOAA preparation and extracted UI contracts.",
+      "Airspy startup regression passes against the actual extracted production-packaged protected module; all 54 protected file hashes and exact corrected module bytes verified before tests. Late fresh RF advances beyond 60 seconds are accepted within the bounded allowance; stale samples, frozen processing and absent required-window progress still fail.",
+      "Packaged native synthetic pipeline completed three five-window cycles: 15 captures, 15 spectrum packets, 75 status packets and no sample stall. Intentional stale/geometry rejection diagnostics remain visible. Synthetic measurements are not antenna RF, known-signal or server-delivery proof.",
+      "Independent transferred ZIP audit passed size/SHA-256/CRC/source, safe unique paths, 164 declared modes, 54 protected hashes/modes, eight native KA9Q AArch64 hashes, executable integrity, presets, universal profiles and 12 exact packaged-source comparisons. Both existing qualified ZIPs were retained unchanged.",
+      "No deployment nodes contacted during qualification; published Build 267 and updater 1.0.70 remain immutable. KD6KPC-3 live Airspy qualification remains a post-publication step. SDRplay/RSP1B remains experimental. No private configuration, credentials or signing material published."
+    ]
+  }
+}
