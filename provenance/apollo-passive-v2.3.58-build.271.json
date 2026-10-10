@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.58-build.271",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8b84b17460f6bb109487c84b49f0bd32bfd26ab2"
+  },
+  "release": {
+    "version": "2.3.58",
+    "build": 271,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.58-build.271-linux-arm64.zip",
+    "byte_size": 19791185,
+    "sha256": "eef0a288fc46c19683044543b8b894a75b0905ab1e916c4b8023596de28c87fa",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen application source 8b84b17460f6bb109487c84b49f0bd32bfd26ab2 contains approved scanner implementation PR 498, qualification documentation PR 505 and generic inventory-admission fix/Build 271 identity PR 506. Exact-head security checks passed before merge. This is one receiver-neutral ARM64 package; BCD996P2 support is early tester and BCT15X qualification is deferred.",
+      "Two fresh-dependency native ARM64 builds are byte-identical: 19,791,185 bytes, SHA-256 eef0a288fc46c19683044543b8b894a75b0905ab1e916c4b8023596de28c87fa. Frozen source, deterministic inputs and extracted package are retained. Existing authenticated KA9Q native inputs remain unchanged. No application rebuild after qualification.",
+      "Independent transferred ZIP audit passed size/hash/CRC/source, safe unique paths, executable integrity, 166 declared modes, 55 protected controller hashes/modes, eight AArch64 native KA9Q hashes, universal receiver profiles and 13 exact packaged-source comparisons.",
+      "Production signed updater 1.0.71 passed full ARM64 and signing/publication workflow https://github.com/gdowkpc/apollo/actions/runs/38082017338. Immutable ZIP SHA-256 484e8617dddd8ea3f76bea29f5db608c7d56608adbc2c778b23cfffdde62ad6b. Its production signature, asset digests, package inventory and capsule binding were independently verified. Updater source 0575917505512a2d5acaf94d39eb492131b082ce differs from frozen application source only in a retention test and required CI.",
+      "Physical workflow https://github.com/gdowkpc/apollo/actions/runs/38082785254 passed at exact frozen application source and ZIP using production signed updater 1.0.71: packaged clean/private predecessor convergence and rollback, isolated RSP1B module/profile-apply systemd write, root-installed RTL service-user inventory, native packaged KA9Q stream and embedded Apollo health. These package/native gates are not physical antenna RF qualification.",
+      "Exact compiled Build 271 passed a connected BCD996P2 bench at 115200 baud: configured model mismatch rejected with zero verified visits; the full 115-target assigned plan completed with zero failed visits. The native serial library loaded from the compiled package without repository/development dependencies or NODE_PATH. Reporting was disabled.",
+      "Packaged BCD996P2 pause released serial access; resume verified MDL and began a fresh session with advancing plan progress. The 440.400 MHz bench completed 21 verified visits/cycles with zero failures. Target-native startup health reported ready/forward progress while explicitly reporting sampled=false and physical_rf_qualified=false.",
+      "Live 123.0 Hz tone reception on 440.400 MHz was unavailable. Physical USB disconnect/reconnect, reboot, installed scanner service/reporting, authenticated server delivery, co-channel RF and digital reception remain pending. Quiet-channel scanning is not RF reception proof; scanner tone/digital metadata does not provide IQ, audio capture, spectrum, SNR/dBm or decoding confidence.",
+      "Original scanner services/watchdog and configuration/plan hashes were restored unchanged after the temporary bench. No permanent node migration or reporting authority change was performed. BCT15X qualification remains deferred. SDRplay/RSP1B remains experimental. No private configuration, credentials or signing material is published. The public setup guide requires controlled signed updater 1.0.71 provisioning and canonical preflight/apply."
+    ]
+  }
+}
