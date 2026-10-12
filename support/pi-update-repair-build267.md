@@ -64,8 +64,10 @@ Do not send passwords, tokens, configuration files, or a full diagnostic archive
 
 The download requires 64-bit ARM Linux and Python 3. It is the same immutable installer offered on the [Apollo downloads page](https://www.repeaterbooklive.com/apollo/downloads/), not the older Build 279 repair candidate.
 
-Filename: `Apollo-Pi-Installer-2.3.72-build.285-linux-arm64.zip`  
-Size: **296,823 bytes**  
+Filename: `Apollo-Pi-Installer-2.3.72-build.285-linux-arm64.zip`
+
+Size: **296,823 bytes**
+
 SHA-256: `88d304967dc72fcc5008774681272af9039c1ab1d3139617f95138617f593530`
 
 An existing-installation update uses Apollo's authenticated configuration preservation and rollback process. Successful installation on your particular Pi is confirmed only when you complete step 5.
