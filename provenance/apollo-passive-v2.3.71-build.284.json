@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.71-build.284",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "9ceb98852bfe558fae9115bbf8beb049df630ddc"
+  },
+  "release": {
+    "version": "2.3.71",
+    "build": 284,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.71-build.284-linux-arm64.zip",
+    "byte_size": 19818527,
+    "sha256": "7008d982875f70b4dfcff17d36f5aef4605f377e11ab4ca900fd8a214c395986",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source 9ceb98852bfe558fae9115bbf8beb049df630ddc is the approved PR 547 merge. Required release-security-contract CI 38303332868 passed at approved head f753d23d95719f6f4468000bf507fc080b12a230, including owner enrollment security tests. Physical ARM64 root passed 145 JavaScript tests with five unrelated input-dependent skips, 27 proof-of-possession Python tests and nine socket authorization tests.",
+      "Two native ARM64 packages were byte-identical: 19,818,527 bytes; SHA-256 7008d982875f70b4dfcff17d36f5aef4605f377e11ab4ca900fd8a214c395986. Independent archive verification passed digest, size, CRC, safe unique paths, source/version/build identity, principal executable hash and 170 declared file modes. The stale release identity assertion was tested from a separate test-only checkout; the package source remains frozen and clean.",
+      "Frozen package qualification passed https://github.com/gdowkpc/apollo/actions/runs/38320383434 at exact source 9ceb98852bfe558fae9115bbf8beb049df630ddc, using signed production updater 1.0.75. Clean/private predecessor convergence and rollback, isolated packaged RSP1B closure, RTL service-user inventory and native packaged KA9Q stream through embedded Apollo health all passed. Updater 1.0.74 rejects the expanded protected controller inventory and must not be used for this package.",
+      "Build 284 repairs universal clean owner enrollment by authenticating the installed package against the existing immutable GitHub release authority and signed inventory before identity initialization. It checks root code ownership and exact installed agent bindings, preserves existing owner-state boundaries, provides nonpersistent preflight, and extends enrollment-specific socket deadlines. It introduces no alternative credential, enrollment grant or updater receipt mechanism.",
+      "RB-NODE-05 existing Build 281 passed a read-only replacement audit: current immutable package verified, original empty-baseline snapshot and twelve node-owned paths verified, zero managed-file drift, saved legacy credential/configuration hashes unchanged and canonical owner identity/credential absent. Build 284 installation and actual account enrollment on that node remain subsequent gates; this release does not claim successful customer login.",
+      "Universal receiver-neutral package retains Uniden serial, RTL-SDR, Airspy and experimental SDRplay/RSP1B profiles. SDRplay requires its separately licensed API/service. Scanner tune/status progress is not physical RF proof; reception, tone, physical reconnect/reboot, installed reporting and BCT15X qualification remain pending. Reporting authority and fleet rollout are not granted.",
+      "Controlled early-tester package requires the signed Universal Pi updater 1.0.75 and target-native activation. Direct ZIP activation is not supported. Preserve credentials and receiver configuration; owner registration is completed through the existing account authorization flow."
+    ]
+  }
+}
