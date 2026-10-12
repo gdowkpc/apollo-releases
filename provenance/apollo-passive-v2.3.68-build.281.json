@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.68-build.281",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "fb37c427d63abba36cec95196afbaeb40e4391d6"
+  },
+  "release": {
+    "version": "2.3.68",
+    "build": 281,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.68-build.281-linux-arm64.zip",
+    "byte_size": 19801560,
+    "sha256": "fe755b50dccb1497abc0150447ec180dc45143bb61203177f29dad3e57502679",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source fb37c427d63abba36cec95196afbaeb40e4391d6 is the approved PR 536 merge and descends from Build 280. Exact-head security run 38196732287 passed. Physical ARM64 root passed 40 focused installer, scanner, gateway and updater-package tests without skips.",
+      "Two native ARM64 builds were byte-identical: 19,801,560 bytes; SHA-256 fe755b50dccb1497abc0150447ec180dc45143bb61203177f29dad3e57502679. Independent archive checks verified digest, size, CRC, unique safe paths, source/version/build, executable hash and all 166 declared modes.",
+      "Frozen-package target-state qualification passed: https://github.com/gdowkpc/apollo/actions/runs/38200143436 . Signed updater 1.0.74 exercised clean/private predecessor convergence and rollback, isolated RSP1B closure, RTL service-user inventory, and native/embedded packaged KA9Q health. Qualification-only source corrections at 1ef8ffced6ae70b7eb53811f7c59a42aea21a5b8 retain the exact candidate source and reject production-source deltas.",
+      "Exact standalone ARM64 package tested on RB-NODE-05 with a BCD996P2: full 115-target assigned-plan pass with zero failed targets, native serial library and exclusive serial ownership, wrong-model rejection, pause releasing serial, and resume with fresh session/model verification and verified target progress. Original legacy configuration/plan hashes unchanged; legacy services restored after the test.",
+      "Packaged native scanner health confirmed verified tune/status progress and explicitly reports sampled false and physical_rf_qualified false. Quiet channels are not RF reception proof. Active tone, physical reconnect/reboot, installed reporting, co-channel and digital qualification remain pending; BCT15X qualification is deferred.",
+      "Build 281 fixes scanner selection recheck and native setup/scanner API routes. Configured local reception with reporting disabled can start before owner enrollment. Owner settings and server delivery retain their authorization gates. Universal clean owner onboarding remains unqualified; this controlled release is for local receiver testing. No reporting authority or fleet rollout is granted.",
+      "Universal receiver-neutral ARM64 package retains RTL-SDR, Airspy and experimental SDRplay/RSP1B inventory. SDRplay requires its separately licensed API/service. Application ZIP requires the signed Universal Pi updater, not direct ZIP activation."
+    ]
+  }
+}
