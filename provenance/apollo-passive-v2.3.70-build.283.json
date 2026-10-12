@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.70-build.283",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "2af3cdd65453548bd719f56fdde13aa9e9927f83"
+  },
+  "release": {
+    "version": "2.3.70",
+    "build": 283,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.70-build.283-linux-arm64.zip",
+    "byte_size": 19808278,
+    "sha256": "70a3dbab5daf0094dea9f54add8b54efb5f5b9bc289ffde4c2b7241993ef0623",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source 2af3cdd65453548bd719f56fdde13aa9e9927f83 is the approved PR 539 merge. It includes current Build 282 lineage. Exact-head release-security workflow 38274992367 passed. Integrated Windows regressions: 190 pass, 20 Linux-only skips; four identity tests pass.",
+      "Two native ARM64 builds on the designated builder were byte-identical: 19,808,278 bytes; SHA-256 70a3dbab5daf0094dea9f54add8b54efb5f5b9bc289ffde4c2b7241993ef0623. Independent transferred ZIP audit verified CRC, safe unique paths, manifest/source, 55 protected controller files, 168 file modes and seven native AArch64 hashes.",
+      "Frozen-package target-state qualification: https://github.com/gdowkpc/apollo/actions/runs/38279809903 . Production signed updater 1.0.74 checks clean/private predecessor convergence and rollback, isolated RSP1B closure, root-installed RTL service-user inventory and native packaged KA9Q stream through embedded Apollo health.",
+      "Unenrolled, explicitly reporting-disabled KA9Q reception uses an acquisition-instance namespace and in-memory channel ownership. It never becomes a server/dashboard UUID or saved credential. Registered nodes retain their identity. Finite channel leases, collision checks and all-window sampled RF installation gates remain required.",
+      "The isolated server/receiver/manager/controller startup regression passes 46 tests on the physical ARM64 Raspberry Pi 3B+, with four release identity tests passing. External RF/network I/O is replaced: this is startup wiring proof, not antenna RF qualification. Sustained physical RF and reboot acceptance remain separate device gates.",
+      "One universal receiver-neutral package retains RTL-SDR, Airspy, Uniden and experimental SDRplay/RSP1B profiles. SDRplay requires its separately licensed API. This package qualification grants no production reporting authorization, fleet rollout, tone-decoding claim or device-specific 3B+ capability approval."
+    ]
+  }
+}
