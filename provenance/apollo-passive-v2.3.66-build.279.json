@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.66-build.279",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "d54a969df8e206cd08cced794d987d193040be0b"
+  },
+  "release": {
+    "version": "2.3.66",
+    "build": 279,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.66-build.279-linux-arm64.zip",
+    "byte_size": 19794977,
+    "sha256": "fbb728569018e8974de43a571fc1186e5e1a9c52f66e9642f629fd6132144635",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen application source d54a969df8e206cd08cced794d987d193040be0b includes RTL existing-node recovery/scan-plan correction PR 529 and Build 279 allocation PR 532. Both exact-head release-security workflows passed before merge. Source descends from published Build 271 and current release lineage.",
+      "Two native ARM64 builds from fresh locked dependencies were byte-identical: 19,794,977 bytes; SHA-256 fbb728569018e8974de43a571fc1186e5e1a9c52f66e9642f629fd6132144635. Independent transferred ZIP audit passed CRC, unique safe paths, frozen source, principal executable, 166 modes, 55 controller files, eight native AArch64 hashes and 13 exact packaged-source comparisons.",
+      "Frozen-package target-state workflow https://github.com/gdowkpc/apollo/actions/runs/38190767322 qualifies clean/private predecessor convergence and rollback, isolated RSP1B package/profile application, root-installed RTL service-user inventory and the native packaged KA9Q stream through embedded Apollo health. It uses production signed updater 1.0.72. This is package/native qualification, not antenna RF proof.",
+      "Matching unchanged legacy RTL serial and pristine default setup are admitted only with one unambiguous serial-identified RTL receiver. Save re-detects hardware; unplugged, swapped, multiple, path-only or conflicting hardware remains blocked. Regression coverage confirms owner recovery preserves node identity and persistent config until a successful authorized Save.",
+      "Linux regression suite: 208 passed, zero failures, one privileged fixture skipped; separate scanner suite 22 passed. Full exact-head GitHub release-security gates passed, including updater recovery/historical migrations. Production updater 1.0.72 signature, ZIP digest and signed capsule binding were independently verified.",
+      "The customer's Pi and RF environment were not contacted. Customer-specific configuration and installation are unverified. BCT15X remains deferred and SDRplay/RSP1B experimental. No new hardware reception, reporting authorization or fleet installation claim is made.",
+      "Build 267 update discovery previously selected itself. Its dashboard installation transport fetches signed updater authority from a private repository and can return HTTP 404 anonymously; updater 1.0.70 also rejects newer controller inventories. Older nodes may require support-assisted signed updater provisioning before installing this application. The ZIP is not a standalone installer."
+    ]
+  }
+}
