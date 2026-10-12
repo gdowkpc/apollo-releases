@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.73-build.286",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "39b103cb324db675ff71aac6b709cdb838b20a6a"
+  },
+  "release": {
+    "version": "2.3.73",
+    "build": 286,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.73-build.286-linux-arm64.zip",
+    "byte_size": 19820741,
+    "sha256": "24e788f59792a6b5a98037986e4954e6878ff0a4b958f47cb5a93330da8d62f3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source 39b103cb324db675ff71aac6b709cdb838b20a6a is the approved PR 548 merge, retaining Pi installer/enrollment PR 552 and Windows NOAA PR 542. Exact-head security CI 38322709779 passed. Focused checks: 143 pass, four skips; merged NOAA/workflow checks: 103 pass.",
+      "Two native ARM64 ZIPs were byte-identical: 19,820,741 bytes; SHA-256 24e788f59792a6b5a98037986e4954e6878ff0a4b958f47cb5a93330da8d62f3. Independent audit verified CRC, safe unique paths, source identity, 57 protected controller sources, 170 file modes and seven native AArch64 hashes.",
+      "Frozen exact-ZIP target-state qualification: https://github.com/gdowkpc/apollo/actions/runs/38323729762 . Production-signed updater 1.0.75 passed clean/legacy convergence and rollback, isolated RSP1B closure, root RTL inventory and native stream through extracted/embedded Apollo RF health.",
+      "The rebuilt RTL driver uses bounded 32 KiB USB blocks, one atomic gain snapshot per block, batched ADC statistics and checked FFT-input writes. Its SHA-256 is 7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb. Packaging rejects stale drivers without the receive contract.",
+      "That identical driver passed the private physical Raspberry Pi 3B+ bench at 2.4 Msamples/sec, including seven NOAA tune commands, amateur retunes and four genuine manager sweeps over both 144-146.224 and 146.224-148 MHz windows. Installed activation, sustained RF and reboot capability gates remain separate and pending.",
+      "One universal receiver-neutral ARM64 package retains RTL-SDR, Airspy, Uniden and experimental SDRplay/RSP1B profiles. The licensed SDRplay API remains separately required. Reporting stays owner-authorized; this record grants no fleet rollout, known-signal decoding proof or blanket 3B+ receiver qualification."
+    ]
+  }
+}
