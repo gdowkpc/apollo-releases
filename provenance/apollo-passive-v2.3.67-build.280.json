@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.67-build.280",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ad7569922bade81279c7a3266ceff121e2a8d99f"
+  },
+  "release": {
+    "version": "2.3.67",
+    "build": 280,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.67-build.280-linux-arm64.zip",
+    "byte_size": 19801021,
+    "sha256": "84090d104b97565c9fd1e820f669f332667d6995ae9b84ab29fdd679dcf35357",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source ad7569922bade81279c7a3266ceff121e2a8d99f is the approved PR 535 merge. It descends from published Build 279. Exact-head release-security workflow 38194362320 passed; focused server/owner/config/release regressions passed 47 tests with no failures or skips.",
+      "Two native ARM64 builds on the designated Apollo builder were byte-identical: 19,801,021 bytes; SHA-256 84090d104b97565c9fd1e820f669f332667d6995ae9b84ab29fdd679dcf35357. Transferred ZIP passed digest, size, CRC, unique safe-path and frozen manifest identity checks.",
+      "Frozen-package target-state qualification: https://github.com/gdowkpc/apollo/actions/runs/38194897754 . Uses production signed updater 1.0.74 for clean/private predecessor convergence and rollback, isolated RSP1B closure, root-installed RTL service-user inventory, and native packaged KA9Q stream through embedded Apollo health.",
+      "Explicitly reporting-disabled clean-install starter configuration permits local RF before account enrollment. Reporting-enabled unprovisioned startup remains blocked. Owner settings, location, enrollment and reporting authority gates remain enforced; installer still requires sampled progress through every configured RF window.",
+      "Native regression on a Raspberry Pi 3B+ reproduced the prior owner-gated startup and verified the correction. This is startup regression proof, not physical antenna RF qualification. Device-specific sustained RF and reboot acceptance will be recorded separately after installation.",
+      "Universal receiver-neutral package preserves the authenticated native RTL-SDR, Airspy and SDRplay inventory. SDRplay/RSP1B remains experimental and requires its separately licensed API. No production reporting authorization, fleet rollout, tone-decoding or new receiver qualification is granted."
+    ]
+  }
+}
