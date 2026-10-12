@@ -1,0 +1,83 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v1",
+  "release_tag": "apollo-pi-installer-v2.3.72-build.285",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "61ff613d5516a9b18f9e5b11ab67780b3946e65d",
+    "pull_request": 552
+  },
+  "target": {
+    "version": "2.3.72",
+    "build": 285,
+    "source_commit": "b5ef9fdd0a48157ee07e26343f5be76b9eb3b86d",
+    "release_tag": "apollo-passive-v2.3.72-build.285",
+    "sha256": "6cb0877f1d68ceb32cdaa59a05d07300893972bf846120aea095c3395e6ffa26"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.72-build.285-linux-arm64.zip",
+    "bytes": 296823,
+    "sha256": "88d304967dc72fcc5008774681272af9039c1ab1d3139617f95138617f593530"
+  },
+  "updater": {
+    "version": "1.0.75",
+    "signed_source_commit": "f36e09d5b062e0b2e4fdb1052ace310e543e5b85",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.75-linux-arm64.zip": {
+        "bytes": 291368,
+        "sha256": "dd640b2498fd1fbc32b93240f60e0fad4beba14f6cc6936026385170a0fa4bc3"
+      },
+      "ApolloUniversalPiUpdater-1.0.75.authority.json": {
+        "bytes": 1169,
+        "sha256": "b7edb63568c69a6bcc095a5e6c4adfaef9f2dc942eac0ab6c242456c54d8130a"
+      },
+      "ApolloUniversalPiUpdater-1.0.75.controller-capsule.json": {
+        "bytes": 6655,
+        "sha256": "07f9a68ba074b1aa8c770eed564d6f4b37c6ae4ec84b8a5fb51cf052d9be109e"
+      }
+    }
+  },
+  "qualification": {
+    "fresh_host": "Raspberry Pi 5, Debian 13.5, ARM64",
+    "baseline": "No application, updater receipt or retained authority; no reporting credential",
+    "readiness": {
+      "pass": true,
+      "source_commit": "b5ef9fdd0a48157ee07e26343f5be76b9eb3b86d",
+      "build": 285,
+      "installer_sha256": "88d304967dc72fcc5008774681272af9039c1ab1d3139617f95138617f593530",
+      "updater": "1.0.75",
+      "units": {
+        "apollo-dashboard-update.path": {
+          "LoadState": "loaded",
+          "ActiveState": "active"
+        },
+        "apollo-dashboard-update.service": {
+          "LoadState": "loaded",
+          "ActiveState": "inactive"
+        }
+      },
+      "retained_authority": "root:0600",
+      "unprivileged_dashboard": {
+        "installed_build": 285,
+        "installation_supported": true
+      },
+      "browser_dashboard": {
+        "installed_build": 285,
+        "installation_supported": true
+      },
+      "setup_required": true,
+      "reporting_credential_present": false
+    },
+    "installer_safety_tests": {
+      "linux_root_pass": 17,
+      "skip": 0
+    },
+    "real_systemd_transport": {
+      "pass": 1,
+      "canonical_activation": "mocked; real activation separately verified by fresh install and package qualification"
+    },
+    "required_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/38318259733",
+    "frozen_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/38316826861",
+    "production_signed_updater_ci": "https://github.com/gdowkpc/apollo/actions/runs/38315779055",
+    "rf_and_reporting": "No physical RF, customer device repair, fleet rollout or reporting authorization claimed"
+  }
+}
