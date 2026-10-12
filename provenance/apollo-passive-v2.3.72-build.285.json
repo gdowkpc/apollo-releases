@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.72-build.285",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "b5ef9fdd0a48157ee07e26343f5be76b9eb3b86d"
+  },
+  "release": {
+    "version": "2.3.72",
+    "build": 285,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.72-build.285-linux-arm64.zip",
+    "byte_size": 19818900,
+    "sha256": "6cb0877f1d68ceb32cdaa59a05d07300893972bf846120aea095c3395e6ffa26",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source b5ef9fdd0a48157ee07e26343f5be76b9eb3b86d is approved PR 550 merge. Required release-security workflow 38310676544 passed. Release identity verification and four identity tests passed. No production reporting authorization is granted.",
+      "Two independent native ARM64 builds were byte-identical: 19,818,900 bytes; SHA-256 6cb0877f1d68ceb32cdaa59a05d07300893972bf846120aea095c3395e6ffa26. Transferred ZIP CRC, manifest, build and source identity audit passed.",
+      "Frozen-package target-state qualification: https://github.com/gdowkpc/apollo/actions/runs/38316826861 . Production-signed updater 1.0.75 checks clean/private Build 191 convergence and rollback, isolated RSP1B closure, root-installed RTL service-user inventory, and native packaged KA9Q stream through embedded Apollo health.",
+      "Complete installer launcher: eleven Python safety tests passed as Linux root. Dashboard updater: thirty Linux-root tests passed, with one real-systemd transport test skipped in WSL. The fresh-machine complete installer is qualified separately before the customer download is promoted.",
+      "One universal receiver-neutral package retains RTL-SDR, Airspy, Uniden and experimental SDRplay/RSP1B profiles. SDRplay requires its separately licensed API. Pi 3B+ reception and BCT15X qualification are deferred. Package qualification is not physical RF qualification, reboot acceptance, fleet rollout or reporting authorization."
+    ]
+  }
+}
