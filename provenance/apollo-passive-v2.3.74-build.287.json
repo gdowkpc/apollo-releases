@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.74-build.287",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "7d652bda61458f5033caf411d3fae9dd3c4bd05b"
+  },
+  "release": {
+    "version": "2.3.74",
+    "build": 287,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.74-build.287-linux-arm64.zip",
+    "byte_size": 19824015,
+    "sha256": "5691852b3b93fa83c9cf7d22ef3403c23b4da51c0255af59ffd66383071fb36d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source 7d652bda61458f5033caf411d3fae9dd3c4bd05b is the approved PR 555 merge. Required CI 38329267249 passed at exact approved head 2b093dd29e680be3983f122d3725db2f4dc4bcb1. Physical ARM64 root passed 56 focused JavaScript tests with five unrelated input-dependent skips and four release identity tests.",
+      "Two native ARM64 packages were byte-identical: 19,824,015 bytes; SHA-256 5691852b3b93fa83c9cf7d22ef3403c23b4da51c0255af59ffd66383071fb36d. Independent archive verification passed digest, size, CRC, safe unique paths, source/version/build identity, principal executable hash and all 170 declared file modes.",
+      "Frozen package qualification passed https://github.com/gdowkpc/apollo/actions/runs/38330311791 at exact source 7d652bda61458f5033caf411d3fae9dd3c4bd05b using signed production updater 1.0.75. Clean/private predecessor convergence and rollback, isolated packaged RSP1B closure, RTL service-user inventory and native packaged KA9Q stream through embedded Apollo health all passed.",
+      "Build 287 repairs the owner initializer permission check to read fresh_node_preenrollment.owner_enrollment_required, matching the actual portable package descriptor. Automatic node-agent enrollment remains forbidden. A private isolated corrected validator passed the real installed Build 284 package bindings without changing running code or creating owner identity, keys or credentials. Successful owner login remains an installation and account-authorization gate.",
+      "Native inputs came from authenticated immutable Build 286, source 39b103cb324db675ff71aac6b709cdb838b20a6a, ZIP SHA-256 24e788f59792a6b5a98037986e4954e6878ff0a4b958f47cb5a93330da8d62f3. The retained RTL driver satisfies the bounded receive capability marker required by current packaging; KA9Q source configuration matches the frozen source.",
+      "RB-NODE-05 continues scanning its saved 115-target Uniden BCD996P2 plan on Build 284, with legacy credentials and receiver configuration preserved and canonical owner state absent. Installation of Build 287 and actual account enrollment remain subsequent gates. Scanner tune/status progress is not physical RF proof; reception, tones, physical reconnect/reboot and installed reporting qualification remain pending.",
+      "Universal receiver-neutral package retains Uniden serial, RTL-SDR, Airspy and experimental SDRplay/RSP1B profiles. SDRplay requires its separately licensed API/service. Controlled early-tester installation uses signed Universal Pi updater 1.0.75 and target-native activation; direct ZIP activation is not supported. No reporting grant or fleet rollout is authorized."
+    ]
+  }
+}
