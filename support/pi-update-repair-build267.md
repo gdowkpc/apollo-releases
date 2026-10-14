@@ -1,73 +1,44 @@
-# Restore Apollo updates on your Raspberry Pi
+# Update Apollo on your Raspberry Pi
 
-For an existing **Apollo 2.3.54 / Build 267** installation that reports an available update but cannot install it because the updater or its services are missing.
+For an existing Apollo installation, including **2.3.54 / Build 267**, that cannot install updates or previously stopped with a permissions or receiver-selection error.
 
-This uses the published **Apollo 2.3.72 / Build 285** installer. It checks your existing installation and uses Apollo's normal update process to preserve your settings and registration. You do not need to erase the SD card or register the node again.
+Use this complete **2.3.74 / Build 287** installer with signed updater **1.0.81**. It preserves your existing settings and registration. Keep your SD card and leave your RTL-SDR, internet, and power connected.
 
-## Before you start
+## Download and install
 
-Keep the Pi connected to power and the internet, and leave your receiver connected. Apollo may briefly stop while it updates.
+Perform these steps **on the Raspberry Pi**, using its desktop:
 
-These steps must be performed **on the Raspberry Pi**, using its desktop and Terminal. A browser displaying Apollo on your Windows PC, Mac, or phone does not provide a terminal on the Pi. If you cannot access the Pi's desktop or are uncomfortable with these steps, reply to the person who sent you this guide and ask for help before continuing.
-
-## 1. Download the file on the Pi
-
-[**Download the Apollo Pi installer**](https://github.com/gdowkpc/apollo-releases/releases/download/apollo-pi-installer-v2.3.72-build.285/Apollo-Pi-Installer-2.3.72-build.285-linux-arm64.zip)
-
-The file is named `Apollo-Pi-Installer-2.3.72-build.285-linux-arm64.zip`. It will usually appear in your **Downloads** folder. Downloading and extracting it does not change Apollo.
-
-## 2. Extract the ZIP
-
-Open the Pi's file manager and find the downloaded ZIP. Right-click it and choose the option to **Extract** or **Extract Here**. Open the extracted `Apollo-Pi-Installer` folder. You should see a file named `install.py`.
-
-## 3. Open a terminal in that folder
-
-In the file manager, use **Open in Terminal** for the folder containing `install.py`. Depending on your Pi desktop, this may appear in the right-click menu or a menu at the top.
-
-If you cannot find this option, stop and ask for help rather than trying commands in an unrelated folder.
-
-## 4. Run this one command
-
-Copy and paste the following line into the Pi's terminal, then press **Enter**:
+1. [**Download the Apollo Pi installer**](https://github.com/gdowkpc/apollo-releases/releases/download/apollo-pi-installer-v2.3.74-build.287-updater.1.0.81/Apollo-Pi-Installer-2.3.74-build.287-updater.1.0.81-linux-arm64.zip).
+2. Find the ZIP in Downloads, right-click it, and choose **Extract** or **Extract Here**.
+3. Open the extracted **Apollo-Pi-Installer** folder. You should see **install.py**.
+4. Right-click inside that folder and select **Open in Terminal**. Paste this command and press Enter:
 
 ```sh
 sudo python3 install.py --apply
 ```
 
-If asked for a password, enter your **Pi login password**. Nothing will appear while you type; that is normal. Press Enter afterward. Enter the password only on your Pi; do not send it to support.
+If asked, enter your Pi login password. Nothing appears while typing it; that is normal. Keep the Terminal open and power connected until installation finishes. Allow several minutes.
 
-Keep power connected and leave the terminal open until the command finishes. It downloads Apollo, verifies the signed updater and application, checks your existing installation, and applies the update. Allow several minutes.
+Open Apollo using your usual address and refresh the page. Confirm **2.3.74 / Build 287**, then reply to support to confirm completion. The normal dashboard update option should be supported.
 
-## 5. Confirm completion
+If you cannot find **Open in Terminal**, or are uncomfortable with these steps, ask the person who sent this guide for help. A browser on another computer does not provide a Terminal on the Pi.
 
-Look for:
+## If you need help
 
-```text
-Apollo installation completed. Open Apollo and confirm Build 285.
-```
+If the installer stops, send support only the line beginning **Stopped:** or the final error line. A message that it cannot open **install.py** means the Terminal is in the wrong folder; return to step 4.
 
-Open Apollo using your usual address and refresh the page. Confirm **2.3.72 / Build 285**. The update status should no longer say installation is unsupported; if another update is available, the normal update option should be available.
+Keep your existing settings and SD card. Do not reset, re-register, erase the operating system, edit files, or try another repair command. Do not send passwords or configuration files.
 
-Reply to support with **"Updated successfully to Build 285"** when complete. You do not need to change your scan settings as part of this repair.
-
-If Apollo still says **"Node Not Authorized"**, tell support. That is a separate account/node authorization message; installing the updater does not grant account or reporting permission.
-
-## If it stops or you need help
-
-If a line starts with **Stopped:**, send support that line or a photo of it. If you see `can't open file 'install.py'`, the terminal is in the wrong folder; return to step 3. For any other error, send the final error line and stop.
-
-Keep your existing settings and SD card. Do not reset or reinstall the operating system, delete files, or try a different repair command. An unexpected or partially installed updater needs support review; this installer will stop rather than overwrite it.
-
-Do not send passwords, tokens, configuration files, or a full diagnostic archive. The short error line is enough to start troubleshooting.
+An account or reporting authorization message is separate from installation; this installer does not grant account or reporting permission.
 
 ## Download details
 
-The download requires 64-bit ARM Linux and Python 3. It is the same immutable installer offered on the [Apollo downloads page](https://www.repeaterbooklive.com/apollo/downloads/), not the older Build 279 repair candidate.
+Requires 64-bit Raspberry Pi OS based on Debian 13 (Trixie), with Python 3. This is the immutable installer offered on the [Apollo downloads page](https://www.repeaterbooklive.com/apollo/downloads/).
 
-Filename: `Apollo-Pi-Installer-2.3.72-build.285-linux-arm64.zip`
+Filename: **Apollo-Pi-Installer-2.3.74-build.287-updater.1.0.81-linux-arm64.zip**
 
-Size: **296,823 bytes**
+Size: **301,137 bytes**
 
-SHA-256: `88d304967dc72fcc5008774681272af9039c1ab1d3139617f95138617f593530`
+SHA-256: `a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc`
 
-An existing-installation update uses Apollo's authenticated configuration preservation and rollback process. Successful installation on your particular Pi is confirmed only when you complete step 5.
+The exact ZIP passed an isolated Build 267 preservation and rollback fixture and installation, repeat installation, sampled RTL-SDR acquisition, and reboot checks on an owned Pi 3B+. Successful installation on your Pi is confirmed when you complete the steps above.

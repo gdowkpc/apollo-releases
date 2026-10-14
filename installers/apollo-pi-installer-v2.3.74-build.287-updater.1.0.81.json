@@ -1,0 +1,119 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v1",
+  "release_tag": "apollo-pi-installer-v2.3.74-build.287-updater.1.0.81",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "fb9f6e676240ae6c044051190788166eeed68a0d",
+    "pull_request": 569
+  },
+  "target": {
+    "version": "2.3.74",
+    "build": 287,
+    "source_commit": "7d652bda61458f5033caf411d3fae9dd3c4bd05b",
+    "release_tag": "apollo-passive-v2.3.74-build.287",
+    "sha256": "5691852b3b93fa83c9cf7d22ef3403c23b4da51c0255af59ffd66383071fb36d"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.74-build.287-updater.1.0.81-linux-arm64.zip",
+    "bytes": 301137,
+    "sha256": "a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc"
+  },
+  "updater": {
+    "version": "1.0.81",
+    "signed_source_commit": "fb9f6e676240ae6c044051190788166eeed68a0d",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.81-linux-arm64.zip": {
+        "bytes": 293952,
+        "sha256": "5257d350dfa5592aae77cf14966e8dca70886d538f2aab296b46bf45df7bf2d6"
+      },
+      "ApolloUniversalPiUpdater-1.0.81.authority.json": {
+        "bytes": 1169,
+        "sha256": "89f74a3de45e8dd4141332053e2e2c479cf6c81dfa50479bbbe50d07170016d3"
+      },
+      "ApolloUniversalPiUpdater-1.0.81.controller-capsule.json": {
+        "bytes": 6655,
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21"
+      }
+    }
+  },
+  "qualification": {
+    "legacy267_preservation_and_injected_failure_rollback": {
+      "pass": true,
+      "installer_sha256": "a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc",
+      "test_environment": "disposable ARM64 namespace",
+      "production_signed_updater": "1.0.81",
+      "predecessor_build": 267,
+      "target_build": 287,
+      "historical_mode": "0644",
+      "old_signed_updater_replaced": "1.0.75",
+      "target_materialization_reached": true,
+      "injected_target_restart_failure": true,
+      "old_application_and_state_restored": true,
+      "retained_authority_mode": "0600",
+      "service_transport": "simulated",
+      "http_transport": "recorded public immutable metadata",
+      "physical_rf_qualification": false,
+      "customer_completion": false
+    },
+    "physical_host": "Raspberry Pi 3 Model B Plus, 64-bit Raspberry Pi OS Debian 13",
+    "actual_install": {
+      "pass": true,
+      "installer_sha256": "a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc",
+      "build": 287,
+      "updater": "1.0.81",
+      "configuration_and_existing_identity_preserved": true,
+      "reporting_enabled": false,
+      "retained_authority_mode": "0600",
+      "dashboard_update_supported": true,
+      "native_rtl_sha256": "7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb",
+      "preserved_files": 1
+    },
+    "repeat_install": {
+      "pass": true,
+      "installer_sha256": "a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc",
+      "build": 287,
+      "updater": "1.0.81",
+      "configuration_and_existing_identity_preserved": true,
+      "reporting_enabled": false,
+      "retained_authority_mode": "0600",
+      "dashboard_update_supported": true,
+      "native_rtl_sha256": "7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb",
+      "preserved_files": 1
+    },
+    "reboot": {
+      "pass": true,
+      "installer_sha256": "a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc",
+      "build": 287,
+      "updater": "1.0.81",
+      "configuration_and_existing_identity_preserved": true,
+      "reporting_enabled": false,
+      "retained_authority_mode": "0600",
+      "dashboard_update_supported": true,
+      "native_rtl_sha256": "7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb",
+      "preserved_files": 1,
+      "reboot_completed": true
+    },
+    "sampled_acquisition_after_reboot": {
+      "pass": true,
+      "baseline_only": false,
+      "installed_application_build": 287,
+      "candidate_installed": true,
+      "reporting_enabled": false,
+      "samples": 3,
+      "accepted_captures_delta": 8,
+      "error_counter_deltas": {
+        "failed_sweeps": 0,
+        "helper_crashes": 0,
+        "sample_stream_stalls": 0,
+        "usb_disconnects": 0,
+        "unrecovered_timeout_sweeps": 0,
+        "scheduled_sweep_failures": 0
+      },
+      "fresh_windows": 2,
+      "installer_sha256": "a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc"
+    },
+    "required_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/38483912610",
+    "production_signed_updater_ci": "https://github.com/gdowkpc/apollo/actions/runs/38484553471",
+    "scope": "Owned lab installation and sampled RTL acquisition; no known-signal, customer-completion, other-receiver, fleet or reporting-authority claim"
+  }
+}
