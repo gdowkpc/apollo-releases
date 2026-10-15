@@ -19,3 +19,5 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/validate_provenance.js
+      - run: node --test tests/pi_updater_requirement.test.js
+      - run: node scripts/validate_pi_updater_requirement.js
