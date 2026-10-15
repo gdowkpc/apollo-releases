@@ -1,0 +1,138 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v1",
+  "release_tag": "apollo-pi-installer-v2.3.79-build.292-updater.1.0.83",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e541b5f930e5610e3226100e7c6615c41630196e",
+    "pull_request": 578
+  },
+  "target": {
+    "version": "2.3.79",
+    "build": 292,
+    "source_commit": "e541b5f930e5610e3226100e7c6615c41630196e",
+    "release_tag": "apollo-passive-v2.3.79-build.292",
+    "sha256": "8e7e2dc6838637a17092f43d2952aa2e26c3817a5d505e63d9d17a0ccb8aeb1d"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.79-build.292-updater.1.0.83-linux-arm64.zip",
+    "bytes": 302601,
+    "sha256": "c7c1cf90a45b8ef0a8a75c244f280e80fb53871ff1ea59cbf3b10a02982e0000"
+  },
+  "updater": {
+    "version": "1.0.83",
+    "signed_source_commit": "6b7c9e6d55c3fa1dbb91e7104cf4894620de2fcf",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.83-linux-arm64.zip": {
+        "bytes": 294985,
+        "sha256": "f6371f5e1570f5d9f931ff41002d40086c8027d01d7e5fcb8c966e9eb5489fd0"
+      },
+      "ApolloUniversalPiUpdater-1.0.83.authority.json": {
+        "bytes": 1169,
+        "sha256": "d3a9f112ff741919ddce72925d212a57405357b670543f7989673839c7568150"
+      },
+      "ApolloUniversalPiUpdater-1.0.83.controller-capsule.json": {
+        "bytes": 6655,
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21"
+      }
+    },
+    "public_distribution_tag": "apollo-universal-pi-updater-v1.0.83"
+  },
+  "legacy_rtl_policy": "Older RTL settings without a saved hardware identity retain validated scan coverage and timing when one RTL receiver is detected. Hardware gain and calibration use automatic defaults; different saved identities and ambiguous hardware retain their selection safeguards.",
+  "qualification": {
+    "legacy267_preservation_and_injected_failure_rollback": {
+      "pass": true,
+      "installer_sha256": "c7c1cf90a45b8ef0a8a75c244f280e80fb53871ff1ea59cbf3b10a02982e0000",
+      "test_environment": "disposable ARM64 namespace",
+      "production_signed_updater": "1.0.83",
+      "predecessor_build": 267,
+      "target_build": 292,
+      "historical_mode": "0644",
+      "old_signed_updater_replaced": "1.0.75",
+      "target_materialization_reached": true,
+      "packaged_agent_activated": true,
+      "agent_pointer_rolled_back": true,
+      "saved_scan_choices_preserved_at_activation": true,
+      "injected_target_restart_failure": true,
+      "old_application_and_state_restored": true,
+      "retained_authority_mode": "0600",
+      "service_transport": "simulated",
+      "http_transport": "recorded public immutable metadata",
+      "prerequisites": "simulated dpkg installed state",
+      "registered_holder_uid": 1234,
+      "physical_rf_qualification": false,
+      "customer_completion": false
+    },
+    "physical_host": "Raspberry Pi 3 Model B Plus, ARM64 Debian13",
+    "physical_installation_scope": "Real application291 to292 through signed updater1.0.83. Completed target-state transaction records agent activation against its distinct agent51 descriptor and SHA256. Private state and scan settings preserved.",
+    "actual_install": {
+      "pass": true,
+      "installer_sha256": "c7c1cf90a45b8ef0a8a75c244f280e80fb53871ff1ea59cbf3b10a02982e0000",
+      "build": 292,
+      "updater": "1.0.83",
+      "configuration_and_existing_identity_preserved": true,
+      "packaged_agent_activated": true,
+      "activation_transaction_recorded": true,
+      "agent_target_build": 51,
+      "reporting_enabled": false,
+      "retained_authority_mode": "0600",
+      "dashboard_update_supported": true,
+      "native_rtl_sha256": "7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb",
+      "preserved_files": 1
+    },
+    "repeat_install": {
+      "pass": true,
+      "installer_sha256": "c7c1cf90a45b8ef0a8a75c244f280e80fb53871ff1ea59cbf3b10a02982e0000",
+      "build": 292,
+      "updater": "1.0.83",
+      "configuration_and_existing_identity_preserved": true,
+      "packaged_agent_activated": true,
+      "activation_transaction_recorded": true,
+      "agent_target_build": 51,
+      "reporting_enabled": false,
+      "retained_authority_mode": "0600",
+      "dashboard_update_supported": true,
+      "native_rtl_sha256": "7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb",
+      "preserved_files": 1
+    },
+    "reboot": {
+      "pass": true,
+      "installer_sha256": "c7c1cf90a45b8ef0a8a75c244f280e80fb53871ff1ea59cbf3b10a02982e0000",
+      "build": 292,
+      "updater": "1.0.83",
+      "configuration_and_existing_identity_preserved": true,
+      "packaged_agent_activated": true,
+      "activation_transaction_recorded": true,
+      "agent_target_build": 51,
+      "reporting_enabled": false,
+      "retained_authority_mode": "0600",
+      "dashboard_update_supported": true,
+      "native_rtl_sha256": "7ec7778253dbc73617c177f161bd1d2de82b5c0a56d48c499fbe52c3203f73eb",
+      "preserved_files": 1,
+      "reboot_completed": true
+    },
+    "sampled_acquisition_after_reboot": {
+      "pass": true,
+      "baseline_only": false,
+      "installed_application_build": 292,
+      "candidate_installed": true,
+      "reporting_enabled": false,
+      "samples": 3,
+      "accepted_captures_delta": 6,
+      "error_counter_deltas": {
+        "failed_sweeps": 0,
+        "helper_crashes": 0,
+        "sample_stream_stalls": 0,
+        "usb_disconnects": 0,
+        "unrecovered_timeout_sweeps": 0,
+        "scheduled_sweep_failures": 0
+      },
+      "fresh_windows": 2,
+      "installer_sha256": "c7c1cf90a45b8ef0a8a75c244f280e80fb53871ff1ea59cbf3b10a02982e0000"
+    },
+    "required_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/38751009293",
+    "application_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/38759223739",
+    "production_signed_updater_ci": "https://github.com/gdowkpc/apollo/actions/runs/38740045187",
+    "scope": "Owned RTL installation, preservation, activation, repeat, reboot and sampled windows; isolated registered267 rollback. No known-transmission, other-receiver, fleet or reporting-permission claim."
+  }
+}
