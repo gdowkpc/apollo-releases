@@ -4,7 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const crypto = require("node:crypto");
 const ROOT = path.resolve(__dirname, "..");
-const MINIMUM = "1.0.82";
+const MINIMUM = "1.0.83";
 // Exact held v1 advertisement at the start of the v2 rollout. Formatting and
 // key order may vary; no identity, URL, notes or other content may be changed.
 const HELD_V1 = "b18d4d95059c0ed94a3defee634edc8484e55701302bc3f500e319b25cec558e";

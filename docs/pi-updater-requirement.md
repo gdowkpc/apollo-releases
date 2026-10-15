@@ -1,7 +1,7 @@
 # Pi promotion requires the qualified updater
 
 New Pi machine-update pointers use `apollo-stable-release-v2` with required
-`minimum_pi_updater_version` of at least `1.0.82`. Older exact v1 parsers reject
+`minimum_pi_updater_version` of at least `1.0.83`. Older exact v1 parsers reject
 the extended contract rather than ignoring the minimum. Windows stays on v1.
 
 CI permits the exact currently held v1 Pi pointer unchanged during rollout.
@@ -10,7 +10,7 @@ qualified immutable provenance. A new v1 build, a missing/invalid minimum, an
 older minimum, or mismatched target metadata fails publication validation.
 
 Deploy in this order: merge the reviewed application support; build and qualify
-the application with unchanged signed updater 1.0.82; publish and qualify the
+the application with unchanged signed updater 1.0.83; publish and qualify the
 complete installer; then promote the v2 pointer. Installing source support alone
 does not change older clients. Those clients need the complete installer; their
 old UI may show a generic unavailable update check when it encounters v2.
