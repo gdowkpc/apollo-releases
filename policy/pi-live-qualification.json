@@ -1,0 +1,15 @@
+{
+  "schema_version": "apollo-pi-live-qualification-policy-v1",
+  "trusted_keys": {
+    "owned-rtl-lab-3bf54ad6d4986de4": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAXw2NFtJJWZVkpdAVmTfaO4psdmtCNmuAqwYDfDb+P8I=\n-----END PUBLIC KEY-----\n"
+  },
+  "held_installer_sha256_lf": {
+    "installers/apollo-pi-installer-v2.3.72-build.285.json": "8675f8c20701d616c1d1a92da81e43d5db60275b6c5142a492ac59f4c50d8a66",
+    "installers/apollo-pi-installer-v2.3.74-build.287-updater.1.0.81.json": "37a9ccb6be7f84b401be9a0e5f55d47bbb37d64cbdbee65de1d2b7418c09fb75",
+    "installers/apollo-pi-installer-v2.3.78-build.291-updater.1.0.81.json": "4a866cf16668a32daef65d5890c50c5e9fa21dcf056895dbd7f1436d76589722",
+    "installers/apollo-pi-installer-v2.3.78-build.291-updater.1.0.82.json": "9ae6fd0e3f0b2c9173c358f6bafd923c52f20fa6d1f042ca1a11178f3c8f600e",
+    "installers/apollo-pi-installer-v2.3.79-build.292-updater.1.0.83.json": "302b22bcc1c64646a0b2c8176c1a24cc1d3b2f773b6aaaaf247181422dbea2af"
+  },
+  "held_stable_fingerprint": "1dae4e1dde18290c90d98c4461f62eca66a97133696ab582484ad810ac5f356c",
+  "required_lab_role": "owned-rtl-bench"
+}

@@ -21,3 +21,5 @@ jobs:
       - run: node scripts/validate_provenance.js
       - run: node --test tests/pi_updater_requirement.test.js
       - run: node scripts/validate_pi_updater_requirement.js
+      - run: node --test tests/pi_live_qualification.test.js
+      - run: node scripts/validate_pi_live_qualification.js

@@ -1,5 +1,8 @@
 # apollo-releases
 
+Future complete Pi installers and stable promotions require the
+[signed owned-bench publication gate](docs/pi-live-qualification.md).
+
 Public, GitHub-authoritative provenance and immutable downloadable artifacts
 for Apollo Passive Receive managed releases.
 
