@@ -1,14 +1,14 @@
 # Update Apollo on your Raspberry Pi
 
-For an existing Apollo installation, including **2.3.54 / Build 267**, that cannot install updates or previously stopped with a permissions or receiver-selection error.
+For an existing Apollo installation, including **2.3.54 / Build 267**, that cannot install updates or previously stopped with a permissions, receiver-selection, prerequisite or credential-ownership error.
 
-Use this complete **2.3.74 / Build 287** installer with signed updater **1.0.81**. It preserves your existing settings and registration. Keep your SD card and leave your RTL-SDR, internet, and power connected.
+Use this complete **2.3.78 / Build 291** installer with signed updater **1.0.81**. It preserves your existing settings and registration. Keep your SD card and leave your RTL-SDR, internet, and power connected.
 
 ## Download and install
 
 Perform these steps **on the Raspberry Pi**, using its desktop:
 
-1. [**Download the Apollo Pi installer**](https://github.com/gdowkpc/apollo-releases/releases/download/apollo-pi-installer-v2.3.74-build.287-updater.1.0.81/Apollo-Pi-Installer-2.3.74-build.287-updater.1.0.81-linux-arm64.zip).
+1. [**Download the Apollo Pi installer**](https://github.com/gdowkpc/apollo-releases/releases/download/apollo-pi-installer-v2.3.78-build.291-updater.1.0.81/Apollo-Pi-Installer-2.3.78-build.291-updater.1.0.81-linux-arm64.zip).
 2. Find the ZIP in Downloads, right-click it, and choose **Extract** or **Extract Here**.
 3. Open the extracted **Apollo-Pi-Installer** folder. You should see **install.py**.
 4. Right-click inside that folder and select **Open in Terminal**. Paste this command and press Enter:
@@ -19,7 +19,7 @@ sudo python3 install.py --apply
 
 If asked, enter your Pi login password. Nothing appears while typing it; that is normal. Keep the Terminal open and power connected until installation finishes. Allow several minutes.
 
-Open Apollo using your usual address and refresh the page. Confirm **2.3.74 / Build 287**, then reply to support to confirm completion. The normal dashboard update option should be supported.
+Open Apollo using your usual address and refresh the page. Confirm **2.3.78 / Build 291**, then reply to support to confirm completion. The normal dashboard update option should be supported.
 
 If you cannot find **Open in Terminal**, or are uncomfortable with these steps, ask the person who sent this guide for help. A browser on another computer does not provide a Terminal on the Pi.
 
@@ -35,10 +35,10 @@ An account or reporting authorization message is separate from installation; thi
 
 Requires 64-bit Raspberry Pi OS based on Debian 13 (Trixie), with Python 3. This is the immutable installer offered on the [Apollo downloads page](https://www.repeaterbooklive.com/apollo/downloads/).
 
-Filename: **Apollo-Pi-Installer-2.3.74-build.287-updater.1.0.81-linux-arm64.zip**
+Filename: **Apollo-Pi-Installer-2.3.78-build.291-updater.1.0.81-linux-arm64.zip**
 
-Size: **301,137 bytes**
+Size: **301,434 bytes**
 
-SHA-256: `a9e4f7cfc774ec2e78e61497dd195692ff867f804e5f8aa2f79a0d6a0354a1bc`
+SHA-256: `fa23b5a66735395aa70b37addaaba6aed7c4d77f0890f3ab263f815cbe4cbf6b`
 
 The exact ZIP passed an isolated Build 267 preservation and rollback fixture and installation, repeat installation, sampled RTL-SDR acquisition, and reboot checks on an owned Pi 3B+. Successful installation on your Pi is confirmed when you complete the steps above.
