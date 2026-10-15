@@ -12,5 +12,5 @@
   "artifact_filename": "ApolloPassiveReceive-2.3.74-build.287-linux-arm64.zip",
   "byte_size": 19824015,
   "sha256": "5691852b3b93fa83c9cf7d22ef3403c23b4da51c0255af59ffd66383071fb36d",
-  "short_release_notes": "Includes the native RTL-SDR driver and owner-invoked enrollment fix. Use the complete Pi installer with signed updater 1.0.81 to restore older installations and dashboard updates while preserving settings and registration."
+  "short_release_notes": "For older Pi repairs, use the complete Pi installer with signed updater 1.0.82 from the downloads portal. It installs Build 291 after upgrading the updater, retains saved scan coverage, and restores dashboard updates. The machine-update target remains unchanged pending a minimum-updater gate."
 }
