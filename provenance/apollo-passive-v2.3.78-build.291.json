@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.78-build.291",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c07a0cc3f31ef569a3d3dde9745ec5d7d262241d"
+  },
+  "release": {
+    "version": "2.3.78",
+    "build": 291,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.78-build.291-linux-arm64.zip",
+    "byte_size": 19837032,
+    "sha256": "b097cc0caf4672e7189d2856b407e6e37713fec071c4a38beeba09346f990217",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR 572 head aa58666782acc4cf633795b7f238713625473bc7 merged as c07a0cc3f31ef569a3d3dde9745ec5d7d262241d with identical tree. Required CI 38656872515 passed. Includes the prerequisite repair from approved PR 571.",
+      "Two native ARM64 builds were byte-identical: 19,837,032 bytes, SHA-256 b097cc0caf4672e7189d2856b407e6e37713fec071c4a38beeba09346f990217. Independent archive checks passed CRC, unique safe paths, source/version/build identity, executable hash and all declared portable file modes.",
+      "Frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38660290360 passed with production-signed updater 1.0.81: clean and private predecessor convergence/rollback, isolated packaged RSP1B closure, service-user RTL inventory, and native KA9Q stream through embedded Apollo health. Qualification checkout cdfa125117b2e0080374ed968ac9921c12f152a7 differs from frozen product source only in tests; workflow enforced this boundary.",
+      "Registered legacy installations retain their existing private node-agent credential holder. Real isolated systemd reproduced recursive StateDirectory ownership changes; corrected generated units preserved synthetic private file/directory bytes and metadata while allowing the runtime user to use the local UNIX socket. Six custody cases and 32 target/custody tests passed on native ARM64.",
+      "ARM64 native inputs are retained from authenticated immutable Build 287; the KA9Q source pin is unchanged. This is a controlled early-tester package. Installer and actual RTL Pi installation/reboot qualification are separate gates before portal promotion. No customer completion, known-transmission, reporting grant or fleet rollout is claimed."
+    ]
+  }
+}
