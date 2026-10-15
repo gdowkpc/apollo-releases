@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.79-build.292",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e541b5f930e5610e3226100e7c6615c41630196e"
+  },
+  "release": {
+    "version": "2.3.79",
+    "build": 292,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.79-build.292-linux-arm64.zip",
+    "byte_size": 19839580,
+    "sha256": "8e7e2dc6838637a17092f43d2952aa2e26c3817a5d505e63d9d17a0ccb8aeb1d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved product PR575 head e2884f6030bd3653ea5c09c05fd12ded9336f448 merged e59904491f616e583d06412451f05452d0eabacd; approved test-only PR578 head 2ee7210f02d1955ed7106f692cf2ce3e1cc20e55 merged as e541b5f930e5610e3226100e7c6615c41630196e with identical approved tree. Both required source CI checks passed in run38751009293. Current approved lineage includes generic updater83 agent activation fix PR576.",
+      "Two native ARM64 builds were byte-identical: 19839580 bytes, SHA256 8e7e2dc6838637a17092f43d2952aa2e26c3817a5d505e63d9d17a0ccb8aeb1d. Independent archive verification checked CRC, unique safe paths, release and source identities, executable digest, all170 portable modes, and the packaged NodeCheckinWorker agent payload.",
+      "Exact frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38759223739 passed at identical source e541b5f930e5610e3226100e7c6615c41630196e with production-signed updater1.0.83. Includes packaged clean and private legacy convergence/rollback, isolated RSP1B module closure, unprivileged RTL inventory, and a native KA9Q test stream through embedded Apollo health. Builder14 is hardware-free; this is isolated native runtime qualification, not physical RF proof.",
+      "The minimum-updater policy passed109/109 native ARM64 tests with zero skips at approved PR575 head, including independent systemd worker, private installed receipt custody, actual immutable Build291 compatibility rejection and owner UI. Updater1.0.83 independently passed signing workflow38740045187 and owned RTL Pi installation, repeat-install, reboot and continued sampled acquisition on unchanged application291.",
+      "Native receiver binaries retained from authenticated immutable Build291; pinned KA9Q configuration unchanged. This is an early-tester package. Complete installer, actual forward RTL installation, agent activation and reboot qualification remain required before portal promotion. No known-transmission, other-receiver, fleet or reporting-authority claim."
+    ]
+  }
+}
