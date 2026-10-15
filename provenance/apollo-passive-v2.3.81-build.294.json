@@ -1,0 +1,42 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.81-build.294",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "49486b15af2cee8c7cd3d0f5b6c8bb61ba922874"
+  },
+  "release": {
+    "version": "2.3.81",
+    "build": 294,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.81-build.294-linux-arm64.zip",
+    "byte_size": 19842620,
+    "sha256": "61367ae159892585b1a341f87508acd0c260848023d7afbd06ca93d4da1f8a24",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR582 head7219ccbca62fc7587122bbe5ef4fe526eb530031 merged49486b15af2cee8c7cd3d0f5b6c8bb61ba922874 with identical tree. Both source CI checks passed in run38811644582; 102 native ARM64 target-state, custody, rollback and identity checks passed with zero skips. Public UUID traversal is service-readable while existing UUID bytes and private credential custody are preserved; unsafe predecessors fail before writes.",
+      "Two native ARM64 builds from the merged source were byte-identical: 19842620 bytes, SHA256 61367ae159892585b1a341f87508acd0c260848023d7afbd06ca93d4da1f8a24. Independent ZIP verification passed CRC, unique safe paths, canonical file inventory, all170 portable modes, source/build identity, executable digest and the packaged NodeCheckinWorker agent digest.",
+      "Frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38816805269 passed with production-signed updater1.0.84 at source226c1e7e2932c5a0910cb3023ceea0bcf4d412e7. Includes clean/legacy convergence and rollback, isolated RSP1B closure, unprivileged RTL inventory and embedded native KA9Q stream health.",
+      "Approved PR583 headd8a42965bffa4e33379e103aaa29152cc9dfa057 merged226c1e7e2932c5a0910cb3023ceea0bcf4d412e7 with identical tree. All55 focused native ARM64 checks and both CI checks passed. The updater owns rollback even without target staging; its released implementation restores public-directory snapshot metadata.",
+      "Clean and preserved legacy UID1234 fixtures start with private0700 UUID parents, prove unprivileged UUID reads after installation, and immediately verify0700 restoration through the production signed updater rollback. Private credentials and ownership remain preserved.",
+      "Builder14 remains hardware-free. Native receiver binaries were retained from authenticated immutable Build292 with unchanged pinned KA9Q inputs. This package-level qualification does not claim physical receiver, known-transmission, calibration, fleet or reporting-authority qualification.",
+      "Production updater1.0.84 passed official signing workflow https://github.com/gdowkpc/apollo/actions/runs/38815443443 at source226c1e7e2932c5a0910cb3023ceea0bcf4d412e7. Independently verified production signature, immutable release, complete manifest inventory and rollback support.",
+      "Exact signed asset ApolloUniversalPiUpdater-1.0.84-linux-arm64.zip: 296082 bytes; SHA256 d8db89e6b64b6ffa853b98fb33b2328ae2e78ec5698d0aa3fdbdaf9a631e0962",
+      "Exact signed asset ApolloUniversalPiUpdater-1.0.84.authority.json: 1169 bytes; SHA256 62ba3cb3d8a41f5bc7197de476bf5e35e835e8b80c268631cba9a1dff4e0dee2",
+      "Exact signed asset ApolloUniversalPiUpdater-1.0.84.controller-capsule.json: 6655 bytes; SHA256 d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+      "Candidate application asset only. Complete installer publication and download/stable promotion remain blocked on mandatory signed owned-RTL-bench evidence for exact installer, preservation, actual reporting, acquisition progress and reboot. The complete installer must pair this package with signed updater1.0.84, and any future dashboard advertisement must require that same qualified updater version. No customer node was used for qualification."
+    ]
+  }
+}
