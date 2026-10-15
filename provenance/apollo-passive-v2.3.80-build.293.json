@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.80-build.293",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "80d2b218f6555ade9069f5877884b5a38a29e68d"
+  },
+  "release": {
+    "version": "2.3.80",
+    "build": 293,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.80-build.293-linux-arm64.zip",
+    "byte_size": 19841208,
+    "sha256": "70002aec51b23d5b7dc377b2909b683581d68076b2f1cc8bfcc4ed1094849159",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR580 head c348e615d6e49a2250bc1deaa741d7ad5ff0e416 merged 80d2b218f6555ade9069f5877884b5a38a29e68d with identical approved tree. Both required source CI checks passed in run38775821691; 95 native ARM64 package/target-state/identity checks passed with zero skips. Fix grants the actual agent principal only the fixed no-argument owner initializer and accepts two exact authenticated agent layouts.",
+      "Two native ARM64 builds from the merged source were byte-identical: 19841208 bytes, SHA256 70002aec51b23d5b7dc377b2909b683581d68076b2f1cc8bfcc4ed1094849159. Independent ZIP verification passed CRC, unique safe paths, canonical file inventory, all170 portable modes, source/build identity, executable digest and the packaged NodeCheckinWorker agent digest.",
+      "Exact frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38786896690 passed with production-signed updater1.0.83. Test-only PR581 head be0f80b3e6a95b04f7c1e59e1b454908a966f021 verifies clean apollo and preserved legacy UID1234 owner-initialization scope; workflow enforces no production changes after frozen package source. Includes clean/private legacy convergence and rollback, isolated RSP1B closure, unprivileged RTL inventory and embedded native KA9Q pipeline.",
+      "Builder14 remains hardware-free. Native receiver binaries were retained from authenticated immutable Build292 with unchanged pinned KA9Q inputs. This package-level qualification does not claim physical receiver, known-transmission, calibration, fleet or reporting-authority qualification.",
+      "Candidate application asset only. Complete installer publication and download/stable promotion remain blocked on mandatory signed owned-RTL-bench evidence for exact installer, preservation, actual reporting, acquisition progress and reboot. Updater1.0.83 is unchanged. No customer node was used for qualification."
+    ]
+  }
+}
