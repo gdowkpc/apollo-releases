@@ -117,6 +117,8 @@
     "required_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/38656872515",
     "frozen_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/38660290360",
     "production_signed_updater_ci": "https://github.com/gdowkpc/apollo/actions/runs/38484553471",
-    "scope": "Owned lab installation and sampled RTL acquisition; no known-signal, customer-completion, other-receiver, fleet or reporting-authority claim"
-  }
+    "scope": "Owned lab installation and sampled RTL acquisition; no known-signal, customer-completion, other-receiver, fleet or reporting-authority claim",
+    "legacy_unbound_scan_settings_preserved": false
+  },
+  "publication_status": "held_for_legacy_receiver_settings_preservation"
 }
