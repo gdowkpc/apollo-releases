@@ -1,0 +1,16 @@
+{
+  "schema_version": "apollo-stable-release-v1",
+  "product_id": "apollo-passive-receive",
+  "platform": "linux",
+  "architecture": "arm64",
+  "version": "2.3.74",
+  "build": 287,
+  "source_commit": "7d652bda61458f5033caf411d3fae9dd3c4bd05b",
+  "published_at": "2026-10-13T02:23:17Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.74-build.287",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.74-build.287/ApolloPassiveReceive-2.3.74-build.287-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.74-build.287-linux-arm64.zip",
+  "byte_size": 19824015,
+  "sha256": "5691852b3b93fa83c9cf7d22ef3403c23b4da51c0255af59ffd66383071fb36d",
+  "short_release_notes": "For older Pi repairs, use the complete Pi installer with signed updater 1.0.82 from the downloads portal. It installs Build 291 after upgrading the updater, retains saved scan coverage, and restores dashboard updates. The machine-update target remains unchanged pending a minimum-updater gate."
+}
