@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.90-build.303",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "1c9db7ebf43944d98fd46263efcbbdae9c3fc092"
+  },
+  "release": {
+    "version": "2.3.90",
+    "build": 303,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.90-build.303-linux-arm64.zip",
+    "byte_size": 19872808,
+    "sha256": "b638b9cac967c79527d68c9adada4a442009187dfcc7dad8f4059ef0a4769c71",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "PR609 approved at8757b4a79aa632ab18aac250b8dc2b8ebd72c57d and merged9394f8af643386b206f4cb7b801fee23af938926. Package source1c9db7ebf43944d98fd46263efcbbdae9c3fc092 remains in main ancestry; all three complete source trees are identical.",
+      "Two physical native ARM64 builds were byte-identical. Exact retained ZIP:19872808 bytes, SHA256 b638b9cac967c79527d68c9adada4a442009187dfcc7dad8f4059ef0a4769c71. CRC,177 unique safe entries, canonical inventory, portable modes and principal AArch64 ELF verified independently.",
+      "156 native/package checks passed:96 DMR/reporting,38 packaged Airspy,10 packaged cadence,12 native CTCSS. Strict intake80 assertions passed. No failures or skips.",
+      "Documented off-air discriminator corpus:9 DMR windows agree with independent DSDcc color code and base source;8 known timeslots agree,1 remains unknown. All53 dPMR/DStar/YSF negatives retain no strong DMR or metadata. All62 classification/provenance results unchanged.",
+      "Same KA9Q multicast capture and existing400ms worker deadline; max off-air worker200.639ms, synthetic packaged worker173.558ms and synchronous finish0.293ms. No added receive/evaluation wait. Existing evidence checks and explicit per-group approval remain mandatory.",
+      "Exact final ZIP passed physical ARM64 packaged checks with production-signed updater1.0.85: clean/Build191 convergence and injected rollback, RSP1B closure, RTL readable inventory, native KA9Q/embedded RF health. No skipped required steps. https://github.com/gdowkpc/apollo/actions/runs/38974648832",
+      "KA9Q native pin remains8f6a05b3b4b5ee5c85ff556f64af918e561786b4. Companion strict intake PR48 mergedc5e0df20e062c9625e4c0db7a11e0dcf9159d3a4 and review PR138 mergedb09ae886398f8354330227e103043375e193b0ab.",
+      "Owner authorized signing/publication of this qualified Build303 package and targeted Universal Pi rollout to existing receiver nodes with post-deployment RF verification. Managed application publication does not promote global stable pointers, public catalog or complete installer."
+    ]
+  }
+}
