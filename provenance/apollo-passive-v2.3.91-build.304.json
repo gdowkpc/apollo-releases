@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.91-build.304",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "b7aa098244345b20140592a0ef1c21d4e8d278c5"
+  },
+  "release": {
+    "version": "2.3.91",
+    "build": 304,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.91-build.304-linux-arm64.zip",
+    "byte_size": 19874876,
+    "sha256": "e1b1a80d07c7bccd6495483ad6b5edb2ef143ada6ec0266225fe5557c1cebc21",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source b7aa098244345b20140592a0ef1c21d4e8d278c5 is approved PR620 merge and includes PR619 optional diagnostic decoding and malformed-status attribution. Descends from published Build303 source. Later main merge622 affects CJ-1 only; qualified bytes were not rebuilt.",
+      "Two native ARM64 builds on KD6KPC-14 were byte-identical: 19874876 bytes, SHA256 e1b1a80d07c7bccd6495483ad6b5edb2ef143ada6ec0266225fe5557c1cebc21. Independently verified safe unique paths, CRC, canonical inventory,177 portable modes and principal AArch64 executable.",
+      "272 focused native checks passed without failures or skips:4 identity,33 frontend contracts,38 packaged Airspy,50 packaged status including captured packets,24 DMR,12 CTCSS,16 LAN/socket,30 frontend Python,4 LAN custody,23 updater85 rollback,38 target-state.",
+      "Exact final ZIP and production-signed updater1.0.85 passed10 required packaged checks with no skips: clean/legacy convergence and rollback2,RSP1B closure1,service-readable RTL inventory1,native KA9Q and embedded Apollo RF health6. https://github.com/gdowkpc/apollo/actions/runs/38980319740",
+      "Universal Pi updater1.0.85 ZIP SHA256 a55ca8cda6e5f124664c4eebadcf8b3d3354d6c4586211af46d1ea2d087b0f23; production signature, authority and controller capsule verified. Existing LAN-identity rollback-capability preflight remains mandatory.",
+      "KA9Q pin unchanged:8f6a05b3b4b5ee5c85ff556f64af918e561786b4;15 native files match retained qualified Build298. libbsd-overlay preflight passed;portable NATIVE=0 retained. Recorder unchanged. Isolated qualification is not live receiver RF,report delivery or reboot proof.",
+      "Owner authorized signing/publication of this exact qualified managed ARM64 candidate. No deployment or node contact authorized. This immutable application publication does not promote stable pointers, activate the public catalog or publish a complete installer."
+    ]
+  }
+}
