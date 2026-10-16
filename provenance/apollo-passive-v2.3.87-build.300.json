@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.87-build.300",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "541eda9dabdb9d784920f6fdafecf0c5a14b5545"
+  },
+  "release": {
+    "version": "2.3.87",
+    "build": 300,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.87-build.300-linux-arm64.zip",
+    "byte_size": 19857601,
+    "sha256": "40a133df56494c7da4bb0b5d085b35144d594f46350a5855f7f2201989c34b17",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR602 approved at a587ac3c0d3ddb8e33859e6352c277de430dc979 and merged4e78a05ed16c106578f32df5a01edf43d2179b18. Required receiver/security CI passed: https://github.com/gdowkpc/apollo/actions/runs/38948476139 .",
+      "Apollo PR604 approved at b08aade12da1f88a0a67c1a1f577a568d500f594 and merged541eda9dabdb9d784920f6fdafecf0c5a14b5545. Canonical release identity and required Linux/Windows custody checks passed: https://github.com/gdowkpc/apollo/actions/runs/38948931382 .",
+      "Opt-in canonical Airspy node preference requires same-observation audio for confirmed CTCSS, no-tone and same-capture CTCSS/DMR conflicts. Missing, short, invalid or unstageable audio prevents queuing; other nodes retain conditional audio defaults. Native detection and server retention are unchanged.",
+      "Two native ARM64 builds are byte-identical: 19857601 bytes, SHA256 40a133df56494c7da4bb0b5d085b35144d594f46350a5855f7f2201989c34b17. Independent CRC, safe unique paths, canonical inventory,173 portable modes, AArch64 executable and exact changed runtime source bytes passed.",
+      "172 native ARM64 regression checks passed with zero failures or skips:4 identity,28 frontend,74 packaged Airspy capture/reporter/runner/integration,24 DMR,12 native CTCSS,30 frontend Python. Tests verify retained-clip hashes, ordered same-observation upload and required-audio failure handling.",
+      "Exact frozen package qualification passed: https://github.com/gdowkpc/apollo/actions/runs/38949974731 . Includes packaged clean/legacy convergence and rollback, isolated RSP1B module/profile apply, unprivileged RTL runtime inventory and real native KA9Q streams through embedded Apollo health.",
+      "All15 native runtime files match immutable Build299. KA9Q remains8f6a05b3b4b5ee5c85ff556f64af918e561786b4. Qualification uses unchanged production-signed updater1.0.84. Package tests do not establish physical known-signal accuracy; separately authorized KD6KPC-3 RF/audio receipt verification follows update.",
+      "Application asset publication only, required by the user-authorized KD6KPC-3 update. No complete installer, public downloads catalog, stable pointer or updater replacement. Existing signed owned-RTL publication gates remain mandatory for those separate scopes."
+    ]
+  }
+}
