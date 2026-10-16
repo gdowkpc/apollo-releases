@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.84-build.297",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f05b892f91e348b01b712d7180c524693338da02"
+  },
+  "release": {
+    "version": "2.3.84",
+    "build": 297,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.84-build.297-linux-arm64.zip",
+    "byte_size": 19849112,
+    "sha256": "bc338830e14fdd31837b02c072c7a09f6932391bba3ca51c28547935966c904c",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR588 head 2d457dbda1395591d22bd7091ef6bf9ce2cfa88a merged f05b892f91e348b01b712d7180c524693338da02 with identical tree, including current main PR589. Both required source checks passed: https://github.com/gdowkpc/apollo/actions/runs/38842706550",
+      "Fixes repeated synchronous full-executable hashing during release/status/acquisition identity lookups. Only unchanged root-owned, non-group/other-writable Linux executables reuse a descriptor/path/metadata-verified digest; seals and sidecars remain checked on every call. RF readiness and activation deadlines are unchanged.",
+      "Exact-head ARM64 source qualification passed8 actual Linux-root ownership/polling/tamper checks,102 packaging/security/readiness checks,4 identity checks and46 integrated Airspy checks including authenticated native DSP replay. Root-only exclusions are separately exercised as root; name-filtered cases are excluded. Prior source fails expected I/O and changed-during-read regressions.",
+      "Two native ARM64 builds from approved merged source were byte-identical: 19849112 bytes, SHA256 bc338830e14fdd31837b02c072c7a09f6932391bba3ca51c28547935966c904c. Independent verification passed CRC, safe unique paths, canonical file inventory, all171 portable modes, source/build identity, executable digest and node-agent digest.",
+      "Frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38848265788 passed with unchanged production-signed updater1.0.84. Covers clean/legacy convergence and rollback, isolated RSP1B closure, unprivileged RTL inventory and embedded native KA9Q stream health.",
+      "Builder14 remains hardware-free. Native receiver binaries were retained from authenticated immutable Build292 with unchanged pinned KA9Q inputs. Source/package tests do not claim physical receiver, known-transmission, calibration, fleet or reporting-authority qualification.",
+      "Updater1.0.84 remains the exact previously signed package from https://github.com/gdowkpc/apollo/actions/runs/38815443443 at source226c1e7e2932c5a0910cb3023ceea0bcf4d412e7; its production signature, payload hashes and rollback support were independently verified.",
+      "Candidate application asset only. Complete installer publication, download catalog and stable promotion remain held until signed owned-RTL-bench installation, preservation, actual reporting, acquisition and reboot evidence passes for the exact complete installer. No customer node supplies qualification."
+    ]
+  }
+}
