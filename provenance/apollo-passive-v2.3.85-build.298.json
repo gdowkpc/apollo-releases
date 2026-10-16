@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.85-build.298",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "29fd1de4d5a0dc16b30e8bde56101d8628a2dd81"
+  },
+  "release": {
+    "version": "2.3.85",
+    "build": 298,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.85-build.298-linux-arm64.zip",
+    "byte_size": 19850504,
+    "sha256": "6da8b8ff3d4e4a8f8ecc222fcda97b80a404c05bbbed8838328d1a61345fac4a",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR596 head4202f2c108de2dffe1f70f0b5f48ffe90f3bd1ee merged29fd1de4d5a0dc16b30e8bde56101d8628a2dd81 with identical tree. Required checks passed: https://github.com/gdowkpc/apollo/actions/runs/38934508734",
+      "Apollo PR594 merged05e9546886a62247879de88560cbdf29d17ae2eb. Same-capture strong DMR evidence makes a native CTCSS detection insufficient evidence; native support and raw candidate diagnostics remain available. Weak or later DMR and analog detections retain their prior behavior.",
+      "Apollo Micro PR47 mergeda274e92670c7d728111840a4fcc0b6e4c26715e9. Intake was deployed and verified before application rollout, including strict diagnostic acceptance and rejection of incomplete native support; production runtime dependencies and unrelated serving behavior were preserved.",
+      "Two native ARM64 builds from merged source were byte-identical: 19850504 bytes, SHA256 6da8b8ff3d4e4a8f8ecc222fcda97b80a404c05bbbed8838328d1a61345fac4a. Independent archive CRC, safe unique paths, canonical inventory,171 portable modes, source/build identity and executable/agent digests passed.",
+      "Final merged package passed69 native ARM64 checks:33 Airspy,24 DMR,12 native CTCSS; zero skips. Source and consumer regression checks separately passed194 with10 platform skips and139 production-adapted intake checks.",
+      "Frozen exact-package qualification passed: https://github.com/gdowkpc/apollo/actions/runs/38935782283 . Includes clean/legacy convergence and rollback, isolated RSP1B module/profile apply, unprivileged RTL runtime inventory and embedded native KA9Q stream health.",
+      "Uses unchanged production-signed updater1.0.84, source226c1e7e2932c5a0910cb3023ceea0bcf4d412e7. Builder is hardware-free; package checks do not claim physical RF accuracy. Fresh owned-node RF verification follows publication and authorized update.",
+      "Application asset publication only. No complete installer, public download catalog or stable pointer change. Existing signed owned-RTL qualification gates remain in force for those separate publication scopes."
+    ]
+  }
+}
