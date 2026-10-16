@@ -14,6 +14,11 @@ physical run. A human-written `pass: true`, customer report, simulated transport
 old queued report or unsigned JSON cannot satisfy this gate. The public schema
 rejects extra private identity/location fields.
 
+Qualification receipt digests bind the complete saved file. Git treats
+`qualifications/*.live.json` as byte-preserved artifacts so Windows and Linux
+checkouts keep the collector's exact receipt bytes. Do not normalize the receipt
+or change its recorded digest to accommodate a checkout conversion.
+
 `policy/pi-live-qualification.json` contains only the trusted public key and
 frozen fingerprints of existing published installer records and the current
 stable pointer. Existing downloads are not re-signed or rewritten, and cannot

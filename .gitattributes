@@ -1,0 +1,2 @@
+# Preserve exact signed qualification bytes across Windows and Linux checkouts.
+qualifications/*.live.json -text whitespace=cr-at-eol
