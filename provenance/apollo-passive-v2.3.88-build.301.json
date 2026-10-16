@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.88-build.301",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "b046f99dac74487281860cfaf7b8e2f27e478402"
+  },
+  "release": {
+    "version": "2.3.88",
+    "build": 301,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.88-build.301-linux-arm64.zip",
+    "byte_size": 19858015,
+    "sha256": "9bb11ae6e6ef43f7a3842542911577a4c0a3df7f61cb7e1b1cebf3e8f5561590",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR606 approved at f491bd9cd1a3ea1c3c9f097adf5d2cc8886e071e and merged b046f99dac74487281860cfaf7b8e2f27e478402. Required release-security and Windows custody checks passed: https://github.com/gdowkpc/apollo/actions/runs/38951454629 .",
+      "Native KA9Q starts bounded audio capture during the first current owned-channel visit. A first-visit report requires successful, measured continuous PCM and matching channel, frequency and source generation. FFT stability requirements, capture bounds and continuous-episode duplicate suppression remain.",
+      "First-visit regression reproduced before the fix. 160 focused Windows checks passed with 10 Linux skips; 166 native ARM64 checks passed with 4 platform skips. Tests include the normal observation/audio sender, stale and mismatched captures, incomplete or discontinuous audio and duplicate suppression.",
+      "Two ARM64 builds are byte-identical: 19858015 bytes, SHA256 9bb11ae6e6ef43f7a3842542911577a4c0a3df7f61cb7e1b1cebf3e8f5561590. Independent CRC, safe unique paths, canonical inventory, all 173 portable modes, AArch64 executable and exact source-owned helpers passed.",
+      "136 native build/helper regressions passed without failure or skip: 4 identity, 28 frontend contracts, 38 packaged Airspy, 24 DMR, 12 native CTCSS and 30 frontend Python checks.",
+      "Exact frozen package qualification passed: https://github.com/gdowkpc/apollo/actions/runs/38952766291 . Includes packaged clean/legacy convergence and rollback, isolated RSP1B module/profile apply, unprivileged RTL inventory and real native KA9Q streams through embedded Apollo health.",
+      "All 15 native runtime files match immutable Build298. KA9Q remains 8f6a05b3b4b5ee5c85ff556f64af918e561786b4. Qualification uses unchanged production-signed updater 1.0.84. Source and package tests are not physical RF proof; owned-bench and customer receipt verification remain pending.",
+      "Application candidate publication only, needed for the authorized owned-bench qualification and customer update. No complete-installer publication, public download-card activation, stable promotion or updater replacement. Existing signed owned-RTL publication gates remain mandatory."
+    ]
+  }
+}
