@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.89-build.302",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "3344d8e9fef835710d48fd2e43e618512014a18e"
+  },
+  "release": {
+    "version": "2.3.89",
+    "build": 302,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.89-build.302-linux-arm64.zip",
+    "byte_size": 19865340,
+    "sha256": "28586e7d498c24cb0989c20fd0ce8022bac2ca69d32cb56202bde8e2d931009e",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source PR613 approved at 916abb6902cc623b8b602095237975cacbb798d4 and merged as 3344d8e9fef835710d48fd2e43e618512014a18e. Frozen package source includes Airspy socket timeout handling, LAN-identity migration and updater-owned rollback support.",
+      "Two physical ARM64 builds on KD6KPC-14 were byte-identical: 19865340 bytes, SHA256 28586e7d498c24cb0989c20fd0ce8022bac2ca69d32cb56202bde8e2d931009e. CRC, unique safe paths, canonical inventory, 176 portable modes and AArch64 executable verified independently.",
+      "222 focused checks passed without failures or skips: 4 identity, 33 frontend contracts, 38 packaged Airspy, 24 DMR, 12 native CTCSS, 16 socket/LAN contracts, 23 updater maintenance, 38 target-state, 30 frontend Python and 4 root identity custody.",
+      "Exact final ZIP and signed updater 1.0.85 passed all 10 required packaged checks without skips: clean/legacy convergence and rollback (2), isolated RSP1B closure (1), service-user-readable RTL inventory (1), native and embedded KA9Q stream/RF health (3+3). https://github.com/gdowkpc/apollo/actions/runs/38971610582",
+      "Qualification ran at 9a2b8a815a2f1ec7368244767031873d0d484945 using two test-only fixture corrections. PR615 was updated to approved cc6f14421249e95ee0e8d1c1d994ab3529d3ac27, checks passed in run 38972463433, and merged 3d0f4cc46779c933993f99eddea27f4d4682a161. Candidate bytes remained unchanged.",
+      "Production-signed Universal Pi updater 1.0.85 ZIP SHA256 a55ca8cda6e5f124664c4eebadcf8b3d3354d6c4586211af46d1ea2d087b0f23; production authority, artifact binding and controller capsule verified. Existing rollback-capability preflight remains mandatory.",
+      "KA9Q pin remains 8f6a05b3b4b5ee5c85ff556f64af918e561786b4; all 15 native runtime files match immutable Build298. Package/fixture qualification is not live receiver RF, reporting, installed-updater replacement or reboot proof.",
+      "Owner authorized publication of this exact qualified candidate hash only. Managed application asset publication does not promote the stable pointer, publish a complete installer or activate the public catalog. No deployment or node contact authorized."
+    ]
+  }
+}
