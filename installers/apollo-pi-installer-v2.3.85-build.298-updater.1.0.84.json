@@ -1,0 +1,78 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v2",
+  "release_tag": "apollo-pi-installer-v2.3.85-build.298-updater.1.0.84",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "29fd1de4d5a0dc16b30e8bde56101d8628a2dd81",
+    "pull_request": 596
+  },
+  "target": {
+    "version": "2.3.85",
+    "build": 298,
+    "source_commit": "29fd1de4d5a0dc16b30e8bde56101d8628a2dd81",
+    "release_tag": "apollo-passive-v2.3.85-build.298",
+    "sha256": "6da8b8ff3d4e4a8f8ecc222fcda97b80a404c05bbbed8838328d1a61345fac4a"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.85-build.298-updater.1.0.84-linux-arm64.zip",
+    "bytes": 303722,
+    "sha256": "49d458cbe656ec26cdb747b87bb3570324d9210cb0698b9f46e4c748e4ae83dc"
+  },
+  "updater": {
+    "version": "1.0.84",
+    "signed_source_commit": "226c1e7e2932c5a0910cb3023ceea0bcf4d412e7",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.84-linux-arm64.zip": {
+        "bytes": 296082,
+        "sha256": "d8db89e6b64b6ffa853b98fb33b2328ae2e78ec5698d0aa3fdbdaf9a631e0962"
+      },
+      "ApolloUniversalPiUpdater-1.0.84.authority.json": {
+        "bytes": 1169,
+        "sha256": "62ba3cb3d8a41f5bc7197de476bf5e35e835e8b80c268631cba9a1dff4e0dee2"
+      },
+      "ApolloUniversalPiUpdater-1.0.84.controller-capsule.json": {
+        "bytes": 6655,
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21"
+      }
+    },
+    "public_distribution_tag": "apollo-universal-pi-updater-v1.0.84"
+  },
+  "legacy_rtl_policy": "Older RTL settings without a saved hardware identity retain validated scan coverage and timing when one RTL receiver is detected. Hardware gain and calibration use automatic defaults; different saved identities and ambiguous hardware retain their selection safeguards.",
+  "qualification": {
+    "legacy267_preservation_and_injected_failure_rollback": {
+      "pass": true,
+      "installer_sha256": "49d458cbe656ec26cdb747b87bb3570324d9210cb0698b9f46e4c748e4ae83dc",
+      "test_environment": "disposable ARM64 namespace",
+      "production_signed_updater": "1.0.84",
+      "predecessor_build": 267,
+      "target_build": 298,
+      "historical_mode": "0644",
+      "old_signed_updater_replaced": "1.0.75",
+      "target_materialization_reached": true,
+      "packaged_agent_activated": true,
+      "agent_pointer_rolled_back": true,
+      "saved_scan_choices_preserved_at_activation": true,
+      "injected_target_restart_failure": true,
+      "old_application_and_state_restored": true,
+      "retained_authority_mode": "0600",
+      "service_transport": "simulated",
+      "http_transport": "recorded public immutable metadata",
+      "prerequisites": "simulated dpkg installed state",
+      "registered_holder_uid": 1234,
+      "public_identity_readable_at_activation": true,
+      "predecessor_identity_directory_mode_restored": "0755",
+      "physical_rf_qualification": false,
+      "customer_completion": false
+    },
+    "application_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/38935782283",
+    "required_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/38934508734",
+    "updater_rollback_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/38813936713",
+    "signed_updater_workflow": "https://github.com/gdowkpc/apollo/actions/runs/38815443443",
+    "scope": "Exact complete installer qualified on the registered owned RTL bench: canonical installation, retry, preserved node-owned state, authenticated production check-ins and new real RF reports before and after actual reboot, every configured window advancing without new receiver errors. Other receiver qualification remains separate."
+  },
+  "live_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.85-build.298-updater.1.0.84.live.json",
+    "sha256": "8e5f17180a231a77e05c5913f7ee914d55d2a725177ae764f6ac38a027b124e5"
+  }
+}
