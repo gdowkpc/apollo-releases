@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.83-build.296",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "fa0e1427bcaf098e94ebbf08911458ba9e783368"
+  },
+  "release": {
+    "version": "2.3.83",
+    "build": 296,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.83-build.296-linux-arm64.zip",
+    "byte_size": 19843215,
+    "sha256": "9efdfacd7ce75472a54eed7258052a1df4eb83f0948a7b26c80ec765920602e7",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR587 head 092f2961660d5f8e65727097beebbc8c1265b0d0 merged fa0e1427bcaf098e94ebbf08911458ba9e783368 with identical tree, including current main Airspy evidence fix PR586. Both required source checks passed: https://github.com/gdowkpc/apollo/actions/runs/38833438946",
+      "Settings reads and save baselines use canonical owner configuration, retaining automatic gain rather than live calibration and preserving separately saved node preferences. Explicit manual gain including zero remains supported; receiver rechecks are unchanged. The real release probe rejects owner gain/reporting projection mismatches.",
+      "Source qualification passed141 local settings/forwarding checks,19 Airspy checks,13 collector checks and4 identity checks. Native ARM64 passed47 target/gateway,12 selected settings/recovery,12 collector and4 identity checks. Frozen-only cases, unrelated filtered cases and Windows-only ACL checks are excluded from native counts. Previous Build295 source fails the new regression tests.",
+      "Two native ARM64 builds from approved merged source were byte-identical: 19843215 bytes, SHA256 9efdfacd7ce75472a54eed7258052a1df4eb83f0948a7b26c80ec765920602e7. Independent verification passed CRC, safe unique paths, canonical file inventory, all170 portable modes, source/build identity, executable digest and node-agent digest.",
+      "Frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38837408742 passed with unchanged production-signed updater1.0.84. Covers clean/legacy convergence and rollback, isolated RSP1B closure, unprivileged RTL inventory and embedded native KA9Q stream health.",
+      "Builder14 remains hardware-free. Native receiver binaries were retained from authenticated immutable Build292 with unchanged pinned KA9Q inputs. Source/package tests do not claim physical receiver, known-transmission, calibration, fleet or reporting-authority qualification.",
+      "Updater1.0.84 remains the exact previously signed package from https://github.com/gdowkpc/apollo/actions/runs/38815443443 at source226c1e7e2932c5a0910cb3023ceea0bcf4d412e7; its production signature, payload hashes and rollback support were independently verified.",
+      "Candidate application asset only. Complete installer publication, download catalog and stable promotion remain held until signed owned-RTL-bench installation, preservation, actual reporting, acquisition and reboot evidence passes for the exact complete installer. No customer node supplies qualification."
+    ]
+  }
+}
