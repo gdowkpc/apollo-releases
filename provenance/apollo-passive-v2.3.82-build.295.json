@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.82-build.295",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f7c5789df974b3a6082aa7056a0e37fb15191f81"
+  },
+  "release": {
+    "version": "2.3.82",
+    "build": 295,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.82-build.295-linux-arm64.zip",
+    "byte_size": 19842631,
+    "sha256": "e20338fdc2aa52a2fc766e9682efa81d8cd9ca1677ba3b412708534614e35206",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR584 head93bb93365b0469ddf2a4aa5e6561c29dd33d6010 mergedf7c5789df974b3a6082aa7056a0e37fb15191f81 with identical tree. Both required source CI checks passed: https://github.com/gdowkpc/apollo/actions/runs/38828318946",
+      "RTL target materialization now routes setup, settings and catalog requests to the running receiver application on17882. A packaged first-install regression fails with the previous logic. Native ARM64 source qualification passed47 checks;12 Windows collector checks include an actual protected directory ACL inspection.",
+      "Two native ARM64 builds from the approved merged source were byte-identical: 19842631 bytes, SHA256 e20338fdc2aa52a2fc766e9682efa81d8cd9ca1677ba3b412708534614e35206. Independent verification passed CRC, safe unique paths, canonical file inventory, all170 portable modes, source/build identity, executable digest and node-agent digest.",
+      "Frozen package qualification https://github.com/gdowkpc/apollo/actions/runs/38829073035 passed with unchanged production-signed updater1.0.84. Covers clean/legacy convergence and rollback, isolated RSP1B closure, unprivileged RTL inventory and embedded native KA9Q stream health.",
+      "Owned registered live-release qualification now requires successful setup and catalog responses through the public gateway before and after reboot, in addition to preservation, real server check-ins/reports and acquisition progress. A broken gateway cannot satisfy publication qualification.",
+      "Builder14 remains hardware-free. Native receiver binaries were retained from authenticated immutable Build292 with unchanged pinned KA9Q inputs. Source/package tests do not claim physical receiver, known-transmission, calibration, fleet or reporting-authority qualification.",
+      "Updater1.0.84 remains the exact previously signed package from https://github.com/gdowkpc/apollo/actions/runs/38815443443 at source226c1e7e2932c5a0910cb3023ceea0bcf4d412e7; its production signature, payload hashes and rollback support were independently verified.",
+      "Candidate application asset only. Complete installer publication, download catalog and stable promotion remain held until signed owned-RTL-bench installation, preservation, actual reporting, acquisition and reboot evidence passes for the exact complete installer. No customer node supplies qualification."
+    ]
+  }
+}
