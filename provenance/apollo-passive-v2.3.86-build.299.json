@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.86-build.299",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "03cea3482d5d9f29ce8f32af390dc8166e5536f2"
+  },
+  "release": {
+    "version": "2.3.86",
+    "build": 299,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.86-build.299-linux-arm64.zip",
+    "byte_size": 19857502,
+    "sha256": "1ea3366decc7968f00474eb44fedb906065e18cfdb5ddfb8921d74e6ddd2b44b",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved PR597 head ed33ebc09c30afbe3e2e6ffb8fb32db9ae347b1f merged as 03cea3482d5d9f29ce8f32af390dc8166e5536f2. Both required checks passed: https://github.com/gdowkpc/apollo/actions/runs/38937884067 .",
+      "Includes PR593: libbsd-overlay discovery and flag-resolution preflight for maintained KA9Q source builds, plus bounded frontend failure causes retained across radiod restarts. Portable builds retain NATIVE=0; normal stops preserve the last failure without granting current RF-health authority.",
+      "Two native ARM64 builds from the exact merged source are byte-identical: 19857502 bytes, SHA256 1ea3366decc7968f00474eb44fedb906065e18cfdb5ddfb8921d74e6ddd2b44b. Independent CRC/path, canonical inventory, 173 file modes, executable hash/architecture and packaged helper-source checks passed.",
+      "131 native regression tests passed with zero failures or skips: 4 identity, 28 frontend contracts, 30 frontend Python, 33 packaged Airspy, 24 DMR and 12 packaged native CTCSS tests. Real libbsd-overlay discovery and compiler/linker flag resolution passed on the builder.",
+      "Exact-package qualification passed 10 tests with zero failures or skips: https://github.com/gdowkpc/apollo/actions/runs/38939536671 . Source SHA matches the artifact. Gates cover clean/legacy convergence and rollback, isolated RSP1B profile/module handling, RTL runtime access, and generated KA9Q streams through native and embedded Apollo health.",
+      "KA9Q remains 2026.09.20-1-trixie1 / 8f6a05b3b4b5ee5c85ff556f64af918e561786b4. All 15 native runtime files match immutable Build298. Qualification used the unchanged production-signed Universal Pi updater 1.0.84 as a fixture; it did not install or replace an updater.",
+      "The exact candidate was frozen from current main at build start. Subsequent PR598 changes only CJ-1 Android host files; ARM64 release, build, application and qualification inputs are unchanged. The candidate retains its original embedded source SHA.",
+      "Application asset publication only. No complete installer, public download catalog, stable discovery pointer, deployment or receiver-node contact is included. Isolated package checks do not claim physical RF qualification; separately authorized node qualification remains pending."
+    ]
+  }
+}
