@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.94-build.307",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "a496bfcb6b7fa9041aec74e4c4a3f4289cd1d721"
+  },
+  "release": {
+    "version": "2.3.94",
+    "build": 307,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.94-build.307-linux-arm64.zip",
+    "byte_size": 19879245,
+    "sha256": "47699f99572bb9cc18c8de7caddc912f784a97cd256622957ee2f8d3f94e8208",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source PR #629 fixes cached Pi receiver readiness after same-device reconnect, with fresh validation before composing settings and immediately before persistence. Identity, replacement, ambiguity and calibration protections remain enforced. A read-only retry preserves unsaved scan-plan edits. Bounded receiver setup status uses the existing authenticated check-in summary without serials, paths, location or credentials.",
+      "Release identity PR #630 head 44301ae9f4cf1ede2570b2e291a0b9ded9d45502 merged at a496bfcb6b7fa9041aec74e4c4a3f4289cd1d721. Complete trees match. Source descends from published Build 306 source 0266071b7e17238a26e168f2af6245321bbbfb9b. Both required source checks passed: https://github.com/gdowkpc/apollo/actions/runs/38998916541",
+      "31 focused identity, reconnect/save, retry UI and diagnostic tests passed on Windows and on the physical ARM64 builder. Existing fix regressions include service recovery/regression, delayed default binding, missing/multiple/replacement devices, disconnect before persistence and diagnostic privacy.",
+      "Two independent physical ARM64 builds are byte-identical: 19879245 bytes, SHA256 47699f99572bb9cc18c8de7caddc912f784a97cd256622957ee2f8d3f94e8208. The release retains the published Build 306 native runtime inputs and unchanged KA9Q pin.",
+      "The exact final ZIP passed the required ARM64 clean/legacy convergence and rollback, RSP1B module/profile closure, readable RTL native inventory and native/embedded executable sample-stream health gates: https://github.com/gdowkpc/apollo/actions/runs/38999433232",
+      "Production-signed updater 1.0.85 remains unchanged. Its Ed25519 authority, archive digest and controller capsule binding are verified. No new updater, trust policy, receiver-specific build or private driver patch is introduced.",
+      "This application candidate enables canonical complete-installer qualification. Actual owned-bench installation, authenticated reporting and reboot evidence are required by the separately signed complete-installer gate before the public download card changes. Other receiver and known-transmission accuracy qualification remain separate. See docs/apollo-build307-candidate.md."
+    ]
+  }
+}
