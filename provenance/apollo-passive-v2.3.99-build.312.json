@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.99-build.312",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e371145f57db017b84518a245a908ddd24e70035"
+  },
+  "release": {
+    "version": "2.3.99",
+    "build": 312,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.99-build.312-linux-arm64.zip",
+    "byte_size": 19898593,
+    "sha256": "13acc301f72954148351a8fac8a98b5373dc9c61b3624eb151c947b464d3d6f6",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Scoring fix Apollo PR #652 merged at fb28b15498d9dedba11d4927fe7583e150cd94dc. Independently detected persistent tones with explicit whole-capture precision-guard support use the existing evidence-confidence formula and actual capture duration. The 0.90 confidence threshold, independent tone selection, native same-buffer/tone agreement, precision and persistence thresholds, rejection controls and server promotion gates are unchanged.",
+      "Exact-head-approved release identity PR #653 allocates 2.3.99 / Build 312; frozen merged source e371145f57db017b84518a245a908ddd24e70035 descends from published Build 310 source 90cfe668a47af71bce795089850401aa6c2fd661, Build 311 candidate source a91ec42a8096b7b9c09ea6203a452156c22c4c5d and merged scoring fix fb28b15498d9dedba11d4927fe7583e150cd94dc. Build 311 remains reserved for its DMR timing package.",
+      "Two independent physical ARM64 builds are byte-identical: 19898593 bytes; SHA256 13acc301f72954148351a8fac8a98b5373dc9c61b3624eb151c947b464d3d6f6. All 15 native runtime payload files match the immutable published Build 310 ZIP byte-for-byte; the KA9Q pin is unchanged.",
+      "Physical ARM64 checks passed: {\"native_helper\": 12, \"packaged_airspy\": 43, \"packaged_dmr\": 24, \"packaged_scoring\": 16, \"source\": 89}. The final extracted ZIP supplies the scoring module, same-buffer confidence wrapper, Airspy observation integration, DMR decoder/timing and native CTCSS helper. Synthetic/package qualification is separate from fresh live RF proof.",
+      "Source fixtures include the 0.90 boundary, actual 2.9-second duration, weak-margin and persistence exclusions and native capture/tone mismatch controls.",
+      "The exact ZIP passed clean/legacy convergence and rollback, isolated RSP1B closure, service-readable RTL native inventory and native/embedded KA9Q sample-stream health: https://github.com/gdowkpc/apollo/actions/runs/39052643306",
+      "Configured-node updates use production-signed Universal Pi updater 1.0.87 and retain authenticated target identity, byte/metadata preservation of node-owned state, rollback and sampled RF-health gates. No new updater or receiver-specific package is required.",
+      "This immutable application asset supports the authorized update of an existing configured KD6KPC-3 Airspy node. No complete installer, public download card, stable pointer, directory data, all-receiver or all-band RF qualification is changed or claimed."
+    ]
+  }
+}
