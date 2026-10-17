@@ -1,0 +1,103 @@
+{
+  "schema_version": "apollo-build315-package-qualification-review-v1",
+  "scope": "Source/package qualification only. Build315 complete installer, physical RF, reporting and reboot are pending.",
+  "source_commit": "c99af61b01e2c4fc3ef6b98c6d80960eea98156f",
+  "refreshed_allocation_head": "eb3473960cbf8ae18d9bb9a019fcfe2c9482400a",
+  "version": "2.3.102",
+  "build": 315,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.102-build.315-linux-arm64.zip",
+    "bytes": 19900520,
+    "sha256": "b06a4286a18816d379bdc4f36b5837c863d247afbfe74b5e9905a2be88f45a7c"
+  },
+  "source_ci": {
+    "head": "eb3473960cbf8ae18d9bb9a019fcfe2c9482400a",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39066465997",
+    "checks_passed": 3,
+    "registered_empty_receiver_fixture_cases_passed": 16
+  },
+  "native": {
+    "byte_identical_builds": 2,
+    "checks_passed": 281,
+    "groups": {
+      "arm64-focused-tests.log": {
+        "tests": 114,
+        "pass": 114,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-confidence-tests.log": {
+        "tests": 43,
+        "pass": 43,
+        "fail": 0,
+        "skipped": 0
+      },
+      "native-ctcss-tests.log": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      },
+      "recovery-source-tests.log": {
+        "tests": 49,
+        "pass": 49,
+        "fail": 0,
+        "skipped": 0
+      },
+      "root-first-receiver-tests.log": {
+        "tests": 58,
+        "pass": 58,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-boot-order-tests.log": {
+        "tests": 3,
+        "pass": 3,
+        "fail": 0,
+        "skipped": 0
+      },
+      "target-state-convergence-tests.log": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    "failures": 0,
+    "skips": 0
+  },
+  "delivered_boot_order_fix_verified": true,
+  "delivered_receiver_identity_code_verified": true,
+  "signed_updater": {
+    "version": "1.0.88",
+    "unchanged": true,
+    "files": {
+      "ApolloUniversalPiUpdater-1.0.88-linux-arm64.zip": {
+        "bytes": 298916,
+        "sha256": "ff102d386d7c804684efaaab670e8e51c480bf9cc181f03cfa046f3fabae58a2"
+      },
+      "ApolloUniversalPiUpdater-1.0.88.authority.json": {
+        "bytes": 1169,
+        "sha256": "096965c3b627a6b050a3701515a3b60b634d7b05721558b5fcb3f557c90d9051"
+      },
+      "ApolloUniversalPiUpdater-1.0.88.controller-capsule.json": {
+        "bytes": 6655,
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21"
+      }
+    }
+  },
+  "limits": [
+    "The real Linux disposable boot transaction and packaged units passed; this is not a physical reboot pass.",
+    "Earlier Build309 RTL runs failed or expired. Manual power/service recovery is not a signed qualification pass.",
+    "No customer readiness, every-band reception or known-transmission accuracy claim is made.",
+    "Registration, settings, receiver binding, reporting authority, startup health and rollback gates remain mandatory."
+  ],
+  "source_approved_head": "eb3473960cbf8ae18d9bb9a019fcfe2c9482400a",
+  "source_merge_commit": "7eae8deddff0e21113197551370c11c1ffd96d65",
+  "approved_head_tree_equals_merge": true,
+  "frozen_source_differs_only_by": [
+    "release/qualifications/apollo-universal-pi-updater-1.0.89.json"
+  ],
+  "native_results_scope": "281 ARM64 checks retained at frozen application source; no runtime or build inputs changed during metadata-only allocation refresh."
+}
