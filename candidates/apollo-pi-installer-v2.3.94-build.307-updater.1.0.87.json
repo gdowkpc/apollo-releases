@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-pi-limited-rc-review-v1",
+  "release_tag": "apollo-pi-installer-v2.3.94-build.307-updater.1.0.87",
+  "classification": "limited_release_candidate",
+  "qualification_status": "pending_full_signed_live_qualification",
+  "application": {
+    "version": "2.3.94",
+    "build": 307,
+    "source_commit": "a496bfcb6b7fa9041aec74e4c4a3f4289cd1d721",
+    "sha256": "47699f99572bb9cc18c8de7caddc912f784a97cd256622957ee2f8d3f94e8208"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.94-build.307-updater.1.0.87-linux-arm64.zip",
+    "bytes": 305891,
+    "sha256": "134ecfc4773eec118c4bfcee9dc82225c72fec77f5a3027d4762c932e5a04d88"
+  },
+  "updater": {
+    "version": "1.0.87",
+    "source_commit": "4dc048a4578291942bbdce23154266057b8c1052",
+    "sha256": "a745ab1c50db333aeaeb70d83b8961e63ee9b6a7ba0f62c1cce472efdc1eca92"
+  },
+  "completed_checks": [
+    "required application source security and Windows custody checks",
+    "31 focused Windows and 31 focused ARM64 tests",
+    "two byte-identical ARM64 application builds",
+    "10 exact-package ARM64 tests with signed updater1.0.87",
+    "legacy267 preservation and injected restart-failure rollback",
+    "owned RTL installer/updater replacement, repeat installation, preserved node-owned state and seven-window progress"
+  ],
+  "qualification_limits": [
+    "full signed live qualification for this exact installer is incomplete",
+    "fresh pre-reboot RF reporting and updater87 reboot/reporting qualification are pending"
+  ],
+  "publication_conditions": [
+    "explicit owner review is required for publication outside the full qualification gate",
+    "label as a limited release candidate and retain these qualification limits",
+    "leave stable update discovery and trust policies unchanged",
+    "do not create a qualified v2 installer record or fabricated signed receipt"
+  ]
+}
