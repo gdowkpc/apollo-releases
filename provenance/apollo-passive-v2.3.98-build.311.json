@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.98-build.311",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "a91ec42a8096b7b9c09ea6203a452156c22c4c5d"
+  },
+  "release": {
+    "version": "2.3.98",
+    "build": 311,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.98-build.311-linux-arm64.zip",
+    "byte_size": 19898384,
+    "sha256": "e815d5826459f48f7252408489926999196d446610747a801a7815a1bb3d7a41",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR649 head3cdd91f5786440ed71cea6c764d70e531f9eb12f prevents fixed-offset voice EMB reads across unconfirmed sync timing slips. It retains the canonical Build310 spur-control and prior precision-guard lineage.",
+      "Three original discriminator captures reproduce false conflicts in the old decoder and decode CC1 in direct and embedded-worker regressions after the fix. Existing correction limits, exact support, true-conflict handling and advisory-only contract remain.",
+      "Two physical ARM64 builds are byte-identical. Exact source, extracted package, native-helper and real-recording replay checks passed without failures or skips. Evidence: qualifications/apollo-passive-v2.3.98-build.311.package.json; SHA-256 788aa39abe1d0b7411db3e69c79849f3d5b7b50f26d69e968d8f318d7c8af73c.",
+      "The exact ZIP passed mandatory ARM64 clean/legacy convergence and rollback, isolated receiver package closure and native/embedded KA9Q sample-stream gates: https://github.com/gdowkpc/apollo/actions/runs/39050646270",
+      "This asset supports the normal signed-updater managed path for existing configured nodes, qualified with unchanged updater1.0.87. Receiver binding, protected-state preservation, native startup-health and rollback gates remain mandatory.",
+      "Application asset only: no complete installer, public download-card or stable-pointer change; package/fixture qualification is separate from fresh deployed RF proof and review adjudication."
+    ]
+  }
+}
