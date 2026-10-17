@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.97-build.310",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "90cfe668a47af71bce795089850401aa6c2fd661"
+  },
+  "release": {
+    "version": "2.3.97",
+    "build": 310,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.97-build.310-linux-arm64.zip",
+    "byte_size": 19897998,
+    "sha256": "39c1164698416bb7730cf8056ccb6470f63f4561f94b23d119c544c11167210d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "User-approved Apollo PR #650 head 90cfe668a47af71bce795089850401aa6c2fd661, merged as 5b1e8700a44cfe75c8c593322a727e83c822ce98 with the identical source tree. Includes current Build 309 lineage, CJ-1 fixes and the newer installer retry fix.",
+      "Source CI passed all three checks: https://github.com/gdowkpc/apollo/actions/runs/39048735538",
+      "Two physical ARM64 builds are byte-identical. Exact package SHA-256 39c1164698416bb7730cf8056ccb6470f63f4561f94b23d119c544c11167210d. Packaged spur worker lifecycle, canonical-setting preservation, native confidence and agent tests passed without skips.",
+      "Exact ZIP passed physical ARM64 clean/legacy convergence and rollback, RSP1B closure, service-readable RTL inventory and native/embedded KA9Q stream health with production-signed updater 1.0.87: https://github.com/gdowkpc/apollo/actions/runs/39049634937",
+      "Evidence: qualifications/apollo-passive-v2.3.97-build.310.package.json; SHA-256 55d49772429aac6a2012b2a0695ee3571871bcd91339cf2202f6bbe44b4767c2. Application package qualification only; live KD6KPC-3 activation and known-spur acknowledgment/undo follow publication.",
+      "The direct review action uses existing node credentials and per-node managed skip revisions. Existing server suppression rules, review decisions, local ignored frequencies, receiver settings and credentials are preserved. No complete installer, stable pointer or public download-card change."
+    ]
+  }
+}

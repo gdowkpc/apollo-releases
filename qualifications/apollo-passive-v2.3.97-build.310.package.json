@@ -1,0 +1,59 @@
+{
+  "schema_version": "apollo-build310-package-qualification-v1",
+  "source_commit": "90cfe668a47af71bce795089850401aa6c2fd661",
+  "source_merge_commit": "5b1e8700a44cfe75c8c593322a727e83c822ce98",
+  "source_tree_equals_merge": true,
+  "version": "2.3.97",
+  "build": 310,
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.97-build.310-linux-arm64.zip",
+    "byte_size": 19897998,
+    "sha256": "39c1164698416bb7730cf8056ccb6470f63f4561f94b23d119c544c11167210d"
+  },
+  "byte_identical_arm64_builds": 2,
+  "source_ci": {
+    "conclusion": "success",
+    "headSha": "90cfe668a47af71bce795089850401aa6c2fd661",
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39048735538"
+  },
+  "native_test_groups": {
+    "arm64-focused-tests.log": {
+      "tests": 134,
+      "pass": 134,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-confidence-tests.log": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-ctcss-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-spur-tests.log": {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "agent_tests_passed": 3,
+  "physical_package_qualification": {
+    "conclusion": "success",
+    "headSha": "90cfe668a47af71bce795089850401aa6c2fd661",
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39049634937"
+  },
+  "signed_updater_version": "1.0.87",
+  "limits": [
+    "Application package and native stream qualification; no complete installer or all-receiver physical RF claim.",
+    "KD6KPC-3 activation, known-spur acknowledgment and undo will be checked after publication.",
+    "No reporting authorization, existing suppression rules, stable pointer or public download-card changes."
+  ]
+}
