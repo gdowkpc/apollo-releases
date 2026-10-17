@@ -1,0 +1,58 @@
+{
+  "schema_version": "apollo-build311-package-qualification-review-v1",
+  "scope": "Exact native application package and offline real-discriminator regression qualification. Managed installation and fresh over-the-air conflict verification follow separately; no complete installer, stable pointer or public download-card promotion.",
+  "source_commit": "a91ec42a8096b7b9c09ea6203a452156c22c4c5d",
+  "approved_pr_head": "3cdd91f5786440ed71cea6c764d70e531f9eb12f",
+  "version": "2.3.98",
+  "build": 311,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.98-build.311-linux-arm64.zip",
+    "bytes": 19898384,
+    "sha256": "e815d5826459f48f7252408489926999196d446610747a801a7815a1bb3d7a41"
+  },
+  "byte_identical_native_builds": 2,
+  "native_test_groups": {
+    "arm64-focused-tests.log": {
+      "tests": 161,
+      "pass": 161,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-confidence-tests.log": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-dmr-tests.log": {
+      "tests": 24,
+      "pass": 24,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-ctcss-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "conclusion": "success",
+    "headSha": "a91ec42a8096b7b9c09ea6203a452156c22c4c5d",
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39050646270"
+  },
+  "updater_used": "1.0.87",
+  "raw_fixture_regressions": {
+    "capture_count": 3,
+    "native_source_and_packaged_workers_passed": true,
+    "scope": "Prior original RF recordings replayed offline; not fresh post-deployment RF proof."
+  },
+  "limits": [
+    "No review-decision mutation.",
+    "No new complete installer or stable pointer.",
+    "No new receiver, customer or every-band RF qualification."
+  ]
+}
