@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.102-build.315",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c99af61b01e2c4fc3ef6b98c6d80960eea98156f"
+  },
+  "release": {
+    "version": "2.3.102",
+    "build": 315,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.102-build.315-linux-arm64.zip",
+    "byte_size": 19900520,
+    "sha256": "b06a4286a18816d379bdc4f36b5837c863d247afbfe74b5e9905a2be88f45a7c",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Native application package qualification only. Complete installer, physical RTL RF, live reporting and reboot qualification remain pending; this application authority enables the normal qualification installer.",
+      "Owner-approved allocation PR #660 head eb3473960cbf8ae18d9bb9a019fcfe2c9482400a, merged as 7eae8deddff0e21113197551370c11c1ffd96d65 with identical trees. Includes merged PR #659 boot-cycle correction.",
+      "Frozen ZIP source c99af61b01e2c4fc3ef6b98c6d80960eea98156f differs from the merge only by an unrelated updater approval record. Application/runtime/build inputs and archive bytes were preserved without recutting.",
+      "https://github.com/gdowkpc/apollo/actions/runs/39066465997: all three CI checks and all 16 registered empty-receiver fixture cases passed at the refreshed approved head.",
+      "Two byte-identical ARM64 builds; 281 checks passed without failures/skips at the frozen source, including exact packaged boot units, receiver/save identity protection and empty/Build191 convergence using existing signed updater1.0.88.",
+      "Evidence: qualifications/apollo-passive-v2.3.102-build.315.package.json; SHA-256 2c224f32ce73a59d11ec3338a68014cf5c6d20d2096f6903e00a0c23e4a76bde.",
+      "Preserves published Build313 and frozen Build314 source ancestry. Uses unchanged signed updater1.0.88. No new signing, complete-installer publication, download/stable changes, customer deployment, reporting grant or private node data is included."
+    ]
+  }
+}
