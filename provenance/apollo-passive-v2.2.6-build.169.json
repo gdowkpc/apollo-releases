@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.2.6-build.169",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "107b9afa558ea77fee8a1f594e57a6020b7dc794"
+  },
+  "release": {
+    "version": "2.2.6",
+    "build": 169,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.2.6-build.169-linux-arm64.zip",
+    "byte_size": 17947190,
+    "sha256": "745d346d98dbc5b0ead1da18813f409d69ef6bac221880c377f3ae6a10cd0364",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "The merged Apollo source at 107b9afa558ea77fee8a1f594e57a6020b7dc794 passed the required release-security contract check.",
+      "Targeted KA9Q profile and release-identity tests passed 30 of 30 on the source release branch.",
+      "The Linux ARM64 package was built on the authorized SDRplay Pi, and its transferred artifact matches the recorded byte size and SHA-256.",
+      "The package embeds version 2.2.6, build 169, and source commit 107b9afa558ea77fee8a1f594e57a6020b7dc794."
+    ]
+  }
+}
