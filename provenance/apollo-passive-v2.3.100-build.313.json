@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.100-build.313",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "82fe78b80434c0ea5c40a53339349880fa7de095"
+  },
+  "release": {
+    "version": "2.3.100",
+    "build": 313,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.100-build.313-linux-arm64.zip",
+    "byte_size": 19899068,
+    "sha256": "102d49125f436e97f7d57e3f008dceaf444ff6c51173bb5ef51b1d273c1c9b38",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "User-approved Apollo PR #654 head 82fe78b80434c0ea5c40a53339349880fa7de095, merged as 343e3def83f7567afcecd9ee31046250156c8ac7 with the identical source tree. Preserves the published Build 312 source, newer CJ-1 changes and tone-confidence scoring fixes.",
+      "Source CI passed all three checks: https://github.com/gdowkpc/apollo/actions/runs/39052921231",
+      "Two physical ARM64 builds are byte-identical. Exact package SHA-256 102d49125f436e97f7d57e3f008dceaf444ff6c51173bb5ef51b1d273c1c9b38. Actual packaged native IPC calls, worker lifecycle, setting preservation, native confidence and agent tests passed without skips.",
+      "Exact ZIP passed physical ARM64 clean/legacy convergence and rollback, RSP1B closure, service-readable RTL inventory and native/embedded KA9Q stream health with production-signed updater 1.0.87: https://github.com/gdowkpc/apollo/actions/runs/39053831766",
+      "Evidence: qualifications/apollo-passive-v2.3.100-build.313.package.json; SHA-256 30e25b8d3f39fc0962367d267e63cfe926342433bce428c1d940d8016fac2be7. Application package qualification only; live KD6KPC-3 activation and known-spur acknowledgment/undo follow publication.",
+      "The native client now uses the existing IPC request helper. The agent defers optional spur exchanges while the root updater is applying a release. Existing server suppression rules, review decisions, local ignored frequencies, receiver settings and credentials are preserved. No complete installer, stable pointer or public download-card change."
+    ]
+  }
+}

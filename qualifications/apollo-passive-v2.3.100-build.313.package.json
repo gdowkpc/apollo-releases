@@ -1,0 +1,65 @@
+{
+  "schema_version": "apollo-build313-package-qualification-v1",
+  "source_commit": "82fe78b80434c0ea5c40a53339349880fa7de095",
+  "source_merge_commit": "343e3def83f7567afcecd9ee31046250156c8ac7",
+  "source_tree_equals_merge": true,
+  "version": "2.3.100",
+  "build": 313,
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.100-build.313-linux-arm64.zip",
+    "byte_size": 19899068,
+    "sha256": "102d49125f436e97f7d57e3f008dceaf444ff6c51173bb5ef51b1d273c1c9b38"
+  },
+  "byte_identical_arm64_builds": 2,
+  "source_ci": {
+    "conclusion": "success",
+    "headSha": "82fe78b80434c0ea5c40a53339349880fa7de095",
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39052921231"
+  },
+  "native_test_groups": {
+    "arm64-focused-tests.log": {
+      "tests": 145,
+      "pass": 145,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-confidence-tests.log": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-ctcss-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-spur-tests.log": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "agent_tests_passed": 5,
+  "physical_package_qualification": {
+    "conclusion": "success",
+    "headSha": "82fe78b80434c0ea5c40a53339349880fa7de095",
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39053831766"
+  },
+  "signed_updater_version": "1.0.87",
+  "linux_process_guard_check": {
+    "root_process_detected_by_agent_uid_1000": true,
+    "deferral_clears_after_process_exit": true,
+    "production_node_contacted": false,
+    "environment": "Disposable Linux process fixture under WSL"
+  },
+  "limits": [
+    "Application package and native stream qualification; no complete installer or all-receiver physical RF claim.",
+    "KD6KPC-3 activation, known-spur acknowledgment and undo will be checked after publication.",
+    "No reporting authorization, existing suppression rules, stable pointer or public download-card changes."
+  ]
+}
