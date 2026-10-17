@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.92-build.305",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "3adfa18661abc10a8765eb4580d37638974d63b2"
+  },
+  "release": {
+    "version": "2.3.92",
+    "build": 305,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.92-build.305-linux-arm64.zip",
+    "byte_size": 19875979,
+    "sha256": "70d17f9fdd07c181078b9d7079abf700877eb1eda773809c1e377b5869ec79f6",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner-approved PR #621 head e78c87b58ab666120c018128a17e075ad4d99540 merged at 3adfa18661abc10a8765eb4580d37638974d63b2. Merged tree equals the exact tested head. Both source CI checks passed: https://github.com/gdowkpc/apollo/actions/runs/38981089764 . Descends from published Build 304 source.",
+      "Fixes the reproduced credential-agent timeout: a valid three-second remote response exceeded the old 2.5-second client budget, while synchronous network dispatch blocked local status. Agent build 52 serializes remote operations and credential/grant writers in one bounded worker with four pending slots, queue-inclusive 25/110-second deadlines and killed/reaped children; clients use 30/120 seconds while local status retains 2.5 seconds.",
+      "All 109 focused ARM64 Node checks and all credential-agent Python suites passed, including Pi/Linux-x64 worker/check-in cases. Covers delayed valid replies, responsive local status, serialization, bounded queue/expiry, unauthorized peers, child termination and no late writes. Peer authorization, credential custody, refusal, expiry and fail-closed reporting gates remain enforced.",
+      "Two independent ARM64 builds were byte-identical: 19875979 bytes, SHA256 70d17f9fdd07c181078b9d7079abf700877eb1eda773809c1e377b5869ec79f6. Independent CRC, safe unique paths, canonical inventory, 177 portable modes, AArch64 executable and source-owned helper checks passed. Packaged agent build 52 and immutable source identity verified.",
+      "All 136 native build/helper checks passed without failures or skips. The exact frozen package and production-signed updater 1.0.85 passed all 10 required packaged checks without skips: clean/legacy convergence and rollback, RSP1B closure, service-readable RTL inventory, native KA9Q streams through embedded Apollo health. https://github.com/gdowkpc/apollo/actions/runs/38982377166",
+      "Signed updater 1.0.85 source 2634905bd0d0791f99873379aee9c2c69cc65d9e, ZIP SHA256 a55ca8cda6e5f124664c4eebadcf8b3d3354d6c4586211af46d1ea2d087b0f23. Production Ed25519 authority, capsule and 68 inventory files verified, including LAN-identity rollback capability. See docs/apollo-build305-candidate.md for exact unchanged mirror bytes.",
+      "KA9Q pin 8f6a05b3b4b5ee5c85ff556f64af918e561786b4 unchanged; 15 native runtime files match retained immutable Build 298. Builder 14 has no receiver. These source/package checks are not physical RF, delivery or reboot proof; full owned-bench qualification and customer fresh RF verification remain pending.",
+      "Immutable application candidate and unchanged signed-updater public mirror are prerequisites for the authorized canonical installer qualification and customer update. No complete-installer publication, download-card activation, stable promotion or customer-qualification claim. Existing mandatory signed owned-bench publication gates remain enforced."
+    ]
+  }
+}
