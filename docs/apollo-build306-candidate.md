@@ -1,0 +1,13 @@
+# Apollo Build 306 recovery qualification candidate
+
+Apollo 2.3.93 / Build 306 corrects LAN identity binding for directly provisioned Pi nodes. The installation UUID and server-issued node UUID remain separate; the worker resolves the existing completed provisioning binding before checking the persisted public identity. Existing credential custody, mismatch refusal and hostname checks remain enforced. The package includes the bounded credential-agent timeout correction from Build 305 and the RSP1B starter's corrected data endpoint.
+
+Source PR #625 was approved at `0266071b7e17238a26e168f2af6245321bbbfb9b` and merged at `f852df8fa8f094e28487dab064feadf218075299`. The full trees match. The qualified archive remains frozen at the approved source commit; it has not been recut under another source identity.
+
+Application: `ApolloPassiveReceive-2.3.93-build.306-linux-arm64.zip`, **19,876,177 bytes**, SHA-256 **`624df6bf0b8dfa15d604bece2dcd678408c8cfc9b97cec8b32d7a6836e5be33e`**. Two ARM64 builds were identical. All 349 focused native checks, both required source CI checks and all ten final exact-package gates passed. [Source CI](https://github.com/gdowkpc/apollo/actions/runs/38989652843); [exact-package qualification](https://github.com/gdowkpc/apollo/actions/runs/38989770019).
+
+The actual package passed read-only identity and RSP1B profile checks on the owned node. Canonical forward recovery, fresh physical RF reception and channel-lifecycle testing remain pending. The application candidate supplies the immutable authority needed by the normal updater; these package checks do not establish RF, reporting-delivery or reboot qualification. KA9Q remains at `8f6a05b3b4b5ee5c85ff556f64af918e561786b4`, without a private thread-leak patch.
+
+The existing production-signed updater **1.0.85** remains the installation engine. Its source is `2634905bd0d0791f99873379aee9c2c69cc65d9e`, ZIP SHA-256 `a55ca8cda6e5f124664c4eebadcf8b3d3354d6c4586211af46d1ea2d087b0f23`, authority SHA-256 `7b3a6a2d613764a79f1eee98991bf91ff65f5936075a0d788963831f065cefb2`, and capsule SHA-256 `d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21`. Its existing production authority and bytes are reused without re-signing. The canonical authority file digest is independently verified during release preparation; the signed expiry is October 16, 2027.
+
+The complete installer, public download card and stable target are outside this candidate publication. Their mandatory signed owned-bench gates remain required. Controlled recovery activation requires its own exact-artifact owner approval and canonical preflight; physical RSP1B results will be reported separately after independently verified installation.
