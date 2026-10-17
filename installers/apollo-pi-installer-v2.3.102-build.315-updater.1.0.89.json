@@ -1,0 +1,52 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v2",
+  "release_tag": "apollo-pi-installer-v2.3.102-build.315-updater.1.0.89",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "7eae8deddff0e21113197551370c11c1ffd96d65"
+  },
+  "target": {
+    "version": "2.3.102",
+    "build": 315,
+    "source_commit": "c99af61b01e2c4fc3ef6b98c6d80960eea98156f",
+    "release_tag": "apollo-passive-v2.3.102-build.315",
+    "sha256": "b06a4286a18816d379bdc4f36b5837c863d247afbfe74b5e9905a2be88f45a7c"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.102-build.315-updater.1.0.89-linux-arm64.zip",
+    "bytes": 309220,
+    "sha256": "1f4766f315c02c227a5b06f0389faabe28a034b3cffff6c18ab015f02d695240"
+  },
+  "updater": {
+    "version": "1.0.89",
+    "signed_source_commit": "7584c1e96aa08e3106954fa10153a7db5de04ef0",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.89-linux-arm64.zip": {
+        "sha256": "e58c6b4dd6eab8e6590249deff826480a31e5a96c31068e3a55295bc4e19221d",
+        "bytes": 299692
+      },
+      "ApolloUniversalPiUpdater-1.0.89.authority.json": {
+        "sha256": "a8bd360c415a7e38f11d784616bb84603fd3ec26f75567c7aab55d86c115d62f",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.89.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "legacy_rtl_policy": "A sole supported receiver can initialize validated empty setup while preserving registration and general settings. Receiver-bound calibration and hardware settings never transfer to different or ambiguous hardware; scan-plan saves retain identity-swap protection.",
+  "qualification": {
+    "collector_source_commit": "744995a327bae90d0d04116eda0a7497e459d32a",
+    "collector_source_pr": "https://github.com/gdowkpc/apollo/pull/666",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39073520122",
+    "signed_updater_workflow": "https://github.com/gdowkpc/apollo/actions/runs/39066329546",
+    "scope": "Exact complete installer on the registered owned RTL bench: repeat installation, preserved node-owned state, authenticated check-ins and new real RF reports before and after actual reboot, and three sustained samples across all seven configured windows with no new receiver errors.",
+    "limits": "The signed canonical run begins on already-installed Build315/updater1.0.89. Earlier updater replacement facts and registered-empty adoption/identity-swap regression fixtures remain separate; this is not a signed forward-upgrade or physical empty-receiver-start attestation. Other receiver families, every-band audio and known-station accuracy are not asserted."
+  },
+  "live_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.102-build.315-updater.1.0.89.live.json",
+    "sha256": "5ddde211fcad933b53b70f4dc50edccb2a770472e393ac4816ee08a14e362b77"
+  }
+}
