@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.104-build.317",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "062b93ad9c3a6054db0f57adb616937014bf4073"
+  },
+  "release": {
+    "version": "2.3.104",
+    "build": 317,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.104-build.317-linux-arm64.zip",
+    "byte_size": 19905407,
+    "sha256": "a34f7f6f9691efda841df1c915a3faf22c2fd07344966823769781dbf36ac93d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner approved PR665 exact refreshed head a1b02753e3d697d1731b43355b9a53dd355baf68; all three CI checks passed before merge 062b93ad9c3a6054db0f57adb616937014bf4073. Source includes published Build316 lineage.",
+      "Two physical ARM64 builds are byte-identical: 19905407 bytes, SHA256 a34f7f6f9691efda841df1c915a3faf22c2fd07344966823769781dbf36ac93d. ZIP CRC, safe unique paths, canonical inventory, modes and principal AArch64 ELF independently verified.",
+      "All102 ARM64 scanner/install/reporting tests passed without skips at the approved head and merged build source. Tests cover10ms quiet visits, no added inter-target pause, metadata settling and full1500ms busy hold, dropped signals, wrong/stale status and rollback.",
+      "Physical BCD996P2 source bench on the preserved115-target plan completed one full pass with zero failures; all115 visits were quiet. Mean observed quiet visit245.8ms, minimum130ms;47.058s including initialization. No busy RF was observed, so this is scanner progress evidence only.",
+      "Exact final ZIP passed 10 required ARM64 target-state checks with public production-signed updater1.0.87, with zero failures/skips. Includes preservation and rollback, RSP1B module closure, RTL permissions, native and embedded executable stream health.",
+      "Native CTCSS, packaged DMR and Airspy integration suites passed during build. Native inputs and KA9Q pin are inherited unchanged from the authenticated release lineage.",
+      "BCD996P2 saved settle_ms remains its busy metadata budget; quiet visits use10ms. Existing target assignments, identity, credentials, reporting policy, failed-visit retry and BCT15X timing are preserved.",
+      "This application asset is package-qualified for the owner-approved controlled node5 rollout. Exact installed-node timing, organic busy metadata, RF identity, reboot and reporting qualification remain separate. No stable pointer, public download catalog or complete installer is promoted."
+    ]
+  }
+}
