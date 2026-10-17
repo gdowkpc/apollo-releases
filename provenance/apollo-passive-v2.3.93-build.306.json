@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.93-build.306",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "0266071b7e17238a26e168f2af6245321bbbfb9b"
+  },
+  "release": {
+    "version": "2.3.93",
+    "build": 306,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.93-build.306-linux-arm64.zip",
+    "byte_size": 19876177,
+    "sha256": "624df6bf0b8dfa15d604bece2dcd678408c8cfc9b97cec8b32d7a6836e5be33e",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner-approved source PR #625 head 0266071b7e17238a26e168f2af6245321bbbfb9b merged normally at f852df8fa8f094e28487dab064feadf218075299. The complete merged tree equals the qualified frozen source tree. Includes PR #623 and descends from published Build 305 source 3adfa18661abc10a8765eb4580d37638974d63b2.",
+      "The LAN worker resolves the server-issued UUID from completed direct provisioning bound to the separate installation UUID. Public identity must still match the resolved server UUID. Credential custody, unsafe-file rejection and canonical hostname checks remain enforced; identities and reporting authority are not rewritten.",
+      "349 focused ARM64 checks passed without failures or skips at 813cc40cedeb67f7b2983d60cec6e522a4788800, including 11 root identity/custody tests and updater boot/recovery contracts with production-signed updater 1.0.85. The reviewed refresh adds four CJ-1-only files; exact Git tree identities prove unchanged Pi/release/qualification inputs.",
+      "Two independent physical ARM64 builds of frozen source 0266071b7e17238a26e168f2af6245321bbbfb9b were byte-identical: 19876177 bytes, SHA256 624df6bf0b8dfa15d604bece2dcd678408c8cfc9b97cec8b32d7a6836e5be33e. Both required source CI checks passed: https://github.com/gdowkpc/apollo/actions/runs/38989652843",
+      "The exact final ZIP passed all 10 required ARM64 package checks without skips using production-signed updater 1.0.85: clean/legacy convergence and rollback (2), RSP1B module/profile closure (1), readable RTL inventory (1), native sample streams (3), and embedded executable/package health streams (3). https://github.com/gdowkpc/apollo/actions/runs/38989770019",
+      "The actual packaged worker resolved an owned directly provisioned RSP1B node's existing server identity read-only. Packaged starter/controller produced a valid 2 Msps, 146 MHz, 150-channel profile with the corrected data endpoint. Protected configuration, identity and credential bytes/metadata and historical rollback journals remained unchanged. Canonical recovery apply is pending.",
+      "Production-signed updater 1.0.85 is unchanged: source 2634905bd0d0791f99873379aee9c2c69cc65d9e, ZIP SHA256 a55ca8cda6e5f124664c4eebadcf8b3d3354d6c4586211af46d1ea2d087b0f23. Its Ed25519 authority, artifact and capsule binding are independently reverified for release preparation.",
+      "KA9Q pin 8f6a05b3b4b5ee5c85ff556f64af918e561786b4 is unchanged and has no private SDRplay thread-leak patch. Synthetic package progress and read-only node checks do not establish physical RF reception, channel-lifecycle leak qualification, reporting delivery or reboot continuity.",
+      "This immutable application candidate is a prerequisite for canonical owned-node forward recovery qualification. Full physical RSP1B RF/channel-lifecycle tests remain pending. No complete-installer record, signed live-qualification receipt, public download card or stable pointer is changed; the mandatory owned-bench publication gates remain enforced. See docs/apollo-build306-candidate.md."
+    ]
+  }
+}
