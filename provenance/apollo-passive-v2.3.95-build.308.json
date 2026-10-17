@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.95-build.308",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "fa6be78d1eb356a65951bc0520000aea7fcbdd00"
+  },
+  "release": {
+    "version": "2.3.95",
+    "build": 308,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.95-build.308-linux-arm64.zip",
+    "byte_size": 19892964,
+    "sha256": "ba430b091db679313ef4c48761601b8a96de8543ebf71ee87deb899c2eb09494",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR #637 adds bounded same-PCM precision confidence supporting an agreeing native CTCSS tone. Native tone remains authoritative; silence, disagreements and digital conflicts do not acquire invented confidence. The existing server match and promotion thresholds remain unchanged.",
+      "Release identity PR #638 merged at fa6be78d1eb356a65951bc0520000aea7fcbdd00. The frozen application source descends from published Build 307 source a496bfcb6b7fa9041aec74e4c4a3f4289cd1d721 and includes its receiver readiness protections. All three required source checks passed: https://github.com/gdowkpc/apollo/actions/runs/39007507171",
+      "Two independent physical ARM64 builds are byte-identical: 19892964 bytes, SHA256 ba430b091db679313ef4c48761601b8a96de8543ebf71ee87deb899c2eb09494. Published Build 307 native runtime inputs and the unchanged KA9Q pin are retained.",
+      "Physical ARM64 focused qualification passed 43 source tests, 41 tests against the extracted final ZIP, and 12 native CTCSS helper tests. These checks establish package behavior and synthetic signal handling; they do not claim a received over-the-air match or production auto-promotion.",
+      "The exact final ZIP passed required ARM64 clean/legacy convergence and rollback, isolated RSP1B closure, service-readable RTL native inventory, and native/embedded KA9Q sample-stream health: https://github.com/gdowkpc/apollo/actions/runs/39040239615",
+      "Production-signed updater 1.0.87 is the qualified configured-node update path. Its authenticated target, preservation, rollback and sampled RF-health gates remain mandatory. No new updater, receiver-specific build, trust policy or private driver patch is introduced.",
+      "This immutable application asset supports an authorized existing configured Airspy node update. It does not qualify a new complete installer, registered-empty update, public download-card change, stable pointer, every receiver or RF band. Those publication and physical qualification gates remain separate."
+    ]
+  }
+}
