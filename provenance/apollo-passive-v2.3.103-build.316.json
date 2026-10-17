@@ -1,0 +1,40 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.103-build.316",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "064d1abaad10c73a034df069db31c1cfc3baf1ae"
+  },
+  "release": {
+    "version": "2.3.103",
+    "build": 316,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.103-build.316-linux-arm64.zip",
+    "byte_size": 19905297,
+    "sha256": "cb1a2d9d18e254cdb8564b50c47b64e75c11f85ad04ea3bd315009e81e4bd032",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "PR657 exact head 54c6edd36901d089cf192b30833b4c0d4b2653f1 was owner-approved after CI and merged as 064d1abaad10c73a034df069db31c1cfc3baf1ae. Approved and merged source trees are identical and include the frozen Build315 lineage.",
+      "Two physical native ARM64 builds are byte-identical: 19905297 bytes, SHA256 cb1a2d9d18e254cdb8564b50c47b64e75c11f85ad04ea3bd315009e81e4bd032. ZIP CRC, unique safe entries, canonical inventory, portable modes and principal AArch64 ELF independently verified.",
+      "Native source and packaged suites passed with zero failures/skips: 106 decoder/reporting, 29 actual packaged decoder/timing, 39 Airspy integration, 24 cadence/conflict and 12 CTCSS tests. All12 native packaged diagnostic cases passed at16/24/48kHz.",
+      "Documented off-air discriminator corpus: all9 DMR windows agree with independent DSDcc color code and base/mobile source; no supported timeslot disagreement. All53 dPMR/DStar/YSF negatives retain no strong DMR or decoded metadata. All62 classifications/provenance remain unchanged.",
+      "Exact PCM SHA256, sample rate/count and zero start coordinate were asserted against supplied samples for synthetic and decoded off-air analysis windows. Existing2s input ceiling and400ms worker timeout remain; no added receive/evaluation wait. Max off-air worker198.430ms, synthetic180.316ms, synchronous finish0.331ms.",
+      "Exact final ZIP passed all10 required physical ARM64 target-state tests with retained production-signed updater1.0.88: clean/Build191 convergence and rollback, RSP1B module/profile closure, RTL inventory permissions, native KA9Q and embedded executable sampled-stream health. No required gate skipped.",
+      "Intake PR53 merged f3363f66a75eb91c01a33e5694551ef94f2775e5; review PR146 merged c2973882b1b6c40a1d455c21c4df5204d6279d3a. Narrow production overlays preserve existing live features. Exact packaged diagnostic wire matches bytes already validated against the deployed strict intake.",
+      "Existing confidence thresholds, protected-field support, voice bracketing, conflict rejection, grouping/context fingerprints and explicit approval for every review group remain mandatory. Trace fields contain no PCM, voice or subscriber identifiers and confer no repeater identity.",
+      "This managed application asset is qualified for controlled rollout. It does not promote the global stable pointer, public download catalog or complete installer and does not claim fresh customer-node RF, reporting or reboot qualification."
+    ]
+  }
+}
