@@ -1,0 +1,89 @@
+{
+  "schema_version": "apollo-build309-package-qualification-review-v1",
+  "scope": "Source and native package qualification only; actual complete installer, RF, reporting delivery and reboot remain unqualified for Build 309.",
+  "source_commit": "990bf2e7547871d2c36a6e22bf29cc38d4b73ead",
+  "source_merge_commit": "add5bbb8a34853509bf1275ef591d8413e24dd31",
+  "source_tree_equals_merge": true,
+  "version": "2.3.96",
+  "build": 309,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.96-build.309-linux-arm64.zip",
+    "bytes": 19893515,
+    "sha256": "2728e226f8ca3c868ec41ece039357ec508491e28412ffe78b9799c5f48e6be1"
+  },
+  "source_ci": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39045836798",
+    "head": "990bf2e7547871d2c36a6e22bf29cc38d4b73ead",
+    "checks_passed": 3,
+    "registered_empty_receiver_fixture_cases_passed": 16
+  },
+  "native": {
+    "byte_identical_builds": 2,
+    "checks_passed": 266,
+    "groups": {
+      "arm64-focused-tests.log": {
+        "tests": 106,
+        "pass": 106,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-confidence-tests.log": {
+        "tests": 42,
+        "pass": 42,
+        "fail": 0,
+        "skipped": 0
+      },
+      "native-ctcss-tests.log": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      },
+      "recovery-source-tests.log": {
+        "tests": 49,
+        "pass": 49,
+        "fail": 0,
+        "skipped": 0
+      },
+      "root-first-receiver-tests.log": {
+        "tests": 55,
+        "pass": 55,
+        "fail": 0,
+        "skipped": 0
+      },
+      "target-state-convergence-tests.log": {
+        "tests": 2,
+        "pass": 2,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    "failures": 0,
+    "skips": 0
+  },
+  "profile_retry_worker_sha256": "aa3fef2a39ba12f1127a5f27bff9a235aa9cba574453f80a6d0feb69b9915c28",
+  "signed_updater": {
+    "version": "1.0.88",
+    "unchanged": true,
+    "files": {
+      "ApolloUniversalPiUpdater-1.0.88-linux-arm64.zip": {
+        "bytes": 298916,
+        "sha256": "ff102d386d7c804684efaaab670e8e51c480bf9cc181f03cfa046f3fabae58a2"
+      },
+      "ApolloUniversalPiUpdater-1.0.88.authority.json": {
+        "bytes": 1169,
+        "sha256": "096965c3b627a6b050a3701515a3b60b634d7b05721558b5fcb3f557c90d9051"
+      },
+      "ApolloUniversalPiUpdater-1.0.88.controller-capsule.json": {
+        "bytes": 6655,
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21"
+      }
+    }
+  },
+  "limits": [
+    "No Build 309 installation or physical RF/reboot qualification has run.",
+    "RSP1B qualification does not establish RTL-SDR, Airspy, scanner, every-band, known-signal accuracy or customer readiness.",
+    "No reporting grant, location, credential, stable-pointer or download-page changes are included."
+  ]
+}

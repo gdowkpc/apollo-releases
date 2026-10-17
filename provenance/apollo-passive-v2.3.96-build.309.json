@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.96-build.309",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "990bf2e7547871d2c36a6e22bf29cc38d4b73ead"
+  },
+  "release": {
+    "version": "2.3.96",
+    "build": 309,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.96-build.309-linux-arm64.zip",
+    "byte_size": 19893515,
+    "sha256": "2728e226f8ca3c868ec41ece039357ec508491e28412ffe78b9799c5f48e6be1",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Native package qualification only. Complete installer, physical RF, reporting delivery and reboot qualification for Build 309 remain pending; this application authority enables the normal qualification installer.",
+      "Approved source PR #646 head 990bf2e7547871d2c36a6e22bf29cc38d4b73ead, merged as add5bbb8a34853509bf1275ef591d8413e24dd31; trees identical. Includes #643 interrupted-profile retry and #644 CTCSS precision protection.",
+      "https://github.com/gdowkpc/apollo/actions/runs/39045836798: all three source CI checks and all 16 registered empty-receiver fixture cases passed.",
+      "Two byte-identical native ARM64 builds; all 266 checks passed, zero failures or skips. Evidence: qualifications/apollo-passive-v2.3.96-build.309.package.json; SHA-256 dd3129d5c061296e2d7954e9b0323852e08593e5005e0575fac805696af5c2c7.",
+      "The canonical application identity descends from published Build 308 source fa6be78d1eb356a65951bc0520000aea7fcbdd00. The original archive and embedded source identity are retained without recutting.",
+      "Uses unchanged production-signed updater 1.0.88, SHA-256 ff102d386d7c804684efaaab670e8e51c480bf9cc181f03cfa046f3fabae58a2. Receiver binding, preservation, startup health, signature and rollback checks remain mandatory.",
+      "No complete-installer release, public download card, stable update pointer, customer activation, reporting authorization or new signing is included. Owned RSP1B qualification and the signed owned-RTL publication gate remain separate."
+    ]
+  }
+}
