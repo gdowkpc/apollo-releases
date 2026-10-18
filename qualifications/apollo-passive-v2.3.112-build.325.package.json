@@ -1,0 +1,182 @@
+{
+  "schema_version": "apollo-build325-package-qualification-review-v1",
+  "scope": "Receiver-neutral ARM64 application for the authorized KD6KPC-13 update.",
+  "source_commit": "a7bddb07447f49b637ae61b9cd74b223970e2b07",
+  "version": "2.3.112",
+  "build": 325,
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.112-build.325-linux-arm64.zip",
+    "bytes": 19913707,
+    "sha256": "b06f32d62b32d51cca613fd738cfe18807b7cf353daab667eef8350ea958c34f"
+  },
+  "byte_identical_native_package_builds": 2,
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 294,
+      "pass": 294,
+      "fail": 0,
+      "skipped": 0
+    },
+    "reported-rf-mode-source-tests.log": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-reported-rf-mode-tests.log": {
+      "tests": 2,
+      "pass": 2,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "conclusion": "success",
+    "databaseId": 39154612752,
+    "headSha": "a7bddb07447f49b637ae61b9cd74b223970e2b07",
+    "jobs": [
+      {
+        "completedAt": "2026-10-18T18:36:33Z",
+        "conclusion": "success",
+        "databaseId": 117755139072,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-18T18:33:21Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-18T18:33:24Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-18T18:33:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:33:25Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-18T18:33:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:33:25Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-18T18:33:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:33:25Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-18T18:33:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:33:27Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-18T18:33:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:33:58Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-18T18:33:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:33:59Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-18T18:33:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:34:01Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-18T18:33:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:34:03Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-18T18:34:01Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:36:29Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-18T18:34:03Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:36:29Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-18T18:36:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:36:29Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-18T18:36:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T18:36:29Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-18T18:36:29Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39154612752/job/117755139072"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39154612752"
+  },
+  "updater_used": "1.0.91",
+  "native_rebuild": "radiod and sdrplay.so rebuilt from the current pinned KA9Q source with merged orderly process exit and serialized SDRplay cleanup; readiness helper rebuilt with stage/serial diagnostics.",
+  "limits": [
+    "Package and isolated native tests are separate from fresh over-air mode verification.",
+    "Normal updater protected-state, startup RF-health and rollback checks remain mandatory.",
+    "RSP1B lifecycle stress and 24-hour soak are separate qualification."
+  ]
+}

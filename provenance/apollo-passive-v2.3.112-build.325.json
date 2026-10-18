@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.112-build.325",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "a7bddb07447f49b637ae61b9cd74b223970e2b07"
+  },
+  "release": {
+    "version": "2.3.112",
+    "build": 325,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.112-build.325-linux-arm64.zip",
+    "byte_size": 19913707,
+    "sha256": "b06f32d62b32d51cca613fd738cfe18807b7cf353daab667eef8350ea958c34f",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR690 explicitly reports measured RF mode from both Pi forwarders: validated CTCSS establishes FM, existing qualified digital evidence establishes DMR, and insufficient mode evidence remains MIXED. Configured receiver settings are not over-air evidence; existing queued envelopes are unchanged.",
+      "Two ARM64 application builds are byte-identical. Source and extracted package reporter mode regressions, receiver shutdown/profile/readiness, decoder, Airspy and native tone tests passed without failures or skips. qualifications/apollo-passive-v2.3.112-build.325.package.json SHA-256 648a15d5548452fb9f6862c41a5fad4e74d898c7ecd3475e772d9a093fead13f.",
+      "Current-source radiod and SDRplay module include the merged PR680 orderly exit and serialized shutdown cleanup, with a rebuilt diagnostic readiness helper. Their hashes are retained in the package provenance. Isolated package closure is distinct from physical receiver stress and a new soak.",
+      "The exact ZIP passed clean/legacy target convergence, rollback and isolated receiver/native-stream gates with production-signed updater1.0.91: https://github.com/gdowkpc/apollo/actions/runs/39154612752",
+      "Authorized existing-node application update on KD6KPC-13 through its signed Universal Pi updater1.0.91. Preserve identity, credentials, receiver binding and settings; require normal startup RF health and rollback. Fresh production RF-mode receipt remains a separate post-install verification.",
+      "Application asset only; no complete installer, public download card or stable-pointer promotion."
+    ]
+  }
+}
