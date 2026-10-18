@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.105-build.318",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e116b4d42107f67c8cae4d7ea8db1679656c6018"
+  },
+  "release": {
+    "version": "2.3.105",
+    "build": 318,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.105-build.318-linux-arm64.zip",
+    "byte_size": 19908226,
+    "sha256": "f45c7b4704a225dcb8ff25675d27cff688a3b3a3256bc4eb6e2fe4daed24d6a4",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "DMR deadline repair PR670 exact head 60a9aaeaa9e4b9a36a113ae539314247eabbe763 merged as 7b55ed1efd871ae454f8341ab15351272365c724; release allocation PR673 merged as e116b4d42107f67c8cae4d7ea8db1679656c6018. Current source contains immutable Build317 and Build315 lineage.",
+      "Two physical ARM64 builds are byte-identical. Exact ZIP, principal AArch64 executable, embedded source identity and all four DMR modules verified. 19908226 bytes; SHA256 f45c7b4704a225dcb8ff25675d27cff688a3b3a3256bc4eb6e2fe4daed24d6a4.",
+      "311 source and packaged decoder, evidence-reporting, native CTCSS and Airspy checks passed without failures or skips. Six embedded Node18 replay cases passed: original recording in three cold workers, silence unknown, packet-loss and changed-source rejection.",
+      "Exact final package passed clean/legacy target convergence, RSP1B module/profile closure, root-installed RTL permission and native KA9Q through embedded Apollo RF-health gates with production-signed updater1.0.89: https://github.com/gdowkpc/apollo/actions/runs/39081953318",
+      "On the intended Pi3B+ KD6KPC-23, the independently packaged Node18 decoder detected the original recording at confidence0.997 in three cold workers below the unchanged400ms cutoff; silence and continuity rejection passed. Running receiver process and configuration were unchanged during replay.",
+      "Controlled KD6KPC-23 deployment only. Installation, continued reporting and organic live DMR remain separate post-activation checks. This prerelease asset does not promote a public download catalog, stable/early-tester discovery pointer or complete installer."
+    ]
+  }
+}
