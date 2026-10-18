@@ -1,0 +1,58 @@
+{
+  "schema_version": "apollo-pi-owner-first-package-qualification-v1",
+  "source_commit": "f865b9186f12288819002815ce8fb922bfafa2a3",
+  "version": "2.3.113",
+  "build": 326,
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.113-build.326-linux-arm64.zip",
+    "bytes": 19917035,
+    "sha256": "2ff487ca7a1529559520027c5eb9a70d5f29ee3be260d21b0540b375a9fcfcc5"
+  },
+  "byte_identical_native_builds": 2,
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 292,
+      "pass": 292,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "conclusion": "success",
+    "headSha": "f865b9186f12288819002815ce8fb922bfafa2a3",
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39154427866"
+  },
+  "owner_flow_checks": {
+    "node_focused": 130,
+    "retained_php": 251,
+    "native_signed_enrollment": 40,
+    "native_checkin": 18,
+    "native_pi_http_restart_cases": 2
+  },
+  "updater_used": "1.0.91",
+  "limits": [
+    "No pre-approval reporting credential or reporting grant is issued.",
+    "No production node is enrolled or used to send synthetic RF evidence.",
+    "Complete-installer registered RTL installation, retry, reboot and fresh reporting qualification is separate and still pending.",
+    "Physical RSP1B window transitions, renewed lifecycle cycles and 24-hour soak remain unqualified for the inherited cleanup fix."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.113-build.326",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f865b9186f12288819002815ce8fb922bfafa2a3"
+  },
+  "release": {
+    "version": "2.3.113",
+    "build": 326,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.113-build.326-linux-arm64.zip",
+    "byte_size": 19917035,
+    "sha256": "2ff487ca7a1529559520027c5eb9a70d5f29ee3be260d21b0540b375a9fcfcc5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR685 implements owner-completed receiver/location setup through the existing signed enrollment device key; reporting stays blocked until one administrator Approve and enable action. Existing ticket/credential/binding/intake transactions finish in the background; saved receipts resume after restart without another login or credential rotation.",
+      "Website PR150 merged atfec7a43831768bdb490cf3180a59cf450126db05; its retained runtime passed251 PHP checks and deployed PHP-FPM rendering was verified without node, credential or reporting-authority writes.",
+      "Two physical ARM64 builds are byte-identical. Source, native signed enrollment/check-in, Pi HTTP/restart and extracted decoder/receiver/native-tone suites passed. Evidence: qualifications/apollo-passive-v2.3.113-build.326.package.json; SHA-256 5b5f985dc77c1957b7d65af6c811be17e0476fe82049600d30196e73b24ddff6.",
+      "Exact ZIP clean/legacy convergence, rollback, isolated receiver package closure and native embedded KA9Q stream qualification passed: https://github.com/gdowkpc/apollo/actions/runs/39154427866",
+      "Current protected main ancestry includes PR680 serialized native SDRplay cleanup, PR688 installed-agent identity, PR691 readiness serialization and PR690 measured RF-mode forwarding. Required native source postimages and radiod/module/readiness binary hashes were verified; this is package closure, not physical RSP1B or 24-hour soak qualification.",
+      "Application artifact only at this step. Complete installer and public discovery promotion remain behind their separate signed registered-RTL live qualification and artifact checks. Ordinary authentication, receiver readiness, owner settings, reporting authority and rollback gates remain required."
+    ]
+  }
+}
