@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.107-build.320",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "4348f8e2b3cc1f4caa2d9fcc1416a7ef6117752e"
+  },
+  "release": {
+    "version": "2.3.107",
+    "build": 320,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.107-build.320-linux-arm64.zip",
+    "byte_size": 19909827,
+    "sha256": "c75b3e00f66f6cbe308838f0907366fd4a6600d320de7968e311d12a48d91095",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR676 head1c11ed2c86e356d354c05785c3a2a9598499921f requires analog agreement and same-burst exact CACH TACT support for maximum-corrected outbound DMR SLOT words. Includes current main and reserved Build319 lineage, with the qualified corrected RSP1B native module.",
+      "Two original discriminator captures reproduce SLOT conflicts in the installed316 baseline and retain31 and22CC1 frames in direct and embedded-worker regressions after the fix. Existing correction limits, exact support, true-conflict handling and advisory-only contract remain.",
+      "Two physical ARM64 builds are byte-identical. Exact source, extracted package, native-helper and real-recording replay checks passed without failures or skips. Evidence: qualifications/apollo-passive-v2.3.107-build.320.package.json; SHA-256 d4b57dd9720cf3aeca652b07fc41114a92a15557daa40495dfef362ae2b43aad.",
+      "The exact ZIP passed mandatory ARM64 clean/legacy convergence and rollback, isolated receiver package closure and native/embedded KA9Q sample-stream gates: https://github.com/gdowkpc/apollo/actions/runs/39085851923",
+      "This asset supports the normal signed-updater managed path for existing configured nodes, qualified with unchanged updater1.0.87. Receiver binding, protected-state preservation, native startup-health and rollback gates remain mandatory.",
+      "Application asset only: no complete installer, public download-card or stable-pointer change; package/fixture qualification is separate from fresh deployed RF proof and review adjudication."
+    ]
+  }
+}
