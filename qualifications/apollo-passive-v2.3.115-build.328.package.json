@@ -1,0 +1,201 @@
+{
+  "schema_version": "apollo-build328-package-qualification-review-v1",
+  "scope": "Exact ARM64 application package qualification for authenticated owned-node installer testing. Physical installation/reboot/organic reception/reporting remain a separate next gate. No complete installer or download/update pointer promotion.",
+  "source_commit": "8eb39ff2e35a1638dc430627782d5cf27fe80eba",
+  "approved_pr_heads": {
+    "693": "5be914a9c1c235084b0672bd7da93c21fe310232"
+  },
+  "version": "2.3.115",
+  "build": 328,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.115-build.328-linux-arm64.zip",
+    "bytes": 19917382,
+    "sha256": "79ac993505fab5e4a6098395c0bdb8209856a27ed9628d3dc070287a0a9ef546"
+  },
+  "principal_executable_sha256": "00290a07c78f5df2649eea72d343b649db72069fbb270d84c02ad04a6c11c6e4",
+  "byte_identical_native_builds": 2,
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 296,
+      "pass": 296,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "native-server-contract-tests.log": {
+      "tests": 40,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 35,
+      "cancelled": 0
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 96,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 88,
+      "cancelled": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  "embedded_receiver_proof": {
+    "module": "apollo_passive_receive/src/ka9q/receiver.js",
+    "sha256": "181f899ebb3528983b47a954688e928a9da69f6efc2819aa8d977701e31b4b48",
+    "offset": 45891263,
+    "bytes": 74168,
+    "read_from_frozen_principal": true
+  },
+  "exact_zip_qualification": {
+    "conclusion": "success",
+    "headSha": "8eb39ff2e35a1638dc430627782d5cf27fe80eba",
+    "jobs": [
+      {
+        "completedAt": "2026-10-18T20:09:42Z",
+        "conclusion": "success",
+        "databaseId": 117776518389,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-18T20:06:50Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-18T20:06:52Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-18T20:06:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:06:53Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-18T20:06:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:06:53Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-18T20:06:53Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:06:53Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-18T20:06:53Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:06:56Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-18T20:06:53Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:07:16Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-18T20:06:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:07:17Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-18T20:07:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:07:18Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-18T20:07:17Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:07:20Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-18T20:07:18Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:09:38Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-18T20:07:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:09:38Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-18T20:09:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:09:38Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-18T20:09:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T20:09:38Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-18T20:09:38Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39161816671/job/117776518389"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39161816671"
+  },
+  "native_scope": {
+    "canonical_server_checks": 5,
+    "explicitly_filtered_server_cases": 35,
+    "full_windows_server_suite_passed_on_approved_identical_source_tree": true
+  },
+  "native_input_inventory_sha256": "44992df28f101a71e2279807ae112c2f85f38245050a41adcd4d3113b53cfb3d",
+  "updater_version": "1.0.91",
+  "physical_node_qualification": "pending",
+  "complete_installer_published": false
+}

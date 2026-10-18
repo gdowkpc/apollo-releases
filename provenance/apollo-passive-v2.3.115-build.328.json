@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.115-build.328",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8eb39ff2e35a1638dc430627782d5cf27fe80eba"
+  },
+  "release": {
+    "version": "2.3.115",
+    "build": 328,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.115-build.328-linux-arm64.zip",
+    "byte_size": 19917382,
+    "sha256": "79ac993505fab5e4a6098395c0bdb8209856a27ed9628d3dc070287a0a9ef546",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner-approved remaining transition-readiness correction PR693 is integrated at source 8eb39ff2e35a1638dc430627782d5cf27fe80eba. Installed Build324 ancestry is preserved. Native inputs include the authenticated PR680 radiod, SDRplay module and readiness helper postimages.",
+      "Reporting renewal preserves the ten-second settling budget after the first coherent snapshot, so waiting behind an existing RF operation cannot consume the new bank progress budget. It waits outside the RF queue for actual measured progress during known transitions. Eight packaged regressions cover overlap, transitions and fail-closed cases. Hardware/source/control failures, stop, unplanned UNKNOWN and timeout remain unavailable; server authority and RF gates are unchanged.",
+      "Two physical ARM64 builds are byte-identical. The principal executable, embedded source identity and frozen ZIP hash are verified. Package evidence: qualifications/apollo-passive-v2.3.115-build.328.package.json; SHA-256 2e98db74ccb6a0b209d1c8abc0dda9b59edc70a1cc5318d9d1bcf573f1428e65.",
+      "The exact package passes mandatory clean/legacy convergence and rollback, isolated RSP1B closure, root-installed RTL inventory access and native KA9Q through embedded RF health with production-signed updater1.0.91: https://github.com/gdowkpc/apollo/actions/runs/39161816671",
+      "The current ARM64 source matrix and five canonical Linux/registered-RTL server checks pass. Thirty-five unrelated generic server cases are explicitly filtered on this physical ARM64 host; the full 218-test targeted Windows server/reporting matrix passed on the identical approved source tree. No field or physical node pass is inferred from source tests.",
+      "Application asset staging only, required for the normal authenticated installer. Owned-node installation/reboot/organic RF and reporting qualification remains separate. No complete installer, public download catalog, stable pointer or early-tester discovery change."
+    ]
+  }
+}
