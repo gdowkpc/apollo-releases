@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.109-build.322",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "268206cde1a62caa89be76f2ccc4a2bf1c64d871"
+  },
+  "release": {
+    "version": "2.3.109",
+    "build": 322,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.109-build.322-linux-arm64.zip",
+    "byte_size": 19910179,
+    "sha256": "1c83d19fd728f649d2eda2fda62a88bd1b575808d93149a0f08709a093d8f162",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR686 head69ca1dec2f315195ee444b3aff1b238276c5d590 merged at738313260caf3258d99af5796618b80d30b849d4 preserves a completed continuous two-second DMR window when later packet loss closes the Airspy segment. Early-gap isolation, capture-error rejection, unfinished-worker cancellation and existing promotion thresholds remain.",
+      "Two native ARM64 builds are byte-identical. Source, extracted decoder, Airspy reporting and native tone-helper tests passed without failures or skips. Evidence: qualifications/apollo-passive-v2.3.109-build.322.package.json; SHA-256 82c73f1c1fe91948d68523f6e1c02bd76054ec36ef23a10fef0d5264f1b17b46.",
+      "Observation69079 hash-verified three-second WAV was inverse voice-conditioned and converted from16 to24kHz for offline real embedded-worker and pipeline replay. The old finalizer rejected a completed result after the simulated42ms gap; the fixed package reports DMR at0.991, CC1, TS1 and marks the conflicting199.5Hz tone inconclusive. This is reconstructed-audio verification, not original native PCM or fresh RF proof.",
+      "The exact ZIP passed mandatory ARM64 clean/legacy convergence and rollback, isolated receiver package closure and native/embedded KA9Q stream gates: https://github.com/gdowkpc/apollo/actions/runs/39149187032",
+      "Existing configured-node managed application update using unchanged production-signed updater1.0.87; identity, credentials, settings, receiver binding and native startup-health/rollback gates remain mandatory. Review decisions are outside this update.",
+      "Application asset only: no complete installer, public download card or stable-pointer promotion. Other receiver field qualification and fresh deployed DMR evidence remain separate."
+    ]
+  }
+}
