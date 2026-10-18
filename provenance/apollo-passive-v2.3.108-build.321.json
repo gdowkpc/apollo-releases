@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.108-build.321",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "dd439f935bd75ea1e98ef5bc1c3b0c2cc35df97d"
+  },
+  "release": {
+    "version": "2.3.108",
+    "build": 321,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.108-build.321-linux-arm64.zip",
+    "byte_size": 19910101,
+    "sha256": "c17eb3b8c0be43349a35200461d22ce11f4c2009048a6adb76d62cb630b9f787",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner-approved reporting-readiness correction PR683 and installer dependency correction PR678 are integrated at source dd439f935bd75ea1e98ef5bc1c3b0c2cc35df97d. Current released Build318 and Build320 source lineage are preserved; native inputs come from the qualified immutable Build320 package.",
+      "The read-only reporting probe uses the adapter operation queue so its asynchronous preflight cannot mix receiver generations. Both concurrency regressions fail before correction and pass after correction, including the packaged ARM64 receiver. Real receiver faults still close readiness; no authority or receiver gate changes.",
+      "Two physical ARM64 builds are byte-identical. The principal executable, embedded source identity and frozen ZIP hash are verified. Package evidence: qualifications/apollo-passive-v2.3.108-build.321.package.json; SHA-256 0f0c0bcd6dae20924807478c67738e1fc2830cd2002affc075bb3fbb3383139e.",
+      "The exact package passes mandatory clean/legacy convergence and rollback, isolated RSP1B closure, root-installed RTL inventory access and native KA9Q through embedded RF health with production-signed updater1.0.91: https://github.com/gdowkpc/apollo/actions/runs/39149564677",
+      "Eight existing generic server fixture failures on ARM64 reproduce on unchanged main. Full targeted server tests pass on Windows and Linux; the canonical ARM64 server subset and native receiver/reporting matrix pass. These baseline limits are retained in the package review evidence.",
+      "Application asset staging only, required for the normal authenticated installer. Owned-node installation/reboot/organic RF and reporting qualification remains separate. No complete installer, public download catalog, stable pointer or early-tester discovery change."
+    ]
+  }
+}
