@@ -4,6 +4,7 @@ const fs = require("node:fs"), os = require("node:os"), path = require("node:pat
 const {prepare,publish}=require("../scripts/publish_pi_installer");
 const cp=require("node:child_process");
 const {DOMAIN,ERRORS,hash,fingerprint,validateEvidence,validateRepository} = require("../scripts/validate_pi_live_qualification");
+const {ONBOARDING_DOMAIN,validateOnboardingEvidence} = require("../scripts/validate_pi_live_qualification");
 const {privateKey,publicKey} = crypto.generateKeyPairSync("ed25519");
 const policy = {trusted_keys:{fixture:publicKey.export({type:"spki",format:"pem"})},required_lab_role:"owned-rtl-bench"};
 const h = v => hash(String(v)), at = n => new Date(Date.UTC(2026,9,15,12,0,n)).toISOString();
@@ -144,5 +145,67 @@ test("removing a historical record fails closed",()=>{
     qualifiedRepository(root);
     fs.unlinkSync(path.join(root,"installers/apollo-pi-installer-v2.3.79-build.292-updater.1.0.83.json"));
     assert.throws(()=>validateRepository(root),/historical_record_missing/);
+  } finally {fs.rmSync(root,{recursive:true,force:true});}
+});
+
+const onboardingPolicy = {...policy,allowed_qualification_scopes:["live_rf","installer_onboarding"]};
+function onboardingPayload() {
+  const p=payload();p.schema_version="apollo-pi-onboarding-qualification-v1";
+  p.pre_reboot.report=null;p.post_reboot.report=null;
+  p.live_rf_reporting={qualified:false,reason:"separate_live_rf_qualification_required"};
+  p.onboarding={application_source_commit:expected.source_commit,website_test_source_commit:"c".repeat(40),
+    website_test_sha256:h("test"),runtime_modules_sha256:h("modules"),test_log_sha256:h("logs"),
+    server_checks:51,runtime_tests:12,production_records_mutated:false};
+  return p;
+}
+function signOnboarding(p) {
+  const bytes=Buffer.from(JSON.stringify(p));
+  return {schema_version:"apollo-pi-onboarding-qualification-attestation-v1",key_id:"fixture",payload:bytes.toString("base64"),
+    signature:crypto.sign(null,Buffer.concat([ONBOARDING_DOMAIN,bytes]),privateKey).toString("base64")};
+}
+function validateOnboarding(p) {return validateOnboardingEvidence(signOnboarding(p),expected,onboardingPolicy,Date.UTC(2026,9,15,13));}
+test("quiet owned bench can qualify onboarding with RF reporting explicitly pending",()=>{
+  const envelope=signOnboarding(onboardingPayload());
+  assert.equal(validateOnboardingEvidence(envelope,expected,onboardingPolicy,Date.UTC(2026,9,15,13)).live_rf_reporting.qualified,false);
+  assert.throws(()=>validateEvidence(envelope,expected,onboardingPolicy),/attestation/);
+  assert.throws(()=>validateOnboardingEvidence(envelope,expected,policy),/scope_not_authorized/);
+  const p=payload();p.post_reboot.report=null;assert.throws(()=>validate(p),/report/);
+});
+for (const name of ["customer node","unregistered bench","wrong hardware","unverified binding","source changed","installer changed",
+  "private state changed","retry damages settings","old agent remains active","activation transaction absent",
+  "missing pre-reboot checkin","replayed heartbeat","no actual reboot","too few RF samples","window missing",
+  "window lost across reboot","stalled window","stale window time","no captures","receiver error","private field leak"]) {
+  test("onboarding still rejects "+name,()=>{const p=onboardingPayload();cases[name](p);assert.throws(()=>validateOnboarding(p),/pi_live_qualification_/);});
+}
+for (const [name,change] of Object.entries({
+  "RF claim":p=>p.live_rf_reporting.qualified=true,
+  "missing onboarding tests":p=>delete p.onboarding,
+  "wrong application under test":p=>p.onboarding.application_source_commit="d".repeat(40),
+  "missing test logs":p=>p.onboarding.test_log_sha256="",
+  "no server checks":p=>p.onboarding.server_checks=0,
+  "no runtime checks":p=>p.onboarding.runtime_tests=0,
+  "production test mutation":p=>p.onboarding.production_records_mutated=true,
+  "RF report relabel":p=>p.pre_reboot.report=phase(0,"first").report,
+})) test("onboarding rejects "+name,()=>{const p=onboardingPayload();change(p);assert.throws(()=>validateOnboarding(p),/pi_live_qualification_/);});
+test("onboarding signature cannot be relabeled as live qualification",()=>{
+  const envelope=signOnboarding(onboardingPayload());
+  assert.throws(()=>validateEvidence({...envelope,schema_version:"apollo-pi-live-qualification-attestation-v1"},expected,onboardingPolicy),/signature/);
+});
+test("scoped v3 record permits installer and stable publication without claiming RF delivery",()=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),"apollo-onboarding-"));
+  try {
+    const {tag,record,file,proofPath}=qualifiedRepository(root);
+    const p=onboardingPayload();p.release.installer_sha256=record.installer.sha256;
+    const bytes=Buffer.from(JSON.stringify(signOnboarding(p))),relative=`qualifications/${tag}.onboarding.json`;
+    fs.writeFileSync(path.join(root,relative),bytes);fs.unlinkSync(path.join(root,proofPath));
+    Object.assign(record,{schema_version:"apollo-pi-installer-distribution-v3",qualification_scope:"installer_onboarding",
+      live_rf_reporting:p.live_rf_reporting,onboarding_qualification:{path:relative,sha256:hash(bytes)}});
+    delete record.live_qualification;
+    const recordFile=path.join(root,"installers",tag+".json");fs.writeFileSync(recordFile,JSON.stringify(record));
+    assert.equal(prepare(root,tag,file).record.live_rf_reporting.qualified,false);
+    fs.writeFileSync(path.join(root,"stable/apollo-passive-receive-linux-arm64.json"),JSON.stringify({...record.target,minimum_pi_updater_version:record.updater.version}));
+    assert.equal(validateRepository(root).signed,1);
+    record.live_rf_reporting.qualified=true;fs.writeFileSync(recordFile,JSON.stringify(record));
+    assert.throws(()=>prepare(root,tag,file),/installer_scope/);
   } finally {fs.rmSync(root,{recursive:true,force:true});}
 });

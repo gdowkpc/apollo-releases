@@ -1,5 +1,6 @@
 {
   "schema_version": "apollo-pi-live-qualification-policy-v1",
+  "allowed_qualification_scopes": ["live_rf", "installer_onboarding"],
   "trusted_keys": {
     "owned-rtl-lab-3bf54ad6d4986de4": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAXw2NFtJJWZVkpdAVmTfaO4psdmtCNmuAqwYDfDb+P8I=\n-----END PUBLIC KEY-----\n"
   },

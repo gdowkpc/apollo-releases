@@ -22,9 +22,13 @@ function publish(root,tag,archive) {
   const reference=JSON.parse(run(["gh","api",`repos/${REPOSITORY}/git/ref/tags/${tag}`],root));
   if(reference.object?.type!=="commit"||reference.object.sha!==main)throw Error("reviewed_lightweight_tag_required");
   // Qualification and exact bytes are checked before any GitHub mutation.
+  const onboarding = prepared.record.qualification_scope === "installer_onboarding";
+  const notes = onboarding
+    ? `Qualified exact installer installation, retry, preserved node state, reboot readiness, authenticated check-ins and tested one-approval onboarding. Live RF reporting qualification remains pending. Signed qualification: ${prepared.record.onboarding_qualification.path}`
+    : `Qualified owned RTL bench installation, retry, authenticated check-ins, real report delivery, reboot and every configured RF window. Signed qualification: ${prepared.record.live_qualification.path}`;
   run(["gh","release","create",tag,prepared.archive,"--repo",REPOSITORY,"--draft","--verify-tag","--latest=false",
     "--title",`Apollo Pi ${prepared.record.target.version} / Build ${prepared.record.target.build}`,
-    "--notes",`Qualified owned RTL bench installation, retry, authenticated check-ins, real report delivery, reboot and every configured RF window. Signed qualification: ${prepared.record.live_qualification.path}`],root);
+    "--notes",notes],root);
   const draft=JSON.parse(run(["gh","release","view",tag,"--repo",REPOSITORY,"--json","tagName,isDraft,assets"],root));
   const asset=draft.assets?.find(v=>v.name===prepared.record.installer.filename);
   if(!draft.isDraft||draft.tagName!==tag||draft.assets.length!==1||asset?.size!==prepared.record.installer.bytes

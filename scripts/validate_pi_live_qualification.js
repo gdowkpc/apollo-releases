@@ -2,6 +2,7 @@
 const fs = require("node:fs"), path = require("node:path"), crypto = require("node:crypto");
 const ROOT = path.resolve(__dirname, "..");
 const DOMAIN = Buffer.from("apollo-pi-live-qualification-v1\n", "utf8");
+const ONBOARDING_DOMAIN = Buffer.from("apollo-pi-onboarding-qualification-v1\n", "utf8");
 const ERRORS = ["failed_sweeps", "helper_crashes", "sample_stream_stalls", "usb_disconnects", "unrecovered_timeout_sweeps", "scheduled_sweep_failures"];
 const hash = b => crypto.createHash("sha256").update(b).digest("hex");
 const fingerprint = v => hash(JSON.stringify(Object.fromEntries(Object.keys(v).sort().map(k => [k, v[k]]))));
@@ -22,17 +23,19 @@ function parse(bytes) {
   const s = Buffer.from(bytes).toString("utf8"); const v = JSON.parse(s);
   requireGate(JSON.stringify(v) === s, "noncanonical_json"); return v;
 }
-function validatePhase(p, release, start, end) {
+function validatePhase(p, release, start, end, requireReport = true) {
   requireGate(exact(p, ["started_at", "completed_at", "boot_fingerprint", "checkin", "report", "samples"]), "phase_fields");
   const a = epoch(p.started_at), b = epoch(p.completed_at);
   requireGate(a >= start && b <= end && b > a && hex(p.boot_fingerprint), "phase_interval");
   requireGate(exact(p.checkin, ["received_at", "event_fingerprint"]) && hex(p.checkin.event_fingerprint), "checkin");
   requireGate(epoch(p.checkin.received_at) >= a && epoch(p.checkin.received_at) <= b, "fresh_checkin");
+  if (requireReport) {
   requireGate(exact(p.report, ["received_at", "observed_at", "event_fingerprint", "source_version"])
     && hex(p.report.event_fingerprint) && p.report.source_version === release.version, "report");
   requireGate(epoch(p.report.observed_at) >= a && epoch(p.report.observed_at) <= b
     && epoch(p.report.received_at) >= a && epoch(p.report.received_at) <= b
     && epoch(p.report.observed_at) <= epoch(p.report.received_at) + 300000, "fresh_real_report");
+  } else requireGate(p.report === null, "onboarding_cannot_claim_rf_report");
   requireGate(Array.isArray(p.samples) && p.samples.length >= 3 && p.samples.length <= 20, "rf_samples");
   let prior = null, indexes = null;
   for (const sample of p.samples) {
@@ -59,14 +62,34 @@ function validatePhase(p, release, start, end) {
   }
 }
 function validateEvidence(envelope, expected, policy, now = Date.now()) {
+  return validateSignedEvidence(envelope, expected, policy, now, false);
+}
+function validateOnboardingEvidence(envelope, expected, policy, now = Date.now()) {
+  requireGate(policy.allowed_qualification_scopes?.includes("installer_onboarding"), "onboarding_scope_not_authorized");
+  return validateSignedEvidence(envelope, expected, policy, now, true);
+}
+function validateSignedEvidence(envelope, expected, policy, now, onboarding) {
+  const prefix = onboarding ? "apollo-pi-onboarding-qualification" : "apollo-pi-live-qualification";
   requireGate(exact(envelope, ["schema_version", "key_id", "payload", "signature"])
-    && envelope.schema_version === "apollo-pi-live-qualification-attestation-v1", "attestation");
+    && envelope.schema_version === prefix + "-attestation-v1", "attestation");
   const publicKey = policy.trusted_keys?.[envelope.key_id]; requireGate(typeof publicKey === "string", "untrusted_signer");
   const bytes = decode(envelope.payload, 128 * 1024), signature = decode(envelope.signature, 64);
-  requireGate(signature.length === 64 && crypto.verify(null, Buffer.concat([DOMAIN, bytes]), publicKey, signature), "signature");
+  requireGate(signature.length === 64 && crypto.verify(null, Buffer.concat([onboarding ? ONBOARDING_DOMAIN : DOMAIN, bytes]), publicKey, signature), "signature");
   const p = parse(bytes);
-  requireGate(exact(p, ["schema_version", "release", "lab", "started_at", "completed_at", "install", "pre_reboot", "post_reboot", "backend"])
-    && p.schema_version === "apollo-pi-live-qualification-v1", "payload");
+  requireGate(exact(p, ["schema_version", "release", "lab", "started_at", "completed_at", "install", "pre_reboot", "post_reboot", "backend", ...(onboarding ? ["onboarding", "live_rf_reporting"] : [])])
+    && p.schema_version === prefix + "-v1", "payload");
+  if (onboarding) {
+    requireGate(exact(p.live_rf_reporting, ["qualified", "reason"]) && p.live_rf_reporting.qualified === false
+      && p.live_rf_reporting.reason === "separate_live_rf_qualification_required", "live_rf_status");
+    const proof = p.onboarding;
+    requireGate(exact(proof, ["application_source_commit", "website_test_source_commit", "website_test_sha256", "runtime_modules_sha256", "test_log_sha256", "server_checks", "runtime_tests", "production_records_mutated"])
+      && proof.application_source_commit === expected.source_commit
+      && /^[a-f0-9]{40}$/.test(proof.website_test_source_commit || "")
+      && [proof.website_test_sha256, proof.runtime_modules_sha256, proof.test_log_sha256].every(hex)
+      && integer(proof.server_checks) && proof.server_checks >= 32
+      && integer(proof.runtime_tests) && proof.runtime_tests > 0
+      && proof.production_records_mutated === false, "onboarding_test_evidence");
+  }
   requireGate(exact(p.release, ["version", "build", "source_commit", "application_sha256", "updater_version", "updater_sha256", "installer_sha256", "installer_bytes", "agent_sha256"]), "release_fields");
   for (const key of ["version", "build", "source_commit", "application_sha256", "updater_version", "updater_sha256", "installer_sha256", "installer_bytes"])
     requireGate(p.release[key] === expected[key], "artifact_mismatch_" + key);
@@ -82,13 +105,13 @@ function validateEvidence(envelope, expected, policy, now = Date.now()) {
     && p.install.after_state_sha256 === p.install.repeat_state_sha256
     && p.install.activated_agent_sha256 === p.release.agent_sha256
     && p.install.updater_version === p.release.updater_version && p.install.transaction_recorded === true, "installation_preservation");
-  validatePhase(p.pre_reboot, p.release, a, b); validatePhase(p.post_reboot, p.release, a, b);
+  validatePhase(p.pre_reboot, p.release, a, b, !onboarding); validatePhase(p.post_reboot, p.release, a, b, !onboarding);
   const windowSet = phase => phase.samples[0].windows.map(w => w.index).sort((x,y) => x-y);
   requireGate(JSON.stringify(windowSet(p.pre_reboot)) === JSON.stringify(windowSet(p.post_reboot)), "reboot_window_set_changed");
   requireGate(epoch(p.post_reboot.started_at) > epoch(p.pre_reboot.completed_at)
     && p.pre_reboot.boot_fingerprint !== p.post_reboot.boot_fingerprint
     && p.pre_reboot.checkin.event_fingerprint !== p.post_reboot.checkin.event_fingerprint
-    && p.pre_reboot.report.event_fingerprint !== p.post_reboot.report.event_fingerprint, "reboot_or_replayed_evidence");
+    && (onboarding || p.pre_reboot.report.event_fingerprint !== p.post_reboot.report.event_fingerprint), "reboot_or_replayed_evidence");
   return p;
 }
 function read(root, relative) {
@@ -106,7 +129,12 @@ function expectedRelease(record) {
 function validateRecord(record, relative, root, policy) {
   const bytes = read(root, relative);
   if (policy.held_installer_sha256_lf?.[relative] === hash(bytes.toString("utf8").replace(/\r\n/g,"\n"))) return {held: true, record};
-  requireGate(record.schema_version === "apollo-pi-installer-distribution-v2" && record.publication_status === "qualified", "installer_contract");
+  const onboarding = record.schema_version === "apollo-pi-installer-distribution-v3";
+  requireGate((onboarding || record.schema_version === "apollo-pi-installer-distribution-v2") && record.publication_status === "qualified", "installer_contract");
+  if (onboarding) requireGate(record.qualification_scope === "installer_onboarding"
+    && exact(record.live_rf_reporting, ["qualified", "reason"]) && record.live_rf_reporting.qualified === false
+    && record.live_rf_reporting.reason === "separate_live_rf_qualification_required"
+    && !Object.hasOwn(record, "live_qualification"), "installer_scope");
   const expected = expectedRelease(record);
   requireGate(typeof expected.version === "string" && /^\d+\.\d+\.\d+$/.test(expected.version)
     && integer(expected.build) && expected.build > 0 && /^[a-f0-9]{40}$/.test(expected.source_commit || "")
@@ -117,11 +145,11 @@ function validateRecord(record, relative, root, policy) {
     && record.installer.filename === `Apollo-Pi-Installer-${expected.version}-build.${expected.build}-updater.${expected.updater_version}-linux-arm64.zip`, "installer_tag");
   const provenance = JSON.parse(read(root, `provenance/apollo-passive-v${expected.version}-build.${expected.build}.json`));
   requireGate(provenance.source?.commit === expected.source_commit && provenance.package?.sha256 === expected.application_sha256, "application_provenance");
-  const reference = record.live_qualification;
-  requireGate(exact(reference, ["path", "sha256"]) && reference.path === `qualifications/${tag}.live.json` && hex(reference.sha256), "evidence_required");
+  const reference = onboarding ? record.onboarding_qualification : record.live_qualification;
+  requireGate(exact(reference, ["path", "sha256"]) && reference.path === `qualifications/${tag}.${onboarding ? "onboarding" : "live"}.json` && hex(reference.sha256), "evidence_required");
   const evidence = read(root, reference.path); requireGate(hash(evidence) === reference.sha256, "evidence_digest");
-  validateEvidence(JSON.parse(evidence), expected, policy);
-  return {held: false, record};
+  (onboarding ? validateOnboardingEvidence : validateEvidence)(JSON.parse(evidence), expected, policy);
+  return {held: false, record, scope: onboarding ? "installer_onboarding" : "live_rf"};
 }
 function validateRepository(root = ROOT) {
   const policy = JSON.parse(read(root,"policy/pi-live-qualification.json"));
@@ -141,4 +169,4 @@ if (require.main === module) {
   try { console.log("pi-live-qualification: PASS " + JSON.stringify(validateRepository())); }
   catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = {DOMAIN, ERRORS, hash, fingerprint, validateEvidence, expectedRelease, validateRecord, validateRepository};
+module.exports = {DOMAIN, ONBOARDING_DOMAIN, ERRORS, hash, fingerprint, validateEvidence, validateOnboardingEvidence, expectedRelease, validateRecord, validateRepository};
