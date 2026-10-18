@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.114-build.327",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e86eec18adbb318e29911855417d3ff4461564fb"
+  },
+  "release": {
+    "version": "2.3.114",
+    "build": 327,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.114-build.327-linux-arm64.zip",
+    "byte_size": 19917265,
+    "sha256": "52845482c8418b6d74972b8b6129e2365e0d29980df6be0a079d3dbb56948c80",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR689 adds same-capture CTCSS confidence reporting for the RSP1B 16kHz s16le PCM path using the existing precision analyzer and native-tone agreement. Native tone remains authoritative. Duration, continuity, SSRC ownership, overflow, silence and disagreement guards remain intact.",
+      "Two native ARM64 builds are byte-identical. Source and extracted-package decoder, Airspy and native tone tests passed. Evidence: qualifications/apollo-passive-v2.3.114-build.327.package.json; SHA-256 34936be289a32472b30ed810816a60e0d82e6da19447748b8c2e92e8166fd64f.",
+      "Exact ZIP passed mandatory ARM64 clean and legacy convergence, rollback, isolated RSP1B package closure, service-readable inventory, native sampled stream and embedded application health: https://github.com/gdowkpc/apollo/actions/runs/39156864703",
+      "The merged application includes current main through Build326 and current native KA9Q shutdown changes. Existing node identity, credentials, settings, receiver plans, managed updater RF-health and rollback gates remain mandatory.",
+      "Managed application asset only. No complete installer or stable-pointer promotion. Server consumer already accepts guarded 16kHz confidence. Existing 85 percent auto-promotion threshold and all other promotion gates remain unchanged.",
+      "Retained-audio replay is diagnostic evidence, not fresh RF proof. Eight historical observations were human-confirmed and their decisions and original payloads are preserved."
+    ]
+  }
+}
