@@ -1,0 +1,175 @@
+{
+  "schema_version": "apollo-build320-package-qualification-review-v1",
+  "scope": "Exact native application package and offline real-discriminator regression qualification. Managed installation and fresh over-the-air conflict verification follow separately; no complete installer, stable pointer or public download-card promotion.",
+  "source_commit": "4348f8e2b3cc1f4caa2d9fcc1416a7ef6117752e",
+  "approved_pr_head": "1c11ed2c86e356d354c05785c3a2a9598499921f",
+  "version": "2.3.107",
+  "build": 320,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.107-build.320-linux-arm64.zip",
+    "bytes": 19909827,
+    "sha256": "c75b3e00f66f6cbe308838f0907366fd4a6600d320de7968e311d12a48d91095"
+  },
+  "byte_identical_native_builds": 2,
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 248,
+      "pass": 248,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 43,
+      "pass": 43,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "conclusion": "success",
+    "headSha": "4348f8e2b3cc1f4caa2d9fcc1416a7ef6117752e",
+    "jobs": [
+      {
+        "completedAt": "2026-10-18T01:18:55Z",
+        "conclusion": "success",
+        "databaseId": 117552131660,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-18T01:15:58Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-18T01:16:00Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-18T01:15:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:02Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-18T01:16:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:02Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-18T01:16:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:02Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-18T01:16:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:04Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-18T01:16:02Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:23Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-18T01:16:04Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:24Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-18T01:16:23Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:25Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-18T01:16:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:16:27Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-18T01:16:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:18:51Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-18T01:16:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:18:51Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-18T01:18:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:18:51Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-18T01:18:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T01:18:52Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-18T01:18:52Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39085851923/job/117552131660"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39085851923"
+  },
+  "updater_used": "1.0.87",
+  "raw_fixture_regressions": {
+    "capture_count": 2,
+    "native_source_and_packaged_workers_passed": true,
+    "scope": "Prior original RF recordings replayed offline; not fresh post-deployment RF proof."
+  },
+  "limits": [
+    "No review-decision mutation.",
+    "No new complete installer or stable pointer.",
+    "No new receiver, customer or every-band RF qualification."
+  ]
+}
