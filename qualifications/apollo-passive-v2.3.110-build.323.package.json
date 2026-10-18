@@ -1,0 +1,187 @@
+{
+  "schema_version": "apollo-build323-package-qualification-review-v1",
+  "scope": "Receiver-neutral ARM64 application asset for the explicitly authorized KD6KPC-3 update; no complete installer or stable-pointer promotion.",
+  "source_commit": "c37e4a5fc4cb8af62cf9ff8e5ef3fdebe72bbb81",
+  "version": "2.3.110",
+  "build": 323,
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.110-build.323-linux-arm64.zip",
+    "bytes": 19910203,
+    "sha256": "c3cb64682670239ca88c42b561211d32cf0221cb065a532d32fce94213c85a23"
+  },
+  "byte_identical_native_builds": 2,
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 248,
+      "pass": 248,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 36,
+      "pass": 36,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "conclusion": "success",
+    "headSha": "c37e4a5fc4cb8af62cf9ff8e5ef3fdebe72bbb81",
+    "jobs": [
+      {
+        "completedAt": "2026-10-18T17:38:18Z",
+        "conclusion": "success",
+        "databaseId": 117742257559,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-18T17:35:05Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-18T17:35:08Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-18T17:35:06Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:09Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-18T17:35:08Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:09Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-18T17:35:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:09Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-18T17:35:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:11Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-18T17:35:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:30Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-18T17:35:11Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:31Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-18T17:35:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:32Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-18T17:35:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:35:34Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-18T17:35:32Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:38:14Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-18T17:35:34Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:38:14Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-18T17:38:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:38:15Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-18T17:38:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-18T17:38:15Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-18T17:38:15Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39150254382/job/117742257559"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39150254382"
+  },
+  "agent_checkin_tests": {
+    "passed": 18,
+    "platform": "physical ARM64 Linux"
+  },
+  "updater_used": "1.0.87",
+  "observation_replay": {
+    "observation_row_id": 69079,
+    "wav_sha256": "130556a52962d808c74affe6747a8079da1a8fd921bfcb415fbc3ef302896abb",
+    "before": {
+      "received_mode": null,
+      "classifier_reason": "discontinuous_or_changed_stream"
+    },
+    "after": {
+      "received_mode": "DMR",
+      "confidence": 0.991,
+      "color_code": 1,
+      "timeslot": 1
+    },
+    "scope": "Offline reconstructed-audio replay with real embedded worker, pipeline and envelope. Inverse voice conditioning and linear 16-to-24 kHz conversion; not retained native PCM or live RF. Replays saved 3 s with observed 42 ms gap, not missing 1.36 s."
+  },
+  "limits": [
+    "Review decisions unchanged.",
+    "Reconstructed saved-audio replay is not original discriminator PCM or fresh RF qualification.",
+    "Normal authenticated updater preservation, startup RF-health and rollback checks remain required."
+  ]
+}
