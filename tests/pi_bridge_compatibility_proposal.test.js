@@ -3,7 +3,7 @@
 // never enter qualifications/ and cannot sign production qualification evidence.
 const test=require("node:test"),assert=require("node:assert/strict"),crypto=require("node:crypto");
 const {initialSetup,unboundUpgrade}=require("../fixtures/pi_bridge_setup");
-const {DOMAIN,hash,validateBridgeEvidence}=require("../scripts/validate_pi_bridge_compatibility");
+const {DOMAIN,EMPTY_ERRORS_SHA256,hash,validateBridgeEvidence}=require("../scripts/validate_pi_bridge_compatibility");
 const {privateKey,publicKey}=crypto.generateKeyPairSync("ed25519"),h=v=>hash(String(v));
 const policy={allowed_qualification_scopes:["dashboard_bridge_compatibility"],trusted_keys:{fixture:publicKey.export({type:"spki",format:"pem"})}};
 const at=s=>new Date(Date.UTC(2026,9,19,12,0,s)).toISOString(),now=Date.UTC(2026,9,19,13);
@@ -12,7 +12,7 @@ const expected={release:{version:"4.0.9",build:900,source_commit:"a".repeat(40),
   minimum_updater_version:"2.0.5",updater_inventory_sha256:h("independently verified full inventory"),
   required_updaters:[5,7].map(n=>({version:`2.0.${n}`,package_sha256:h("updater"+n),capsule_sha256:h("signed capsule"+n)}))};
 function progress(offset){return {started_at:at(offset),completed_at:at(offset+180),samples:[30,90,150].map((s,i)=>({at:at(offset+s),accepted_captures:10+i,
-  errors_sha256:h("unchanged counters"),windows:[0,1].map(index=>({index,sweeps:10+i,sampled_at:at(offset+s-1)}))}))};}
+  errors_sha256:EMPTY_ERRORS_SHA256,windows:[0,1].map(index=>({index,sweeps:10+i,sampled_at:at(offset+s-1)}))}))};}
 function payload(){return {schema_version:"apollo-pi-dashboard-bridge-compatibility-v1",release:{...expected.release},
   installer_evidence_sha256:expected.installer_evidence_sha256,minimum_updater_version:expected.minimum_updater_version,
   updater_inventory_sha256:expected.updater_inventory_sha256,lab:{role:"owned-rtl-bench",receiver_kind:"rtl_sdr",production_credentials_used:false,production_records_mutated:false},
@@ -21,7 +21,7 @@ function payload(){return {schema_version:"apollo-pi-dashboard-bridge-compatibil
     advertisement:{kind:"private_descriptor_fixture",sha256:h("private descriptor"),target_application_sha256:expected.release.application_sha256},
     native:{systemd:true,real_root_worker:true,physical_usb:true,tls_verification:true,signature_verification:true,service_adapters:false,process_adapters:false,hardware_adapters:false,health_adapters:false,authority_adapters:false},
     preservation:{before_sha256:h("owned state bytes and metadata"),activated_sha256:h("owned state bytes and metadata"),rollback_sha256:h("owned state bytes and metadata"),retry_sha256:h("owned state bytes and metadata"),manifest_sha256:h("preservation manifest")},
-    activation:{application_sha256:expected.release.application_sha256,agent_sha256:h("activated agent"),updater_version:expected.release.updater_version,transaction_sha256:h("apply"),before_restart:progress(0),after_restart:progress(300),before_boot_sha256:h("boot1"),after_boot_sha256:h("boot2")},
+    configured_windows:[0,1],activation:{application_sha256:expected.release.application_sha256,agent_sha256:h("activated agent"),updater_version:expected.release.updater_version,transaction_sha256:h("apply"),before_restart:progress(0),after_restart:progress(300),before_boot_sha256:h("boot1"),after_boot_sha256:h("boot2")},
     rollback:{forced_failure:true,restored_application_sha256:h("original application"),restored_updater_version:u.version,transaction_sha256:h("rollback"),services_recovered:true},
     retry:{application_sha256:expected.release.application_sha256,updater_version:expected.release.updater_version,transaction_sha256:h("retry")},
     unbound_upgrade:unboundUpgrade(expected.release),logs_sha256:h("logs")}))};}
@@ -61,6 +61,9 @@ const cases={
   "restart window lost":p=>p.cases[0].activation.after_restart.samples.forEach(s=>s.windows.pop()),
   "no receiver progress":p=>p.cases[0].activation.after_restart.samples.forEach(s=>s.accepted_captures=10),
   "receiver error":p=>p.cases[0].activation.after_restart.samples[2].errors_sha256=h("new error"),
+  "stable nonempty receiver errors":p=>p.cases[0].activation.after_restart.samples.forEach(s=>s.errors_sha256=h("unchanged but nonzero errors")),
+  "omitted configured window in every phase":p=>{p.cases[0].activation.before_restart.samples.forEach(s=>s.windows.pop());p.cases[0].activation.after_restart.samples.forEach(s=>s.windows.pop());},
+  "postSave omitted configured window":p=>p.initial_setup.post_save_progress.samples.forEach(s=>s.windows.pop()),
   "stalled receiver window":p=>p.cases[0].activation.after_restart.samples[2].windows[0].sweeps=10,
   "rollback not exercised":p=>p.cases[0].rollback.forced_failure=false,
   "wrong rollback app":p=>p.cases[0].rollback.restored_application_sha256=h("wrong"),

@@ -4,6 +4,8 @@ const fs = require("node:fs"), path = require("node:path");
 const DOMAIN = Buffer.from("apollo-pi-dashboard-bridge-compatibility-v1\n");
 const INVENTORY_DOMAIN = Buffer.from("apollo-pi-updater-inventory-v1\n");
 const hash = b => crypto.createHash("sha256").update(b).digest("hex");
+const ERROR_KEYS=["failed_sweeps","helper_crashes","sample_stream_stalls","usb_disconnects","unrecovered_timeout_sweeps","scheduled_sweep_failures"];
+const EMPTY_ERRORS_SHA256=hash(JSON.stringify(Object.fromEntries(ERROR_KEYS.map(k=>[k,0]))));
 const hex = x => typeof x === "string" && /^[a-f0-9]{64}$/.test(x);
 const version = x => typeof x === "string" && /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)$/.test(x)
   && x.length < 64 && x.split(".").every(n => Number.isSafeInteger(Number(n)));
@@ -53,21 +55,24 @@ function referenced(root,ref,expectedPath) {
   gate(exact(ref,["path","sha256"]) && ref.path===expectedPath && hex(ref.sha256),"record_reference");
   const bytes=readRecord(root,ref.path);gate(hash(bytes)===ref.sha256,"record_digest");return JSON.parse(bytes);
 }
-function progress(p,start,end) {
+function progress(p,start,end,configuredWindows) {
+  gate(Array.isArray(configuredWindows) && configuredWindows.length>0 && configuredWindows.length<=128
+    && configuredWindows.every(v=>Number.isSafeInteger(v) && v>=0) && new Set(configuredWindows).size===configuredWindows.length,"configured_windows");
+  const required=[...configuredWindows].sort((a,b)=>a-b);
   gate(exact(p,["started_at","completed_at","samples"]),"progress_fields");
   const a=time(p.started_at),b=time(p.completed_at);gate(a>=start && b<=end && b>a,"progress_interval");
   gate(Array.isArray(p.samples) && p.samples.length>=3 && p.samples.length<=20,"progress_samples");
   let prior=null,indexes=null;
   for(const s of p.samples) {
     gate(exact(s,["at","accepted_captures","errors_sha256","windows"]) && time(s.at)>=a && time(s.at)<=b
-      && Number.isSafeInteger(s.accepted_captures) && s.accepted_captures>=0 && hex(s.errors_sha256),"progress_sample");
+      && Number.isSafeInteger(s.accepted_captures) && s.accepted_captures>=0 && s.errors_sha256===EMPTY_ERRORS_SHA256,"progress_sample");
     gate(Array.isArray(s.windows) && s.windows.length>0 && s.windows.length<=128,"progress_windows");
     const found=s.windows.map(w=>{
       gate(exact(w,["index","sweeps","sampled_at"]) && Number.isSafeInteger(w.index) && w.index>=0
         && Number.isSafeInteger(w.sweeps) && w.sweeps>0 && time(w.sampled_at)>=a && time(w.sampled_at)<=time(s.at),"progress_window");
       return w.index;
     }).sort((x,y)=>x-y);
-    gate(new Set(found).size===found.length && (!indexes || JSON.stringify(found)===JSON.stringify(indexes)),"window_set");indexes=found;
+    gate(new Set(found).size===found.length && JSON.stringify(found)===JSON.stringify(required) && (!indexes || JSON.stringify(found)===JSON.stringify(indexes)),"window_set");indexes=found;
     if(prior)gate(time(s.at)>time(prior.at) && s.accepted_captures>=prior.accepted_captures && s.errors_sha256===prior.errors_sha256,"receiver_error_or_reset");
     prior=s;
   }
@@ -110,7 +115,7 @@ function validateBridgeEvidence(envelope, expected, policy, now=Date.now()) {
   gate(Array.isArray(p.cases) && p.cases.length===versions.size,"coverage");
   const seen=new Set();
   for(const c of p.cases) {
-    gate(exact(c,["updater","baseline","advertisement","native","preservation","activation","rollback","retry","unbound_upgrade","logs_sha256"]),"case_fields");
+    gate(exact(c,["updater","baseline","advertisement","native","preservation","configured_windows","activation","rollback","retry","unbound_upgrade","logs_sha256"]),"case_fields");
     const wanted=expected.required_updaters.find(u=>u.version===c.updater?.version);
     gate(wanted && !seen.has(wanted.version),"coverage");seen.add(wanted.version);same(c.updater,wanted,"updater_identity");
     gate(exact(c.baseline,["kind","application_sha256","installer_sha256","manifest_sha256","reporting_enabled"])
@@ -128,7 +133,7 @@ function validateBridgeEvidence(envelope, expected, policy, now=Date.now()) {
       && c.activation.application_sha256===r.application_sha256 && c.activation.updater_version===r.updater_version && c.activation.agent_sha256===expected.agent_sha256
       && [c.activation.agent_sha256,c.activation.transaction_sha256,c.activation.before_boot_sha256,c.activation.after_boot_sha256].every(hex)
       && c.activation.before_boot_sha256!==c.activation.after_boot_sha256,"activation");
-    const pre=progress(c.activation.before_restart,start,end),post=progress(c.activation.after_restart,start,end);
+    const pre=progress(c.activation.before_restart,start,end,c.configured_windows),post=progress(c.activation.after_restart,start,end,c.configured_windows);
     gate(JSON.stringify(pre)===JSON.stringify(post) && time(c.activation.after_restart.started_at)>time(c.activation.before_restart.completed_at),"restart");
     gate(exact(c.rollback,["forced_failure","restored_application_sha256","restored_updater_version","transaction_sha256","services_recovered"])
       && c.rollback.forced_failure===true && c.rollback.restored_application_sha256===c.baseline.application_sha256
@@ -148,7 +153,7 @@ function validateBridgeEvidence(envelope, expected, policy, now=Date.now()) {
   const s=p.initial_setup;
   gate(exact(s,["baseline_updater_version","initial_state","final_state","application_sha256","updater_version","before_configuration_sha256","saved_configuration_sha256",
     "registration_before_sha256","registration_after_save_sha256","neutral_choices_before_sha256","neutral_choices_after_save_sha256","location_before_sha256","location_after_save_sha256",
-    "receiver_selection","receiver_identity_sha256","save_transaction_sha256","native_observations_sha256","packaged_safeguards","native_no_device_refusal","post_save_progress","log_sha256"]),"initial_setup_fields");
+    "receiver_selection","receiver_identity_sha256","save_transaction_sha256","native_observations_sha256","packaged_safeguards","native_no_device_refusal","configured_windows","post_save_progress","log_sha256"]),"initial_setup_fields");
   const from=p.cases.find(c=>c.updater.version===s.baseline_updater_version);
   gate(from && s.initial_state==="setup_required" && s.final_state==="receiver_ready" && s.application_sha256===r.application_sha256 && s.updater_version===r.updater_version
     && s.before_configuration_sha256===from.unbound_upgrade.upgraded_configuration_sha256 && s.receiver_selection==="exactly_one_serial_identified_rtl"
@@ -164,7 +169,7 @@ function validateBridgeEvidence(envelope, expected, policy, now=Date.now()) {
   const n=s.native_no_device_refusal;
   gate(exact(n,["scope","updater_version","application_sha256","code","log_sha256"]) && n.scope==="direct_verified_package_component"
     && versions.has(n.updater_version) && n.application_sha256===r.application_sha256 && n.code==="generic_target_receiver_selection_required" && hex(n.log_sha256),"native_no_device_refusal");
-  progress(s.post_save_progress,start,end);
+  progress(s.post_save_progress,start,end,s.configured_windows);
   return p;
 }
 function validateBridgeRecord(record,relative,root,policy,installers,now=Date.now()) {
@@ -208,4 +213,4 @@ function validateBridgeRepository(root,policy,installers,now=Date.now()) {
     const relative=`bridges/${n}`;return validateBridgeRecord(JSON.parse(readRecord(root,relative)),relative,root,policy,installers,now);
   });
 }
-module.exports={DOMAIN,INVENTORY_DOMAIN,hash,validateBridgeEvidence,validateUpdaterInventory,validateBridgeRecord,validateBridgeRepository};
+module.exports={DOMAIN,INVENTORY_DOMAIN,EMPTY_ERRORS_SHA256,hash,validateBridgeEvidence,validateUpdaterInventory,validateBridgeRecord,validateBridgeRepository};

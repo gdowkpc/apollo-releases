@@ -91,8 +91,12 @@ Collect the following actual observations per updater:
   updater, with its actual transaction hash.
 - At least three time-ordered samples spanning two minutes with accepted capture
   growth and sweep/time progress in every configured window, before and after
-  an actual container or system restart. Hash the full receiver error counters;
-  they must not change or reset within either phase. Window sets remain equal.
+  an actual container or system restart. The collector derives independently
+  signed `configured_windows` from the retained receiver configuration, not the
+  observed samples. Every sample must include exactly that complete set.
+  `errors_sha256` must equal the exported `EMPTY_ERRORS_SHA256`: canonical JSON
+  with the six existing receiver error counters in `ERROR_KEYS` order, all zero.
+  Stable nonzero errors are rejected, as are new errors or resets.
   Distinct boot fingerprints and nonoverlapping phases are required.
 - A forced activation failure with actual rollback journal, restored original
   application/updater and recovered services, then a successful retry with a
