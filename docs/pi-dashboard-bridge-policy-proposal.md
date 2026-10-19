@@ -1,7 +1,10 @@
 # Proposed legacy dashboard bridge qualification
 
-Status: review proposal and isolated validation prototype. Not enabled, merged,
-published or imported by any release gate. No production receipt is supplied.
+Status: historical design proposal. Implementation is now prepared separately
+under the owner's subsequent authorization; see `pi-dashboard-bridge-qualification.md`
+for the current enforced schema and integration. No production receipt is
+supplied here. The integration checklist below records the original proposal,
+not current implementation status.
 
 ## Decision required
 
