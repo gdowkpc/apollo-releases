@@ -1,0 +1,56 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8b453b8f1173c8d96e5587c611a7351131068019"
+  },
+  "target": {
+    "version": "2.3.116",
+    "build": 329,
+    "source_commit": "8b453b8f1173c8d96e5587c611a7351131068019",
+    "release_tag": "apollo-passive-v2.3.116-build.329",
+    "sha256": "98c9e9a88f83fad5df1187a35bf0f5cd8e41602679964845f4b3f76419ba6e4f"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.116-build.329-updater.1.0.91-linux-arm64.zip",
+    "bytes": 311116,
+    "sha256": "e1f81389e95bc18d736860994e220e35fa065accd7651ab1ec8ad8a4baa4beea"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact complete-installer Build328 to329 upgrade, repeat installation, preserved registration/credentials/settings/tuning, real reboot, fresh authenticated check-ins and every configured processing window before and after reboot; isolated one-approval setup checks.",
+    "collector_source_commit": "2a011e4753f4a8775104c4bb1e69523d5694ede3",
+    "collector_source_pr": "https://github.com/gdowkpc/apollo/pull/696",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39195026608",
+    "limits": "Physical owned Pi3B+ RTL-SDR qualification starts at Build328. Build307 missing-identity recovery and refusal paths are covered by exact-package software tests, not a physical VE7LOG installation. Live RF report delivery, fresh physical enrollment, other receiver models and known-signal accuracy remain separate qualifications.",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39198146877"
+  },
+  "release_tag": "apollo-pi-installer-v2.3.116-build.329-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.116-build.329-updater.1.0.91.onboarding.json",
+    "sha256": "25b2c44d303cf054a83cd24899f780d85974a70bde55eee1353640a51b5b22d2"
+  }
+}
