@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.120-build.333",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "4770faec1045e2e4830c0ec9bcf56173d10b8fb9"
+  },
+  "release": {
+    "version": "2.3.120",
+    "build": 333,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.120-build.333-linux-arm64.zip",
+    "byte_size": 19982507,
+    "sha256": "15d0e334b906e68fdd8cc02d6b621f2c2b691d21e0484a2fee1c01aa607044a3",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved source PR713 fixes the PCM helper lifecycle budget without extending acquisition timeout or weakening hardware identity admission. Merge 5e406f2c7bd476475995745c3ce10157b607dbc8.",
+      "Two full ARM64 packages are byte identical. Exact-package convergence, rollback and native embedded-health qualification passed with signed updater1.0.85: https://github.com/gdowkpc/apollo/actions/runs/39334870018",
+      "Package and independent ZIP/embedded-module audit, selected-test counts and prior byte-identical native-loader evidence: qualifications/apollo-passive-v2.3.120-build.333.package.json; SHA256 862a879fa30fe4fdcb4034a800aaa667a1a364e995ea877b2ebce85d54d46ec5.",
+      "Application staging only. Physical installer/reboot, historical SDK activation/refusal/restart/rollback/retry, first Save and original307 dashboard delivery pending. No stable descriptor, download portal or customer node changes."
+    ]
+  }
+}

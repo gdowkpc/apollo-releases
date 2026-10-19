@@ -173,6 +173,8 @@ function validateBridgeEvidence(envelope, expected, policy, now=Date.now()) {
   return p;
 }
 function validateBridgeRecord(record,relative,root,policy,installers,now=Date.now()) {
+  if(record?.schema_version==="apollo-pi-dashboard-bridge-record-v2")
+    return require("./pi_bridge_v2_records").validateFinalRecord(record,relative,root,policy,installers,now);
   gate(exact(record,["schema_version","release","installer_record","minimum_updater_version","updater_inventory","compatibility_evidence","live_rf_reporting"])
     && record.schema_version==="apollo-pi-dashboard-bridge-record-v1","bridge_record");
   const release=record.release;
@@ -213,4 +215,5 @@ function validateBridgeRepository(root,policy,installers,now=Date.now()) {
     const relative=`bridges/${n}`;return validateBridgeRecord(JSON.parse(readRecord(root,relative)),relative,root,policy,installers,now);
   });
 }
-module.exports={DOMAIN,INVENTORY_DOMAIN,EMPTY_ERRORS_SHA256,hash,validateBridgeEvidence,validateUpdaterInventory,validateBridgeRecord,validateBridgeRepository};
+module.exports={DOMAIN,INVENTORY_DOMAIN,EMPTY_ERRORS_SHA256,hash,validateBridgeEvidence,validateUpdaterInventory,validateBridgeRecord,validateBridgeRepository,
+  validateBridgeProgress:progress,readBridgeRecord:readRecord,referencedBridgeRecord:referenced};

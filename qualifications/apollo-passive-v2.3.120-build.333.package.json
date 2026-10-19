@@ -1,0 +1,343 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.120",
+  "build": 333,
+  "candidate_revision": 2,
+  "source_commit": "4770faec1045e2e4830c0ec9bcf56173d10b8fb9",
+  "source_merge": "5e406f2c7bd476475995745c3ce10157b607dbc8",
+  "scope": "Application staging prerequisite only; physical installation and historical dashboard delivery pending.",
+  "package_audit": {
+    "passed": true,
+    "source": "4770faec1045e2e4830c0ec9bcf56173d10b8fb9",
+    "version": "2.3.120",
+    "build": 333,
+    "artifact": "ApolloPassiveReceive-2.3.120-build.333-linux-arm64.zip",
+    "bytes": 19982507,
+    "sha256": "15d0e334b906e68fdd8cc02d6b621f2c2b691d21e0484a2fee1c01aa607044a3",
+    "principal_sha256": "697ff8a920c76c3744dc2bfc5f8e7d89f8e32f4c87598647e98e5af509169cc2",
+    "two_packages_byte_identical": true,
+    "embedded_observations_verified": 269,
+    "test_groups": {
+      "arm64-source-tests.log": {
+        "tests": 585,
+        "pass": 580,
+        "fail": 0,
+        "skipped": 5
+      },
+      "rtl-closure-source-tests.log": {
+        "tests": 23,
+        "pass": 23,
+        "fail": 0,
+        "skipped": 0
+      },
+      "native-pi-setup-tests.log": {
+        "tests": 27,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 20
+      },
+      "native-server-contract-tests.log": {
+        "tests": 42,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 35
+      },
+      "packaged-readiness-tests.log": {
+        "tests": 102,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 94
+      },
+      "packaged-setup-tests.log": {
+        "tests": 79,
+        "pass": 79,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-timing-tests.log": {
+        "tests": 124,
+        "pass": 124,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-native-tone-tests.log": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-airspy-tests.log": {
+        "tests": 48,
+        "pass": 48,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-decoder-tests.log": {
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    "rtlsdr_linkage": {
+      "schema": "apollo_ka9q_rtlsdr_static_v1",
+      "ka9q_source_commit": "8f6a05b3b4b5ee5c85ff556f64af918e561786b4",
+      "rtl_source_repository": "https://github.com/rtlsdrblog/rtl-sdr-blog",
+      "rtl_source_commit": "aed0ea19f3a273370a13c9009b96313c75d54c7b",
+      "static_archive_sha256": "5d9e24a582d2629a671e9cb032d5b0a7de1d8b618d040e98b04bb6bd58b7b93c",
+      "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+      "needed": [
+        "libbsd.so.0",
+        "libc.so.6",
+        "libusb-1.0.so.0"
+      ],
+      "source_availability": "third_party/rtl-sdr/rtlsdrblog-v4/README.md"
+    },
+    "actual_packaged_driver_elf": {
+      "elf_class": 64,
+      "endianness": "little",
+      "machine": 183,
+      "needed": [
+        "libusb-1.0.so.0",
+        "libbsd.so.0",
+        "libc.so.6"
+      ]
+    },
+    "rtl_source_assets": [
+      "third_party/rtl-sdr/rtlsdrblog-v4/README.md",
+      "third_party/rtl-sdr/rtlsdrblog-v4/apollo-rf-lifecycle.patch"
+    ],
+    "packaged_receiver_guard_hashes": {
+      "managed-release/pi_receiver_detection.js": "a17f27f0c3f55b26193c98f91d3cfd89e2f33e9aaf630613dd2708230f0a2c25",
+      "managed-release/pi_receiver_starter_profile.js": "5ecc58cba09f265608151ac7d9372a7c45a81f7215215b4b323693728bbb8853",
+      "principal:server.js": "21ce756ab1f2ec11129a12d98a8d767d02842d3f3ecebd96175b35f6e24993e2",
+      "principal:pi_receiver_watch.js": "d5f7143bf5a8cf6bc4602bd1315162acff7ea080cd02fe4161ac6b3473e3f1b1"
+    },
+    "minimal_runtime_native_ci": {
+      "url": "https://github.com/gdowkpc/apollo/actions/runs/39328175262",
+      "head": "7c123e03760658db71fcfae7cc8adf2145707ef6",
+      "result": {
+        "passed": true,
+        "scope": "native_plugin_load_without_external_rtl_library",
+        "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+        "runtime_image": "sha256:79c70727a896d88aca686270c4897fc3281811ce8735d67fb83de451bee1d384",
+        "actual_plugin_initialization_observed": true,
+        "no_hardware_driver_setup_observed": true,
+        "exit_status": 66,
+        "physical_usb_exposed": false,
+        "physical_rf_qualified": false,
+        "production_records_mutated": false
+      },
+      "scope": "Prior source CI, exact identical packaged driver bytes verified; no new CI run claimed"
+    },
+    "physical_installation_qualified": false,
+    "legacy_dashboard_qualified": false,
+    "live_rf_reporting_qualified": false
+  },
+  "independent_archive_and_embedded_audit": {
+    "scope": "independent retained package and embedded source-proof audit",
+    "source_commit": "4770faec1045e2e4830c0ec9bcf56173d10b8fb9",
+    "artifact_sha256": "15d0e334b906e68fdd8cc02d6b621f2c2b691d21e0484a2fee1c01aa607044a3",
+    "artifact_bytes": 19982507,
+    "principal_sha256": "697ff8a920c76c3744dc2bfc5f8e7d89f8e32f4c87598647e98e5af509169cc2",
+    "manifest_sha256": "74ed2fdc91ef4da46a10f98ffeff2f5dd97b5593417f11e584f02df05f114a95",
+    "zip_members": 188,
+    "embedded_proofs": {
+      "setup": {
+        "observations": 135,
+        "proof_sha256": "6b4d9b04bf98dbd0382917435c69fbff1b4af03dd70fab90fbf77f6265ff0078"
+      },
+      "readiness": {
+        "observations": 66,
+        "proof_sha256": "f4b8297248a385a6127df2c9142ebed92aacc64728f5142b2476201e2b3580dd"
+      },
+      "timing": {
+        "observations": 68,
+        "proof_sha256": "85547fce9e67f477afc5bd75a34981cae10b6d3cc66c9c6f9298148dc3a9384b"
+      }
+    },
+    "guard_hashes": {
+      "pi_receiver_detection.js": "a17f27f0c3f55b26193c98f91d3cfd89e2f33e9aaf630613dd2708230f0a2c25",
+      "pi_receiver_starter_profile.js": "5ecc58cba09f265608151ac7d9372a7c45a81f7215215b4b323693728bbb8853",
+      "principal:server.js": "21ce756ab1f2ec11129a12d98a8d767d02842d3f3ecebd96175b35f6e24993e2",
+      "principal:pi_receiver_watch.js": "d5f7143bf5a8cf6bc4602bd1315162acff7ea080cd02fe4161ac6b3473e3f1b1"
+    },
+    "test_logs": {
+      "setup": {
+        "tests": 79,
+        "pass": 79,
+        "fail": 0,
+        "skipped": 0,
+        "log_sha256": "579276f79783ba5e2945995e8445c1f3751d43c1af818d5fdcb750a8bf144ce4"
+      },
+      "readiness": {
+        "tests": 102,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 94,
+        "log_sha256": "28464c3ed619aa070719bd6c2ca7040aa8a7ad317255b731469443246260dc8b"
+      },
+      "timing": {
+        "tests": 124,
+        "pass": 124,
+        "fail": 0,
+        "skipped": 0,
+        "log_sha256": "3e99c5d9f016e88112fe1392d532b7f6dc57135e0d15fe74ce955a4deae28a94"
+      }
+    },
+    "passed": true,
+    "limits": [
+      "No build repetition or new device test.",
+      "Two-build equality is the builder's retained observation, not independently downloaded second ZIP.",
+      "Proof ranges and logs bind exact source/module bytes; they do not establish native customer upgrade or physical RF.",
+      "R1 ZIP094/source7c/native diagnostic and old SDK probes are not relabeled revised477 package evidence.",
+      "No immutable publication, complete installer, native dashboard flow, customer recovery or live RF qualification is claimed."
+    ]
+  },
+  "exact_package_workflow": {
+    "conclusion": "success",
+    "headSha": "4770faec1045e2e4830c0ec9bcf56173d10b8fb9",
+    "jobs": [
+      {
+        "completedAt": "2026-10-19T22:28:34Z",
+        "conclusion": "success",
+        "databaseId": 118341719998,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-19T22:25:45Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-19T22:25:48Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-19T22:25:46Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:25:49Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-19T22:25:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:25:49Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-19T22:25:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:25:49Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-19T22:25:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:25:52Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-19T22:25:49Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:26:13Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-19T22:25:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:26:14Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-19T22:26:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:26:16Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-19T22:26:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:26:18Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-19T22:26:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:28:30Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-19T22:26:18Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:28:30Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-19T22:28:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:28:31Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-19T22:28:30Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T22:28:31Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-19T22:28:31Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39334870018/job/118341719998"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39334870018"
+  },
+  "canonical_workflow_updater_version": "1.0.85",
+  "artifact_workflow_inputs": {
+    "target_artifact_path": "/var/tmp/apollo-arm64-workflows/receiver-refresh-deadline333-r2-20261019/first/ApolloPassiveReceive-2.3.120-build.333-linux-arm64.zip",
+    "target_artifact_sha256": "15d0e334b906e68fdd8cc02d6b621f2c2b691d21e0484a2fee1c01aa607044a3",
+    "target_source_sha": "4770faec1045e2e4830c0ec9bcf56173d10b8fb9",
+    "build191_evidence_path": "/home/pi/.apollo-private-qualification/ApolloPassiveReceive-2.2.21-build.191-linux-arm64-5e13e701.zip",
+    "build191_disabled_dropins_dir": "/home/pi/.apollo-private-qualification/build191-dropins",
+    "ka9q_test_source_path": "/home/pi/.apollo-private-qualification/ka9q-build224-source",
+    "ka9q_test_dependency_prefix": "/var/tmp/apollo-arm64-workflows/ka9q-test-inputs/usr",
+    "updater_version": "1.0.85"
+  },
+  "retained_first_candidate": {
+    "source": "7c123e03760658db71fcfae7cc8adf2145707ef6",
+    "artifact_sha256": "0942347339317bcdc75a2c61c30b77bdbd6b0d86a6c31fea73ab96e9b606cc7c",
+    "failed_workflow": 39328699040,
+    "published": false
+  },
+  "limits": [
+    "Actual packaged timing tests include the unchanged acquisition timeout and failed/unreaped-helper refusal.",
+    "Source and embedded native signal-generation tests do not prove physical USB, customer installation, dashboard delivery, organic RF or map visibility.",
+    "Prior minimal-runtime loader CI is reused only for verified byte-identical packaged RTL driver bytes; its original source identity remains disclosed.",
+    "Physical installer/retry/reboot/preservation, complete historical SDK paths, original307 owner dashboard and customer eligibility remain separate."
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "schema_version": "apollo-pi-dashboard-bridge-policy-v2",
+  "approved_collectors": {},
+  "maximum_publisher_exposure_seconds": 1800,
+  "public_probe_enabled": false
+}
