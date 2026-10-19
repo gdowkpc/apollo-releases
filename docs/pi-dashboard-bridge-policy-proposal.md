@@ -70,8 +70,16 @@ with rollback to original application/updater and recovered services, then a
 successful retry. Bind separate transaction and log hashes. Preserve strict
 node-owned bytes and UID/GID/mode across activation, rollback and retry: settings,
 scan plans, credential/key/public identity and registration, including canonical
-generated identity projection. Any compact-to-pretty projection migration needs
-separate explicit schema design and tests; this prototype grants no exception.
+generated identity projection. The qualification fixture uses canonical pretty
+JSON, so its projection remains byte-exact. Existing installations may regenerate
+the read-only `/etc/apollo-node-agent/identity.json` projection from canonical
+`receiver-config.node_configuration` under the already reviewed projection
+contract: whitespace may change while UUID, schema, UID/GID and mode remain
+unchanged. This is not a new identity migration or approval requirement. The
+prototype's byte-exact fixture proof does not exercise that formatting case;
+the separate identity-format diagnosis records it. Rollback must restore the
+original projection's raw bytes. Canonical node configuration, credentials,
+keys and public identity retain strict byte and metadata preservation.
 
 Container restart is explicitly legacy compatibility evidence. It cannot replace
 the independent normal installer receipt's physical reboot and authenticated
