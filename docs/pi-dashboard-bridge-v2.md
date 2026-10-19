@@ -27,13 +27,29 @@ the same frozen baseline export. Their custody and lineage hashes are distinct.
 Application/principal/source and the actual retained historical SDK are bound
 in every phase. SDK replacement is a separate component operation.
 
-Every positive case includes all five ordered native phases and every declared
-native refusal family. Restart uses exact bound configuration preservation even
+Every positive case includes all five ordered native phases. Restart uses exact bound configuration preservation even
 when activation performed first binding. Forced failure includes one successful
 target stop and settlement of its one-shot helper before rollback/retry. An
 untriggered, failed or lingering fault helper cannot supply rollback proof.
 Healthy phases reuse the v1 complete-window, zero-error, two-minute sustained
 processing validator. They do not require a new live RF report.
+
+Unsafe receiver/calibration/gain/unknown-field/intent coverage is a separate
+`verified_package_sdk_component_tests` scope for every historical SDK. It binds
+the exact frozen application manifest/principal/detector/starter and actual signed
+SDK archive/capsule/authority/caller, reviewed test provenance and dependency/raw
+manifests. Synthetic device inventories are disclosed explicitly; these tests
+cannot claim physical USB or queued activation. Cases require complete unchanged
+state and raw input/result bindings for every required unsafe family. Export
+differences across historical SDKs therefore stay source-bound and observable.
+
+Separately, `native_no_device_refusal` requires an actual no-device
+`direct_verified_package_component` result from one inventory SDK, with unchanged
+real pointers, journals, protected state and custody. It cannot claim a queued
+worker result or substitute synthetic hardware. This preserves the v1 boundary:
+no extra physical multi-receiver purchase or calibration injection is required.
+The root's signed raw audit verifies the disclosed component/native distinction;
+source test fixtures never become physical qualification.
 
 `validateRepositoryProbe()` is a separate guarded-publisher entry point. It
 revalidates the ordinary repository and the complete native candidate before
@@ -79,8 +95,16 @@ component completion is not another successful application transaction, nor
 proof of automatic component installation by original307.
 
 Collector manifests are exact-hash approved in `policy/pi-dashboard-bridge-v2.json`.
-Each approval pins collection source, producer and actor plus separately reviewed
-audit source, producer and actor. Those identities must correspond to real
+Each approval pins collection provenance, producer, dependency manifest and actor,
+plus separately reviewed audit provenance, producer, dependencies and actor.
+Provenance has two disjoint closed variants: `reviewed_git_commit` contains only
+kind, repository and exact commit; `reviewed_artifact_bundle` contains only kind,
+bundle SHA-256 and code-manifest SHA-256. Both are supported for real reviewed
+collectors/review tools. A bundle is not assigned the application's source commit
+or a fictional Git commit. Mixed, missing or substituted fields fail; the pinned
+collector manifest must match the approved variant exactly. Application source
+and historical SDK Git/source authority remain separate and unchanged.
+Those identities must correspond to real
 retained custody/review records. The audit actor must differ from the collection
 actor. Audit signatures bind the complete native/delivery contract and retained
 raw/replay evidence. The existing authorized owned-bench key may sign both
@@ -156,7 +180,8 @@ No self commit/file hash is embedded in the object being hashed.
 The tests use synthetic documents and ephemeral keys only, in temporary roots.
 They establish reader behavior, not installation, hardware, native progress,
 owner HTTP delivery or successful recovery of VE7LOG-1 or WH6DLQ-1. Real approved
-collector identities, complete matrix runs, private raw/replay audits, guarded
+collector identities, complete positive native matrix runs, typed safeguard and
+actual no-device component evidence, private raw/replay audits, guarded
 publisher/supervisor integration and actual customer updater inventories remain
 required. Original307's hidden update controls also require a separately proved
 owner-accessible path. Public delivery fixtures cannot resolve an unknown

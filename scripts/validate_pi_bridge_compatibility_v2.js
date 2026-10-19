@@ -14,11 +14,12 @@ function validatePolicy(policy) {
     && policy.maximum_publisher_exposure_seconds <= 1800 && typeof policy.public_probe_enabled === "boolean", "policy");
   for (const [id, value] of Object.entries(policy.approved_collectors)) {
     gate(hex(id), "collector_digest");
-    closed(value, ["source_commit", "producer_sha256", "actor_sha256", "audit_key_id", "reviewer"], "collector_policy");
-    closed(value.reviewer, ["actor_sha256", "source_commit", "producer_sha256"], "reviewer_policy");
-    gate(sha(value.source_commit) && hex(value.producer_sha256) && hex(value.actor_sha256) && typeof value.audit_key_id === "string"
+    closed(value, ["provenance", "producer_sha256", "dependency_manifest_sha256", "actor_sha256", "audit_key_id", "reviewer"], "collector_policy");
+    closed(value.reviewer, ["actor_sha256", "provenance", "producer_sha256", "dependency_manifest_sha256"], "reviewer_policy");
+    C.provenance(value.provenance); C.provenance(value.reviewer.provenance);
+    gate(hex(value.producer_sha256) && hex(value.dependency_manifest_sha256) && hex(value.actor_sha256) && typeof value.audit_key_id === "string"
       && hex(value.reviewer.actor_sha256) && value.reviewer.actor_sha256 !== value.actor_sha256
-      && sha(value.reviewer.source_commit) && hex(value.reviewer.producer_sha256), "collector_policy");
+      && hex(value.reviewer.producer_sha256) && hex(value.reviewer.dependency_manifest_sha256), "collector_policy");
   }
 }
 function preservation(p, baseline, updater, expected, rollback = false, refusal = false) {
@@ -70,7 +71,7 @@ function nativeContract(p, expected, now) {
   gate(Array.isArray(expected.required_updaters) && expected.required_updaters.length > 0 && expected.required_updaters.length <= 32
     && new Set(expected.required_updaters.map(u => u.version)).size === expected.required_updaters.length, "expected_inventory");
   closed(p, ["release", "agent_sha256", "installer_evidence_sha256", "updater_inventory_sha256", "minimum_updater_version", "requirements_sha256",
-    "collector", "artifacts", "started_at", "completed_at", "lab", "cases", "first_save", "components", "live_rf_reporting"], "native_fields");
+    "collector", "artifacts", "started_at", "completed_at", "lab", "cases", "safeguards", "native_no_device_refusal", "first_save", "components", "live_rf_reporting"], "native_fields");
   for (const key of ["release", "agent_sha256", "installer_evidence_sha256", "updater_inventory_sha256", "minimum_updater_version", "artifacts"])
     equal(p[key], expected[key], "binding_" + key);
   equal(p.live_rf_reporting, RF, "rf_scope");
@@ -83,7 +84,7 @@ function nativeContract(p, expected, now) {
   const keys = new Set();
   gate(Array.isArray(p.cases) && p.cases.length === expected.required_updaters.length * BASELINES.length, "matrix");
   for (const value of p.cases) {
-    closed(value, ["updater", "baseline", "activation_branch", "rollback_branch", "phases", "negatives", "raw_manifest_sha256"], "case");
+    closed(value, ["updater", "baseline", "activation_branch", "rollback_branch", "phases", "raw_manifest_sha256"], "case");
     const updater = expected.required_updaters.find(u => u.version === value.updater?.version);
     gate(updater && BASELINES.includes(value.baseline?.kind), "case_inventory"); equal(value.updater, updater, "updater");
     const key = updater.version + ":" + value.baseline.kind;
@@ -129,18 +130,40 @@ function nativeContract(p, expected, now) {
       else progress(phase.progress, pa, pb, value.baseline.configured_windows);
     }
     gate(value.phases[0].incarnation_sha256 !== value.phases[1].incarnation_sha256, "restart_incarnation");
-    gate(Array.isArray(value.negatives) && value.negatives.length === NEGATIVES.length, "negative_matrix");
+  }
+  // Synthetic device inventories are legitimate component-test inputs, never
+  // evidence of physical multi-device/calibration injection or queued refusal.
+  gate(Array.isArray(p.safeguards) && p.safeguards.length === expected.required_updaters.length, "safeguard_inventory");
+  const guarded = new Set();
+  for (const suite of p.safeguards) {
+    closed(suite, ["scope", "updater", "release", "artifacts", "test_provenance", "sdk_authority_sha256", "sdk_caller_sha256", "producer_sha256",
+      "dependency_manifest_sha256", "raw_manifest_sha256", "synthetic_hardware_inputs", "queued_activation_claimed", "cases"], "safeguard_fields");
+    gate(suite.scope === "verified_package_sdk_component_tests" && suite.synthetic_hardware_inputs === true && suite.queued_activation_claimed === false, "safeguard_scope");
+    const updater = expected.required_updaters.find(u => u.version === suite.updater?.version);
+    gate(updater && !guarded.has(updater.version), "safeguard_coverage"); guarded.add(updater.version);
+    equal(suite.updater, updater, "safeguard_sdk"); equal(suite.release, expected.release, "safeguard_release"); equal(suite.artifacts, expected.artifacts, "safeguard_artifacts");
+    C.provenance(suite.test_provenance);
+    gate(["sdk_authority_sha256", "sdk_caller_sha256", "producer_sha256", "dependency_manifest_sha256", "raw_manifest_sha256"].every(k => hex(suite[k])), "safeguard_digests");
+    gate(Array.isArray(suite.cases) && suite.cases.length === NEGATIVES.length, "safeguard_matrix");
     const seen = new Set();
-    for (const negative of value.negatives) {
-      closed(negative, ["kind", "constructor_sha256", "code", "worker_logs_sha256", "pointers_before_sha256", "pointers_after_sha256",
-        "transactions_before_sha256", "transactions_after_sha256", "preservation"], "negative");
-      gate(NEGATIVES.includes(negative.kind) && !seen.has(negative.kind), "negative_coverage"); seen.add(negative.kind);
-      gate(typeof negative.code === "string" && /^generic_[a-z_]{1,120}$/.test(negative.code)
-        && ["constructor", "worker_logs", "pointers_before", "pointers_after", "transactions_before", "transactions_after"].every(k => hex(negative[k + "_sha256"]))
-        && negative.pointers_before_sha256 === negative.pointers_after_sha256 && negative.transactions_before_sha256 === negative.transactions_after_sha256, "native_refusal");
-      preservation(negative.preservation, value.baseline.kind, updater, expected, false, true);
+    for (const negative of suite.cases) {
+      closed(negative, ["kind", "code", "input_manifest_sha256", "state_before_sha256", "state_after_sha256", "raw_case_sha256"], "safeguard_case");
+      gate(NEGATIVES.includes(negative.kind) && !seen.has(negative.kind), "safeguard_family"); seen.add(negative.kind);
+      gate(typeof negative.code === "string" && /^generic_[a-z_]{1,120}$/.test(negative.code) && hex(negative.input_manifest_sha256)
+        && hex(negative.raw_case_sha256) && hex(negative.state_before_sha256) && negative.state_before_sha256 === negative.state_after_sha256, "safeguard_no_writes");
     }
   }
+  const refusal = p.native_no_device_refusal;
+  closed(refusal, ["scope", "updater", "release", "artifacts", "code", "physical_usb_present", "hardware_adapters", "queued_activation_claimed",
+    "producer_sha256", "dependency_manifest_sha256", "pointers_before_sha256", "pointers_after_sha256", "transactions_before_sha256", "transactions_after_sha256",
+    "raw_manifest_sha256", "preservation"], "no_device_refusal");
+  gate(refusal.scope === "direct_verified_package_component" && refusal.code === "generic_target_receiver_selection_required"
+    && refusal.physical_usb_present === false && refusal.hardware_adapters === false && refusal.queued_activation_claimed === false
+    && expected.required_updaters.some(u => JSON.stringify(u) === JSON.stringify(refusal.updater)), "no_device_scope");
+  equal(refusal.release, expected.release, "no_device_release"); equal(refusal.artifacts, expected.artifacts, "no_device_artifacts");
+  gate(["producer_sha256", "dependency_manifest_sha256", "pointers_before_sha256", "transactions_before_sha256", "raw_manifest_sha256"].every(k => hex(refusal[k]))
+    && refusal.pointers_before_sha256 === refusal.pointers_after_sha256 && refusal.transactions_before_sha256 === refusal.transactions_after_sha256, "no_device_no_writes");
+  preservation(refusal.preservation, "original307_unbound", refusal.updater, expected, false, true);
   const save = p.first_save;
   closed(save, ["baseline_kind", "constructor_sha256", "lineage_sha256", "before_state_sha256", "get_http_sha256", "save_http_sha256", "identity_recheck_sha256",
     "registration_before_sha256", "registration_after_sha256", "owner_before_sha256", "owner_after_sha256", "location_before_sha256", "location_after_sha256",
@@ -171,10 +194,12 @@ function validateNativeEvidence(envelope, expected, policy, v2Policy, now = Date
   closed(p, ["schema_version", "native_contract", "independent_audit"], "native_payload");
   gate(p.schema_version === NATIVE + "-v2", "native_schema");
   const collector = p.native_contract?.collector;
-  closed(collector, ["manifest_sha256", "source_commit", "producer_sha256", "actor_sha256"], "collector_fields");
+  closed(collector, ["manifest_sha256", "provenance", "producer_sha256", "dependency_manifest_sha256", "actor_sha256"], "collector_fields");
+  C.provenance(collector.provenance);
   const approved = v2Policy.approved_collectors[collector.manifest_sha256];
-  gate(approved && collector.source_commit === approved.source_commit && collector.producer_sha256 === approved.producer_sha256
+  gate(approved && collector.producer_sha256 === approved.producer_sha256 && collector.dependency_manifest_sha256 === approved.dependency_manifest_sha256
     && collector.actor_sha256 === approved.actor_sha256, "unapproved_collector");
+  equal(collector.provenance, approved.provenance, "collector_provenance_binding");
   const contract = nativeContract(p.native_contract, {...expected, collector}, now);
   gate(p.independent_audit?.key_id === approved.audit_key_id, "audit_signer");
   const audit = signed(p.independent_audit, AUDIT, policy);

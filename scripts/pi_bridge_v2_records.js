@@ -33,7 +33,8 @@ function validateNativeRecord(record, relative, root, policy, installers, now = 
   gate(inventory.payload.updaters.find(u => u.version === r.updater_version)?.package_sha256 === r.updater_sha256, "inventory_target");
   const v2Policy = JSON.parse(io().readBridgeRecord(root, "policy/pi-dashboard-bridge-v2.json")); V.validatePolicy(v2Policy);
   const collector = read(root, record.collector_manifest, `qualifications/pi-bridge-collector-${record.collector_manifest?.sha256}.json`);
-  closed(collector, ["schema_version", "source_commit", "producer_sha256", "actor_sha256", "release", "artifacts"], "collector_manifest");
+  closed(collector, ["schema_version", "provenance", "producer_sha256", "dependency_manifest_sha256", "actor_sha256", "release", "artifacts"], "collector_manifest");
+  C.provenance(collector.provenance);
   gate(collector.schema_version === "apollo-pi-dashboard-bridge-collector-v2", "collector_manifest_schema");
   equal(collector.release, r, "collector_release");
   digests(collector.artifacts, ["manifest_sha256", "principal_sha256", "detector_sha256", "starter_sha256"], "target_artifacts");
@@ -41,7 +42,8 @@ function validateNativeRecord(record, relative, root, policy, installers, now = 
     minimum_updater_version: record.minimum_updater_version, updater_inventory_sha256: record.updater_inventory.sha256,
     required_updaters: inventory.required_updaters, inventory_collected_at: inventory.payload.collected_at, artifacts: collector.artifacts};
   const native = V.validateNativeEvidence(read(root, record.native_evidence, `qualifications/${tag}.bridge-native-v2.json`), expected, policy, v2Policy, now);
-  equal(native.collector, {manifest_sha256: record.collector_manifest.sha256, source_commit: collector.source_commit, producer_sha256: collector.producer_sha256, actor_sha256: collector.actor_sha256}, "collector_record_binding");
+  equal(native.collector, {manifest_sha256: record.collector_manifest.sha256, provenance: collector.provenance, producer_sha256: collector.producer_sha256,
+    dependency_manifest_sha256: collector.dependency_manifest_sha256, actor_sha256: collector.actor_sha256}, "collector_record_binding");
   return {record, relative, native, expected, v2Policy};
 }
 function validateFinalRecord(record, relative, root, policy, installers, now = Date.now()) {

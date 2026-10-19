@@ -16,7 +16,12 @@ const bad = {
   "inventory identity mismatch": f => { f.contract.cases[0].updater.package_sha256 = h("foreign"); },
   "self-selected requirements": f => { f.contract.requirements_sha256 = h("my matrix"); },
   "no independent collector approval": f => { f.v2Policy.approved_collectors = {}; },
-  "collector source substitution": f => { f.contract.collector.source_commit = "d".repeat(40); },
+  "collector provenance substitution": f => { f.contract.collector.provenance.bundle_sha256 = h("other_bundle"); },
+  "fake app commit as artifact collector identity": f => { f.contract.collector.provenance.source_commit = f.expected.release.source_commit; },
+  "collector missing artifact code manifest": f => { delete f.contract.collector.provenance.code_manifest_sha256; },
+  "collector mixed git and artifact variants": f => { f.contract.collector.provenance.commit = "d".repeat(40); },
+  "collector omitted provenance": f => { delete f.contract.collector.provenance; },
+  "collector dependency substitution": f => { f.contract.collector.dependency_manifest_sha256 = h("other_dependencies"); },
   "same collector actor as reviewer": f => { f.v2Policy.approved_collectors[f.contract.collector.manifest_sha256].reviewer.actor_sha256 = f.contract.collector.actor_sha256; },
   "unbound baseline invented health": f => { f.contract.cases[0].baseline.progress = f.contract.cases[1].baseline.progress; },
   "bound baseline absent fresh progress": f => { f.contract.cases[1].baseline.progress = null; },
@@ -41,9 +46,19 @@ const bad = {
   "whole receiver waiver": f => { f.contract.cases[0].phases[0].preservation.mode = "ignore_receiver"; },
   "replay SDK not installed archive": f => { f.contract.cases[0].phases[0].preservation.replay.sdk_archive_sha256 = h("other sdk"); },
   "replay expected mismatch": f => { f.contract.cases[0].phases[0].preservation.replay.expected_configuration_sha256 = h("after"); },
-  "missing negative family": f => { f.contract.cases[0].negatives.pop(); },
-  "duplicate negative": f => { f.contract.cases[0].negatives[1] = f.contract.cases[0].negatives[0]; },
-  "refusal activated app": f => { f.contract.cases[0].negatives[0].transactions_after_sha256 = h("new transaction"); },
+  "missing component safeguard version": f => { f.contract.safeguards.pop(); },
+  "missing negative family": f => { f.contract.safeguards[0].cases.pop(); },
+  "duplicate negative": f => { f.contract.safeguards[0].cases[1] = f.contract.safeguards[0].cases[0]; },
+  "refusal component wrote state": f => { f.contract.safeguards[0].cases[0].state_after_sha256 = h("new state"); },
+  "synthetic safeguard relabeled native": f => { f.contract.safeguards[0].scope = "native_queued_refusal"; },
+  "synthetic safeguard claims queued activation": f => { f.contract.safeguards[0].queued_activation_claimed = true; },
+  "synthetic hardware hidden": f => { f.contract.safeguards[0].synthetic_hardware_inputs = false; },
+  "safeguard uses different frozen package": f => { f.contract.safeguards[0].artifacts = {...f.contract.safeguards[0].artifacts, principal_sha256: h("other")}; },
+  "native no-device relabeled queued": f => { f.contract.native_no_device_refusal.queued_activation_claimed = true; },
+  "native no-device synthetic hardware": f => { f.contract.native_no_device_refusal.hardware_adapters = true; },
+  "native no-device pointers changed": f => { f.contract.native_no_device_refusal.pointers_after_sha256 = h("other"); },
+  "native no-device lost registration": f => { f.contract.native_no_device_refusal.preservation.registration_after_sha256 = h("other"); },
+  "native no-device wrong SDK": f => { f.contract.native_no_device_refusal.updater = {...f.contract.native_no_device_refusal.updater, package_sha256: h("other")}; },
   "first Save erases registration": f => { f.contract.first_save.registration_after_sha256 = h("lost"); },
   "first Save borrowed bound lineage": f => { f.contract.first_save.lineage_sha256 = f.contract.cases[0].activation_branch.lineage_sha256; },
   "component missing historical version": f => { f.contract.components.pop(); },
@@ -62,6 +77,16 @@ test("audit binds full contract and cannot be borrowed after mutation", () => {
 test("existing authorized key may sign separate audit domain with independently pinned reviewer provenance", () => {
   const f = fixture(); f.v2Policy.approved_collectors[f.contract.collector.manifest_sha256].audit_key_id = "collector";
   assert.equal(V.validateNativeEvidence(f.envelope(), f.expected, f.policy, f.v2Policy, f.now).cases.length, 4);
+});
+test("reviewed artifact-bundle collector and reviewer provenance is an explicit supported identity", () => {
+  const result = run(); assert.equal(result.collector.provenance.kind, "reviewed_artifact_bundle");
+});
+test("reviewed Git collector provenance is separate from app source and rejects mixed artifact fields", () => {
+  const f = fixture(), git = {kind: "reviewed_git_commit", repository: "https://github.com/gdowkpc/apollo-releases", commit: "d".repeat(40)};
+  f.contract.collector.provenance = {...git}; f.v2Policy.approved_collectors[f.contract.collector.manifest_sha256].provenance = {...git};
+  assert.equal(V.validateNativeEvidence(f.envelope(), f.expected, f.policy, f.v2Policy, f.now).collector.provenance.kind, "reviewed_git_commit");
+  f.contract.collector.provenance.bundle_sha256 = h("artifact");
+  assert.throws(() => V.validateNativeEvidence(f.envelope(), f.expected, f.policy, f.v2Policy, f.now), /git_provenance_fields/);
 });
 test("domains and duplicate/noncanonical signed payloads fail", () => {
   const f = fixture(); const envelope = f.envelope();

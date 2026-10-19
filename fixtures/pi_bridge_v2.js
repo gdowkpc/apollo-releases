@@ -26,10 +26,12 @@ function fixture() {
   const release = {version: "4.0.9", build: 999, source_commit: "a".repeat(40), application_sha256: h("application"), updater_version: "2.0.9",
     updater_sha256: h("new_sdk"), installer_sha256: h("installer"), installer_bytes: 12345};
   const updaters = [5, 7].map(n => ({version: "2.0." + n, package_sha256: h("sdk" + n), capsule_sha256: h("capsule" + n)}));
-  const collector = {manifest_sha256: h("collector_manifest"), source_commit: "b".repeat(40), producer_sha256: h("producer"), actor_sha256: h("collection_actor")};
+  const collector = {manifest_sha256: h("collector_manifest"), provenance: {kind: "reviewed_artifact_bundle", bundle_sha256: h("collector_bundle"), code_manifest_sha256: h("collector_code_manifest")},
+    producer_sha256: h("producer"), dependency_manifest_sha256: h("collector_dependencies"), actor_sha256: h("collection_actor")};
   const v2Policy = {schema_version: "apollo-pi-dashboard-bridge-policy-v2", approved_collectors: {[collector.manifest_sha256]: {
-    source_commit: collector.source_commit, producer_sha256: collector.producer_sha256, actor_sha256: collector.actor_sha256, audit_key_id: "auditor",
-    reviewer: {actor_sha256: h("independent_review_actor"), source_commit: "d".repeat(40), producer_sha256: h("review_producer")}}}, maximum_publisher_exposure_seconds: 1800, public_probe_enabled: false};
+    provenance: {...collector.provenance}, producer_sha256: collector.producer_sha256, dependency_manifest_sha256: collector.dependency_manifest_sha256, actor_sha256: collector.actor_sha256, audit_key_id: "auditor",
+    reviewer: {actor_sha256: h("independent_review_actor"), provenance: {kind: "reviewed_artifact_bundle", bundle_sha256: h("review_bundle"), code_manifest_sha256: h("review_code_manifest")},
+      producer_sha256: h("review_producer"), dependency_manifest_sha256: h("review_dependencies")}}}, maximum_publisher_exposure_seconds: 1800, public_probe_enabled: false};
   const artifacts = Object.fromEntries(["manifest_sha256", "principal_sha256", "detector_sha256", "starter_sha256"].map(k => [k, h(k)]));
   const expected = {release, agent_sha256: h("agent"), installer_evidence_sha256: h("normal"), updater_inventory_sha256: h("inventory"),
     minimum_updater_version: "2.0.5", required_updaters: updaters, inventory_collected_at: at(-10), artifacts};
@@ -78,10 +80,17 @@ function fixture() {
       preservation: preservation(i === 1 ? "healthy_observed331_bound" : kind, updater, i === 3), progress: i === 2 || i === 3 && kind === "original307_unbound" ? null : progress(i * 200),
       outcome: i === 2 ? "actual_one_shot_target_failure" : i === 3 ? kind === "original307_unbound" ? "original_setup_restored" : "healthy_baseline_restored" : "target_processing_ready"}));
     contract.cases.push({updater: {...updater}, baseline, activation_branch: activation, rollback_branch: rollback, phases,
-      negatives: C.NEGATIVES.map(name => ({kind: name, constructor_sha256: h(seed + name), code: "generic_target_receiver_selection_required",
-        worker_logs_sha256: h("refused"), pointers_before_sha256: h("pointers"), pointers_after_sha256: h("pointers"),
-        transactions_before_sha256: h("journals"), transactions_after_sha256: h("journals"), preservation: preservation(kind, updater, false, true)})), raw_manifest_sha256: h(seed + "raw")});
+      raw_manifest_sha256: h(seed + "raw")});
   }
+  contract.safeguards = updaters.map(updater => ({scope: "verified_package_sdk_component_tests", updater: {...updater}, release, artifacts,
+    test_provenance: {...collector.provenance}, sdk_authority_sha256: h("sdk_authority"), sdk_caller_sha256: h("actual_sdk_caller"), producer_sha256: h("safeguard_producer"),
+    dependency_manifest_sha256: h("safeguard_dependencies"), raw_manifest_sha256: h("safeguards"), synthetic_hardware_inputs: true, queued_activation_claimed: false,
+    cases: C.NEGATIVES.map(kind => ({kind, code: "generic_target_receiver_selection_required", input_manifest_sha256: h(kind), state_before_sha256: h("unchanged"),
+      state_after_sha256: h("unchanged"), raw_case_sha256: h("raw" + kind)}))}));
+  contract.native_no_device_refusal = {scope: "direct_verified_package_component", updater: {...updaters[0]}, release, artifacts, code: "generic_target_receiver_selection_required",
+    physical_usb_present: false, hardware_adapters: false, queued_activation_claimed: false, producer_sha256: h("native_no_device_producer"), dependency_manifest_sha256: h("native_dependencies"),
+    pointers_before_sha256: h("pointers"), pointers_after_sha256: h("pointers"), transactions_before_sha256: h("transactions"), transactions_after_sha256: h("transactions"),
+    raw_manifest_sha256: h("native_no_device"), preservation: preservation("original307_unbound", updaters[0], false, true)};
   contract.first_save = {baseline_kind: "target_registered_unbound", ...Object.fromEntries(["constructor_sha256", "lineage_sha256", "before_state_sha256", "get_http_sha256", "save_http_sha256",
     "identity_recheck_sha256", "registration_before_sha256", "registration_after_sha256", "owner_before_sha256", "owner_after_sha256", "location_before_sha256", "location_after_sha256",
     "neutral_before_sha256", "neutral_after_sha256", "configuration_replay_sha256", "raw_manifest_sha256"].map(k => [k, h("save")])), configured_windows: [0, 1], progress: progress(1200)};

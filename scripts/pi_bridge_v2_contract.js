@@ -36,11 +36,22 @@ const NEGATIVES = Object.freeze(["owner_gain", "calibration_ppm", "foreign_ident
 const PHASES = Object.freeze(["activation", "restart", "forced_failure", "rollback", "retry"]);
 function requirements(updaters) {
   return {schema_version: "apollo-pi-dashboard-bridge-requirements-v2", updaters,
-    baselines: [...BASELINES], phases: [...PHASES], negatives: [...NEGATIVES], first_save: "target_registered_unbound",
+    baselines: [...BASELINES], phases: [...PHASES], negatives: [...NEGATIVES], negative_scope: "verified_package_sdk_component_tests",
+    native_no_device_scope: "direct_verified_package_component", first_save: "target_registered_unbound",
     component: "separate_same_application_request"};
 }
 function interval(value, start, end) {
   const a = time(value.started_at), b = time(value.completed_at);
   gate(a >= start && b > a && b <= end, "interval"); return [a, b];
 }
-module.exports = {hash, hex, sha, exact, gate, closed, equal, digests, time, signed, RF, BASELINES, NEGATIVES, PHASES, requirements, interval};
+function provenance(value) {
+  if (value?.kind === "reviewed_git_commit") {
+    closed(value, ["kind", "repository", "commit"], "git_provenance_fields");
+    gate(typeof value.repository === "string" && /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(value.repository)
+      && sha(value.commit), "git_provenance");
+  } else {
+    closed(value, ["kind", "bundle_sha256", "code_manifest_sha256"], "artifact_provenance_fields");
+    gate(value.kind === "reviewed_artifact_bundle" && hex(value.bundle_sha256) && hex(value.code_manifest_sha256), "artifact_provenance");
+  }
+}
+module.exports = {hash, hex, sha, exact, gate, closed, equal, digests, time, signed, provenance, RF, BASELINES, NEGATIVES, PHASES, requirements, interval};

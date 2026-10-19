@@ -39,8 +39,9 @@ function repository(root) {
   const inventoryEnvelope = f.signV1(inventory, "apollo-pi-updater-inventory", bridge.INVENTORY_DOMAIN);
   const inventoryHash = h(JSON.stringify(inventoryEnvelope));
   const inventoryRef = write(`qualifications/pi-updater-inventory-${inventoryHash}.json`, inventoryEnvelope);
-  const collector = {schema_version: "apollo-pi-dashboard-bridge-collector-v2", source_commit: f.contract.collector.source_commit,
-    producer_sha256: f.contract.collector.producer_sha256, actor_sha256: f.contract.collector.actor_sha256, release: r, artifacts: f.expected.artifacts};
+  const collector = {schema_version: "apollo-pi-dashboard-bridge-collector-v2", provenance: f.contract.collector.provenance,
+    producer_sha256: f.contract.collector.producer_sha256, dependency_manifest_sha256: f.contract.collector.dependency_manifest_sha256,
+    actor_sha256: f.contract.collector.actor_sha256, release: r, artifacts: f.expected.artifacts};
   const collectorHash = h(JSON.stringify(collector));
   const collectorRef = write(`qualifications/pi-bridge-collector-${collectorHash}.json`, collector);
   const approved = Object.values(f.v2Policy.approved_collectors)[0]; f.v2Policy.approved_collectors = {[collectorHash]: approved};
