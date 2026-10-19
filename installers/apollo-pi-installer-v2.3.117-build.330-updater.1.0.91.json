@@ -1,0 +1,55 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f993ca8c62de34ea90fd1adba943af9168ed2aa6"
+  },
+  "target": {
+    "version": "2.3.117",
+    "build": 330,
+    "source_commit": "f993ca8c62de34ea90fd1adba943af9168ed2aa6",
+    "release_tag": "apollo-passive-v2.3.117-build.330",
+    "sha256": "aebb4cfaa65156b7e9907b9ce437c055c56cb8f4b24d635f5e573d2b7f4abe21"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.117-build.330-updater.1.0.91-linux-arm64.zip",
+    "bytes": 311109,
+    "sha256": "193a052adaab3ae0de2b071715544b07c55907028d3a15569b738e84e3711b7f"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact complete-installer Build329 to330 upgrade and repeat installation, preserved registration/credentials/settings/tuning, physical Pi reboot, fresh authenticated check-ins and all seven configured processing windows before/after reboot; isolated one-approval setup checks.",
+    "collector_source_commit": "f993ca8c62de34ea90fd1adba943af9168ed2aa6",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39251699934",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39252288279",
+    "limits": "Owned Pi3B+ RTL-SDR physical installation qualification only. Legacy307 dashboard activation/rollback and shared firstSave remain separate native bridge gates. No customer installation, live RF delivery, new physical enrollment or other receiver-model claim. Public stable discovery and downloads portal remain unchanged."
+  },
+  "release_tag": "apollo-pi-installer-v2.3.117-build.330-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.117-build.330-updater.1.0.91.onboarding.json",
+    "sha256": "2ff4987f5c5c5e4db5651de6838873e107b263c84db477a3157c7107ecdf3615"
+  }
+}
