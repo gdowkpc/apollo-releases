@@ -1,5 +1,6 @@
 "use strict";
 const fs = require("node:fs"), path = require("node:path"), crypto = require("node:crypto");
+const {validateBridgeRepository} = require("./validate_pi_bridge_compatibility");
 const ROOT = path.resolve(__dirname, "..");
 const DOMAIN = Buffer.from("apollo-pi-live-qualification-v1\n", "utf8");
 const ONBOARDING_DOMAIN = Buffer.from("apollo-pi-onboarding-qualification-v1\n", "utf8");
@@ -156,12 +157,16 @@ function validateRepository(root = ROOT) {
   requireGate(policy.required_lab_role === "owned-rtl-bench" && Object.keys(policy.trusted_keys || {}).length > 0, "trust_policy");
   const records = fs.readdirSync(path.join(root,"installers")).filter(n => n.endsWith(".json"));
   requireGate(Object.keys(policy.held_installer_sha256_lf || {}).every(n => records.includes(n.replace(/^installers\//,""))), "historical_record_missing");
-  const validated = records.map(n => validateRecord(JSON.parse(read(root,`installers/${n}`)),`installers/${n}`,root,policy));
+  const validated = records.map(n => ({...validateRecord(JSON.parse(read(root,`installers/${n}`)),`installers/${n}`,root,policy),relative:`installers/${n}`}));
+  const bridges = validateBridgeRepository(root,policy,validated);
   const stable = JSON.parse(read(root,"stable/apollo-passive-receive-linux-arm64.json"));
   if (fingerprint(stable) !== policy.held_stable_fingerprint) {
     requireGate(validated.some(v => !v.held && v.record.target?.build === stable.build
       && v.record.target?.source_commit === stable.source_commit && v.record.target?.sha256 === stable.sha256
-      && v.record.target?.version === stable.version && v.record.updater?.version === stable.minimum_pi_updater_version), "stable_requires_matching_qualified_installer");
+      && v.record.target?.version === stable.version && v.record.updater?.version === stable.minimum_pi_updater_version)
+      || bridges.some(v=>v.record.release.build===stable.build && v.record.release.source_commit===stable.source_commit
+        && v.record.release.application_sha256===stable.sha256 && v.record.release.version===stable.version
+        && v.record.minimum_updater_version===stable.minimum_pi_updater_version), "stable_requires_matching_qualified_installer");
   }
   return {records: validated.length, signed: validated.filter(v => !v.held).length};
 }

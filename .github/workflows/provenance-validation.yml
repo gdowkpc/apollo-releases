@@ -22,4 +22,5 @@ jobs:
       - run: node --test tests/pi_updater_requirement.test.js
       - run: node scripts/validate_pi_updater_requirement.js
       - run: node --test tests/pi_live_qualification.test.js
+      - run: node --test tests/pi_bridge_compatibility_proposal.test.js tests/pi_bridge_repository.test.js tests/pi_updater_inventory_collector.test.js
       - run: node scripts/validate_pi_live_qualification.js
