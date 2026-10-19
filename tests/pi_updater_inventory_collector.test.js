@@ -1,6 +1,6 @@
 "use strict";
 const test=require("node:test"),assert=require("node:assert/strict");
-const {releaseRange}=require("../scripts/collect_pi_updater_inventory");
+const {releaseRange,resolveHistoricalStates}=require("../scripts/collect_pi_updater_inventory");
 function release(v,id=1){return {id,tag_name:`apollo-universal-pi-updater-v${v}`,draft:false,prerelease:false,immutable:true,
   assets:["-linux-arm64.zip",".authority.json",".controller-capsule.json"].map((s,i)=>({name:`ApolloUniversalPiUpdater-${v}${s}`,id:id*10+i,size:100}))};}
 function pages(){return [[release("1.0.85",1),release("1.0.86",2),release("1.0.87",3),release("1.0.89",4),release("1.0.90",5),release("1.0.91",6)]];}
@@ -13,3 +13,9 @@ test("draft or prerelease cannot satisfy an endpoint",()=>{for(const field of ["
 test("incomplete final page is rejected",()=>assert.throws(()=>releaseRange([Array.from({length:100},(_,i)=>release("1.0.85",i+1))],"1.0.85","1.0.91"),/pagination_incomplete/));
 test("unrelated non-updater releases do not affect coverage",()=>{const p=pages();p[0].push({id:999,tag_name:"apollo-passive-v4.0.1-build.800"});assert.equal(releaseRange(p,"1.0.85","1.0.91").length,6);});
 test("collector rejects malformed semantic ranges",()=>{for(const minimum of ["01.0.85","1.0.99999999999999999999","1.0.92",null])assert.throws(()=>releaseRange(pages(),minimum,"1.0.91"),/range/);});
+test("sparse signed capsule identities resolve only to full unchanged canonical historical states",()=>{
+  const sparse={state_sha256:"a".repeat(64),controller_generation:"fixture",build:38,source_commit:"b".repeat(40)},full={...sparse,schema_version:"historical",application_manifest_sha256:"c".repeat(64),recovery_entrypoint:"/canonical"};
+  assert.deepEqual(resolveHistoricalStates({historical_states:[sparse]},[full]),[full]);
+  assert.throws(()=>resolveHistoricalStates({historical_states:[{...sparse,state_sha256:"d".repeat(64)}]},[full]),/unknown_capsule_historical_identity/);
+  assert.throws(()=>resolveHistoricalStates({historical_states:[sparse]},[full,full]),/unknown_capsule_historical_identity/);
+});

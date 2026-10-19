@@ -30,6 +30,13 @@ function releaseRange(pages,minimum,maximum){
   }
   gate(seenVersions.has(minimum) && seenVersions.has(maximum),"range_endpoints");return selected.sort((a,b)=>compare(a.version,b.version));
 }
+function resolveHistoricalStates(capsule,known){
+  gate(Array.isArray(capsule.historical_states) && capsule.historical_states.length>0,"capsule_states");
+  return capsule.historical_states.map(s=>{
+    const matches=known.filter(v=>["state_sha256","controller_generation","build","source_commit"].every(k=>v[k]===s[k]));
+    gate(matches.length===1,"unknown_capsule_historical_identity");return matches[0];
+  });
+}
 function collect(plan){
   gate(plan && typeof plan.source_root==="string" && typeof plan.output_directory==="string","plan");
   const publicRoot=path.resolve(__dirname,".."),sourceRoot=path.resolve(plan.source_root);
@@ -37,6 +44,9 @@ function collect(plan){
   const output=path.resolve(plan.output_directory);gate(!fs.existsSync(output),"output_exists");
   const runtime=path.join(sourceRoot,"tools/rb_rig_agent_uniden/apollo_passive_receive");
   const verifier=require(path.join(runtime,"src/updates/universal_pi_updater.js"));
+  const build38=require(path.join(runtime,"src/updates/historical_build38_fixture.js"));
+  const build211=require(path.join(runtime,"src/updates/historical_build211_fixture.js"));
+  const historical=[build38.historicalState({manifest_sha256:build38.BUILD38.release_manifest_sha256}),build211.historicalState()];
   const anchorPath=path.join(runtime,"config/universal-pi-updater-trust-anchor-v1.json"),anchorBytes=fs.readFileSync(anchorPath),anchor=JSON.parse(anchorBytes);
   const pages=JSON.parse(run("gh",["api","--hostname","github.com","repos/gdowkpc/apollo/releases?per_page=100","--paginate","--slurp"]));
   const releases=releaseRange(pages,plan.minimum_updater_version,plan.maximum_updater_version);
@@ -50,8 +60,7 @@ function collect(plan){
     gate(authority.updater_version===version && authority.updater_artifact.filename===archiveName,"authority_identity");
     verifier.verifyUpdaterArtifact(assets[archiveName].bytes,authority);
     const capsule=JSON.parse(assets[capsuleName].bytes);
-    gate(Array.isArray(capsule.historical_states) && capsule.historical_states.length>0,"capsule_states");
-    for(const state of capsule.historical_states)verifier.verifyCapsule(assets[capsuleName].bytes,authority,state);
+    for(const state of resolveHistoricalStates(capsule,historical))verifier.verifyCapsule(assets[capsuleName].bytes,authority,state);
     updaters.push({version,package_sha256:assets[archiveName].sha256,capsule_sha256:assets[capsuleName].sha256});
     manifest.releases.push({id:r.id,tag_name:r.tag_name,immutable:r.immutable,assets:names.map(name=>({name,id:assets[name].id,sha256:assets[name].sha256,bytes:assets[name].bytes.length}))});
     logs.push({version,immutable:true,authority_verified:true,artifact_verified:true,capsule_verified:true,profiles_checked:capsule.historical_states.length});
@@ -77,4 +86,4 @@ function collect(plan){
   return {versions:updaters.map(u=>u.version),signed:!!signed,output_directory:output,collector_source_commit:collectorCommit,manifest_sha256:hash(manifestBytes)};
 }
 if(require.main===module){try{gate(process.argv.length===3,"usage_plan_json_required");console.log(JSON.stringify(collect(JSON.parse(fs.readFileSync(process.argv[2])))));}catch(e){console.error(e.code || (e.message.startsWith("pi_updater_inventory_") ? e.message : "pi_updater_inventory_collection_failed"));process.exitCode=1;}}
-module.exports={releaseRange,collect};
+module.exports={releaseRange,resolveHistoricalStates,collect};
