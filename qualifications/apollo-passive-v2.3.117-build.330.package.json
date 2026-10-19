@@ -1,0 +1,87 @@
+{
+  "schema_version": "apollo-build330-package-qualification-review-v1",
+  "scope": "ARM64 managed application; physical node13 results remain pending",
+  "source_commit": "d84cae9e9796717bd54649bb2d4d4d9dc294cffc",
+  "version": "2.3.117",
+  "build": 330,
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.117-build.330-linux-arm64.zip",
+    "bytes": 19936104,
+    "sha256": "5cdc49e2e3e15a596353cc934e02bc3e1f0302e10c1df3f78b46093e28feb5eb"
+  },
+  "byte_identical_native_builds": 2,
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 434,
+      "pass": 434,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "native-server-contract-tests.log": {
+      "tests": 42,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 35,
+      "cancelled": 0
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 102,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 94,
+      "cancelled": 0
+    },
+    "packaged-setup-tests.log": {
+      "tests": 120,
+      "pass": 120,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-pause-resume-tests.log": {
+      "tests": 107,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 99,
+      "cancelled": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "id": 39252396745,
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39252396745",
+    "passed_gates": [
+      "Require packaged clean and legacy convergence",
+      "Require isolated packaged RSP1B module load and profile-apply systemd write",
+      "Require root-installed RTL runtime inventory readable by the service user",
+      "Require native packaged KA9Q stream through embedded Apollo RF health"
+    ]
+  },
+  "updater_used": "1.0.91",
+  "limits": [
+    "No physical node13 activation, pause/resume cycle, RF quality, reboot or soak result is claimed.",
+    "Native channel lifetime and single-monitor code are unchanged.",
+    "No complete installer, catalog, stable pointer or update discovery promotion."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.117-build.330",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "d84cae9e9796717bd54649bb2d4d4d9dc294cffc"
+  },
+  "release": {
+    "version": "2.3.117",
+    "build": 330,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.117-build.330-linux-arm64.zip",
+    "byte_size": 19936104,
+    "sha256": "5cdc49e2e3e15a596353cc934e02bc3e1f0302e10c1df3f78b46093e28feb5eb",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Apollo PR698 rebuilds stopped KA9Q controllers on resume, preserves stop cancellation, and returns failed initialization truthfully. It is merged as 5e6fd90d6cbcbe66e97ce0b9ed41542b82c8a4af. Native SDK and channel-monitor lifecycle code are unchanged.",
+      "Identity PR701 assigns 2.3.117 Build330. Source d84cae9e9796717bd54649bb2d4d4d9dc294cffc descends from published Build329 and current main through PR700. Identity/provenance merges and owner approval are required before publication.",
+      "Two ARM64 builds are byte-identical. All 434 source cases, 120 frozen-executable setup checks, eight selected frozen-executable pause/resume regressions, and the packaged Airspy/decoder/native-tone groups passed. Evidence: qualifications/apollo-passive-v2.3.117-build.330.package.json; SHA-256 eb43b9cb66a351a40d7d0e6bbe04756270f8ff4a23b3afa8165ab064bad15afe.",
+      "Exact-ZIP clean/legacy convergence, rollback, isolated RSP1B closure, service-readable RTL inventory and native KA9Q embedded-health gates passed using signed updater1.0.91: https://github.com/gdowkpc/apollo/actions/runs/39252396745",
+      "Qualification repairs make the calibration test clock and desktop fixture architecture explicit. Calibration expiry, hardware identity rejection and fail-closed behavior remain enforced.",
+      "Managed application asset only. Existing identity, credentials, settings, reporting state and rollback gates remain mandatory. No installer, stable-pointer or catalog promotion. Physical node13 activation and continued-operation qualification remain separate."
+    ]
+  }
+}
