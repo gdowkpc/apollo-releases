@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.118-build.331",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "6d0ba8563eec74e5dc35d5ea078d8b8db0c7301c"
+  },
+  "release": {
+    "version": "2.3.118",
+    "build": 331,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.118-build.331-linux-arm64.zip",
+    "byte_size": 19974144,
+    "sha256": "3fadd7235e93b6591ec492bf74291df335e9c41078676ee76b03e92993728aca",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source PR707 closes the undeclared RTL shared-library dependency; identity, registration, watcher and RF-health safeguards remain unchanged. Source merge f041a9a9218954c7fdf8f1e4ab50e5bfd758a6aa.",
+      "Two complete ARM64 packages match byte for byte; exact package convergence/rollback and native embedded-health workflow passed with signed updater1.0.85: https://github.com/gdowkpc/apollo/actions/runs/39298266664",
+      "Actual ARM64 plugin loads through pinned radiod without a system RTL library; native runtime/build provenance and explicit test filters: qualifications/apollo-passive-v2.3.118-build.331.package.json; SHA256 fa537a8ce6532f4f276e2fa5dac1cc24bb0cdaa59f3293136b25410dc863f398.",
+      "Application staging only. Physical installer/reboot, original307 dashboard activation, first receiver setup, customer delivery and live RF reporting remain separate. No stable descriptor, installer or downloads portal change."
+    ]
+  }
+}
