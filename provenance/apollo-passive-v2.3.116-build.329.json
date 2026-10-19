@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.116-build.329",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8b453b8f1173c8d96e5587c611a7351131068019"
+  },
+  "release": {
+    "version": "2.3.116",
+    "build": 329,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.116-build.329-linux-arm64.zip",
+    "byte_size": 19918138,
+    "sha256": "98c9e9a88f83fad5df1187a35bf0f5cd8e41602679964845f4b3f76419ba6e4f",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR696 retains registration and neutral scan choices when binding one serial-identified RTL. Calibration, gain, unknown fields, conflicting serials, ambiguity and save-time hardware changes remain blocked. The watcher does not reset existing unbound RTL settings.",
+      "Approved identity PR697 assigns 2.3.116 Build329. Exact source 8b453b8f1173c8d96e5587c611a7351131068019 is merged in canonical main history and descends from Build328.",
+      "Two physical ARM64 builds are byte-identical. Frozen-executable setup regressions and packaged watcher/UI source checks pass. Evidence: qualifications/apollo-passive-v2.3.116-build.329.package.json; SHA-256 37099eb66e9d5b52bd0a00ba6666a9b6d8dc6de2f857429fe2cbc0b862e22e9e.",
+      "Exact-ZIP clean/legacy convergence, rollback, RSP1B closure, RTL inventory and native KA9Q embedded-health gates passed with signed updater1.0.91: https://github.com/gdowkpc/apollo/actions/runs/39198146877",
+      "Native Pi setup and receiver recovery/watcher tests pass. Desktop fixture limitations reproduce on pre-fix ARM64 source and are disclosed; full x64 Linux CI and targeted Windows tests pass. These tests do not establish physical RF or customer-node success.",
+      "Application asset staging is required by the normal authenticated installer. Owned-node installer, retry, preservation, reboot and fresh check-in qualification remains separate. No complete installer, catalog, stable pointer or update discovery promotion."
+    ]
+  }
+}
