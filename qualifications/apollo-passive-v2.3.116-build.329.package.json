@@ -1,0 +1,1011 @@
+{
+  "schema_version": "apollo-build329-package-qualification-review-v1",
+  "scope": "Exact ARM64 application package qualification for authenticated complete-installer testing. Physical bench and customer installation remain separate. No live RF or download promotion claim.",
+  "source_commit": "8b453b8f1173c8d96e5587c611a7351131068019",
+  "version": "2.3.116",
+  "build": 329,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.116-build.329-linux-arm64.zip",
+    "bytes": 19918138,
+    "sha256": "98c9e9a88f83fad5df1187a35bf0f5cd8e41602679964845f4b3f76419ba6e4f"
+  },
+  "principal_executable_sha256": "48562ecceac021af172ad063dec3032a77daf5fc58fe2445dd344cd9cc1b99da",
+  "byte_identical_native_builds": 2,
+  "approved_changes": {
+    "fix_pr": 696,
+    "fix_head": "d1a1fdb00a470c7542b4a773f4e0a285f298dad9",
+    "fix_merge": "2a011e4753f4a8775104c4bb1e69523d5694ede3",
+    "identity_pr": 697,
+    "identity_head": "8b453b8f1173c8d96e5587c611a7351131068019",
+    "identity_merge": "c41ebecdfc6ec506b3d39dfee6336a4d79eca6d0"
+  },
+  "native_test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 387,
+      "pass": 387,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "native-server-contract-tests.log": {
+      "tests": 40,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 35,
+      "cancelled": 0
+    },
+    "native-pi-setup-tests.log": {
+      "tests": 27,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 20,
+      "cancelled": 0
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 96,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 88,
+      "cancelled": 0
+    },
+    "packaged-setup-tests.log": {
+      "tests": 79,
+      "pass": 79,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0,
+      "cancelled": 0
+    }
+  },
+  "exact_zip_qualification": {
+    "id": 39198146877,
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39198146877",
+    "passed_gates": [
+      "Require packaged clean and legacy convergence",
+      "Require isolated packaged RSP1B module load and profile-apply systemd write",
+      "Require root-installed RTL runtime inventory readable by the service user",
+      "Require native packaged KA9Q stream through embedded Apollo RF health"
+    ]
+  },
+  "embedded_setup_modules": {
+    "principal_sha256": "48562ecceac021af172ad063dec3032a77daf5fc58fe2445dd344cd9cc1b99da",
+    "modules": [
+      {
+        "module": "apollo_passive_receive/src/server.js",
+        "sha256": "0a14ed0ca849bdf04155f9ad07858ba193356b93fb8e8b7bcdb56b370ab6d8d6",
+        "offset": 45141338,
+        "bytes": 165342,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/receiver.js",
+        "sha256": "ce1d7b5b55bc8a45214b96f9c09468796e4978716c6de4e19e64aa07ff23484b",
+        "offset": 45000709,
+        "bytes": 58780,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/spectrum.js",
+        "sha256": "5cd0fde2c30a059b2b93fd392f20f61dae0794050cedbfd532f1805b5e54b6fd",
+        "offset": 45306802,
+        "bytes": 140,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/spectrum.js",
+        "sha256": "81c47a7bda4d9a4346d4332ab5f9b32e695af77df2b5c0867f27574f79e784d7",
+        "offset": 45686661,
+        "bytes": 7475,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/platform.js",
+        "sha256": "5f3f16e9d8ab718aab0f2abf1da4d50160a5d7e7465266c842429951336ac95d",
+        "offset": 45000437,
+        "bytes": 153,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/platforms/adapter.js",
+        "sha256": "3554e7d6165af75144c800507f8563f1f59de86aef93ee45e8cb6e6385c386c7",
+        "offset": 46003024,
+        "bytes": 3861,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/platforms/windows.js",
+        "sha256": "fe4fd8dee0ba6d58962d707c1cb07a38133d38c882c0d32fe3c30fef267f9140",
+        "offset": 46009389,
+        "bytes": 1702,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/platforms/linux.js",
+        "sha256": "4e550d588b950d74f5585c74868151651495bc0a72a4a088e41af20b2d569cbf",
+        "offset": 46007005,
+        "bytes": 839,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/platforms/macos.js",
+        "sha256": "c1e3e059b4b0db1681d65053ee40ea173e32a70f06fd2cf0b50d7c1a186a5767",
+        "offset": 46007963,
+        "bytes": 1306,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/receiver_config.js",
+        "sha256": "52ffa1c4f906eb106cb05afc0c226d4f56108a9d063dedc6f80ed48d6f5e24be",
+        "offset": 45605568,
+        "bytes": 13882,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/survey_profile.js",
+        "sha256": "507de0a2819a972f2d59b9c82b70e474ff421b1a1031f810c6cf8dc30aa6ea24",
+        "offset": 45694256,
+        "bytes": 5746,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/frequency_ignore.js",
+        "sha256": "96bb7fa6d6ca0ceebf1795ae1f651669116c1ea213c97a240ba928a7b273954f",
+        "offset": 45497795,
+        "bytes": 5098,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/sweep_plan.js",
+        "sha256": "6f6ff5ade6fd8e129d1f2fc51f845b80a0c25cfe0f0a4491695dd4eb951c4699",
+        "offset": 45709743,
+        "bytes": 24619,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/input_profile.js",
+        "sha256": "0890fb544d110d07bfe5dfdc384a8daca9f3130a223de47c2134f7e4ee0f6113",
+        "offset": 45848423,
+        "bytes": 12259,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/channel_plan.js",
+        "sha256": "a4120a3d0fb92de71389b17073310e447efb436032418603585d1835d5a55323",
+        "offset": 45748539,
+        "bytes": 7358,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/rsp1b_channel_batches.js",
+        "sha256": "3cb631deb282e268488666c28d39031f15c3533eb1b351370c5ffd527733977a",
+        "offset": 45974841,
+        "bytes": 2627,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/runtime_integrity.js",
+        "sha256": "15dba5936ae13553a6a69909123c73d8e3557798b7aaa3c8838741818bb9f5fe",
+        "offset": 45100099,
+        "bytes": 12513,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/native_runtime_integrity.js",
+        "sha256": "3631094c506c3e02ed77126dd8b80281efa35a4f100b47fe0f95077b62c30590",
+        "offset": 44829861,
+        "bytes": 15351,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/ctcss.js",
+        "sha256": "31887920490afc44aaa36291a83116ca85dd9effb2b374c26c06b40e56e4433b",
+        "offset": 45460410,
+        "bytes": 27206,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/ka9q_style_ctcss.js",
+        "sha256": "2242b18effc00bbd42b0ec9725f4e6cd4058c039fdc882647d4f6d1cccb4a410",
+        "offset": 45503013,
+        "bytes": 6904,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/ctcss_lifecycle.js",
+        "sha256": "9c2d28366c7697a052086254f6db3defd76132af0b59466fee599523611607d1",
+        "offset": 45487737,
+        "bytes": 5965,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/rtl_rf_lifecycle.js",
+        "sha256": "f4b4d89fe5b6ebcf14469455269049cd5470fbea0fd1127fb5bfbf56899622a1",
+        "offset": 45682560,
+        "bytes": 3981,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/rtl_power_command.js",
+        "sha256": "27ab1bf3dd1f6a0f7a72f4c067123b60c052749ca53bc97de054e0de8f84eeff",
+        "offset": 45095555,
+        "bytes": 3489,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/measured_frequency_calibration.js",
+        "sha256": "22c54acfa5670682f45475739886d1320be73b681c5391bc0ea7d2c76088db52",
+        "offset": 49250742,
+        "bytes": 12209,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/frequency_reference_calibration.js",
+        "sha256": "985a27505abbfc75c9f16cf85f2747d6d305d9a90b7dd1cf3bd584297f3df711",
+        "offset": 49263072,
+        "bytes": 10573,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/frequency_evidence.js",
+        "sha256": "0c268ae5a341ddf6f620cf4599564daa17974159aca875a3858438d439b31129",
+        "offset": 45493822,
+        "bytes": 3853,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/rtl_frequency_reference.js",
+        "sha256": "d718ce69b6e62975b3865149e402da408e83479b8d5090043f28d71aa591baed",
+        "offset": 45082104,
+        "bytes": 12263,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/noaa_validation.js",
+        "sha256": "8df09f9eaa3a6a6aedc36b13a1426b480a2fe2f0f786eb807eb5d58fad8981d9",
+        "offset": 44895379,
+        "bytes": 38107,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/release_identity.js",
+        "sha256": "13e8ca87bf9dd102f3b7454790b57b031de8f7fb573127ef7605f1ce4695c71c",
+        "offset": 45060837,
+        "bytes": 16808,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/receiver_config_store.js",
+        "sha256": "9106a9008e584fa996595c0e8262f86038168946c5ad14715220d32b9954b7ef",
+        "offset": 45619571,
+        "bytes": 20279,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/node_configuration.js",
+        "sha256": "7b0124b67c9c7a3060444b5324731de7af68fb5f672acfe156751fc5aae7c7b8",
+        "offset": 45510037,
+        "bytes": 10355,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/noaa_gain_calibration.js",
+        "sha256": "54d6e410d96edde8cd75427ae9fceb65409537a64f99dcb493684537ea10880d",
+        "offset": 44855400,
+        "bytes": 9604,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/windows_audio_evidence_adapter.js",
+        "sha256": "0741e8d2f9da4308fd6bee1e504b365aee176d5437e8586f7785ce886742b8e3",
+        "offset": 45330667,
+        "bytes": 23934,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/audio_evidence_attachment.js",
+        "sha256": "42d498ceb4483eb48a531b809388a09d60d72f9893075bc73a59280d1ddecfb7",
+        "offset": 49273766,
+        "bytes": 23460,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/evidence_credential.js",
+        "sha256": "3b937d4b22d14890c0c64f7350bc736f1714847b52a2975679272e8d53f3667c",
+        "offset": 49417609,
+        "bytes": 480,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/network_request_deadline.js",
+        "sha256": "a90784a7fae6e40e8959db1b0255895a50ca08cad5cd48e2d1a59018e37fc469",
+        "offset": 49418208,
+        "bytes": 1753,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/windows_audio_qualification.js",
+        "sha256": "7e8cc3b40574b910714f7a8714c3d1a80ea2c0994e134af9a9878c1516e561eb",
+        "offset": 45354722,
+        "bytes": 3210,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/channel_evidence.js",
+        "sha256": "918d47deb76d9d30fc20be66caf5103f303e9aeea123e0e78186d7cf3c4832cb",
+        "offset": 45743737,
+        "bytes": 4682,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/pcm_signal_classifier.js",
+        "sha256": "a6aeb03dbcab42f4a7201b450ac909a35f60459c9a3e8918a9379be908c845da",
+        "offset": 44938496,
+        "bytes": 9681,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/rtl_helper_identity.js",
+        "sha256": "9a0e2707f7b05b19a4d383597ee39c1659f8dc1304894b6b2c1968f46752e25b",
+        "offset": 45094488,
+        "bytes": 948,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/rtl_sdr_identity.js",
+        "sha256": "366b46aeb5b846b1dd84b15de7d7a0982c367e02a5a96904f710e96b9bbda8a3",
+        "offset": 45099164,
+        "bytes": 816,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/native_iq_receiver.js",
+        "sha256": "797ad827a9a63e11b8b002d7b0ea8f8435de60a2d2e8766e5a1cf2b10d1b8f84",
+        "offset": 44804532,
+        "bytes": 25208,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/iq_capture_contract.js",
+        "sha256": "62cac3fb30487111267eea1022acd80a5f4969c771b3c23de20f01aeacd5801c",
+        "offset": 44787108,
+        "bytes": 6684,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/wide_noaa_qualification.js",
+        "sha256": "ff24f5ec1b270b24f21c247e7b897d607fccbc55a464105e0232173e8cf6eb50",
+        "offset": 45327268,
+        "bytes": 3279,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/iq_history.js",
+        "sha256": "6984089dc26410513e273d4fdb9326dd756edb0bff9e4593fbbfec0617a52a1b",
+        "offset": 44800682,
+        "bytes": 1393,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/receiver.js",
+        "sha256": "181f899ebb3528983b47a954688e928a9da69f6efc2819aa8d977701e31b4b48",
+        "offset": 45892543,
+        "bytes": 74168,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/command_controller.js",
+        "sha256": "77980e397cc91eb7f6b309cd0f498b01a300019d6f460ff91a5c0d4647eb4c3e",
+        "offset": 45756017,
+        "bytes": 22553,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/ssrc_namespace.js",
+        "sha256": "36be0f7f39743ceaa2121529dd006e020cebbe959b05e59461096c878ebeed63",
+        "offset": 45993874,
+        "bytes": 3218,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/ownership_registry.js",
+        "sha256": "5d33be123751a9cd829466731d8521a3e55c7dbefb86f6337446ec96e0fe6261",
+        "offset": 45884680,
+        "bytes": 2403,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/status_parser.js",
+        "sha256": "fdf07ee004bff35759437228b11188187b29b88caecd551bcf8a987d759deeba",
+        "offset": 45997212,
+        "bytes": 5692,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/channel_contract.js",
+        "sha256": "b68b52e959c442fd6a25d78cf90909f0704f723fb86b9c632f884d576c9bff36",
+        "offset": 45738130,
+        "bytes": 5487,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/multicast_status_client.js",
+        "sha256": "ffe0cf0668ac49906ff4aecade3c3dd1b4c92767af6ed17a598ef9a5a6cc17d5",
+        "offset": 45860803,
+        "bytes": 18266,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/health.js",
+        "sha256": "b8bcc0dbd76d123f0defc624bc11a8b959810a1275184af771d49c358c11227b",
+        "offset": 45846462,
+        "bytes": 1841,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/recovery.js",
+        "sha256": "b72215c654a85952f5a3545de656299f33e7f21c381f332e15cbc6e6cec8b956",
+        "offset": 45966832,
+        "bytes": 7889,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/rtp_activity.js",
+        "sha256": "a8c15e2ebd79b99460b085e19362af2ee92440de65d236796b48bbcbe281f738",
+        "offset": 45981595,
+        "bytes": 2399,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/rtp_capture.js",
+        "sha256": "5d9827f5de79a13999cd45c916ee17b1f5996add3e0971e098bc8002ee17dc08",
+        "offset": 45984114,
+        "bytes": 9640,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/ctcss.js",
+        "sha256": "ee68b3db8088062fa52b6b793d3b6d378eba44f7071604678f2b3567f3a001a8",
+        "offset": 45778691,
+        "bytes": 5638,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/bounded_capture.js",
+        "sha256": "700fc0cc60efab1ed0680b28206b5564d21536ed7fb973b65c2d1e5b94a5122d",
+        "offset": 45734483,
+        "bytes": 3527,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/ctcss_confidence.js",
+        "sha256": "ed4f5dbf7a78eb9bca829a06340799540207699d011760029277d0e1a8c9f3b8",
+        "offset": 45784449,
+        "bytes": 1834,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/dcs.js",
+        "sha256": "d840ac7e65c37a66ee6d64614109a09ba0d7f9a532023f591c9bfe05c9b2d368",
+        "offset": 45793965,
+        "bytes": 8767,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/dmr_sync_cadence.js",
+        "sha256": "9a966bd5dbc32fef91dfd79b99151ed2401c8035baa5926c90eb80b00694832f",
+        "offset": 45831382,
+        "bytes": 14959,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/dmr_metadata.js",
+        "sha256": "58ffa70462a44127532b4901ae391bee620f2a02aa9684e7ddae2c570b8a1eb7",
+        "offset": 45816534,
+        "bytes": 14727,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/dmr_frame_diagnostics.js",
+        "sha256": "0763412abcc5802043614845d1e8eeef24ca2e2925f3c2a7ff6e6ade26dcd4a9",
+        "offset": 45810999,
+        "bytes": 5415,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/dmr.js",
+        "sha256": "aa11a3522e8a712c05e6a805f4fb8522e84ef19bb54adbb9937dfdbf8f4c4c4f",
+        "offset": 45802852,
+        "bytes": 8027,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/profile_switch.js",
+        "sha256": "56c55e676b0db4163830bb95e2132a38e47859d11b8095cc37d3a05c6f2f2ba0",
+        "offset": 45887203,
+        "bytes": 5220,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/noaa_reference.js",
+        "sha256": "db35d516dbcfe32d7ff8894e21c96daf9b3b9217bbc8e7d80352005f0dcd8038",
+        "offset": 45879190,
+        "bytes": 5370,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/frontend_failure.js",
+        "sha256": "58a26c3ad1bf7b7026cfd8cf42eaa18f244135acb30dd0e1c5920de72354aa84",
+        "offset": 49414713,
+        "bytes": 2776,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/airspy_receiver.js",
+        "sha256": "8ce24cb19f66c85067aebf0daf2bfae1a0b28c9f187144a9a31b53f31971c4d8",
+        "offset": 44734059,
+        "bytes": 1192,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/hydrasdr_receiver.js",
+        "sha256": "5b34edb8bff1c614a4ccb8ee61b338552f8e0ecc8bcaecbe622b986c1735ece7",
+        "offset": 44766621,
+        "bytes": 20366,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/hydrasdr_dsp.js",
+        "sha256": "c5923d0897cba3e185eac650c27e3fa7fa28ef4850fb77f39e736c4562be9904",
+        "offset": 44758402,
+        "bytes": 7227,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/iq_dsp.js",
+        "sha256": "62ff25d84ab35648dfc6c56b5fdee7d828358448a3d694f21007dd4ce7be1416",
+        "offset": 44793912,
+        "bytes": 5678,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/nfm_ctcss.js",
+        "sha256": "5da1863ff528eea1ac8706b7de79163e2979923a2bf185a0fcbc927338766614",
+        "offset": 44845333,
+        "bytes": 9947,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/observation_store.js",
+        "sha256": "39efb8e7c4f7f8e8cb653ccd9d4204d682c776a1e04ecc9b3b12fa1722425205",
+        "offset": 44933607,
+        "bytes": 144,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/observation_store.js",
+        "sha256": "2f7fab812d50641c448420b37cc120a993634097b685e0c2df7d9f505bb5d780",
+        "offset": 45525326,
+        "bytes": 67496,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/bounded_jsonl.js",
+        "sha256": "1e7f8865932f99739f935e76d77cf645091514d41fe54891e32bcfc1a9301070",
+        "offset": 45457191,
+        "bytes": 3099,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/shared/apollo_observation_payload.js",
+        "sha256": "9c768bb85b1ae9328aa3cfc0563b3e5c948430c2469be22ebb8c25c544e29bb4",
+        "offset": 46178920,
+        "bytes": 9337,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/shared/rf_mode_triage.js",
+        "sha256": "0b20ba4a26682ccd2d13565baf5f0a31020306e04caddb86641afa5897878a1d",
+        "offset": 46188377,
+        "bytes": 7041,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/rf_events.js",
+        "sha256": "9f647e6caba372dc4ccf655834278301f730b5cb146cd783e1736b2fa5fc50ab",
+        "offset": 45676286,
+        "bytes": 6154,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/rf_episode_contract.js",
+        "sha256": "e0e39eb331202a6d38379f760d918af321fa3dde3014bf95a79a37c138ff7e59",
+        "offset": 45672126,
+        "bytes": 4040,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/activity_evidence.js",
+        "sha256": "ce467cbe53548c6cd0db7010b6b16eb92989e84bf2b9c69b84720d4121250374",
+        "offset": 45443902,
+        "bytes": 3073,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/receiver_manager.js",
+        "sha256": "6a2a2e188ad97685e908a364298f76c7ee16d1ce0a4873ff92ef70c1d3576890",
+        "offset": 45639971,
+        "bytes": 32034,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/uniden_scanner.js",
+        "sha256": "30e73ec67b72d96c2d46b7c19733445f2e386bb00153d4c37557bfdd58dc3374",
+        "offset": 45309302,
+        "bytes": 15111,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/uniden_configuration.js",
+        "sha256": "2fc626ce348bb79c21f70211f04becdf5f55800e1418a151ff284d02f46b7614",
+        "offset": 45307061,
+        "bytes": 2121,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/owner_location_store.js",
+        "sha256": "e7d4409e60f2989bf2bd00083e85a50958b95c23d7b45348ef1a7600d26357c1",
+        "offset": 45592943,
+        "bytes": 6345,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/band_plan_data.js",
+        "sha256": "1f2f43bfae919cbb588fef85720d03bcc9dcca919d32dd1a8667124955e26953",
+        "offset": 45447095,
+        "bytes": 9976,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/diagnostics_export.js",
+        "sha256": "13745c37f7c806fb54cd4fd57c5146daf493165fa5d8aad44c322e345d09ed2b",
+        "offset": 44748906,
+        "bytes": 5931,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/receiver_setup_status.js",
+        "sha256": "b14bb33ca1b7baf4b1874123d7199fc4a430bd5956fdaad0465867feb5559052",
+        "offset": 45059610,
+        "bytes": 1107,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/sdr_qualification.js",
+        "sha256": "042431badd0ca9f79ecc5ed8b7c38f49614ee0f3e7b41c6e0e3debbc75babda8",
+        "offset": 45112733,
+        "bytes": 28484,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/noaa_startup_recovery.js",
+        "sha256": "3b3472703c221fecea02e6defa380011ed69eef7ddfb20e74fb9e9647d7d4cc9",
+        "offset": 44865124,
+        "bytes": 30134,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/core/survey_scheduler.js",
+        "sha256": "b15ff3df0c41079e3604271c4b21c1f09a96213251b737c7aebb33d77ab6b217",
+        "offset": 45700122,
+        "bytes": 9501,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/contract_v1/transport.js",
+        "sha256": "4a96fe66968b8525133e06284acb9649ba67eac8ee16d1aeecdb14c9ec0d75cd",
+        "offset": 45434691,
+        "bytes": 2733,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/contract_v1/adapter.js",
+        "sha256": "5f5f5fe7b9190aa7fdda532052ae020620196bd88e470a3c3bdda61ff8c2e79a",
+        "offset": 45397140,
+        "bytes": 34504,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/contract_v1/windows_owner_projection.js",
+        "sha256": "c4ec8655e7f2573ae6795efe6852b60d74bc1d1c3d2b389cd828831efe678037",
+        "offset": 45441192,
+        "bytes": 2590,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/contract_v1/scan_projection.js",
+        "sha256": "6aa2f37089268693ff0cb14b4a5aae2a3cadbc3768e7fe4889f5e0181ad99b38",
+        "offset": 45431765,
+        "bytes": 2806,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "src/reporting_authority_status.js",
+        "sha256": "eb4023ee8ad423fda57132aa45b6a2b38405ee83710c7fdfe829ce95f1ce7566",
+        "offset": 49408967,
+        "bytes": 4575,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/dashboard_status_v2.js",
+        "sha256": "83da084c4330b8e6504b3e998ceb5396c32e99725ee4d0ccc0bdc7cfabd8e46f",
+        "offset": 44744524,
+        "bytes": 4262,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/flutter_dashboard.js",
+        "sha256": "f6d4bbecff06d88113433775e7a93d850f2adce6cc965089a51500fa9068c39f",
+        "offset": 44754957,
+        "bytes": 3325,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/contract_v1/windows_endpoint_descriptor.js",
+        "sha256": "4f81ddeb6065e3896a9bac41d1fe45b1dbbbae213a742a2fc73159255e85b9a4",
+        "offset": 45437544,
+        "bytes": 3528,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/validation_metrics.js",
+        "sha256": "978b815db5905026da2a7381a9611735cedadc047c276a14ff6950e27188b504",
+        "offset": 45324534,
+        "bytes": 2614,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/reporting/evidence_forwarder.js",
+        "sha256": "fe0c954307a7d545f1b18feeed0f6a38612eedabd33f34b75121bc38a7cd7586",
+        "offset": 46011211,
+        "bytes": 64469,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/stable_update_manager.js",
+        "sha256": "759d29a74f6b185f9f43c283f860a908af7d63fb0f0f177790bbffab6fcdff36",
+        "offset": 47342176,
+        "bytes": 10016,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/stable_release_descriptor.js",
+        "sha256": "10f2a45015cc07f5148bb516c0fb93e46e6e3b920b7220f0fb720037dd33f64f",
+        "offset": 47334582,
+        "bytes": 7474,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/github_release_authority.js",
+        "sha256": "f7ee75bbc008749127df51ff12bc927a15f5a1c1875257a2059e8d8461c5e6d2",
+        "offset": 46628015,
+        "bytes": 14631,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/release_update.js",
+        "sha256": "fb9469a57f7c89a49ea3b1443f4c325dc37b5afe2d0a5073f8b65f98ebba1161",
+        "offset": 47307994,
+        "bytes": 26467,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/pi_canonical_update_provider.js",
+        "sha256": "8182b5e38ec9583f8141fa85b4c1cba92e917c2396081ab7113c786db0833f1d",
+        "offset": 47152594,
+        "bytes": 3737,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/pi_dashboard_update.js",
+        "sha256": "2ca71083690ae900615d1ddb5f63ee565f109c34f621d897edd8f99b92e3639b",
+        "offset": 47156451,
+        "bytes": 13860,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/pi_stable_update_provider.js",
+        "sha256": "19919ca122b1b8b1c94b78139a07445b6ada6aeecc7d0c18662662eec3d3ed69",
+        "offset": 47179861,
+        "bytes": 7642,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/windows_stable_update_provider.js",
+        "sha256": "1e3e88a81f3ed77936a52d1544f07f64c58e75cae4c5e95eba2f03fad0bd276b",
+        "offset": 47437761,
+        "bytes": 2244,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/updates/dashboard_update_routes.js",
+        "sha256": "5b03ec1c7ecefa87c0f1ddf791ef3b8a6171ad42d0988660b56dfd7daff70b9f",
+        "offset": 46343092,
+        "bytes": 2070,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/windows_node_credential_store.js",
+        "sha256": "8a3574dcc7242c277d75ecd6037e0ae4286c4905f1a7dd7f857fe0dda56ff30b",
+        "offset": 46136499,
+        "bytes": 37630,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/windows_legacy_provenance.js",
+        "sha256": "a45ef781780ad289126e2b93083ec1ece7208c6c8f38f81f3549472e3702481a",
+        "offset": 46115722,
+        "bytes": 5895,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/windows_authorization_recovery.js",
+        "sha256": "235498c9ec5a6b69c74ff0d24497f27e175bd2a81af314b968782ff96d9e5086",
+        "offset": 46106868,
+        "bytes": 8734,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/windows_new_node_provisioning.js",
+        "sha256": "1b4a552832eee9a749caf9749760a3d2725d3ae2f3518605fab589b443a7ed3d",
+        "offset": 46121737,
+        "bytes": 14641,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/windows_protected_service_transition.js",
+        "sha256": "96940ca8d2a56123490dbe1c2ef2e2e5ca91075127efe0acebc1ea0fff2b29d2",
+        "offset": 46174250,
+        "bytes": 4550,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/owner_release_identity.js",
+        "sha256": "b310d81150cc74b83d9458071971ee56a801562b18b6cc089036f90e0365b64d",
+        "offset": 44937231,
+        "bytes": 1145,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/windows_receiver_setup.js",
+        "sha256": "644b1351d621f6ab7dfdc3fd179b95d6747f916fed07d2c05c75c6646bfaf518",
+        "offset": 45373163,
+        "bytes": 4357,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/windows_usb_presence.js",
+        "sha256": "c08cd9396ecc06adb9412c765ab649f7cf4f503cba3bbf4ab5b06a2a2c7fbd04",
+        "offset": 45394938,
+        "bytes": 2082,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/linux_node_credential_store.js",
+        "sha256": "c8543aa2f885bab7925c6dcab0edcbc557158a4305a0b46866956effecff43bc",
+        "offset": 46100078,
+        "bytes": 6670,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/security/linux_node_agent_socket_client.js",
+        "sha256": "13857ab73ba0dd67333a7db1e975526064c9c66f9476275acd85c5735b579777",
+        "offset": 46080202,
+        "bytes": 19755,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/reporting/receiver_provenance.js",
+        "sha256": "161f349277249577f1b1bd398e1604672347e26a14428598539b4eb4582ad69b",
+        "offset": 46075801,
+        "bytes": 4281,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/owner_provisioning_state.js",
+        "sha256": "fc307633f5ceb95f76f48cf5cd1df7a2c5700652ee5dd85e491e371b736e1254",
+        "offset": 44933870,
+        "bytes": 3241,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/audio_selection_audit.js",
+        "sha256": "649013f06f990374612ebb89382db37557be170960cd6c009210bfb84b5327ec",
+        "offset": 44735371,
+        "bytes": 9033,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/pi_rtl_usb_reset.js",
+        "sha256": "93d9c0c37a603e8998174d4657d846cca98386eb2cc874206a5be217deb3839e",
+        "offset": 44998887,
+        "bytes": 1430,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/windows_privileged_rtl_recovery.js",
+        "sha256": "329418646c8067aa943ffff1e78831d5ee5d3b98c635d04f7aab42251f5a73ac",
+        "offset": 45364017,
+        "bytes": 9026,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/windows_rtl_fault_evidence.js",
+        "sha256": "dc81b8127400ee5bed86365217c7ce68951127358f640c3d78effbb9efd26d3d",
+        "offset": 45388351,
+        "bytes": 6467,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q_manual_observation_client.js",
+        "sha256": "d1a4a4b01727f721882f2dfc61a0b7e06c48810a3fcea10de001ba7d33d87d1a",
+        "offset": 44802195,
+        "bytes": 2217,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/pi_receiver_detection.js",
+        "sha256": "6f450b89272ee7784b4812cdd8f519a14fc3c9918c7e744abeaf8c58a85146b9",
+        "offset": 44972250,
+        "bytes": 10021,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/pi_receiver_starter_profile.js",
+        "sha256": "5ecc58cba09f265608151ac7d9372a7c45a81f7215215b4b323693728bbb8853",
+        "offset": 44982392,
+        "bytes": 8066,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/pi_receiver_watch.js",
+        "sha256": "a385ddbf6535b9880690858c47a3e9ab9fe31b3c4ed0ed902523a7b833392f92",
+        "offset": 44990578,
+        "bytes": 8189,
+        "read_from_frozen_principal": true
+      },
+      {
+        "module": "apollo_passive_receive/src/pi_receiver_change.js",
+        "sha256": "648223a77df89b1f1b1de768a8fa80136d292d71d91fb12c661bc7a387d40ae8",
+        "offset": 44948297,
+        "bytes": 23832,
+        "read_from_frozen_principal": true
+      }
+    ]
+  },
+  "native_input_inventory_sha256": "ae0d2d0af28bf776c1a64ccd1db769be1cadf5fed4a6d8f076df55985a081666",
+  "updater_version": "1.0.91",
+  "test_scope": "Eight desktop-fixture failures on ARM64 reproduce on pre-fix source. The native Pi HTTP setup cases and full new recovery/watcher suites pass; desktop cases pass in x64 Linux CI and targeted Windows tests. No runtime guard was disabled.",
+  "physical_installer_qualification": "pending",
+  "complete_installer_published": false
+}
