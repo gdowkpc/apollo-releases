@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.117-build.330",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f993ca8c62de34ea90fd1adba943af9168ed2aa6"
+  },
+  "release": {
+    "version": "2.3.117",
+    "build": 330,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.117-build.330-linux-arm64.zip",
+    "byte_size": 19936101,
+    "sha256": "aebb4cfaa65156b7e9907b9ce437c055c56cb8f4b24d635f5e573d2b7f4abe21",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Package source contains the merged dashboard signed-updater replacement feature PR700, including preservation, signature/refusal and rollback checks. Release identity is assigned by PR703; canonical source merge must precede application staging.",
+      "Two ARM64 builds are byte-identical, and frozen principal/manifest/source identities agree. Exact package workflow with production-signed updater1.0.85 passed: https://github.com/gdowkpc/apollo/actions/runs/39252288279",
+      "Package test scope and explicit platform/selection filters: qualifications/apollo-passive-v2.3.117-build.330.package.json; SHA256 d2cfff9e9fdde83c55e8d28dc9a44776e7cb3399716546a8d87eb873a8edd88a.",
+      "Application staging only, as a prerequisite for normal authenticated owned-node qualification. Legacy307 dashboard activation, physical installation/reboot, end-user delivery and live RF reporting remain separate qualification gates. No public stable descriptor, installer or downloads portal change."
+    ]
+  }
+}
