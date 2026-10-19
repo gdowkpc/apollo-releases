@@ -1,0 +1,226 @@
+{
+  "schema_version": "apollo-build331-package-qualification-review-v1",
+  "scope": "Exact ARM64 application package staging prerequisite only; physical installation, legacy dashboard activation and customer delivery remain separately unqualified.",
+  "source_commit": "6d0ba8563eec74e5dc35d5ea078d8b8db0c7301c",
+  "source_merge": "f041a9a9218954c7fdf8f1e4ab50e5bfd758a6aa",
+  "version": "2.3.118",
+  "build": 331,
+  "architecture": "arm64",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.118-build.331-linux-arm64.zip",
+    "bytes": 19974144,
+    "sha256": "3fadd7235e93b6591ec492bf74291df335e9c41078676ee76b03e92993728aca"
+  },
+  "principal_executable_sha256": "23a453f493c2de66cf85218457ad3fe2cabb7aa7ae9c8ec6e56538eb8a0cda80",
+  "byte_identical_native_builds": 2,
+  "test_groups": {
+    "arm64-source-tests.log": {
+      "tests": 481,
+      "pass": 477,
+      "fail": 0,
+      "skipped": 4
+    },
+    "rtl-closure-source-tests.log": {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-pi-setup-tests.log": {
+      "tests": 27,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 20
+    },
+    "native-server-contract-tests.log": {
+      "tests": 42,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 35
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 102,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 94
+    },
+    "packaged-setup-tests.log": {
+      "tests": 79,
+      "pass": 79,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "rtlsdr_linkage": {
+    "schema": "apollo_ka9q_rtlsdr_static_v1",
+    "ka9q_source_commit": "8f6a05b3b4b5ee5c85ff556f64af918e561786b4",
+    "rtl_source_repository": "https://github.com/rtlsdrblog/rtl-sdr-blog",
+    "rtl_source_commit": "aed0ea19f3a273370a13c9009b96313c75d54c7b",
+    "static_archive_sha256": "5d9e24a582d2629a671e9cb032d5b0a7de1d8b618d040e98b04bb6bd58b7b93c",
+    "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+    "needed": [
+      "libbsd.so.0",
+      "libc.so.6",
+      "libusb-1.0.so.0"
+    ],
+    "source_availability": "third_party/rtl-sdr/rtlsdrblog-v4/README.md"
+  },
+  "actual_packaged_driver_elf": {
+    "elf_class": 64,
+    "endianness": "little",
+    "machine": 183,
+    "needed": [
+      "libusb-1.0.so.0",
+      "libbsd.so.0",
+      "libc.so.6"
+    ]
+  },
+  "minimal_runtime_native_ci": "https://github.com/gdowkpc/apollo/actions/runs/39297283011",
+  "exact_package_workflow": {
+    "conclusion": "success",
+    "headSha": "6d0ba8563eec74e5dc35d5ea078d8b8db0c7301c",
+    "jobs": [
+      {
+        "completedAt": "2026-10-19T17:58:59Z",
+        "conclusion": "success",
+        "databaseId": 118216367739,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-19T17:55:44Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-19T17:55:47Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-19T17:55:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:55:48Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-19T17:55:47Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:55:48Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-19T17:55:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:55:48Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-19T17:55:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:55:51Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-19T17:55:48Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:56:21Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-19T17:55:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:56:22Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-19T17:56:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:56:23Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-19T17:56:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:56:25Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-19T17:56:23Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:58:55Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-19T17:56:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:58:55Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-19T17:58:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:58:56Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-19T17:58:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-19T17:58:56Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-19T17:58:56Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39298266664/job/118216367739"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39298266664"
+  },
+  "canonical_workflow_updater_version": "1.0.85",
+  "artifact_unchanged_after_fixture_identity_correction": true,
+  "physical_node_qualification": "pending",
+  "complete_installer_published": false,
+  "discovery_changed": false,
+  "limits": "Explicit test selection/platform skips are disclosed. Actual plugin loading without a system RTL library is proved; USB, physical reboot, legacy dashboard activation, receiver setup firstSave and live RF delivery remain separate gates. No customer state changes."
+}
