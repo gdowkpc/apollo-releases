@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.119-build.332",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8232db984d1d3cdbb55caa9b829178b65b55b426"
+  },
+  "release": {
+    "version": "2.3.119",
+    "build": 332,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.119-build.332-linux-arm64.zip",
+    "byte_size": 19977423,
+    "sha256": "54b92c286aba1d54752481e7964ebf57fd5ba0d42b5125e95a97ccd15e51853c",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canonical source PR709 strengthens target-owned receiver preservation admission for older signed updaters; matching hardware retains full state, unsafe first binding fails closed. Source merge beef497650162285bc15f1f5ed75d9a50b4d7409.",
+      "Two complete ARM64 packages are byte identical. Exact-package convergence, rollback and embedded native-health workflow passed with signed updater1.0.85: https://github.com/gdowkpc/apollo/actions/runs/39310391857",
+      "Exact package/test-only qualification checkout, guard/source/principal proofs, real RTL plugin load without an external RTL library, and explicit test filters: qualifications/apollo-passive-v2.3.119-build.332.package.json; SHA256 761f0046508a25af825204c491bf8a707f53f2aa01c12d675c620219657929af.",
+      "Application staging only. Physical installer/reboot, native historical activation/refusal/restart/rollback/retry, first receiver Save, unchanged307 owner dashboard delivery, customer eligibility and live RF reporting remain separate. No stable descriptor, installer or downloads portal change."
+    ]
+  }
+}
