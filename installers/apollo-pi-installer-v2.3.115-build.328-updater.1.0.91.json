@@ -1,0 +1,55 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8eb39ff2e35a1638dc430627782d5cf27fe80eba"
+  },
+  "target": {
+    "version": "2.3.115",
+    "build": 328,
+    "source_commit": "8eb39ff2e35a1638dc430627782d5cf27fe80eba",
+    "release_tag": "apollo-passive-v2.3.115-build.328",
+    "sha256": "79ac993505fab5e4a6098395c0bdb8209856a27ed9628d3dc070287a0a9ef546"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.115-build.328-updater.1.0.91-linux-arm64.zip",
+    "bytes": 311118,
+    "sha256": "fd52ae13df5c9791dc28882683a31715eb2a589c810d0eee223e481a72611e5c"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact complete installer installation, retry, preserved node-owned state, reboot recovery, fresh authenticated check-ins and every configured processing window on the owned RTL bench; isolated one-approval setup integration tests. Live RF reception and report delivery remain separately unqualified.",
+    "collector_source_commit": "2fcb0125729118b836a0bf9b489ef22c5e767e68",
+    "collector_source_pr": "https://github.com/gdowkpc/apollo/pull/695",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39176672273",
+    "limits": "Physical run starts on Build328 and proves same-target installer/retry/reboot preservation and readiness. Earlier retained324-to328 attempt proves forward installation and preservation only. New-owner enrollment and single-approval automatic activation are covered by isolated software integration tests, not a physical fresh-node enrollment. Live RF reporting, other receivers, Pi models and known-signal accuracy remain separate qualifications."
+  },
+  "release_tag": "apollo-pi-installer-v2.3.115-build.328-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.115-build.328-updater.1.0.91.onboarding.json",
+    "sha256": "d32734e520c0f68f10f1b7648ac0268ed182cbae3fae20860b34b46da77d81c8"
+  }
+}
