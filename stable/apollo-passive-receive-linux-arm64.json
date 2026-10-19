@@ -1,17 +1,17 @@
 {
   "schema_version": "apollo-stable-release-v2",
-  "minimum_pi_updater_version": "1.0.83",
+  "minimum_pi_updater_version": "1.0.91",
   "product_id": "apollo-passive-receive",
   "platform": "linux",
   "architecture": "arm64",
-  "version": "2.3.79",
-  "build": 292,
-  "source_commit": "e541b5f930e5610e3226100e7c6615c41630196e",
-  "published_at": "2026-10-15T15:24:52Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.79-build.292",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.79-build.292/ApolloPassiveReceive-2.3.79-build.292-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.3.79-build.292-linux-arm64.zip",
-  "byte_size": 19839580,
-  "sha256": "8e7e2dc6838637a17092f43d2952aa2e26c3817a5d505e63d9d17a0ccb8aeb1d",
-  "short_release_notes": "Pi upgrade reliability fixes. Use the complete Pi installer from the downloads portal to install signed updater 1.0.83 while keeping your existing settings and registration."
+  "version": "2.3.115",
+  "build": 328,
+  "source_commit": "8eb39ff2e35a1638dc430627782d5cf27fe80eba",
+  "published_at": "2026-10-18T20:12:55Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.115-build.328",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.115-build.328/ApolloPassiveReceive-2.3.115-build.328-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.115-build.328-linux-arm64.zip",
+  "byte_size": 19917382,
+  "sha256": "79ac993505fab5e4a6098395c0bdb8209856a27ed9628d3dc070287a0a9ef546",
+  "short_release_notes": "Owners can finish Pi setup before one administrator Approve and enable action. Improves reporting readiness after receiver changes. Use the qualified complete Pi installer to obtain signed updater 1.0.91 while preserving registration and settings."
 }
