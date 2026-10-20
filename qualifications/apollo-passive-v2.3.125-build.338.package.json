@@ -1,0 +1,127 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.125",
+  "build": 338,
+  "source_commit": "e8bb2b1db942c4ef1121e7cf3c0922cac9fd2686",
+  "approved_source_head": "ecb11324eb15faa4ecc1d485abdb985eca693690",
+  "scope": "Application-only staging prerequisite; not physical installer, original Build307 dashboard delivery, or customer receiver qualification.",
+  "package": {
+    "artifact": "ApolloPassiveReceive-2.3.125-build.338-linux-arm64.zip",
+    "bytes": 19986473,
+    "sha256": "475193bb3111142590317198b55c78dbeb45469b388432168c77834d2a5da460",
+    "principal_sha256": "89aac2567ad9b8e5326f3cfda89a22d6b65dab030e3b315305ae9ca2c3c01661",
+    "two_packages_byte_identical": true
+  },
+  "source_and_packaged_tests": {
+    "arm64-source-tests.log": {
+      "tests": 625,
+      "pass": 620,
+      "fail": 0,
+      "skipped": 5
+    },
+    "privileged-source-tests.log": {
+      "tests": 60,
+      "pass": 58,
+      "fail": 0,
+      "skipped": 2
+    },
+    "rtl-closure-source-tests.log": {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-pi-setup-tests.log": {
+      "tests": 27,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 20
+    },
+    "native-server-contract-tests.log": {
+      "tests": 42,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 35
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 102,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 94
+    },
+    "packaged-setup-tests.log": {
+      "tests": 79,
+      "pass": 79,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-timing-tests.log": {
+      "tests": 136,
+      "pass": 136,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-cold-profile-tests.log": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "independent_archive_audit": {
+    "result": "PASS_OFFLINE_FROZEN338_PACKAGE_AUDIT_WITH_SCOPE_LIMITS",
+    "receipt_sha256": "cb8d6090b2d3193623d2e9135a832aad2b15692a51180b9a67ff9b89a748be0d",
+    "protected_controller_files_verified": 57,
+    "loose_source_files_verified": 81,
+    "embedded_source_proofs": {
+      "setup": {
+        "modules": 137,
+        "proof_sha256": "cd1a48a16c23ca6406bd828c871e98b710d721a90a67ab5cf8cfcf81be8512f8"
+      },
+      "readiness": {
+        "modules": 68,
+        "proof_sha256": "fda624320c89f747e9113e4acfc9c36da8726cedc440753fc7a486f1e153f5e2"
+      },
+      "timing": {
+        "modules": 70,
+        "proof_sha256": "ede0501523457dbbe321fa5fe49b06940b1d956cbd84d164277a5ee74204069a"
+      },
+      "cold-profile": {
+        "modules": 68,
+        "proof_sha256": "bbe73c191143e8560fe42ee1d9c452a1cd497ea3af2cc3e4c7407188ec87ca1e"
+      }
+    }
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39425182875",
+    "source": "e8bb2b1db942c4ef1121e7cf3c0922cac9fd2686",
+    "conclusion": "success",
+    "updater_version": "1.0.85",
+    "log_sha256": "c0b5d7aa2a416d1e36e6b3cc927d9361e68e978d1553a003a87ca39f1085fcf8"
+  },
+  "limits": [
+    "The receiver startup recovery re-enters existing initialization when no controller was acquired. It preserves prerequisite failures and requires actual receiver progress before health credit.",
+    "The separate cold-start multicast discovery failure remains under diagnosis; this record does not claim that name publication or original Build307 dashboard upgrades are qualified.",
+    "Native receiver binaries were reused after byte-for-byte verification and unchanged native-source checks; no new driver compilation is claimed.",
+    "All source and packaged test failures are zero; platform and name-filter skips are retained explicitly.",
+    "No stable target, updater floor, public probe, complete installer, downloads-page or customer changes."
+  ]
+}
