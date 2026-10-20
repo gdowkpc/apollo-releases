@@ -1,0 +1,125 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.122",
+  "build": 335,
+  "source_commit": "848a5082d0b8de9f934060f114bb5852db3a69e8",
+  "source_merge": "698381ec92bb1c948628e79496789e9c84972616",
+  "fix_merge": "13a010e49242840d336f96ec417554873f506d75",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.122-build.335-linux-arm64.zip",
+    "bytes": 19985852,
+    "sha256": "eb533fd163afdab31e70d7e9c6f43046f749cc9a51d2330e752950808903ad7a",
+    "principal_sha256": "26091425b3a098dd72b3e1a75f734fc84d552a2d9f023c144a8b167ca6f76350",
+    "two_packages_byte_identical": true
+  },
+  "source_and_embedded_package_tests": {
+    "arm64-source-tests.log": {
+      "tests": 611,
+      "pass": 606,
+      "fail": 0,
+      "skipped": 5
+    },
+    "rtl-closure-source-tests.log": {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-pi-setup-tests.log": {
+      "tests": 27,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 20
+    },
+    "native-server-contract-tests.log": {
+      "tests": 42,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 35
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 102,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 94
+    },
+    "packaged-setup-tests.log": {
+      "tests": 79,
+      "pass": 79,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-timing-tests.log": {
+      "tests": 142,
+      "pass": 142,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "skipped": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "embedded_module_observations_verified": 275,
+  "exact_package_qualification": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39352564680",
+    "head": "848a5082d0b8de9f934060f114bb5852db3a69e8",
+    "conclusion": "success",
+    "updater_version": "1.0.85"
+  },
+  "native_rtlsdr_linkage": {
+    "schema": "apollo_ka9q_rtlsdr_static_v1",
+    "ka9q_source_commit": "8f6a05b3b4b5ee5c85ff556f64af918e561786b4",
+    "rtl_source_repository": "https://github.com/rtlsdrblog/rtl-sdr-blog",
+    "rtl_source_commit": "aed0ea19f3a273370a13c9009b96313c75d54c7b",
+    "static_archive_sha256": "5d9e24a582d2629a671e9cb032d5b0a7de1d8b618d040e98b04bb6bd58b7b93c",
+    "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+    "needed": [
+      "libbsd.so.0",
+      "libc.so.6",
+      "libusb-1.0.so.0"
+    ],
+    "source_availability": "third_party/rtl-sdr/rtlsdrblog-v4/README.md"
+  },
+  "scoped_reused_native_loader_evidence": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39328175262",
+    "head": "7c123e03760658db71fcfae7cc8adf2145707ef6",
+    "result": {
+      "passed": true,
+      "scope": "native_plugin_load_without_external_rtl_library",
+      "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+      "runtime_image": "sha256:79c70727a896d88aca686270c4897fc3281811ce8735d67fb83de451bee1d384",
+      "actual_plugin_initialization_observed": true,
+      "no_hardware_driver_setup_observed": true,
+      "exit_status": 66,
+      "physical_usb_exposed": false,
+      "physical_rf_qualified": false,
+      "production_records_mutated": false
+    },
+    "scope": "Prior source CI, exact identical packaged driver bytes verified; no new CI run claimed"
+  },
+  "corrections": [
+    "Finite helper termination/reaping budget and cleanup fence shared by device discovery and receiver operations.",
+    "Retained first/last refresh failure and helper diagnostics; bounded intermediate capture history.",
+    "Read-only observer checks every retained successful capture and sampled UTC/monotonic clock coherence."
+  ],
+  "limits": [
+    "Application package qualification only. Physical RSP1B RF,100-cycle lifecycle and24-hour soak remain distinct, pending gates.",
+    "No complete installer, public stable pointer or downloads portal promotion. Node settings and reporting state must be preserved.",
+    "Physical disconnect/reconnect, SDK recovery, reboot,70cm/all-band and fresh-owner installation are not qualified by these source/package checks."
+  ]
+}

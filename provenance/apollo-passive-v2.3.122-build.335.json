@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.122-build.335",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "848a5082d0b8de9f934060f114bb5852db3a69e8"
+  },
+  "release": {
+    "version": "2.3.122",
+    "build": 335,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.122-build.335-linux-arm64.zip",
+    "byte_size": 19985852,
+    "sha256": "eb533fd163afdab31e70d7e9c6f43046f749cc9a51d2330e752950808903ad7a",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Merged PR716 helper-cleanup, failure-diagnostic and capture-gap corrections; source identity allocated by merged PR717.",
+      "Two byte-identical ARM64 packages; actual embedded production modules independently matched to committed source. qualifications/apollo-passive-v2.3.122-build.335.package.json SHA256 9ea7f3ec2dcfce2fcae7de63c5aa19d54e4e9dd8eee7c5457fbf3503f50706e9.",
+      "Exact frozen ZIP target-state convergence, rollback and packaged native-health qualification passed: https://github.com/gdowkpc/apollo/actions/runs/39352564680",
+      "Immutable application asset only, for separately owner-approved node13 deployment and RSP1B qualification. No installer or update-discovery promotion."
+    ]
+  }
+}
