@@ -1,0 +1,56 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "4862375c504a4700d9e820f2d9d8911a68b3be6c"
+  },
+  "target": {
+    "version": "2.3.127",
+    "build": 340,
+    "source_commit": "a73b0e83c9fb4e89477f74e4209d2a5257df346f",
+    "release_tag": "apollo-passive-v2.3.127-build.340",
+    "sha256": "b6f44c7521b9a66d72ae14110cd98bb0fdb27b91998bc7feb40d9b196f581a56"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.127-build.340-updater.1.0.91-linux-arm64.zip",
+    "bytes": 316567,
+    "sha256": "02c0190d19e8fa185e046336c12719c91f13d56ab26c563390624a052d720580"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact revised complete installer upgrades an owned registered Pi3B+ from Build338 to340, repeats installation, preserves registration, credentials, settings and tuning, physically reboots the Pi, and verifies fresh authenticated check-ins plus all seven configured processing windows before and after reboot; isolated one-approval setup checks.",
+    "collector_source_commit": "4862375c504a4700d9e820f2d9d8911a68b3be6c",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39496740210",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39481328001",
+    "qualification_test_commit": "8943082fdd7bac7045b9dc358dd2377dd903e40a",
+    "limits": "Owned Pi3B+ RTL-SDR installation qualification only. Separate retained native evidence covers the preceding installer with the identical Build340 application and signed updater: original Build307 installation, updater87-to91 transition, first binding and actual retry preservation, followed by post-retry and private cold-start processing. The revised launcher retains the same application and signed updater payloads; direct original307 execution of this revised installer and the original307 dashboard-button route are not claimed. No customer installation, organic RF delivery, new physical enrollment or other receiver-model claim. Public dashboard target remains unchanged. Exact cumulative receiver counters for each signed sample: {\"post_reboot\": [{\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}], \"pre_reboot\": [{\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}]}. Counters meet the unchanged validator; no reset or waiver."
+  },
+  "release_tag": "apollo-pi-installer-v2.3.127-build.340-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.127-build.340-updater.1.0.91.onboarding.json",
+    "sha256": "119dd72665b0748e613cb462de452b67ef32c6afccd8e417d786775b2c680dff"
+  }
+}
