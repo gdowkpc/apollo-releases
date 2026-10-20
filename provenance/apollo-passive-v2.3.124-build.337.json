@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.124-build.337",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ce6cb87acd2bb1078eb2018828cd1ea67933d903"
+  },
+  "release": {
+    "version": "2.3.124",
+    "build": 337,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.124-build.337-linux-arm64.zip",
+    "byte_size": 19986307,
+    "sha256": "165250366e876a8eccadb200fd09398b4b56a64fa4dda5483b3a45353f7d6fd6",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved source PR719 keeps existing update controls outside hidden owner/receiver panels, with unchanged application handlers. Merge 92105bc2b5a5fc22d30f0aec11f810b6e7997b6e.",
+      "Two byte-identical native ARM64 packages and exact archive target-state/native embedded-health workflow with signed updater1.0.85: https://github.com/gdowkpc/apollo/actions/runs/39367780674",
+      "Independent archive/embedded-source/UI audit and104 signed-SDK component cases with synthetic USB: qualifications/apollo-passive-v2.3.124-build.337.package.json; SHA256 09b2aef42c8972a2d74e9995829815a5a0be5f473417f279bd5aa8d7e5d81086.",
+      "Application staging only. Original307-worker delivery and physical installer qualification remain pending; no public update target, downloads page or customer changes."
+    ]
+  }
+}
