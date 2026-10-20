@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.121-build.334",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c77b818d4f79d49f6a6ca13f31fbcbdcc990a9dc"
+  },
+  "release": {
+    "version": "2.3.121",
+    "build": 334,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.121-build.334-linux-arm64.zip",
+    "byte_size": 19983276,
+    "sha256": "bdca39e4b2a09ce8ce7579cf92d8d24edff32542dcbe9b18c0ea9b66ba767d59",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved source PR715 separates preflight acquisition and finite observation deadlines without changing hardware identity or readiness admission. Merge c6a87aeb36107d38b44307b02da5db161757c461.",
+      "Two full ARM64 packages are byte identical. Exact-package convergence, rollback and native embedded-health qualification passed with production-signed updater1.0.85: https://github.com/gdowkpc/apollo/actions/runs/39347018083",
+      "Package and independent ZIP/embedded-module audit with source identities and scoped native-loader evidence: qualifications/apollo-passive-v2.3.121-build.334.package.json; SHA256 0cf30d14eb7ae8a1cd30f580793fac21b1c399c4d99ea4427bc94b896a1b020e.",
+      "Application staging only. Normal installer and original307 dashboard qualification remain pending. No stable descriptor, download portal or customer node changes."
+    ]
+  }
+}
