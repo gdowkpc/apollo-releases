@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.127-build.340",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "a73b0e83c9fb4e89477f74e4209d2a5257df346f"
+  },
+  "release": {
+    "version": "2.3.127",
+    "build": 340,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.127-build.340-linux-arm64.zip",
+    "byte_size": 19987807,
+    "sha256": "b6f44c7521b9a66d72ae14110cd98bb0fdb27b91998bc7feb40d9b196f581a56",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved source PR722 at 9dc94c62c6684ec8c19c4a453a05d94a2e8eb479, merged as a73b0e83c9fb4e89477f74e4209d2a5257df346f. Existing initialization and hardware identity/health safeguards retained.",
+      "Two byte-identical native ARM64 packages; exact package install/rollback/convergence and native embedded-health workflow: https://github.com/gdowkpc/apollo/actions/runs/39481328001",
+      "Independent exact archive and embedded-source audit plus source/packaged tests: qualifications/apollo-passive-v2.3.127-build.340.package.json; SHA256 9cde28c9fa33274de390aaf2cddf25a04b90a1bf68bfbef623c505d4211c1307.",
+      "Application-only staging. Physical installer, native cold-start and original Build307 delivery remain separate pending gates. No dashboard target or customer changes."
+    ]
+  }
+}

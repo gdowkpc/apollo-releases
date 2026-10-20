@@ -1,0 +1,193 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.127",
+  "build": 340,
+  "source_commit": "a73b0e83c9fb4e89477f74e4209d2a5257df346f",
+  "approved_source_head": "9dc94c62c6684ec8c19c4a453a05d94a2e8eb479",
+  "scope": "Application-only staging prerequisite; not physical installer, original Build307 dashboard delivery, or customer receiver qualification.",
+  "package": {
+    "artifact": "ApolloPassiveReceive-2.3.127-build.340-linux-arm64.zip",
+    "bytes": 19987807,
+    "sha256": "b6f44c7521b9a66d72ae14110cd98bb0fdb27b91998bc7feb40d9b196f581a56",
+    "principal_sha256": "fe5683d50ef397f71e6085e0d6815337660595d83e27bb0158da14b4c8ea5a62",
+    "two_packages_byte_identical": true
+  },
+  "source_and_packaged_tests": {
+    "arm64-source-tests.log": {
+      "tests": 656,
+      "pass": 651,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 5,
+      "todo": 0
+    },
+    "privileged-source-tests.log": {
+      "tests": 60,
+      "pass": 58,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 2,
+      "todo": 0
+    },
+    "rtl-closure-source-tests.log": {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "native-pi-setup-tests.log": {
+      "tests": 27,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 20,
+      "todo": 0
+    },
+    "native-server-contract-tests.log": {
+      "tests": 42,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 35,
+      "todo": 0
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 103,
+      "pass": 8,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 95,
+      "todo": 0
+    },
+    "packaged-setup-tests.log": {
+      "tests": 79,
+      "pass": 79,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-timing-tests.log": {
+      "tests": 142,
+      "pass": 142,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-cold-profile-tests.log": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-startup-tests.log": {
+      "tests": 128,
+      "pass": 128,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "installer-source-tests.log": {
+      "tests": 53,
+      "pass": 53,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "source_test_environment": {
+    "first_run_general_source_tests": {
+      "tests": 656,
+      "pass": 651,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 5,
+      "todo": 0
+    },
+    "separate_first_run_privileged_fixture_tests": {
+      "tests": 60,
+      "pass": 58,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 2,
+      "todo": 0
+    },
+    "build_driver_sha256": "b53ea1a24c7ad2d273c7e8e0386a7a96470591faa47340d425d51944ca5ad993",
+    "scope": "Root-fixture tests were run in their isolated root context from the first dispatch. Both first-run source logs must have zero failures.",
+    "installer_service_model": {
+      "sha256": "8cba38e7f474a5642cfe7bda03da62e5dd9d58a63b89377a7c5b5b4e07b0e67f",
+      "scope": "Pure Python source tests only; exact absent dashboard units in isolated namespace without systemd. Not actual systemd or physical service admission evidence."
+    }
+  },
+  "independent_archive_audit": {
+    "result": "PASS_OFFLINE_FROZEN340_PACKAGE_AUDIT_WITH_SCOPE_LIMITS",
+    "receipt_sha256": "9f99e8bfa2f2a929e5d64d34720ab202bc5c0d652266c496a9bdd40f2f9d5d80",
+    "protected_controller_files_verified": 57,
+    "loose_source_files_verified": 81,
+    "embedded_source_proofs": {
+      "setup": {
+        "modules": 137,
+        "proof_sha256": "3123d35d39f435fd2acd4afa11d295a423aa2d41e9ed4aab455ba1f9ed93b871"
+      },
+      "readiness": {
+        "modules": 68,
+        "proof_sha256": "732f72a9aedd9d97b7f8bb6e7a3382eebbdd9a8832b5d11c657a6c9dbea538b9"
+      },
+      "timing": {
+        "modules": 70,
+        "proof_sha256": "ad500fca59241e9c0864bfdc67d1e8ac1e1662de2abc0d6635b7bdc2237fcc60"
+      },
+      "cold-profile": {
+        "modules": 68,
+        "proof_sha256": "6cd8f1e44208ea486b60066dffca1763229c8c29aafc44bd8d665d091a286a3a"
+      },
+      "startup": {
+        "modules": 70,
+        "proof_sha256": "5c621b0b7ea29fe9c2fbcee82355e5711228ba7cd46ca08e2911507b900a11b1"
+      }
+    }
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39481328001",
+    "source": "a73b0e83c9fb4e89477f74e4209d2a5257df346f",
+    "conclusion": "success",
+    "updater_version": "1.0.85",
+    "log_sha256": "a69b8191ad40382a3dff11f1cbbaf50dec29333f658740c1ed2c0c69e1281771"
+  },
+  "limits": [
+    "Refresh timing snapshots existing bounded tone ownership before the manager queue and retains the same deadlines through adapter admission. Unknown or expired work remains fail-closed; no timeout or identity guard is relaxed.",
+    "Native cold-start and original Build307 complete-installer delivery remain separately pending; source and packaged queue timing tests do not establish customer readiness.",
+    "Native receiver binaries were reused after byte-for-byte verification and unchanged native-source checks; no new driver compilation is claimed.",
+    "All source and packaged test failures are zero; platform and name-filter skips are retained explicitly.",
+    "No stable target, updater floor, public probe, complete installer, downloads-page or customer changes."
+  ]
+}
