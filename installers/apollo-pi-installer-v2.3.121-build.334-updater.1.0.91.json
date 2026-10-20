@@ -1,0 +1,56 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "c77b818d4f79d49f6a6ca13f31fbcbdcc990a9dc"
+  },
+  "target": {
+    "version": "2.3.121",
+    "build": 334,
+    "source_commit": "c77b818d4f79d49f6a6ca13f31fbcbdcc990a9dc",
+    "release_tag": "apollo-passive-v2.3.121-build.334",
+    "sha256": "bdca39e4b2a09ce8ce7579cf92d8d24edff32542dcbe9b18c0ea9b66ba767d59"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.121-build.334-updater.1.0.91-linux-arm64.zip",
+    "bytes": 311111,
+    "sha256": "b8d3a015b23e1f3496fec79f2307b245083de83e11d95d5d1084c674b1d22ae3"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact complete installer upgrades registered Build333 to334, repeats installation, preserves registration, credentials, settings and tuning, physically reboots the Pi, and verifies fresh authenticated check-ins plus all seven configured processing windows before and after reboot; isolated one-approval setup checks.",
+    "collector_source_commit": "c77b818d4f79d49f6a6ca13f31fbcbdcc990a9dc",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39345492272",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39347018083",
+    "qualification_test_commit": "c77b818d4f79d49f6a6ca13f31fbcbdcc990a9dc",
+    "limits": "Owned Pi3B+ RTL-SDR installation qualification only. Original307 dashboard activation, restart, rollback, retry, firstSave and owner delivery remain separate native bridge gates. No customer installation, organic RF delivery, new physical enrollment or other receiver-model claim. Public stable discovery and downloads page remain unchanged. Retained cumulative failed_sweeps is20 in all three pre-reboot samples and21 in all three post-reboot samples; the other five counters are zero. The unchanged validator requires stability within each phase and passed. The between-phase change is disclosed separately; its cause and phase remain unestablished. No policy waiver or counter reset was used."
+  },
+  "release_tag": "apollo-pi-installer-v2.3.121-build.334-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.121-build.334-updater.1.0.91.onboarding.json",
+    "sha256": "edd8fb22be32f166afdcdb6cd2dcd6244095940e1054cc602a700fc1563f3817"
+  }
+}
