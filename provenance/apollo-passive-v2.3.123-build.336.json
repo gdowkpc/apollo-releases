@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.123-build.336",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "df5de5c319fa85d0b75340a6782b742fee36d7ce"
+  },
+  "release": {
+    "version": "2.3.123",
+    "build": 336,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.123-build.336-linux-arm64.zip",
+    "byte_size": 19986364,
+    "sha256": "42fadd2bc52c7b092c5b9b3c4fb8b415a0b40611d79654d72d580da3805f09b5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved source PR718 preserves the browser Host, including port, through the managed update gateway. Merge 40ff4ced7a2cbdc0aa42ca6444144422763db831. Same-origin and hardware identity safeguards remain intact.",
+      "Two ARM64 builds are byte identical. Exact-package target-state and native embedded-health checks passed with production-signed updater1.0.85: https://github.com/gdowkpc/apollo/actions/runs/39364773403",
+      "Exact package and independent embedded-source audit, with retained test-context corrections: qualifications/apollo-passive-v2.3.123-build.336.package.json; SHA256 999f04743d7a1b220e7b567b5bb0ffac7cc5e052e45756c1998f85f01afea4c9.",
+      "Application staging only. Physical installer and actual Build307 dashboard delivery remain pending. No stable target, download page or customer changes."
+    ]
+  }
+}
