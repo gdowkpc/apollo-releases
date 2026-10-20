@@ -1,0 +1,56 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ce6cb87acd2bb1078eb2018828cd1ea67933d903"
+  },
+  "target": {
+    "version": "2.3.124",
+    "build": 337,
+    "source_commit": "ce6cb87acd2bb1078eb2018828cd1ea67933d903",
+    "release_tag": "apollo-passive-v2.3.124-build.337",
+    "sha256": "165250366e876a8eccadb200fd09398b4b56a64fa4dda5483b3a45353f7d6fd6"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.124-build.337-updater.1.0.91-linux-arm64.zip",
+    "bytes": 311115,
+    "sha256": "e15380755dc650afe912f45509abc6d8e22a7f95fa0d0c4b4f6bad789e9d86b6"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact complete installer upgrades registered Build334 to337, repeats installation, preserves registration, credentials, settings and tuning, physically reboots the Pi, and verifies fresh authenticated check-ins plus all seven configured processing windows before and after reboot; isolated one-approval setup checks.",
+    "collector_source_commit": "ce6cb87acd2bb1078eb2018828cd1ea67933d903",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39366523521",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39367780674",
+    "qualification_test_commit": "ce6cb87acd2bb1078eb2018828cd1ea67933d903",
+    "limits": "Owned Pi3B+ RTL-SDR installation qualification only. Original307 dashboard activation, restart, rollback, retry, firstSave and owner delivery remain separate native bridge gates. No customer installation, organic RF delivery, new physical enrollment or other receiver-model claim. Public stable discovery and downloads page remain unchanged. Exact cumulative receiver counters for each signed sample: {\"post_reboot\": [{\"failed_sweeps\": 24, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 24, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 24, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}], \"pre_reboot\": [{\"failed_sweeps\": 24, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 24, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 24, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}]}. Counters must meet the unchanged validator; no reset or waiver."
+  },
+  "release_tag": "apollo-pi-installer-v2.3.124-build.337-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.124-build.337-updater.1.0.91.onboarding.json",
+    "sha256": "f858005dd108067cfe30c42d2d372c3f9d48047f5c08c5fbed140d12689304b7"
+  }
+}
