@@ -1,0 +1,193 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.126",
+  "build": 339,
+  "source_commit": "8ad63efe4d2e4c7e0aa77163b6718e41b7da7720",
+  "approved_source_head": "ff85b3e8a1b14e3294c82842a9625c610ec9f398",
+  "scope": "Application-only staging prerequisite; not physical installer, original Build307 dashboard delivery, or customer receiver qualification.",
+  "package": {
+    "artifact": "ApolloPassiveReceive-2.3.126-build.339-linux-arm64.zip",
+    "bytes": 19987451,
+    "sha256": "12e784cd357c89e2f51c1b72d3a4cb1e6374ee0f7e44e267f05ee96fe9d65257",
+    "principal_sha256": "5d1461ead3e728471c6453ad842871274f1a493a13f5e88050e20d7cef19205d",
+    "two_packages_byte_identical": true
+  },
+  "source_and_packaged_tests": {
+    "arm64-source-tests.log": {
+      "tests": 651,
+      "pass": 646,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 5,
+      "todo": 0
+    },
+    "privileged-source-tests.log": {
+      "tests": 60,
+      "pass": 58,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 2,
+      "todo": 0
+    },
+    "rtl-closure-source-tests.log": {
+      "tests": 23,
+      "pass": 23,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "native-pi-setup-tests.log": {
+      "tests": 27,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 20,
+      "todo": 0
+    },
+    "native-server-contract-tests.log": {
+      "tests": 42,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 35,
+      "todo": 0
+    },
+    "packaged-readiness-tests.log": {
+      "tests": 103,
+      "pass": 8,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 95,
+      "todo": 0
+    },
+    "packaged-setup-tests.log": {
+      "tests": 79,
+      "pass": 79,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-timing-tests.log": {
+      "tests": 137,
+      "pass": 137,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-cold-profile-tests.log": {
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-startup-tests.log": {
+      "tests": 128,
+      "pass": 128,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-native-tone-tests.log": {
+      "tests": 12,
+      "pass": 12,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-airspy-tests.log": {
+      "tests": 48,
+      "pass": 48,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "packaged-decoder-tests.log": {
+      "tests": 17,
+      "pass": 17,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "installer-source-tests.log": {
+      "tests": 53,
+      "pass": 53,
+      "fail": 0,
+      "skipped": 0
+    }
+  },
+  "source_test_environment": {
+    "first_run_general_source_tests": {
+      "tests": 651,
+      "pass": 646,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 5,
+      "todo": 0
+    },
+    "separate_first_run_privileged_fixture_tests": {
+      "tests": 60,
+      "pass": 58,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 2,
+      "todo": 0
+    },
+    "build_driver_sha256": "faab22871152276c5763c9bc60176952483f30f869a9017ae6b2e9ae339c6538",
+    "scope": "Root-fixture tests were run in their isolated root context from the first dispatch. Both first-run source logs must have zero failures.",
+    "installer_service_model": {
+      "sha256": "8cba38e7f474a5642cfe7bda03da62e5dd9d58a63b89377a7c5b5b4e07b0e67f",
+      "scope": "Pure Python source tests only; exact absent dashboard units in isolated namespace without systemd. Not actual systemd or physical service admission evidence."
+    }
+  },
+  "independent_archive_audit": {
+    "result": "PASS_OFFLINE_FROZEN339_PACKAGE_AUDIT_WITH_SCOPE_LIMITS",
+    "receipt_sha256": "26d599ef382d76ca56fa540dfbccb5ec86893f0069a238133cc83d1208a6f3fb",
+    "protected_controller_files_verified": 57,
+    "loose_source_files_verified": 81,
+    "embedded_source_proofs": {
+      "setup": {
+        "modules": 137,
+        "proof_sha256": "bee423b6d4d29def75957cdc106c7928541ae688f187f9cb9b9e41b8b5f24238"
+      },
+      "readiness": {
+        "modules": 68,
+        "proof_sha256": "a7cb95bca96b5c503e4f93733907c104a304ddc00e7abd204645f96452c0af32"
+      },
+      "timing": {
+        "modules": 70,
+        "proof_sha256": "68147bf174be9775665a8fbd79357b3360dfc7ac6c451a3ddf1f0239d5d52250"
+      },
+      "cold-profile": {
+        "modules": 68,
+        "proof_sha256": "9395e90bcba9bf24e84ea23172265ec07c11cb76983a20650f9f2bee15c4ffcb"
+      },
+      "startup": {
+        "modules": 70,
+        "proof_sha256": "468968ecaa08ad0b70fb8e7e3b9cc01d6b96b3031e0a523ae39b937055e5331c"
+      }
+    }
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39468494678",
+    "source": "8ad63efe4d2e4c7e0aa77163b6718e41b7da7720",
+    "conclusion": "success",
+    "updater_version": "1.0.85",
+    "log_sha256": "5ca8a42a9dcd8c3597a5d04497e9a829c9318518ff8a05bbd495a88f26328f76"
+  },
+  "limits": [
+    "Persistent status reconnect is bounded after fresh source admission. It preserves generation, shutdown, hardware identity and health guards; connecting alone grants no receiver readiness.",
+    "Native cold-start and original Build307 complete-installer delivery remain separately pending; source and packaged connection recovery tests do not establish customer readiness.",
+    "Native receiver binaries were reused after byte-for-byte verification and unchanged native-source checks; no new driver compilation is claimed.",
+    "All source and packaged test failures are zero; platform and name-filter skips are retained explicitly.",
+    "No stable target, updater floor, public probe, complete installer, downloads-page or customer changes."
+  ]
+}
