@@ -1,0 +1,531 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.123",
+  "build": 336,
+  "source_commit": "df5de5c319fa85d0b75340a6782b742fee36d7ce",
+  "source_merge": "40ff4ced7a2cbdc0aa42ca6444144422763db831",
+  "scope": "Application-only staging prerequisite. Physical installer and actual original Build307 dashboard transaction remain pending.",
+  "package_audit": {
+    "passed": true,
+    "source": "df5de5c319fa85d0b75340a6782b742fee36d7ce",
+    "version": "2.3.123",
+    "build": 336,
+    "artifact": "ApolloPassiveReceive-2.3.123-build.336-linux-arm64.zip",
+    "bytes": 19986364,
+    "sha256": "42fadd2bc52c7b092c5b9b3c4fb8b415a0b40611d79654d72d580da3805f09b5",
+    "principal_sha256": "6d0ad6500c24f270ec8a7412e88ff24ae9570c8410704cc6915183f040dc2120",
+    "source_test_environment": {
+      "initial_unprivileged_run": {
+        "tests": 671,
+        "pass": 640,
+        "fail": 3,
+        "skipped": 28
+      },
+      "initial_failures_retained": [
+        "managed gateway verification requires the exact no-trailing-slash route",
+        "target-owned state converges clean and legacy roots and restores authenticated predecessor",
+        "clean preflight loads a hash-bound packaged starter and a unique USB receiver"
+      ],
+      "correct_privileged_namespace_tests": {
+        "tests": 60,
+        "pass": 58,
+        "fail": 0,
+        "skipped": 2
+      },
+      "original_failed_log_sha256": "1c1cf21983aed9617738f26b22a1973062b6c35ef3539a7d86050f9bc52e8722",
+      "qualified_log_sha256": "8c695da4eb22ab4f73e68f7570e08356fc4ebac34342b711286134cddb6518d3",
+      "scope": "Same committed source; root-fixture environment correction, no failure suppression or source change."
+    },
+    "packaged_gateway_controller": {
+      "scope": "actual protected target controller bytes and target-owned gateway rendering; no standalone app source-file requirement",
+      "modules": [
+        {
+          "file": "protected-controller-bootstrap/src/updates/managed_nginx_gateway.js",
+          "sha256": "57b6df66e83d94346999bfd302c93f70778dfe1eb1b87309856a38f05d591508",
+          "source_sha256": "57b6df66e83d94346999bfd302c93f70778dfe1eb1b87309856a38f05d591508"
+        }
+      ],
+      "profiles": [
+        {
+          "profile": "universal",
+          "rendered_sha256": "6cc5b8c3db14c935ece40bbba1ab0dda8740e80a8f6993c6b2c868b1f60da250",
+          "idempotent": true
+        },
+        {
+          "profile": "airspy",
+          "rendered_sha256": "aa701391b7780593d7e29a5430c4cbd3c6127faa4fceb2c1e6c2a1b91fa36717",
+          "idempotent": true
+        }
+      ]
+    },
+    "two_packages_byte_identical": true,
+    "embedded_observations_verified": 275,
+    "test_groups": {
+      "privileged-source-tests.log": {
+        "tests": 60,
+        "pass": 58,
+        "fail": 0,
+        "skipped": 2
+      },
+      "rtl-closure-source-tests.log": {
+        "tests": 23,
+        "pass": 23,
+        "fail": 0,
+        "skipped": 0
+      },
+      "native-pi-setup-tests.log": {
+        "tests": 27,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 20
+      },
+      "native-server-contract-tests.log": {
+        "tests": 42,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 35
+      },
+      "packaged-readiness-tests.log": {
+        "tests": 102,
+        "pass": 8,
+        "fail": 0,
+        "skipped": 94
+      },
+      "packaged-setup-tests.log": {
+        "tests": 79,
+        "pass": 79,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-timing-tests.log": {
+        "tests": 136,
+        "pass": 136,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-native-tone-tests.log": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-airspy-tests.log": {
+        "tests": 48,
+        "pass": 48,
+        "fail": 0,
+        "skipped": 0
+      },
+      "packaged-decoder-tests.log": {
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    "rtlsdr_linkage": {
+      "schema": "apollo_ka9q_rtlsdr_static_v1",
+      "ka9q_source_commit": "8f6a05b3b4b5ee5c85ff556f64af918e561786b4",
+      "rtl_source_repository": "https://github.com/rtlsdrblog/rtl-sdr-blog",
+      "rtl_source_commit": "aed0ea19f3a273370a13c9009b96313c75d54c7b",
+      "static_archive_sha256": "5d9e24a582d2629a671e9cb032d5b0a7de1d8b618d040e98b04bb6bd58b7b93c",
+      "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+      "needed": [
+        "libbsd.so.0",
+        "libc.so.6",
+        "libusb-1.0.so.0"
+      ],
+      "source_availability": "third_party/rtl-sdr/rtlsdrblog-v4/README.md"
+    },
+    "actual_packaged_driver_elf": {
+      "elf_class": 64,
+      "endianness": "little",
+      "machine": 183,
+      "needed": [
+        "libusb-1.0.so.0",
+        "libbsd.so.0",
+        "libc.so.6"
+      ]
+    },
+    "rtl_source_assets": [
+      "third_party/rtl-sdr/rtlsdrblog-v4/README.md",
+      "third_party/rtl-sdr/rtlsdrblog-v4/apollo-rf-lifecycle.patch"
+    ],
+    "packaged_receiver_guard_hashes": {
+      "managed-release/pi_receiver_detection.js": "a17f27f0c3f55b26193c98f91d3cfd89e2f33e9aaf630613dd2708230f0a2c25",
+      "managed-release/pi_receiver_starter_profile.js": "5ecc58cba09f265608151ac7d9372a7c45a81f7215215b4b323693728bbb8853",
+      "principal:server.js": "21ce756ab1f2ec11129a12d98a8d767d02842d3f3ecebd96175b35f6e24993e2",
+      "principal:pi_receiver_watch.js": "d5f7143bf5a8cf6bc4602bd1315162acff7ea080cd02fe4161ac6b3473e3f1b1"
+    },
+    "minimal_runtime_native_ci": {
+      "url": "https://github.com/gdowkpc/apollo/actions/runs/39328175262",
+      "head": "7c123e03760658db71fcfae7cc8adf2145707ef6",
+      "result": {
+        "passed": true,
+        "scope": "native_plugin_load_without_external_rtl_library",
+        "module_sha256": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+        "runtime_image": "sha256:79c70727a896d88aca686270c4897fc3281811ce8735d67fb83de451bee1d384",
+        "actual_plugin_initialization_observed": true,
+        "no_hardware_driver_setup_observed": true,
+        "exit_status": 66,
+        "physical_usb_exposed": false,
+        "physical_rf_qualified": false,
+        "production_records_mutated": false
+      },
+      "scope": "Prior source CI, exact identical packaged driver bytes verified; no new CI run claimed"
+    },
+    "physical_installation_qualified": false,
+    "legacy_dashboard_qualified": false,
+    "live_rf_reporting_qualified": false
+  },
+  "independent_archive_and_embedded_audit": {
+    "status": "PASS_OFFLINE_FROZEN_PACKAGE_AUDIT_WITH_SCOPE_LIMITS",
+    "findings": [],
+    "source": "df5de5c319fa85d0b75340a6782b742fee36d7ce",
+    "approved_merge": "40ff4ced7a2cbdc0aa42ca6444144422763db831",
+    "artifact_sha256": "42fadd2bc52c7b092c5b9b3c4fb8b415a0b40611d79654d72d580da3805f09b5",
+    "artifact_bytes": 19986364,
+    "manifest_sha256": "70b061fac73e53bf05549c2c02450cc52b4e2cbb326020b868405013968343dc",
+    "principal_sha256": "6d0ad6500c24f270ec8a7412e88ff24ae9570c8410704cc6915183f040dc2120",
+    "zip_members": 188,
+    "portable_inventory_sha256": "6a2545703be6279b7f97e40691c6f903e15f1f1dd2cfd45f6d658b6fbe9a346d",
+    "protected_controller_files_verified": 57,
+    "loose_source_files_verified": 81,
+    "embedded_source_observations": {
+      "setup": {
+        "observations": 137,
+        "proof_sha256": "6fcc30c37940d6a6ad5f809445108c272e42e03c200ded3d3aebd41234dcf43e"
+      },
+      "readiness": {
+        "observations": 68,
+        "proof_sha256": "4f6e5ac19b4ded2895242900f3f78f852a07c7109d3d5d476168818781d2209a"
+      },
+      "timing": {
+        "observations": 70,
+        "proof_sha256": "7292faf89e9d9e8070acde2924e41cd4ea1c7f0fac35cbcb0433108576b73993"
+      }
+    },
+    "gateway_render_replayed": [
+      {
+        "profile": "universal",
+        "rendered_sha256": "6cc5b8c3db14c935ece40bbba1ab0dda8740e80a8f6993c6b2c868b1f60da250",
+        "idempotent": true
+      },
+      {
+        "profile": "airspy",
+        "rendered_sha256": "aa701391b7780593d7e29a5430c4cbd3c6127faa4fceb2c1e6c2a1b91fa36717",
+        "idempotent": true
+      }
+    ],
+    "receiver_guard_hashes": {
+      "pi_receiver_detection.js": "a17f27f0c3f55b26193c98f91d3cfd89e2f33e9aaf630613dd2708230f0a2c25",
+      "pi_receiver_starter_profile.js": "5ecc58cba09f265608151ac7d9372a7c45a81f7215215b4b323693728bbb8853",
+      "server.js": "21ce756ab1f2ec11129a12d98a8d767d02842d3f3ecebd96175b35f6e24993e2",
+      "pi_receiver_watch.js": "d5f7143bf5a8cf6bc4602bd1315162acff7ea080cd02fe4161ac6b3473e3f1b1"
+    },
+    "unchanged_native_member_hashes": {
+      "sdr-airspy/apollo_airspy_capture": "60de7e3e9a973f96cb370f9bf2cec351075b29d0da9e786875f9139faede7516",
+      "sdr-ka9q/airspy.so": "21a498527f6e173e9e565f1b100c418325af226cf3bd35fba1f13170e4ef6c5d",
+      "sdr-ka9q/apollo-build-provenance.json": "7d78920386383c7da77cc5a12db8512e7b424560d2ce6616d3b080f73614bb55",
+      "sdr-ka9q/ctcss": "6f82cb4efce17cd162bf3d2303d3af9fa5ca0d38c3162391771beeaa0942ea9d",
+      "sdr-ka9q/metadump": "109c7619f1e2346f9b2b0545cac5bff952c34da08563975e8ac902c8da020e93",
+      "sdr-ka9q/pcmrecord": "af2f02b0cbb1c0ebd073abda6c4c054c7eb74cd70c6ce4153a0d2cf3273b7834",
+      "sdr-ka9q/presets.conf": "024b4d4d9a232c9001d9bd53ecdd23cfba849a34a6af7a738c4ac209fac2e87c",
+      "sdr-ka9q/radiod": "05b862baf0aa54e1e3fe3b0854a3781aa203b76a0cb40efe1f40f09cf736f0e8",
+      "sdr-ka9q/rtlsdr.so": "d53ab830a76eb2d05363732bd52ccfa5a1179ee241e45a0b3f52a8cc3c96c7cd",
+      "sdr-ka9q/sdrplay.so": "b31d690c9f51f61926f10cc0ba90028a287b116a75aa7889289533198231b3c2",
+      "sdr-ka9q/tune": "4d055febea7b1965dadccf563e18362a4f46e86d732a1c831cea1cfd21fd5f62",
+      "sdr-sdrplay/ka9q-sdrplay-ready": "a43b0ef6062a57a292ed31df51638b4cea975b7a86936d4a45dfe1b15c89513d"
+    },
+    "driver_actual_elf_needed": [
+      "libbsd.so.0",
+      "libc.so.6",
+      "libusb-1.0.so.0"
+    ],
+    "test_logs": {
+      "rtl-closure-source-tests.log": {
+        "tests": 23,
+        "pass": 23,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "854869a5dff1b58de776e1555143d4b1bd8ec926dfedc0f6e7db39de7d06740e"
+      },
+      "rtl-loader-interpretation-tests.log": {
+        "tests": 5,
+        "pass": 5,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "python_unittest",
+        "sha256": "6273232de4d3ef7acd4ecafa5c86beeeb974f56586b21089a2990b3f72facbe6"
+      },
+      "native-pi-setup-tests.log": {
+        "tests": 27,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 20,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "e45247996aaf97884d202b52595e78d238091c5162d33484a698102121d8786d"
+      },
+      "native-server-contract-tests.log": {
+        "tests": 42,
+        "pass": 7,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 35,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "8e08b6af6803674b797a5d51c8fac696565de7dd497a7d7a2699b9893aa680d6"
+      },
+      "packaged-readiness-tests.log": {
+        "tests": 102,
+        "pass": 8,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 94,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "cc5df3157374b83d9ee41a5aedf197fb0bb7c585148ac2649ed966ed3e15681b"
+      },
+      "packaged-setup-tests.log": {
+        "tests": 79,
+        "pass": 79,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "1eeda442071d84cac204a9804634e54b4772a3e280b59adaadee4c4156b0c39b"
+      },
+      "packaged-timing-tests.log": {
+        "tests": 136,
+        "pass": 136,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "382a4ffa9ebe65b84a1a3fae914e1a09c111f9a2ad329a56a63790c4c1aaafd4"
+      },
+      "packaged-decoder-tests.log": {
+        "tests": 17,
+        "pass": 17,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "dab678badfd3ad58077e92dcf3e7dba5cddaba7c860b60122a4d7590b529c8f9"
+      },
+      "packaged-airspy-tests.log": {
+        "tests": 48,
+        "pass": 48,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "26cb64c641c9f792bbf31887b944ba537eb0d944e3d97c18e3d47422592a50f0"
+      },
+      "packaged-native-tone-tests.log": {
+        "tests": 12,
+        "pass": 12,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "c6dae946ab46c772df52dbaa9407dad4701ff6c6e5ec2361b842d0e4d28cd6ce"
+      },
+      "privileged-source-tests.log": {
+        "tests": 60,
+        "pass": 58,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 2,
+        "todo": 0,
+        "format": "node_tap",
+        "sha256": "8c695da4eb22ab4f73e68f7570e08356fc4ebac34342b711286134cddb6518d3"
+      }
+    },
+    "initial_failed_source_counts": {
+      "tests": 671,
+      "pass": 640,
+      "fail": 3,
+      "skipped": 28
+    },
+    "initial_three_cases_pass_correct_root_context": true,
+    "raw_initial_failure_preserved": true,
+    "reused_loader_evidence": "identical driver; prior actual ARM64 plugin initialization/nohardware proof, not new native run",
+    "two_build_reproducibility": "two saved builder hashes; second physical ZIP not independently retrieved",
+    "root_audit_sha256": "24a7f073ee133bb7ce11cae82be8cb4fa9899adca32c3b5c01b73f5c33c43b2e",
+    "auditor_helper_sha256": "d6e59d09e5d3cb09920fc9101a0f932e99a4e5fb9a4db5b8a3e9d5851b832233",
+    "local_execution": "pure actual-packaged JS gateway renderer only; no build/test repetition, remote/device/native execution",
+    "limits": [
+      "source tests and source fixture context correction do not prove physical installation",
+      "filtered groups retain explicit skips; logs not deduplicated into a single aggregate pass count",
+      "actual package workflow still separate; no fresh status assertion from this saved offline audit",
+      "no source signing/publication/customer delivery approval",
+      "original307 actual browser update/receiver preservation/runtime/install still unqualified",
+      "no liveRF/map/customer readiness claim"
+    ],
+    "original307_dashboard_qualified": false,
+    "physical_install_qualified": false,
+    "customer_ready": false
+  },
+  "exact_package_workflow": {
+    "conclusion": "success",
+    "headSha": "df5de5c319fa85d0b75340a6782b742fee36d7ce",
+    "jobs": [
+      {
+        "completedAt": "2026-10-20T03:34:45Z",
+        "conclusion": "success",
+        "databaseId": 118438986077,
+        "name": "target-state-convergence",
+        "startedAt": "2026-10-20T03:31:53Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-20T03:31:56Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-20T03:31:55Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:31:58Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 2,
+            "startedAt": "2026-10-20T03:31:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:31:58Z",
+            "conclusion": "success",
+            "name": "Prepare disk-backed ARM64 temporary workspace",
+            "number": 3,
+            "startedAt": "2026-10-20T03:31:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:31:58Z",
+            "conclusion": "success",
+            "name": "Verify physical runner and frozen evidence",
+            "number": 4,
+            "startedAt": "2026-10-20T03:31:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:32:00Z",
+            "conclusion": "success",
+            "name": "Fetch production-signed updater fixture",
+            "number": 5,
+            "startedAt": "2026-10-20T03:31:58Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:32:25Z",
+            "conclusion": "success",
+            "name": "Require packaged clean and legacy convergence",
+            "number": 6,
+            "startedAt": "2026-10-20T03:32:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:32:26Z",
+            "conclusion": "success",
+            "name": "Require isolated packaged RSP1B module load and profile-apply systemd write",
+            "number": 7,
+            "startedAt": "2026-10-20T03:32:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:32:27Z",
+            "conclusion": "success",
+            "name": "Require root-installed RTL runtime inventory readable by the service user",
+            "number": 8,
+            "startedAt": "2026-10-20T03:32:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:32:29Z",
+            "conclusion": "success",
+            "name": "Install locked dependencies for the embedded native qualification executable",
+            "number": 9,
+            "startedAt": "2026-10-20T03:32:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:34:40Z",
+            "conclusion": "success",
+            "name": "Require native packaged KA9Q stream through embedded Apollo RF health",
+            "number": 10,
+            "startedAt": "2026-10-20T03:32:29Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:34:40Z",
+            "conclusion": "success",
+            "name": "Remove this run's disk-backed temporary workspace",
+            "number": 11,
+            "startedAt": "2026-10-20T03:34:40Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:34:40Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+            "number": 22,
+            "startedAt": "2026-10-20T03:34:40Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-20T03:34:40Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 23,
+            "startedAt": "2026-10-20T03:34:40Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/gdowkpc/apollo/actions/runs/39364773403/job/118438986077"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39364773403"
+  },
+  "exact_package_workflow_log": {
+    "workflow": "39364773403",
+    "source": "df5de5c319fa85d0b75340a6782b742fee36d7ce",
+    "conclusion": "success",
+    "log_sha256": "30e6da44d9e804db45daec5a2e7f75ac7aecfa91b75e3a7973d433185a0550d3",
+    "temporary_qa_branch_removed": true,
+    "public_catalog_changed": false
+  },
+  "canonical_workflow_updater_version": "1.0.85",
+  "artifact_workflow_inputs": {
+    "target_artifact_path": "/var/tmp/apollo-arm64-workflows/dashboard-gateway336-20261019/first/ApolloPassiveReceive-2.3.123-build.336-linux-arm64.zip",
+    "target_artifact_sha256": "42fadd2bc52c7b092c5b9b3c4fb8b415a0b40611d79654d72d580da3805f09b5",
+    "target_source_sha": "df5de5c319fa85d0b75340a6782b742fee36d7ce",
+    "build191_evidence_path": "/home/pi/.apollo-private-qualification/ApolloPassiveReceive-2.2.21-build.191-linux-arm64-5e13e701.zip",
+    "build191_disabled_dropins_dir": "/home/pi/.apollo-private-qualification/build191-dropins",
+    "ka9q_test_source_path": "/home/pi/.apollo-private-qualification/ka9q-build224-source",
+    "ka9q_test_dependency_prefix": "/var/tmp/apollo-arm64-workflows/ka9q-test-inputs/usr",
+    "updater_version": "1.0.85"
+  },
+  "limits": [
+    "The initial unprivileged source run had three root-fixture failures. All three passed in the correct isolated root context with unchanged source; original failures remain retained.",
+    "A missing build-only RTL linkage sidecar was restored from the exact prior qualified input with its captured hash. Driver bytes remain unchanged.",
+    "The first gateway proof used a nonexistent loose application module. Correct proof checks the actual packaged protected controller; archive bytes were unchanged.",
+    "Prior minimal-loader CI applies only to the identical driver hash and retains its original source and no-device scope.",
+    "No actual Build307 dashboard delivery, ordinary LAN recovery, customer installation, live RF reporting or broad public bridge eligibility is claimed.",
+    "No stable descriptor, updater floor, public probe authorization, complete installer or download-page promotion changes."
+  ]
+}
