@@ -24,3 +24,12 @@ Neither scope changes receiver detection, sampling/error checks, production
 authentication, node ownership, Live authority, observation quality, review or
 directory rules. Historical frozen records and their existing hash exceptions
 are preserved. No new per-release bypass or unqualified allowlist is added.
+
+Installer-only corrections may retain the immutable application and signed
+updater while setting `installer_revision` to an integer of at least 2. The
+release tag and ZIP filename must include the matching `-revision.N` suffix.
+An omitted revision keeps the historical names unchanged. Each changed ZIP
+requires its own exact-artifact signed qualification and publication record;
+an earlier installer's evidence cannot qualify different bytes. Revisions do
+not replace published assets, change application build ordering, or relax any
+installation, preservation, reboot, check-in or receiver-progress requirement.

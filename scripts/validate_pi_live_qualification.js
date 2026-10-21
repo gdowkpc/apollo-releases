@@ -141,9 +141,12 @@ function validateRecord(record, relative, root, policy) {
     && integer(expected.build) && expected.build > 0 && /^[a-f0-9]{40}$/.test(expected.source_commit || "")
     && [expected.application_sha256,expected.updater_sha256,expected.installer_sha256].every(hex)
     && integer(expected.installer_bytes) && expected.installer_bytes > 0 && /^\d+\.\d+\.\d+$/.test(expected.updater_version || ""), "installer_identity");
-  const tag = `apollo-pi-installer-v${expected.version}-build.${expected.build}-updater.${expected.updater_version}`;
+  const revision = record.installer_revision;
+  requireGate(revision === undefined || (integer(revision) && revision >= 2), "installer_revision");
+  const suffix = revision === undefined ? "" : `-revision.${revision}`;
+  const tag = `apollo-pi-installer-v${expected.version}-build.${expected.build}-updater.${expected.updater_version}${suffix}`;
   requireGate(record.release_tag === tag && relative === `installers/${tag}.json`
-    && record.installer.filename === `Apollo-Pi-Installer-${expected.version}-build.${expected.build}-updater.${expected.updater_version}-linux-arm64.zip`, "installer_tag");
+    && record.installer.filename === `Apollo-Pi-Installer-${expected.version}-build.${expected.build}-updater.${expected.updater_version}${suffix}-linux-arm64.zip`, "installer_tag");
   const provenance = JSON.parse(read(root, `provenance/apollo-passive-v${expected.version}-build.${expected.build}.json`));
   requireGate(provenance.source?.commit === expected.source_commit && provenance.package?.sha256 === expected.application_sha256, "application_provenance");
   const reference = onboarding ? record.onboarding_qualification : record.live_qualification;
