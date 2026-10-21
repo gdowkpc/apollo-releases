@@ -1,0 +1,64 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "46191c1d112b0bfdde5952c694ad88e452179bab"
+  },
+  "target": {
+    "version": "2.3.128",
+    "build": 341,
+    "source_commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "release_tag": "apollo-passive-v2.3.128-build.341",
+    "sha256": "71ba8a07b1761266fc952b1ee82b2c13ce95f4428d281477a31d30be71077497"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.128-build.341-updater.1.0.94-revision.3-linux-arm64.zip",
+    "bytes": 329487,
+    "sha256": "6f69ae8c9fff881f16c095446c64d130dcc5fc3e315ab599098fdbb8a1808a07"
+  },
+  "updater": {
+    "version": "1.0.94",
+    "signed_source_commit": "90f70289195750bd75cedd1e35c6256ad8b7795b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.94-linux-arm64.zip": {
+        "sha256": "621555677d6e5e278a95e407f65ebf65cc9405a4df989ab813f93eeb98d7bf60",
+        "bytes": 312524
+      },
+      "ApolloUniversalPiUpdater-1.0.94.authority.json": {
+        "sha256": "e6a15b1ef6edf49e6c8e3b3507efb9f4de34c851832ae104d2b4e07b57556f21",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.94.controller-capsule.json": {
+        "sha256": "769705f9d17b85a6c3c7de1043b35d79e576ec16a2c57e95a2f48b0e9c2d2503",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Installer-only revision: exact complete ZIP authenticates and recovers stale saved-content preparation on registered KD6KPC-23, preserves current protected files and earlier history, then passes install, retry, reboot, fresh authenticated check-ins and sustained processing in all seven windows before and after reboot.",
+    "collector_source_commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "changed_settings_case_verified": true,
+    "launcher_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/39616189734",
+    "packaged_recovery_tests": 49,
+    "reproducible_installer": true,
+    "package_audit_passed": true,
+    "changed_settings_case": {
+      "path": "qualifications/apollo-pi-installer-v2.3.128-build.341-updater.1.0.94-revision.3.settings-recovery.json",
+      "sha256": "a283ef9cea78753d496b8917d1bf694d703f3a67cd41eddc310aa83dd8593610"
+    },
+    "arm64_source_tests": 84,
+    "limits": "Owned Pi3B+ RTL-SDR installer maintenance and packaged root recovery/refusal tests. The live signed-predecessor case uses synthetic stale earlier hashes without editing current live credentials or settings. Actual changed file bytes and newly created state are covered by 49 packaged root tests. Stable current contents may be retained only after predecessor authentication; deletion, metadata drift, concurrent writes and unfinished updater transactions remain refused. No customer installation or organic RF delivery claim. Historical receiver error counters are retained; signed validation requires no increment/reset within each phase."
+  },
+  "installer_revision": 3,
+  "release_tag": "apollo-pi-installer-v2.3.128-build.341-updater.1.0.94-revision.3",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.128-build.341-updater.1.0.94-revision.3.onboarding.json",
+    "sha256": "6759306250ff13534eeff58fb0e048e08b37af78cbfb7c319bf2a1d0c8e6c1f7"
+  }
+}
