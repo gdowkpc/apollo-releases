@@ -139,6 +139,30 @@ test("publisher rejects invalid evidence before any external command or mutation
     assert.throws(()=>publish(root,tag,file),/signature/);assert.equal(command.mock.callCount(),0);
   } finally {fs.rmSync(root,{recursive:true,force:true});}
 });
+
+test("installer revisions retain exact signed evidence and require matching immutable names",()=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),"apollo-revised-installer-"));
+  try {
+    const {tag,record,file,proofPath}=qualifiedRepository(root);
+    const revisedTag=tag+"-revision.2";
+    record.installer_revision=2;record.release_tag=revisedTag;
+    record.installer.filename=record.installer.filename.replace("-linux-arm64.zip","-revision.2-linux-arm64.zip");
+    const revisedFile=path.join(root,record.installer.filename);fs.renameSync(file,revisedFile);
+    const revisedProof=`qualifications/${revisedTag}.live.json`;
+    fs.renameSync(path.join(root,proofPath),path.join(root,revisedProof));record.live_qualification.path=revisedProof;
+    const recordFile=path.join(root,"installers",revisedTag+".json");
+    fs.unlinkSync(path.join(root,"installers",tag+".json"));fs.writeFileSync(recordFile,JSON.stringify(record));
+    assert.equal(prepare(root,revisedTag,revisedFile).record.installer_revision,2);
+    for(const revision of [0,1,-2,"2",2.5]) {
+      record.installer_revision=revision;fs.writeFileSync(recordFile,JSON.stringify(record));
+      assert.throws(()=>prepare(root,revisedTag,revisedFile),/installer_revision/);
+    }
+    record.installer_revision=3;fs.writeFileSync(recordFile,JSON.stringify(record));
+    assert.throws(()=>prepare(root,revisedTag,revisedFile),/installer_tag/);
+    record.installer_revision=2;record.installer.sha256=h("different installer");fs.writeFileSync(recordFile,JSON.stringify(record));
+    assert.throws(()=>prepare(root,revisedTag,revisedFile),/artifact_mismatch_installer_sha256/);
+  } finally {fs.rmSync(root,{recursive:true,force:true});}
+});
 test("removing a historical record fails closed",()=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),"apollo-history-held-"));
   try {

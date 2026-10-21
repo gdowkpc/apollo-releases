@@ -3,7 +3,7 @@ const fs = require("node:fs"), path = require("node:path"), cp = require("node:c
 const {hash,validateRecord} = require("./validate_pi_live_qualification");
 const REPOSITORY = "gdowkpc/apollo-releases";
 function prepare(root, tag, archive) {
-  if (!/^apollo-pi-installer-v\d+\.\d+\.\d+-build\.[1-9]\d*-updater\.\d+\.\d+\.\d+$/.test(tag)) throw Error("invalid_installer_tag");
+  if (!/^apollo-pi-installer-v\d+\.\d+\.\d+-build\.[1-9]\d*-updater\.\d+\.\d+\.\d+(?:-revision\.[1-9]\d*)?$/.test(tag)) throw Error("invalid_installer_tag");
   const relative=`installers/${tag}.json`, recordBytes=fs.readFileSync(path.join(root,relative));
   const record=JSON.parse(recordBytes), policy=JSON.parse(fs.readFileSync(path.join(root,"policy/pi-live-qualification.json")));
   const validated=validateRecord(record,relative,root,policy);
