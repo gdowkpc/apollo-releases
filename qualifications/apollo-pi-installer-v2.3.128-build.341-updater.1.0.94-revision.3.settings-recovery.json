@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "case": "stale_saved_contents_current_state_preserved",
+  "installer_sha256": "6f69ae8c9fff881f16c095446c64d130dcc5fc3e315ab599098fdbb8a1808a07",
+  "current_registration_and_settings_preserved": true,
+  "earlier_record_retained": true,
+  "authenticated_recovery_executed": true,
+  "journal_sha256": "773af8d758bcac6353223969ee414c8a1bfbe4a715490859b329b1e108c57832",
+  "current_preservation_sha256": "2ee95670e4136daed6c385d7c1275a7bb052b806ad0d393a765bab78ff123844",
+  "limits": "Real installed signed predecessor with synthetic stale earlier content hashes. Current live protected file bytes were not edited to construct the case. Actual changed file bytes and newly created state are covered by the 49 packaged root fixture tests.",
+  "original_current_snapshot_matched_exactly": true
+}
