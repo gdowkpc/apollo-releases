@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.128-build.341",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953"
+  },
+  "release": {
+    "version": "2.3.128",
+    "build": 341,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.128-build.341-linux-arm64.zip",
+    "byte_size": 19991150,
+    "sha256": "71ba8a07b1761266fc952b1ee82b2c13ce95f4428d281477a31d30be71077497",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Source PR727 reviewed and merged; frozen source 809507cdf482b6ee1df15ec9d91e3b3e3f0c7953 retained in main ancestry.",
+      "Two byte-identical native ARM64 builds. Exact package convergence and native health: https://github.com/gdowkpc/apollo/actions/runs/39527458755",
+      "Independent archive/checklist audit: qualifications/apollo-passive-v2.3.128-build.341.package.json; SHA256 defe95acb58cb09629c708e6b8fb92284bf4efcc8cee2c7e845fff5c6517cf66.",
+      "Application authority staging only. Exact installer lab install/retry/reboot and preservation qualification remain pending. No customer, dashboard or downloads promotion."
+    ]
+  }
+}
