@@ -1,0 +1,95 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.129",
+  "build": 342,
+  "source_commit": "98cd4a8e8c249b0118346b2cfd5f5f61fb1156c7",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/730",
+  "source_merge": "388922a36e09da267d3f453408712c7e655948af",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.129-build.342-linux-arm64.zip",
+    "sha256": "5710b231eb393b236d2205972b3e21cbe7d0c664a8b649c07809eff0bbf4ac2b",
+    "bytes": 19996977,
+    "manifest_sha256": "5e8434bc81822dbe4cbbf37568bf52ac8ae3bf8003ffee8cda4e2c5af6e70c5a",
+    "principal_sha256": "679dcfc829cbb2a243054b1f960bce7209cc4aaae91d325d33dec2e0f0a79a4b",
+    "architecture": "aarch64"
+  },
+  "independent_archive_audit": {
+    "passed": true,
+    "modes_verified": 188,
+    "protected_sources_verified": 57,
+    "embedded_admission_modules": [
+      {
+        "module": "apollo_passive_receive/src/core/receiver_config.js",
+        "sha256": "52ffa1c4f906eb106cb05afc0c226d4f56108a9d063dedc6f80ed48d6f5e24be",
+        "bytes": 13882,
+        "offset": 45619663
+      },
+      {
+        "module": "apollo_passive_receive/src/core/survey_profile.js",
+        "sha256": "507de0a2819a972f2d59b9c82b70e474ff421b1a1031f810c6cf8dc30aa6ea24",
+        "bytes": 5746,
+        "offset": 45717288
+      },
+      {
+        "module": "apollo_passive_receive/src/core/frequency_ignore.js",
+        "sha256": "96bb7fa6d6ca0ceebf1795ae1f651669116c1ea213c97a240ba928a7b273954f",
+        "bytes": 5098,
+        "offset": 45511890
+      },
+      {
+        "module": "apollo_passive_receive/src/core/sweep_plan.js",
+        "sha256": "6f6ff5ade6fd8e129d1f2fc51f845b80a0c25cfe0f0a4491695dd4eb951c4699",
+        "bytes": 24619,
+        "offset": 45732775
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/input_profile.js",
+        "sha256": "0890fb544d110d07bfe5dfdc384a8daca9f3130a223de47c2134f7e4ee0f6113",
+        "bytes": 12259,
+        "offset": 45871455
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/channel_plan.js",
+        "sha256": "a4120a3d0fb92de71389b17073310e447efb436032418603585d1835d5a55323",
+        "bytes": 7358,
+        "offset": 45771571
+      },
+      {
+        "module": "apollo_passive_receive/src/ka9q/rsp1b_channel_batches.js",
+        "sha256": "3cb631deb282e268488666c28d39031f15c3533eb1b351370c5ffd527733977a",
+        "bytes": 2627,
+        "offset": 46020906
+      },
+      {
+        "module": "apollo_passive_receive/src/core/receiver_config_store.js",
+        "sha256": "9106a9008e584fa996595c0e8262f86038168946c5ad14715220d32b9954b7ef",
+        "bytes": 20279,
+        "offset": 45633666
+      },
+      {
+        "module": "apollo_passive_receive/src/core/node_configuration.js",
+        "sha256": "7b0124b67c9c7a3060444b5324731de7af68fb5f672acfe156751fc5aae7c7b8",
+        "bytes": 10355,
+        "offset": 45524132
+      },
+      {
+        "module": "apollo_passive_receive/src/pi_receiver_detection.js",
+        "sha256": "2cd5210e33b72375ab55f41b5048a9f0f23f7dac30e5ed493eb0c80004ff0dcd",
+        "bytes": 17556,
+        "offset": 44976231
+      }
+    ],
+    "native_elf_machine": 183,
+    "node_actions": []
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39532507883",
+    "source": "98cd4a8e8c249b0118346b2cfd5f5f61fb1156c7",
+    "conclusion": "success"
+  },
+  "reproducible_native_arm64_builds": true,
+  "limits": [
+    "Application authority staging only. Exact complete public installer and registered-bench install/retry/reboot remain pending.",
+    "No customer installation or RF claim. No dashboard, stable pointer, catalog, registration or settings changes."
+  ]
+}
