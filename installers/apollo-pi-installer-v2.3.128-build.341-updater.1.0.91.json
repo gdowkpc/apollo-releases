@@ -1,0 +1,56 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953"
+  },
+  "target": {
+    "version": "2.3.128",
+    "build": 341,
+    "source_commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "release_tag": "apollo-passive-v2.3.128-build.341",
+    "sha256": "71ba8a07b1761266fc952b1ee82b2c13ce95f4428d281477a31d30be71077497"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.128-build.341-updater.1.0.91-linux-arm64.zip",
+    "bytes": 316567,
+    "sha256": "8232c7098da602d4ee7ab8dbb41d623cb58467adb40af893da0a72a480798f94"
+  },
+  "updater": {
+    "version": "1.0.91",
+    "signed_source_commit": "87508634d77409eeebd830cac2357decd7dd6193",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.91-linux-arm64.zip": {
+        "sha256": "6d6a79bcb84aa7385e274cd02e0c58ae39a83349aca8b4cf7c591ccf8b16b49c",
+        "bytes": 301485
+      },
+      "ApolloUniversalPiUpdater-1.0.91.authority.json": {
+        "sha256": "6946a76d83748b32bf60cb50cdde10f02812b803d1d89d51b9ae0b03cab31402",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.91.controller-capsule.json": {
+        "sha256": "d9bf61b4b34526e4be89e551aa9b5e8f4a7fa1389f11f42f603061ca86ef3e21",
+        "bytes": 6655
+      }
+    }
+  },
+  "qualification": {
+    "scope": "Exact complete installer upgrades owned registered KD6KPC-23 from Build340 to341, repeats installation, preserves protected node state, physically reboots, and verifies fresh authenticated check-ins plus progress across all seven configured windows before and after reboot; isolated one-session owner setup checks.",
+    "collector_source_commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "required_collector_ci": "https://github.com/gdowkpc/apollo/actions/runs/39526918994",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39527458755",
+    "qualification_test_commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "limits": "Owned Pi3B+ RTL-SDR installer qualification and disposable one-session provisioning checks. No customer installation, new physical enrollment, organic RF delivery or other receiver-model claim. Existing dashboard update advertisement remains separately controlled. No registration, credential, receiver-setting or queue resets. Exact cumulative receiver counters for each signed sample: {\"post_reboot\": [{\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}], \"pre_reboot\": [{\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}, {\"failed_sweeps\": 27, \"helper_crashes\": 0, \"sample_stream_stalls\": 0, \"scheduled_sweep_failures\": 0, \"unrecovered_timeout_sweeps\": 0, \"usb_disconnects\": 0}]}. The unchanged validator requires no counter increment or reset within each phase; historical nonzero counts are retained."
+  },
+  "release_tag": "apollo-pi-installer-v2.3.128-build.341-updater.1.0.91",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.128-build.341-updater.1.0.91.onboarding.json",
+    "sha256": "9f754c138a7430e4691c802c170d7139b34a24f72075a1f5d79131d84680108a"
+  }
+}
