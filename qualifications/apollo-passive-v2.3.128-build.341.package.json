@@ -1,0 +1,72 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.128",
+  "build": 341,
+  "source_commit": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/727",
+  "source_merge": "77c00340538d39e5fc95b628f7935eae1d0ddf51",
+  "package": {
+    "source": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "path": "D:\\apollo\\artifacts\\wes-empty-receiver341-20261020\\build-r4\\ApolloPassiveReceive-2.3.128-build.341-linux-arm64.zip",
+    "sha256": "71ba8a07b1761266fc952b1ee82b2c13ce95f4428d281477a31d30be71077497",
+    "bytes": 19991150,
+    "manifest_sha256": "bd82db079ed841ab4976f4757d182f157e423aae1f40afa6aa9a97d0fec4059d",
+    "principal_sha256": "129a56285e6b682617115dbc228b7eff87c40ae3397b066226aba33c7cb500be",
+    "architecture": "aarch64"
+  },
+  "independent_archive_audit": {
+    "scope": "Independent exact-archive audit; no node execution or publication",
+    "application": {
+      "source": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+      "path": "D:\\apollo\\artifacts\\wes-empty-receiver341-20261020\\build-r4\\ApolloPassiveReceive-2.3.128-build.341-linux-arm64.zip",
+      "sha256": "71ba8a07b1761266fc952b1ee82b2c13ce95f4428d281477a31d30be71077497",
+      "bytes": 19991150,
+      "manifest_sha256": "bd82db079ed841ab4976f4757d182f157e423aae1f40afa6aa9a97d0fec4059d",
+      "principal_sha256": "129a56285e6b682617115dbc228b7eff87c40ae3397b066226aba33c7cb500be",
+      "architecture": "aarch64"
+    },
+    "checklist_embedded_payloads": [
+      {
+        "source": "tools/rb_rig_agent_uniden/apollo_passive_receive/src/owner_provisioning_state.js",
+        "sha256": "0903e58739e7ca711bb474de868eaf468c3eeced14eb00114e89b173f885b655",
+        "bytes": 6680,
+        "principal_offset": 44934412
+      },
+      {
+        "source": "tools/rb_rig_agent_uniden/apollo_passive_receive/src/server.js",
+        "sha256": "8443e0fc78d9c00aaccf681dd66032706c73174386f01d6e8a12042fb9301e70",
+        "bytes": 166612,
+        "principal_offset": 45152972
+      },
+      {
+        "source": "tools/rb_rig_agent_uniden/apollo_passive_receive/public/index.html",
+        "sha256": "0236fdc918a26d3289fa5f9c92b6c4c52f1767a5c84bc9a40d6cbbe936767cb1",
+        "bytes": 163143,
+        "principal_offset": 47502237
+      }
+    ],
+    "modes_verified": 188,
+    "protected_sources_verified": 57,
+    "multicast_profile_outputs_verified": true,
+    "checklist_and_published340_are_ancestors": true,
+    "passed": true,
+    "production_ready": false,
+    "remaining_gates": [
+      "Current approved source integration",
+      "Exact package convergence/native pipeline qualification",
+      "Registered KD6KPC-23 exact installer install/retry/reboot attestation; lab-only authorization received"
+    ],
+    "node_actions": []
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39527458755",
+    "source": "809507cdf482b6ee1df15ec9d91e3b3e3f0c7953",
+    "conclusion": "success",
+    "updater_version": "1.0.91"
+  },
+  "reproducible_native_arm64_builds": true,
+  "limits": [
+    "Application authority staging only. Exact complete installer lab install, retry, preservation and reboot are pending.",
+    "No customer installation or physical RF reception claim. No node registration/settings changes or dashboard/download promotion."
+  ]
+}
