@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.133",
+  "build": 346,
+  "source_commit": "8decc9eb93d38c068cc86c8703d9546dd327e5aa",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/771",
+  "source_merge": "8decc9eb93d38c068cc86c8703d9546dd327e5aa",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.133-build.346-linux-arm64.zip",
+    "sha256": "3c60fe3880b2707fd484e94801925552c3668ba5cf70677f0e60fbd80377f47d",
+    "bytes": 24409520,
+    "manifest_sha256": "c9671432e61ca8600deb84b18cd3f92288218dde57262ed10ebda2079d702105",
+    "principal_sha256": "15eb341060d956fefed4b8dcea0612433d1c6fa629aafb422676ffd19f55c9f7",
+    "architecture": "aarch64"
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39818074726",
+    "source": "8decc9eb93d38c068cc86c8703d9546dd327e5aa",
+    "conclusion": "success"
+  },
+  "reproducible_native_arm64_builds": true,
+  "reporting": {
+    "source_ci_passed": true,
+    "scanner_provenance_supported": [
+      "uniden_bcd996p2",
+      "uniden_bct15x"
+    ],
+    "ctcss_origin": "uniden_scanner_status",
+    "unknown_confidence_preserved": true
+  },
+  "limits": [
+    "Application asset staging for the authorized existing node 5 upgrade through production-signed updater 1.0.95. No stable/download catalog or complete installer change.",
+    "Source tests and isolated package gates do not establish fresh node 5 RF reporting; verify real production delivery after the authorized installation."
+  ]
+}

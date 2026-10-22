@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.133-build.346",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "8decc9eb93d38c068cc86c8703d9546dd327e5aa"
+  },
+  "release": {
+    "version": "2.3.133",
+    "build": 346,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.133-build.346-linux-arm64.zip",
+    "byte_size": 24409520,
+    "sha256": "3c60fe3880b2707fd484e94801925552c3668ba5cf70677f0e60fbd80377f47d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved Apollo PR771 merged at 8decc9eb93d38c068cc86c8703d9546dd327e5aa; source CI passed.",
+      "Two byte-identical ARM64 packages and native RTL component builds; full physical package/native/target-state/Canada gates: https://github.com/gdowkpc/apollo/actions/runs/39818074726",
+      "Package review: qualifications/apollo-passive-v2.3.133-build.346.package.json; SHA256 dbf4f46f4e4c65f0f53de5931f5411bd41bc70063d0ebcf935ff78a61fff1a32.",
+      "Application asset staging for the authorized existing node 5 upgrade with production-signed updater 1.0.95; no complete installer or stable/download pointer change. Fresh physical scanner reports will be verified after deployment."
+    ]
+  }
+}
