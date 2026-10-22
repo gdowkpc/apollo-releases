@@ -1,0 +1,120 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9"
+  },
+  "target": {
+    "version": "2.3.131",
+    "build": 344,
+    "source_commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+    "release_tag": "apollo-passive-v2.3.131-build.344",
+    "sha256": "1b1d52c2670ff7ac2c594c993c63082bd205f127b233ee7a2b5aafabae514862"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.131-build.344-updater.1.0.95-linux-arm64.zip",
+    "bytes": 332050,
+    "sha256": "eebb0f2b85ce039176c93bc234c639357b8bc5569da74f1c9e9dcc5bc9dec401"
+  },
+  "updater": {
+    "version": "1.0.95",
+    "signed_source_commit": "9efbb0eab413a94ad0c2dc1f68804f0231b01d7d",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.95-linux-arm64.zip": {
+        "sha256": "74e6b5e2c53fab73688b2132cb4ad676801f2cad795fd8f8ebaecba5d631a2b2",
+        "bytes": 313057
+      },
+      "ApolloUniversalPiUpdater-1.0.95.authority.json": {
+        "sha256": "add5cda72acb1dc020af02bade3c63f4c4dad011f216413a086ff29827ced9dd",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.95.controller-capsule.json": {
+        "sha256": "9725f7c0caaf6c0e8e54b4183cae4af1760fcc9dddf3efbd63c1ca68459f949b",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.131-build.344-updater.1.0.95",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.131-build.344-updater.1.0.95.onboarding.json",
+    "sha256": "d95864264c77bbee4a269d254a8a373ae9012d218c1313e7271d13aac7796320"
+  },
+  "qualification": {
+    "scope": "Exact public installer same-target installation and retry on the owned registered RTL-SDR bench; protected state preservation, actual software reboot, fresh authenticated check-ins and three spaced full-window processing samples before and after reboot; matching disposable one-approval onboarding tests.",
+    "collector_source_commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+    "exact_package_ci": "https://github.com/gdowkpc/apollo/actions/runs/39787735572",
+    "publication_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/39811849091",
+    "qualification_test_commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+    "onboarding_software": {
+      "application_source_commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+      "website_test_source_commit": "4fdf83178a45fb75a984bfd097f708156c0e569b",
+      "website_test_sha256": "a7c2368b5234908c69e9cd0ecb223e8f1ddd1cf5a46577d3bea6d2ed495682f6",
+      "runtime_modules_sha256": "480509b0ad2427b3bf538ea0547c9b4f2366a28c5f2a3d2eeac2fc372ecf3063",
+      "test_log_sha256": "e417d0684ee80f92a370a079badf4de39eff1138a282e6993c823e4d7e8823d5",
+      "server_checks": 57,
+      "runtime_tests": 63,
+      "production_records_mutated": false
+    },
+    "limits": "This signed receipt binds the exact public installer. The earlier successful private forward upgrade from Build341 to Build344 is retained separately in the application package review. Same-target maintenance is not a fresh-node physical enrollment or a new forward-upgrade claim. Live RF reporting and other receiver models remain separate. No resets, settings changes, credential/permission changes or customer activation are authorized by publication.",
+    "receiver_counters": {
+      "pre_reboot": [
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        }
+      ],
+      "post_reboot": [
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        }
+      ]
+    }
+  }
+}
