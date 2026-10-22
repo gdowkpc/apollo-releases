@@ -1,0 +1,49 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.131",
+  "build": 344,
+  "source_commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/762",
+  "source_merge": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.131-build.344-linux-arm64.zip",
+    "sha256": "1b1d52c2670ff7ac2c594c993c63082bd205f127b233ee7a2b5aafabae514862",
+    "bytes": 24391435,
+    "manifest_sha256": "1a943a887c6c3c54766435ae86fddd81592be27433d80a4c0bdd53e46a2a666a",
+    "principal_sha256": "0b95e028b99efbb7af89c5c776bc2672e7dbfe259fb6a54d39d462d93c09f3e9",
+    "native_inventory_sha256": "9357efc5470c99de5763039acfad295c71a4bf4647ed858d5e492c9262a7d912",
+    "architecture": "aarch64"
+  },
+  "exact_package_workflow": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/39787735572",
+    "source": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
+    "conclusion": "success"
+  },
+  "reproducible_native_arm64_builds": true,
+  "canada": {
+    "catalog_sha256": "674b7a596b290f7af587696dbddf0b40a82ad82321770d355b3e2336b5baca23",
+    "installed_runtime_download": true,
+    "canadian_recommendation": true,
+    "us_border_exclusion": true,
+    "custom_config_unchanged": true
+  },
+  "private_delivery_qualification": {
+    "scope": "owned registered RTL-SDR bench",
+    "version": "2.3.131",
+    "build": 344,
+    "updater": "1.0.95",
+    "installation": true,
+    "same_version_retry": true,
+    "protected_state_preserved": true,
+    "actual_reboot": true,
+    "pre_reboot_samples": 3,
+    "post_reboot_samples": 3,
+    "configured_windows": 7,
+    "fresh_authenticated_checkins_before_and_after_reboot": true,
+    "qualification_result_sha256": "563e9e81e34d347619494d380858b0962584b7a0b8e7d765d6bd4a3e053a5c05"
+  },
+  "limits": [
+    "Immutable application asset staging is separately authorized. Public complete-installer publication and portal activation require the canonical exact-installer signed onboarding receipt and reviewed v3 distribution record.",
+    "No live RF reporting or other receiver-model qualification claim; no customer deployment or settings/reporting change."
+  ]
+}
