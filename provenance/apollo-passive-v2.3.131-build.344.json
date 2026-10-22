@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.131-build.344",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9"
+  },
+  "release": {
+    "version": "2.3.131",
+    "build": 344,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.131-build.344-linux-arm64.zip",
+    "byte_size": 24391435,
+    "sha256": "1b1d52c2670ff7ac2c594c993c63082bd205f127b233ee7a2b5aafabae514862",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Canada RAC runtime source and closure gates reviewed in Apollo PR760/PR762; frozen source ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9 remains in protected main ancestry.",
+      "Two byte-identical ARM64 packages; exact package/native/target-state/Canada closure: https://github.com/gdowkpc/apollo/actions/runs/39787735572",
+      "Private delivery with signed updater 1.0.95 passed exact installation, same-version retry, protected settings/credential metadata preservation, reboot, three spaced fresh seven-window samples on both boots and authenticated check-ins.",
+      "Package review: qualifications/apollo-passive-v2.3.131-build.344.package.json; SHA256 1c06fa00255c1a682a117e89d2b70791b19a57e73e5d48d6da62f5f9da81ca63.",
+      "Application asset staging only. Public installer/download activation requires its own signed exact-byte onboarding receipt. Live RF reporting and other receiver-model qualification remain separate."
+    ]
+  }
+}
