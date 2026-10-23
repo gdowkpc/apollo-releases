@@ -1,0 +1,53 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.136",
+  "build": 349,
+  "source_commit": "6fd48848b3bcce1b72008fb066e3ce35860ed7ec",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/785",
+  "source_merge": "fd90c2515a23eaccc9b7e73101f0423a71fb1019",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.136-build.349-linux-arm64.zip",
+    "sha256": "a808f893b5f7cf37ec8c4fd05ed145b1bf52788a6acc1670a0ee99dd0664b330",
+    "bytes": 24420712,
+    "manifest_sha256": "285df1208d8ad05e266d2379d77e4a6780bb63d4e871d913df1a3108daa194cb",
+    "principal_sha256": "f6ec5bb2222d5f7713ee1640bc3eee0aed8e9a2114fe793e74f27595f4588734",
+    "architecture": "aarch64"
+  },
+  "source_ci": {
+    "url": "https://github.com/gdowkpc/apollo/actions/runs/40004016781",
+    "conclusion": "success"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "completed_utc": "2026-10-23T18:32:49.715061Z",
+    "reproducible_packages": true,
+    "updater_version": "1.0.97",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "exact_frozen_main_modules_verified": true,
+    "evidence_sha256": {
+      "build-summary.json": "d508cb0f5040cfb0d6f786c0e0b4a7781a5a320655cdd20ec1ebb29e7c6c62bd",
+      "qualification-status.json": "7fd8d121b872b2caccfeb617e1639b03e0cc22d83ecceadb2f868ce4cfc16154",
+      "qualify-frozen-package.sh": "a12ad138be9660dd5a1873d0a1f8ffd86ccabdb91d2fe0eea8e2b6fed418ad5a",
+      "clean-legacy-convergence.log": "9d68259f0947c63ed9a3ca0438e8d3043f9548845a5fecf0eae95340cc1cc03e",
+      "service-user-readability.log": "d3323add62a30d7c092473b3865af8b3fe97749c513d3dbb01e1c37f87bfb6f6",
+      "native-packaged-pipeline.log": "2341317d4b44f40c8f56d252f21dd04d155366c763125ae77fd9e6cef04d3504",
+      "frozen-main-modules-verification.json": "bc691969ef7f45d1f93b27be39be2c9e9120fe7384dc7ba0e390f13d74469c48",
+      "final-builder-audit.json": "2f0ce6d318bbed5f2258f286eed344621970f0efbf2f2d5b73e014390000f3c5"
+    }
+  },
+  "reporting": {
+    "native_ctcss_preserved": true,
+    "unknown_confidence_preserved": true,
+    "physical_rtl_ka9q_report_accepted": true,
+    "exact_accepted_audio_independently_verified": true,
+    "server_bridge_required": true
+  },
+  "limits": [
+    "This record permits staging the exact qualified application asset. Dashboard promotion and a new complete installer require their own exact-artifact signed qualification receipt.",
+    "The ARM64 package was prepared and qualified on the owned physical builder; the source CI URL is not a package workflow run.",
+    "Private candidate authority and private installation bundles are excluded from this publication. No customer node installation or receiver-setting changes are authorized here."
+  ]
+}
