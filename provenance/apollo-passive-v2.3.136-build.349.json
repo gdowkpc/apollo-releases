@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.136-build.349",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "6fd48848b3bcce1b72008fb066e3ce35860ed7ec"
+  },
+  "release": {
+    "version": "2.3.136",
+    "build": 349,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.136-build.349-linux-arm64.zip",
+    "byte_size": 24420712,
+    "sha256": "a808f893b5f7cf37ec8c4fd05ed145b1bf52788a6acc1670a0ee99dd0664b330",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Approved source PR785 merged at fd90c2515a23eaccc9b7e73101f0423a71fb1019; frozen payload source 6fd48848b3bcce1b72008fb066e3ce35860ed7ec is in that merged ancestry.",
+      "Source CI passed: https://github.com/gdowkpc/apollo/actions/runs/40004016781 . Physical ARM64 package qualification is separately recorded, not attributed to that CI run.",
+      "Package review: qualifications/apollo-passive-v2.3.136-build.349.package.json; SHA256 67ab2080ac9beeb0162a13a0224732a8fe9cd6af07f2645d1add9c28d4d48553.",
+      "Two byte-identical packages; exact-archive clean/legacy convergence, native readability/pipeline and frozen-module checks passed. Fresh native RTL/KA9Q tone report and independently verified retained audio accepted after the server bridge fix.",
+      "Immutable application staging only. Keep the dashboard pointer unchanged until exact public installer qualification is complete; exclude the private bench authority."
+    ]
+  }
+}
