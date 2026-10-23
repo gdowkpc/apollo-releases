@@ -1,0 +1,134 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "24534f80291b9eef44ba4a046fdf3b24c39258be"
+  },
+  "target": {
+    "version": "2.3.136",
+    "build": 349,
+    "source_commit": "6fd48848b3bcce1b72008fb066e3ce35860ed7ec",
+    "release_tag": "apollo-passive-v2.3.136-build.349",
+    "sha256": "a808f893b5f7cf37ec8c4fd05ed145b1bf52788a6acc1670a0ee99dd0664b330"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.136-build.349-updater.1.0.97-linux-arm64.zip",
+    "bytes": 334219,
+    "sha256": "212050fe825837b09fae4d8d5a32b944d799556880c5c43c2e095e458eca5b70"
+  },
+  "updater": {
+    "version": "1.0.97",
+    "signed_source_commit": "92bd3534a6037f00d317f91ad70bef022d1051f1",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.97-linux-arm64.zip": {
+        "sha256": "b80bf8056201c2b6a5af631d4f8e55b7c0df37032acbb09b78a5db77cba67fbf",
+        "bytes": 315318
+      },
+      "ApolloUniversalPiUpdater-1.0.97.authority.json": {
+        "sha256": "5663032583f05101e40c3b0bfe5a8e8143f50abcb8dc541ab4caa02098976d7e",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.97.controller-capsule.json": {
+        "sha256": "d2d4ac35c3db3be87c51ffbb9e8feb4dd23275da8f8b58f2814d83ce45a79a41",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.136-build.349-updater.1.0.97",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.136-build.349-updater.1.0.97.onboarding.json",
+    "sha256": "1bb7069d5f01f3d844cd109f152a9bf58f7ef0f15a5eb50f91a21e803a79a8d3"
+  },
+  "qualification": {
+    "scope": "Exact public installer same-target installation and retry on the registered owned RTL-SDR bench, protected state preservation, actual reboot, authenticated check-ins and three spaced samples across all seven configured windows before and after reboot; matching disposable one-approval onboarding tests.",
+    "collector_source_commit": "fcd55cc2f410ba191f4a82346a4863b98deb12d1",
+    "publication_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/40022755811",
+    "application_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/40004016781",
+    "package_qualification_review": "qualifications/apollo-passive-v2.3.136-build.349.package.json",
+    "onboarding_software": {
+      "application_source_commit": "6fd48848b3bcce1b72008fb066e3ce35860ed7ec",
+      "website_test_source_commit": "4fdf83178a45fb75a984bfd097f708156c0e569b",
+      "website_test_sha256": "a7c2368b5234908c69e9cd0ecb223e8f1ddd1cf5a46577d3bea6d2ed495682f6",
+      "runtime_modules_sha256": "776882ae7c89d7cbe15d86bf1b8b4d01aaec8a30e0a599bce2d02ec71fec2f23",
+      "test_log_sha256": "06fb779ef74e21e807b93e88268132aa8426ca5873af06dad4a9a953cd048483",
+      "server_checks": 57,
+      "runtime_tests": 63,
+      "production_records_mutated": false
+    },
+    "receiver_counters": {
+      "pre_reboot": [
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        }
+      ],
+      "post_reboot": [
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        }
+      ]
+    },
+    "dashboard_compatibility": {
+      "predecessor_build": 344,
+      "predecessor_updater": "1.0.95",
+      "target_updater": "1.0.97",
+      "packaged_build344_upgrade_module": true,
+      "production_signatures": true,
+      "canonical_signed_replacement": true,
+      "protected_bytes_modes_uid_gid": true,
+      "induced_failure_rollback": true,
+      "unbound_receiver_preserved": true,
+      "worker_handoff": true,
+      "application_apply_stubbed": true,
+      "physical_forward_upgrade": false
+    },
+    "limits": "This signed receipt binds the exact public installer and same-target maintenance on the owned RTL bench. It does not claim physical Build344-to349 forward-upgrade or live RF reporting qualification. The isolated Build344 dashboard fixture verifies the actual packaged worker and signed updater replacement; application apply is stubbed. Separate previously accepted native-tone reports and exact retained-audio analysis are recorded in the package review. Other receiver models remain separately qualified. Customer installation is owner initiated."
+  }
+}
