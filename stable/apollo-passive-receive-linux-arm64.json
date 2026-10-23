@@ -1,17 +1,17 @@
 {
   "schema_version": "apollo-stable-release-v2",
-  "minimum_pi_updater_version": "1.0.95",
+  "minimum_pi_updater_version": "1.0.97",
   "product_id": "apollo-passive-receive",
   "platform": "linux",
   "architecture": "arm64",
-  "version": "2.3.131",
-  "build": 344,
-  "source_commit": "ac93c840d6c79f15d9a4fe1f7f9647eab0bc08a9",
-  "published_at": "2026-10-22T16:48:31.300Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.131-build.344",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.131-build.344/ApolloPassiveReceive-2.3.131-build.344-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.3.131-build.344-linux-arm64.zip",
-  "byte_size": 24391435,
-  "sha256": "1b1d52c2670ff7ac2c594c993c63082bd205f127b233ee7a2b5aafabae514862",
-  "short_release_notes": "Recommends Canada RAC for saved Canadian locations while retaining the existing selected plan, custom ranges, calibration, identity, credentials, location and reporting preferences. Requires qualified signed updater 1.0.95; owners confirm updates, and installations needing installer recovery should use the qualified complete Pi installer. Installer/onboarding and reboot readiness qualified; live RF reporting remains separate."
+  "version": "2.3.136",
+  "build": 349,
+  "source_commit": "6fd48848b3bcce1b72008fb066e3ce35860ed7ec",
+  "published_at": "2026-10-23T20:56:12Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.136-build.349",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.136-build.349/ApolloPassiveReceive-2.3.136-build.349-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.136-build.349-linux-arm64.zip",
+  "byte_size": 24420712,
+  "sha256": "a808f893b5f7cf37ec8c4fd05ed145b1bf52788a6acc1670a0ee99dd0664b330",
+  "short_release_notes": "Fixes missing verified RTL-SDR tones in reports and capture recovery after a native receiver restart. Preserves saved settings, identity and calibration."
 }
