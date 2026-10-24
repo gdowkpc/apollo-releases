@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.140-build.353",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "7ac7a012fe696837b16a708a90128f8281fa3b55"
+  },
+  "release": {
+    "version": "2.3.140",
+    "build": 353,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.140-build.353-linux-arm64.zip",
+    "byte_size": 24444165,
+    "sha256": "7c790adfc0f70da7f42e9a49605a54270e57e093b1b5921a1b73583f454f1e65",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Logging PR793 merged at3859d8bfe07e2bb1f5c92159e4fd9781430178c5; approved allocation PR794 merged at7ac7a012fe696837b16a708a90128f8281fa3b55 is the frozen package source.",
+      "Package review: qualifications/apollo-passive-v2.3.140-build.353.package.json; SHA256 d720221b12fb98191599e4fdae1488a0de54fc2c16c2efcdd8d7b3816625dce5.",
+      "Two byte-identical physical ARM64 packages passed native pipeline, target-state convergence, service-user readability and packaged diagnostic tests. Owned Airspy normal-updater installation, actual reboot, preserved protected state, fresh production reports and tone auto-promotion passed.",
+      "Owner authorized public Pi runtime, normal stable discovery and complete installer publication. Updater1.0.98 remains unchanged; stable activation follows signed exact-installer qualification. Private authority is excluded."
+    ]
+  }
+}
