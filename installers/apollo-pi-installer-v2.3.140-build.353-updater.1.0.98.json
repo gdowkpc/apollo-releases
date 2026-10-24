@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "7ac7a012fe696837b16a708a90128f8281fa3b55"
+  },
+  "target": {
+    "version": "2.3.140",
+    "build": 353,
+    "source_commit": "7ac7a012fe696837b16a708a90128f8281fa3b55",
+    "release_tag": "apollo-passive-v2.3.140-build.353",
+    "sha256": "7c790adfc0f70da7f42e9a49605a54270e57e093b1b5921a1b73583f454f1e65"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.140-build.353-updater.1.0.98-linux-arm64.zip",
+    "bytes": 334881,
+    "sha256": "984e88a0f8fd8a625abc4afe29a27fb9bc676f9a3648032287a7dba75da08bd8"
+  },
+  "updater": {
+    "version": "1.0.98",
+    "signed_source_commit": "5bf292a20da97960229a22afda7f8247bc276de8",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.98-linux-arm64.zip": {
+        "sha256": "4895ed1ad2096dccfc1b08cc6568f808b3f356260bb9bb2d437b774d0b8cb587",
+        "bytes": 315983
+      },
+      "ApolloUniversalPiUpdater-1.0.98.authority.json": {
+        "sha256": "92a3d56a261edb62cf54dad0f4d121abb8e1dda2af278e134630fb71702b61aa",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.98.controller-capsule.json": {
+        "sha256": "88bbd68e060593e3ba5ff3c4f63035797294bc5d3e3cfcf30098cdb504526c6a",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.140-build.353-updater.1.0.98",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.140-build.353-updater.1.0.98.onboarding.json",
+    "sha256": "3de71ab93b8d581df58e8aed3791d5478d2278704029be7a4f82a88ab1f29552"
+  },
+  "qualification": {
+    "scope": "Exact public installer forward upgrade from Build351/updater1.0.98, retry, protected-state preservation, actual reboot, fresh authenticated check-ins, and three spaced processing samples across all seven configured RF windows before and after reboot passed on the registered owned RTL bench. Matching disposable onboarding integration tests passed 57 server checks and 63 runtime tests. Live RF reporting for this installer scope remains separate; exact runtime Airspy RF/reporting qualification passed independently."
+  }
+}
