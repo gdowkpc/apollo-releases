@@ -1,0 +1,141 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4"
+  },
+  "target": {
+    "version": "2.3.138",
+    "build": 351,
+    "source_commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4",
+    "release_tag": "apollo-passive-v2.3.138-build.351",
+    "sha256": "afad2fcbc9a831a057fa306659087b7fb97c045d5c51b4935f6eee6664c49258"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.138-build.351-updater.1.0.98-linux-arm64.zip",
+    "bytes": 334875,
+    "sha256": "6d0e08a32774d114d480aa06381a2e6c4d2bcf31bb34803b58b6c76c556197da"
+  },
+  "updater": {
+    "version": "1.0.98",
+    "signed_source_commit": "5bf292a20da97960229a22afda7f8247bc276de8",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.98-linux-arm64.zip": {
+        "sha256": "4895ed1ad2096dccfc1b08cc6568f808b3f356260bb9bb2d437b774d0b8cb587",
+        "bytes": 315983
+      },
+      "ApolloUniversalPiUpdater-1.0.98.authority.json": {
+        "sha256": "92a3d56a261edb62cf54dad0f4d121abb8e1dda2af278e134630fb71702b61aa",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.98.controller-capsule.json": {
+        "sha256": "88bbd68e060593e3ba5ff3c4f63035797294bc5d3e3cfcf30098cdb504526c6a",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.138-build.351-updater.1.0.98",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.138-build.351-updater.1.0.98.onboarding.json",
+    "sha256": "aa53a1dfab0490952f20487eb1fc6b8ffeba52fd604a5d9d3af14670148ee812"
+  },
+  "qualification": {
+    "scope": "Exact public installer same-target installation and retry on the registered owned RTL-SDR bench, preserved state, actual reboot, authenticated check-ins and three spaced samples across all seven configured windows before and after reboot; matching disposable one-approval onboarding tests. The preceding normal public forward installation from Build349/updater1.0.97 and recovery retry are retained separately.",
+    "collector_source_commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4",
+    "publication_source_ci": "https://github.com/gdowkpc/apollo/actions/runs/40050128171",
+    "package_qualification_review": "qualifications/apollo-passive-v2.3.138-build.351.package.json",
+    "onboarding_software": {
+      "application_source_commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4",
+      "website_test_source_commit": "4fdf83178a45fb75a984bfd097f708156c0e569b",
+      "website_test_sha256": "227cd887ef8809938bbe789266fce008edbd73ccd22686dfd011b2869070a7ed",
+      "runtime_modules_sha256": "480509b0ad2427b3bf538ea0547c9b4f2366a28c5f2a3d2eeac2fc372ecf3063",
+      "test_log_sha256": "e7191ac3eb31f0a70b4e9915a0289112cf40664229f3051b5e44cc1ca94199a5",
+      "server_checks": 57,
+      "runtime_tests": 63,
+      "production_records_mutated": false
+    },
+    "receiver_counters": {
+      "pre_reboot": [
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        }
+      ],
+      "post_reboot": [
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        },
+        {
+          "failed_sweeps": 466,
+          "helper_crashes": 0,
+          "sample_stream_stalls": 0,
+          "usb_disconnects": 0,
+          "unrecovered_timeout_sweeps": 0,
+          "scheduled_sweep_failures": 0
+        }
+      ]
+    },
+    "dashboard_compatibility": {
+      "predecessor_build": 349,
+      "predecessor_updater": "1.0.97",
+      "target_updater": "1.0.98",
+      "packaged_build349_upgrade_module": true,
+      "production_signatures": true,
+      "canonical_signed_replacement": true,
+      "protected_bytes_modes_uid_gid": true,
+      "induced_failure_rollback": true,
+      "unbound_receiver_preserved": true,
+      "packaged_worker_handoff": true,
+      "application_apply_stubbed": true,
+      "physical_forward_installer_upgrade": true
+    },
+    "physical_forward_upgrade": {
+      "predecessor_build": 349,
+      "target_build": 351,
+      "normal_installer": true,
+      "initial_network_failure": "github_release_request_failed",
+      "normal_recovery_retry_passed": true,
+      "protected_state_preserved": true
+    },
+    "limits": "The signed receipt binds exact public installer maintenance and reboot continuity on the owned RTL bench. It does not claim live RF reporting qualification for this installer. Separate normal forward installer recovery from349 preserved protected state; isolated packaged349 dashboard tests verify signed updater replacement and rollback with application apply stubbed. KD6KPC-3 separately passed adopted Airspy runtime installation, reboot and fresh server-accepted reporting; the local workaround was retired. No customer installation is performed by publication."
+  }
+}
