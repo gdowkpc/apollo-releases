@@ -1,0 +1,48 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.138",
+  "build": 351,
+  "source_commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/788",
+  "source_merge": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.138-build.351-linux-arm64.zip",
+    "sha256": "afad2fcbc9a831a057fa306659087b7fb97c045d5c51b4935f6eee6664c49258",
+    "bytes": 24442182,
+    "manifest_sha256": "c021f417c15173cd0aab77b00f1455dc697132b155dd5762746a53532dbbbf03",
+    "principal_sha256": "8091ffd8c50a84be2ebf272a8e8ec8c184b043ee6764c4240246dce3a6c1becd",
+    "architecture": "aarch64"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reproducible_packages": true,
+    "updater_version": "1.0.98",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "packaged_watchdog_safety_passed": true,
+    "evidence_sha256": {
+      "build-summary.json": "b9a21a96f3d0f4abd99ed18ab5831a348aaf3e5ff4914ea46fba47d47c2fc705",
+      "qualification-status.json": "0d922d42e9a0aa1e95d0a567d308bc9e28f2efcec59b8a8d910b211ddc4727c0",
+      "clean-legacy-convergence.log": "57ef6e91d97afa1c23dfae1422269ee4d57f7e7766555c49ebda3bd6d6adbc07",
+      "service-user-readability.log": "78476c824516151db4d5eeb2a9a41d44ff6482ab54958ea6a2de784822b2ff34",
+      "native-packaged-pipeline.log": "e311940683b837e5481e579f7e0d9475781adc392bd854294a738842eaad432d",
+      "packaged-progress-watchdog.log": "c41abff74c0047e7f372a83ee44d1c948c72d837aa26ceb6b20b40187638e3ab",
+      "packaged-universal-closure.log": "0df325264f82838b2db198184ad0c4f7a806a6ec17279593b112dde8cbc82289"
+    }
+  },
+  "owned_airspy_qualification": {
+    "application_transaction": "dfd78947d65bf99374182bc9e8af45a5",
+    "reboot_verified": true,
+    "protected_state_preserved": true,
+    "fresh_server_accepted_post_reboot_reports": true,
+    "package_owned_watchdog_active": true,
+    "node_local_workaround_retired": true
+  },
+  "limits": [
+    "Exact frozen universal application staging only. Stable discovery and complete installer publication require their own exact-artifact signed public installer qualification.",
+    "Adopted Airspy recovery is qualified; other receiver profiles keep their packaged behavior. Quiet RF and paused scanning do not establish a stall.",
+    "Private node authority and private installer bundles are excluded from publication."
+  ]
+}
