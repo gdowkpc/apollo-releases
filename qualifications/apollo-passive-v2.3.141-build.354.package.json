@@ -1,0 +1,44 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.141",
+  "build": 354,
+  "source_commit": "6df583e57cf908263361d1a67a4dca39c21b66c5",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/799",
+  "allocation_pr": "https://github.com/gdowkpc/apollo/pull/800",
+  "test_correction_pr": "https://github.com/gdowkpc/apollo/pull/801",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.141-build.354-linux-arm64.zip",
+    "sha256": "7042c555f5ff510070e0027c51ca69b953f2e8ec73b9201770bc872017c95c47",
+    "bytes": 24445344,
+    "manifest_sha256": "c45e880d27bdfd973e5a898e6a02991579239a1a6c1031821a4c3a4fda0b9955",
+    "principal_sha256": "8aae5b85f74ab4aa758aa9208db7a14b548ae67055fa6eebbbb3ea50984eba14",
+    "architecture": "aarch64"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reproducible_packages": true,
+    "updater_version": "1.0.98",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "packaged_universal_closure_passed": true,
+    "packaged_tone_diagnostics_passed": true,
+    "source_tests_passed": 610,
+    "source_tests_skipped": 4,
+    "source_skip_reason": "Three Windows direct-RTL cases and one Linux x64-only case; x64 focused setup suite separately passed all 57 without skips.",
+    "airspy_serial_tests_passed": 78,
+    "retained_evidence_archive_sha256": "0cf9004df1e003c5d0f3be944d3d05d090a07e812ae57533889ba59a9e1f0460"
+  },
+  "onboarding_software": {
+    "server_checks": 57,
+    "runtime_tests": 66,
+    "production_records_mutated": false
+  },
+  "limits": [
+    "Exact retained archive only; no rebuild.",
+    "Complete installer, stable discovery and download catalog remain held pending signed exact-installer onboarding qualification on the registered owned RTL bench.",
+    "No new live RF reporting or other-receiver field qualification claimed; existing native code is unchanged.",
+    "No customer node contact or installation."
+  ]
+}

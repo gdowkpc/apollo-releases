@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.141-build.354",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "6df583e57cf908263361d1a67a4dca39c21b66c5"
+  },
+  "release": {
+    "version": "2.3.141",
+    "build": 354,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.141-build.354-linux-arm64.zip",
+    "byte_size": 24445344,
+    "sha256": "7042c555f5ff510070e0027c51ca69b953f2e8ec73b9201770bc872017c95c47",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner setup acknowledgment PR799, release allocation PR800 and ARM64 fixture corrections PR801 are merged; frozen source 6df583e57cf908263361d1a67a4dca39c21b66c5.",
+      "Package review: qualifications/apollo-passive-v2.3.141-build.354.package.json; SHA256 7a46f0844da463aaf321b0a342a98254cc618214f76568a7cbd1da02015afbac.",
+      "Two byte-identical physical ARM64 archives; 610 source tests passed, four documented architecture skips, clean/legacy target-state convergence, service-user readability, universal closure and packaged native pipeline passed. Onboarding disposable tests passed 57 server checks and 66 app tests.",
+      "Owner authorized qualification and public Pi release. This immutable runtime stage enables exact installer qualification only; download and stable pointers remain held until the signed exact-installer gate passes. No customer state or other platform changed."
+    ]
+  }
+}
