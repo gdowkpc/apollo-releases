@@ -1,0 +1,59 @@
+{
+  "schema_version": "apollo-qualified-updater-public-mirror-v1",
+  "version": "1.0.98",
+  "source_commit": "5bf292a20da97960229a22afda7f8247bc276de8",
+  "canonical_signed_release": {
+    "repository": "gdowkpc/apollo",
+    "tag": "apollo-universal-pi-updater-v1.0.98",
+    "release_id": 422448615,
+    "immutable": true
+  },
+  "production_signed_candidate": {
+    "run_id": "40042482529",
+    "workflow_sha": "603769f0c38b8d88e1e4d0f8bd86a27cdab82fa9",
+    "manifest_sha256": "d2099480e06490cdc66b5b49dbc3a24253f9279685a63f2204097760e3e69f3e"
+  },
+  "files": {
+    "ApolloUniversalPiUpdater-1.0.98-linux-arm64.zip": {
+      "bytes": 315983,
+      "sha256": "4895ed1ad2096dccfc1b08cc6568f808b3f356260bb9bb2d437b774d0b8cb587"
+    },
+    "ApolloUniversalPiUpdater-1.0.98.authority.json": {
+      "bytes": 1169,
+      "sha256": "92a3d56a261edb62cf54dad0f4d121abb8e1dda2af278e134630fb71702b61aa"
+    },
+    "ApolloUniversalPiUpdater-1.0.98.controller-capsule.json": {
+      "bytes": 6655,
+      "sha256": "88bbd68e060593e3ba5ff3c4f63035797294bc5d3e3cfcf30098cdb504526c6a"
+    }
+  },
+  "native_qualification": {
+    "native-updater-matrix": {
+      "tests": 421,
+      "pass": 421,
+      "fail": 0,
+      "skipped": 0
+    },
+    "native-root-boundaries": {
+      "tests": 197,
+      "pass": 195,
+      "fail": 0,
+      "skipped": 2,
+      "skip_reason": "Two opt-in adoption integration cases are outside this updater workflow."
+    },
+    "native-nonroot-recovery": {
+      "tests": 61,
+      "pass": 60,
+      "fail": 0,
+      "skipped": 1,
+      "skip_reason": "Root-only StateDirectory custody is exercised by the root boundary gate."
+    }
+  },
+  "owner_authorization": "Owner authorized qualification and public release of the updated Pi app for new nodes and existing incomplete registrations. The dashboard public updater URLs require these exact already-qualified signed bytes. No rebuilding, signing, node contact or installation is performed by this mirror publication.",
+  "constraints": {
+    "unchanged_signed_bytes": true,
+    "no_private_bench_authority": true,
+    "no_update_pointer_change": true,
+    "no_other_platform_change": true
+  }
+}
