@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "6df583e57cf908263361d1a67a4dca39c21b66c5"
+  },
+  "target": {
+    "version": "2.3.141",
+    "build": 354,
+    "source_commit": "6df583e57cf908263361d1a67a4dca39c21b66c5",
+    "release_tag": "apollo-passive-v2.3.141-build.354",
+    "sha256": "7042c555f5ff510070e0027c51ca69b953f2e8ec73b9201770bc872017c95c47"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.141-build.354-updater.1.0.98-linux-arm64.zip",
+    "bytes": 334882,
+    "sha256": "b7ad9d40b546e1785df4c0c3df76bdd2963aa9b0e0321bbf6d7c8a195a7172f2"
+  },
+  "updater": {
+    "version": "1.0.98",
+    "signed_source_commit": "5bf292a20da97960229a22afda7f8247bc276de8",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.98-linux-arm64.zip": {
+        "sha256": "4895ed1ad2096dccfc1b08cc6568f808b3f356260bb9bb2d437b774d0b8cb587",
+        "bytes": 315983
+      },
+      "ApolloUniversalPiUpdater-1.0.98.authority.json": {
+        "sha256": "92a3d56a261edb62cf54dad0f4d121abb8e1dda2af278e134630fb71702b61aa",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.98.controller-capsule.json": {
+        "sha256": "88bbd68e060593e3ba5ff3c4f63035797294bc5d3e3cfcf30098cdb504526c6a",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.141-build.354-updater.1.0.98",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.141-build.354-updater.1.0.98.onboarding.json",
+    "sha256": "415ba9fb61bf21982ec7cae2865e76a3b78435acb977651c6d3675943e6f715f"
+  },
+  "qualification": {
+    "scope": "Exact public installer forward upgrade from Build353/updater1.0.98, retry, protected registration/settings preservation, actual reboot, fresh authenticated check-ins, and three spaced processing samples across all seven configured RF windows on both boots passed on the registered owned RTL bench. Matching disposable onboarding integration tests passed 57 server checks and 66 runtime tests, including incomplete existing registrations. Installed app confirms its named receiver/location after reboot; production check-in reports 2.3.141 Build354. Live RF reporting qualification remains separate."
+  }
+}
