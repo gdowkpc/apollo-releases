@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.138-build.351",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4"
+  },
+  "release": {
+    "version": "2.3.138",
+    "build": 351,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.138-build.351-linux-arm64.zip",
+    "byte_size": 24442182,
+    "sha256": "afad2fcbc9a831a057fa306659087b7fb97c045d5c51b4935f6eee6664c49258",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Reviewed source PR787 merged at459a6ff9b5746c286d3871791155a65d9c66e52c; packaging PR788 merged at72088801378367f2a85eaccf0a7d0cf1ea9c9ba4 is the frozen payload source.",
+      "Package review: qualifications/apollo-passive-v2.3.138-build.351.package.json; SHA256 1572c40f8e3919422c77a42368e864e83fee6800533d1971b9ae45bd4f8e9c1a.",
+      "Two byte-identical ARM64 packages and exact-archive clean/legacy convergence, native readability/pipeline and watchdog safety checks passed. KD6KPC-3 passed normal authenticated installation, retry, actual reboot, protected-state preservation and fresh server-accepted reports. Package-owned watchdog replaced the retired local workaround.",
+      "Owner authorized normal public Pi publication with retained signed updater1.0.98, stable discovery and public installer. Keep stable discovery unchanged until exact public installer qualification completes. No private authority is published."
+    ]
+  }
+}
