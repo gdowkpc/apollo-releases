@@ -1,0 +1,46 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.140",
+  "build": 353,
+  "source_commit": "7ac7a012fe696837b16a708a90128f8281fa3b55",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/794",
+  "source_merge": "7ac7a012fe696837b16a708a90128f8281fa3b55",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.140-build.353-linux-arm64.zip",
+    "sha256": "7c790adfc0f70da7f42e9a49605a54270e57e093b1b5921a1b73583f454f1e65",
+    "bytes": 24444165,
+    "manifest_sha256": "6486a0f07654054b56f294943d098eacd81bee19b442473f2ed3efbb8d1f5bb0",
+    "principal_sha256": "501aaa1cc45c02189f30a4a2286cee3b0878456934b1ab713cb44f88e5f89ca4",
+    "architecture": "aarch64"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reproducible_packages": true,
+    "updater_version": "1.0.98",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "packaged_tone_diagnostics_passed": true,
+    "source_tests_passed": 498,
+    "source_tests_skipped": 3,
+    "airspy_serial_tests_passed": 78,
+    "retained_evidence_archive_sha256": "68b77af7ae9ebb5a22d9a2a28b1b07060b0b5e486370194535f90428c8bb774e"
+  },
+  "owned_airspy_qualification": {
+    "normal_updater_install": true,
+    "reboot_verified": true,
+    "protected_state_preserved": true,
+    "fresh_server_accepted_post_reboot_reports": true,
+    "supported_tones_auto_promoted": true,
+    "withheld_confidence_reason_logged": true,
+    "package_owned_watchdogs_active": true,
+    "node_local_workaround_absent": true
+  },
+  "limits": [
+    "Exact immutable archive only; no rebuild.",
+    "Complete installer and stable discovery require separately signed exact-installer qualification.",
+    "Detection thresholds, confidence calculations, wire evidence and promotion gates unchanged.",
+    "Private bench authority and identity are excluded from publication."
+  ]
+}
