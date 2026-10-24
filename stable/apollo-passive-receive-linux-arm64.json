@@ -1,17 +1,17 @@
 {
   "schema_version": "apollo-stable-release-v2",
-  "minimum_pi_updater_version": "1.0.97",
+  "minimum_pi_updater_version": "1.0.98",
   "product_id": "apollo-passive-receive",
   "platform": "linux",
   "architecture": "arm64",
-  "version": "2.3.136",
-  "build": 349,
-  "source_commit": "6fd48848b3bcce1b72008fb066e3ce35860ed7ec",
-  "published_at": "2026-10-23T20:56:12Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.136-build.349",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.136-build.349/ApolloPassiveReceive-2.3.136-build.349-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.3.136-build.349-linux-arm64.zip",
-  "byte_size": 24420712,
-  "sha256": "a808f893b5f7cf37ec8c4fd05ed145b1bf52788a6acc1670a0ee99dd0664b330",
-  "short_release_notes": "Fixes missing verified RTL-SDR tones in reports and capture recovery after a native receiver restart. Preserves saved settings, identity and calibration."
+  "version": "2.3.138",
+  "build": 351,
+  "source_commit": "72088801378367f2a85eaccf0a7d0cf1ea9c9ba4",
+  "published_at": "2026-10-24T02:12:10Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.138-build.351",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.138-build.351/ApolloPassiveReceive-2.3.138-build.351-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.138-build.351-linux-arm64.zip",
+  "byte_size": 24442182,
+  "sha256": "afad2fcbc9a831a057fa306659087b7fb97c045d5c51b4935f6eee6664c49258",
+  "short_release_notes": "Repairs the receiver watcher and adds bounded progress-based recovery for adopted Airspy reception and local reporting. Quiet RF, paused or disabled scanning, unknown telemetry and reporting retry backoff do not trigger recovery. Preserves receiver settings, calibration, identity, credentials and reporting preferences."
 }
