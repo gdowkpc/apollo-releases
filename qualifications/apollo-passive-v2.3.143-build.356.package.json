@@ -1,0 +1,44 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.143",
+  "build": 356,
+  "source_commit": "ba63c3dd1efe259873f23131ff8142f48f749865",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/804",
+  "allocation_pr": "https://github.com/gdowkpc/apollo/pull/805",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.143-build.356-linux-arm64.zip",
+    "sha256": "decdff01f63a0b36821300a80e4094bb82625ec5e31baa957d78c8ebd1dfcf11",
+    "bytes": 24447667,
+    "manifest_sha256": "ddb250c02fd1a15645045085e242a89e0ed305fa464f33468bca8deaa99824dc",
+    "principal_sha256": "8c4d9223ff228de03c42b85944797c2d03845faea20f68d84020e6e72587e756",
+    "architecture": "aarch64"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reproducible_packages": true,
+    "updater_version": "1.0.98",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "packaged_universal_closure_passed": true,
+    "packaged_tone_diagnostics_passed": true,
+    "source_tests_passed": 626,
+    "source_tests_skipped": 4,
+    "source_skip_reason": "Three Windows direct-RTL cases and one Linux x64-only case; separate Linux CI covers source configuration and recovery paths.",
+    "airspy_serial_tests_passed": 78,
+    "retained_evidence_archive_sha256": "0a465db3acb84adb7a3277c1372fb6112cb74e96445bf0573af3c676fbdf5acf"
+  },
+  "regional_scan_regression": {
+    "packaged_runtime": true,
+    "windows": 4,
+    "settings_unchanged": true,
+    "dormant_band_activated": false
+  },
+  "limits": [
+    "Exact frozen archive only; existing signed updater 1.0.98 reused unchanged.",
+    "Immutable runtime stage enables signed exact-installer qualification; stable discovery and download catalog remain held.",
+    "Physical onboarding/reboot and live RF reporting are separate gates; no new other-receiver field qualification claimed.",
+    "No customer node contact or installation."
+  ]
+}

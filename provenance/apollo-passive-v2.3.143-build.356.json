@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.143-build.356",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ba63c3dd1efe259873f23131ff8142f48f749865"
+  },
+  "release": {
+    "version": "2.3.143",
+    "build": 356,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.143-build.356-linux-arm64.zip",
+    "byte_size": 24447667,
+    "sha256": "decdff01f63a0b36821300a80e4094bb82625ec5e31baa957d78c8ebd1dfcf11",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Merged regional RTL correction PR804 and release allocation PR805; exact frozen source ba63c3dd1efe259873f23131ff8142f48f749865.",
+      "Package review: qualifications/apollo-passive-v2.3.143-build.356.package.json; SHA256 c8cc132cefb730915157c57bfffa524058c3125277eabd531cc4e8f5b09bef11.",
+      "Two byte-identical physical ARM64 archives; 626 source tests passed with four documented platform skips. Clean/legacy convergence, service-user readability, universal closure, packaged native pipeline and 78 Airspy serial tests passed.",
+      "Packaged regional single-span regression verifies four authorized 2 m windows, dormant bands inactive and saved settings unchanged.",
+      "Owner authorized qualification and publication. Immutable runtime stage only; signed exact-installer bench qualification precedes installer publication. No customer node installation."
+    ]
+  }
+}
