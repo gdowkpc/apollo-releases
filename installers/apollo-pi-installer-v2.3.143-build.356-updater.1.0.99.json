@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ba63c3dd1efe259873f23131ff8142f48f749865"
+  },
+  "target": {
+    "version": "2.3.143",
+    "build": 356,
+    "source_commit": "ba63c3dd1efe259873f23131ff8142f48f749865",
+    "release_tag": "apollo-passive-v2.3.143-build.356",
+    "sha256": "decdff01f63a0b36821300a80e4094bb82625ec5e31baa957d78c8ebd1dfcf11"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.143-build.356-updater.1.0.99-linux-arm64.zip",
+    "bytes": 335722,
+    "sha256": "b27e4f96a8014b528721204f0493ba3244648abf5d03cb56a6602c2da92e918a"
+  },
+  "updater": {
+    "version": "1.0.99",
+    "signed_source_commit": "f79caa35fed6e5080b3736f3c7876ee41aaf0949",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.99-linux-arm64.zip": {
+        "sha256": "b74231a5a18d97ebac7c149ceca4568ffc3ff45d62c7c82ef47d5749d93617dd",
+        "bytes": 316798
+      },
+      "ApolloUniversalPiUpdater-1.0.99.authority.json": {
+        "sha256": "8ac761a5cb475ca7f9123cebec253e7aedf47e6b64415daf108373b3304f80cd",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.99.controller-capsule.json": {
+        "sha256": "fc58d676a64e9860cda323ea4b691c3ea1c1a2cdf8e08ff2dce41fa4624ef92f",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.143-build.356-updater.1.0.99",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.143-build.356-updater.1.0.99.onboarding.json",
+    "sha256": "b85a26179a925b9b9e9ae58d1d8dcb66b0864d2a9e4953828e3429ba20d4d7f9"
+  },
+  "qualification": {
+    "scope": "Exact complete-installer installation and repeat installation on the owned registered RTL bench preserved protected node state, passed an actual reboot, authenticated check-ins, and three spaced processing samples across all seven configured windows on each boot. Matching isolated onboarding software checks passed. Qualification scope is installer_onboarding; live RF reporting remains separately unqualified. No customer node was contacted."
+  }
+}
