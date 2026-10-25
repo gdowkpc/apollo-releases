@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "ba63c3dd1efe259873f23131ff8142f48f749865"
+  },
+  "target": {
+    "version": "2.3.143",
+    "build": 356,
+    "source_commit": "ba63c3dd1efe259873f23131ff8142f48f749865",
+    "release_tag": "apollo-passive-v2.3.143-build.356",
+    "sha256": "decdff01f63a0b36821300a80e4094bb82625ec5e31baa957d78c8ebd1dfcf11"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.143-build.356-updater.1.0.98-linux-arm64.zip",
+    "bytes": 334879,
+    "sha256": "1d33f27683a1c4d0a41452b7191e0151143b9b97fa6aaea7b24adb1ac3a1c3b7"
+  },
+  "updater": {
+    "version": "1.0.98",
+    "signed_source_commit": "5bf292a20da97960229a22afda7f8247bc276de8",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.98-linux-arm64.zip": {
+        "sha256": "4895ed1ad2096dccfc1b08cc6568f808b3f356260bb9bb2d437b774d0b8cb587",
+        "bytes": 315983
+      },
+      "ApolloUniversalPiUpdater-1.0.98.authority.json": {
+        "sha256": "92a3d56a261edb62cf54dad0f4d121abb8e1dda2af278e134630fb71702b61aa",
+        "bytes": 1169
+      },
+      "ApolloUniversalPiUpdater-1.0.98.controller-capsule.json": {
+        "sha256": "88bbd68e060593e3ba5ff3c4f63035797294bc5d3e3cfcf30098cdb504526c6a",
+        "bytes": 6655
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.143-build.356-updater.1.0.98",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.143-build.356-updater.1.0.98.onboarding.json",
+    "sha256": "6332f42ecb57c21fc35eeeacc5d1dae14cb60c9e73379e6f4e07df68873f0eb1"
+  },
+  "qualification": {
+    "scope": "Exact public installer re-entry and repeat install on a registered Build356/updater1.0.98 owned RTL bench, protected-state preservation, actual reboot, authenticated check-ins and three spaced processing samples across all seven configured windows on both boots passed. The initial Build354-to-356 upgrade completed in an earlier run whose final sampling stopped on a local API timeout; failed evidence is retained privately. A fresh complete canonical run produced this attestation. Matching disposable onboarding checks passed 57 server checks and 66 runtime tests. Live RF reporting remains separately unqualified."
+  }
+}
