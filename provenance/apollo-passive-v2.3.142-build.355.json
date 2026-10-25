@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.142-build.355",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "cc4dc3d79152caa85bc7edf4f9880a2bd10381cd"
+  },
+  "release": {
+    "version": "2.3.142",
+    "build": 355,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.142-build.355-linux-arm64.zip",
+    "byte_size": 24445691,
+    "sha256": "203d680ee73de6ccfd41c90eb14b4fb6c25a6b694cb70dde3341cdf993b53fc5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Scan-plan activation fix PR802 and Build355 allocation PR803 merged. Frozen source cc4dc3d79152caa85bc7edf4f9880a2bd10381cd is an ancestor of approved main, with identical tree at integration.",
+      "Package review: qualifications/apollo-passive-v2.3.142-build.355.package.json; SHA256 8988ccba3860a6a5017b2e2d031a19fbd597bf14c42809f9feb4e16d61d7be2c.",
+      "Two byte-identical physical ARM64 archives; 635 source tests passed, four documented architecture skips; target-state convergence, universal closure, service-user readability, native pipeline and packaged dashboard checks passed.",
+      "Owner authorized only frozen application publication, followed by owned RTL installer upgrade/retry checks. Complete installer, download catalog and stable update pointers remain held. Node23 remains excluded."
+    ]
+  }
+}

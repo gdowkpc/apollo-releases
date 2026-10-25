@@ -1,0 +1,45 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.142",
+  "build": 355,
+  "source_commit": "cc4dc3d79152caa85bc7edf4f9880a2bd10381cd",
+  "source_pr": "https://github.com/gdowkpc/apollo/pull/802",
+  "allocation_pr": "https://github.com/gdowkpc/apollo/pull/803",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.142-build.355-linux-arm64.zip",
+    "sha256": "203d680ee73de6ccfd41c90eb14b4fb6c25a6b694cb70dde3341cdf993b53fc5",
+    "bytes": 24445691,
+    "manifest_sha256": "4abc0e648c3beebaf593324df38d42fd7cf5df5cf162d4ae3ba0dd065ce5af27",
+    "principal_sha256": "91497f5cd9eb30c350c8e55e7521fb642a8a23a021d7a6af41244096d1939fb7",
+    "architecture": "aarch64"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reproducible_packages": true,
+    "updater_version": "1.0.98",
+    "source_tests_passed": 635,
+    "source_tests_skipped": 4,
+    "source_skip_reason": "Three Windows direct RTL cases and one Linux x64-only case.",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "packaged_universal_closure_passed": true,
+    "packaged_tone_diagnostics_passed": true,
+    "airspy_serial_tests_passed": 78,
+    "packaged_dashboard_equals_reviewed_source": true
+  },
+  "installer_preparation": {
+    "root_fixture_tests_passed": 108,
+    "byte_identical_candidates": true,
+    "signature_inventory_capsule_verified": true,
+    "installer_published": false,
+    "installed_upgrade_and_retry": false
+  },
+  "limits": [
+    "Exact retained application archive only; no rebuild or new signature.",
+    "Application-only staging is owner-authorized to permit installer qualification. Complete installer publication, public download catalog and stable discovery remain held.",
+    "No live receiver/reporting or reboot qualification is claimed. Node 23 is excluded and remains pending.",
+    "Initial package-check symlink was corrected to real directory; one unchanged Airspy parallel timing failure passed all 78 serial checks. Logs retained."
+  ]
+}
