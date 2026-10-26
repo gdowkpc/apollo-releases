@@ -1,0 +1,41 @@
+{
+  "schema_version": "apollo-pi-forward-install-qualification-review-v1",
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.152-build.365-updater.1.0.102-linux-arm64.zip",
+    "bytes": 341998,
+    "sha256": "81f86be12c7605d36d6ae01a6e01105da1ec899869f7ada73376d99cbfe62d72"
+  },
+  "target": {
+    "version": "2.3.152",
+    "build": 365,
+    "source_commit": "9459788cb3b4e3b8ee2565c78c4435c12b1783a2",
+    "release_tag": "apollo-passive-v2.3.152-build.365",
+    "sha256": "315c45a023d5317d4779a45e1250b31cb086d07a5088bbae3307dab0e1717a68"
+  },
+  "updater": {
+    "version": "1.0.102",
+    "source_commit": "55e338cb259132ac3481c76f2e37115ccbc36c9b",
+    "artifact_sha256": "56b55d005321d9be273e3e95cad7e5e8f1ea059ac6b862560b80eacfa1498f82"
+  },
+  "predecessor": {
+    "version": "2.3.148",
+    "build": 361,
+    "source_commit": "bb7e2e15f171798b0a44001c42c96e658c31e6cb",
+    "manifest_sha256": "6dc380cfa3e4b5842b81ed067a66a95263d4f146d5ed20f475e25d7f1da35cb3"
+  },
+  "result": {
+    "canonical_forward_transaction_passed": true,
+    "transaction_started_sha256": "57267721afed66d3255727420e612449665ced89514ee71d901809d720955797",
+    "transaction_complete_sha256": "12fcc3ec3e52994f8ce8eea0e63a891e5d1123a78609c1586b84d929e1a5c49f",
+    "protected_files_present": 5,
+    "declared_paths": 13,
+    "bytes_uid_gid_mode_xattrs_unchanged": true,
+    "root_private_backups_retained": true,
+    "registered_receiver_readiness_passed": true
+  },
+  "limits": [
+    "Separate forward-install review supplements the signed installer-onboarding receipt; it does not replace it.",
+    "The first standard collector refused the deliberately held old watchdog before installation. Its failed preflight remains retained. The normal signed forward installer established the new target service contract before the successful standard collector.",
+    "No customer node contact, live RF reporting qualification or new USB interruption/other-hardware qualification."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "9459788cb3b4e3b8ee2565c78c4435c12b1783a2"
+  },
+  "target": {
+    "version": "2.3.152",
+    "build": 365,
+    "source_commit": "9459788cb3b4e3b8ee2565c78c4435c12b1783a2",
+    "release_tag": "apollo-passive-v2.3.152-build.365",
+    "sha256": "315c45a023d5317d4779a45e1250b31cb086d07a5088bbae3307dab0e1717a68"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.152-build.365-updater.1.0.102-linux-arm64.zip",
+    "bytes": 341998,
+    "sha256": "81f86be12c7605d36d6ae01a6e01105da1ec899869f7ada73376d99cbfe62d72"
+  },
+  "updater": {
+    "version": "1.0.102",
+    "signed_source_commit": "55e338cb259132ac3481c76f2e37115ccbc36c9b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.102-linux-arm64.zip": {
+        "sha256": "56b55d005321d9be273e3e95cad7e5e8f1ea059ac6b862560b80eacfa1498f82",
+        "bytes": 318670
+      },
+      "ApolloUniversalPiUpdater-1.0.102.authority.json": {
+        "sha256": "b999ef3e4f627e7135d1a07baf0baf4b24bab7af78f6ec1e8ac65d24aef6a9cd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.102.controller-capsule.json": {
+        "sha256": "b4ff7d86e60f6620d1c74d63bde948509b57a8867033edc7bed9910377ea2a17",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.152-build.365-updater.1.0.102",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.152-build.365-updater.1.0.102.onboarding.json",
+    "sha256": "b875cda5f28501be8641bd455e6bb13369eb2c6ec96762ab43b44fa0afcf46b2"
+  },
+  "qualification": {
+    "scope": "Exact signed complete-installer installation and retry on the registered owned RTL bench preserved protected node state, passed one real reboot, fresh authenticated check-ins, and three spaced samples across all seven configured windows on each boot. Receiver error counters remained unchanged across the reboot. Matching isolated onboarding checks passed. A separate canonical forward installation from private361 preserved all five existing protected files, including bytes,UID,GID,modes,xattrs, and eight absent paths; review qualifications/apollo-pi-installer-v2.3.152-build.365-updater.1.0.102.forward.json SHA256 62287bcbdcc8137e0c7f5aef67b07c2113d5a038314351c30e419eca7299d918. Qualification scope is installer_onboarding; live RF reporting remains separate. No customer node was contacted."
+  }
+}
