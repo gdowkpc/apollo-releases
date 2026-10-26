@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.152-build.365",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "9459788cb3b4e3b8ee2565c78c4435c12b1783a2"
+  },
+  "release": {
+    "version": "2.3.152",
+    "build": 365,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.152-build.365-linux-arm64.zip",
+    "byte_size": 24484862,
+    "sha256": "315c45a023d5317d4779a45e1250b31cb086d07a5088bbae3307dab0e1717a68",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source 9459788cb3b4e3b8ee2565c78c4435c12b1783a2; allocation/signing approval PR860; runtime restart-cycle fix PR855, confidence diagnostics PR857, shared DMR decoding PR858 and privacy setup fixture PR861.",
+      "Package review: qualifications/apollo-passive-v2.3.152-build.365.package.json; SHA256 2398e146107b8cbe2e42e087b84a22fcc78f561994950f7460cf989adf3f1028.",
+      "Two byte-identical physical ARM64 packages. Recovery165/165; effective runtime810 passed with four documented platform skips; corrected fixture3/3; Airspy79/79; all206 file modes/hashes and59 protected source blobs independently verified.",
+      "Clean/legacy convergence2/2 with unchanged signed updater99, service-user readability1/1, universal closure1/1, packaged tone7/7. New exact updater102 complete installer remains a separate gate.",
+      "Owner authorized newer owned KD6KPC-23 release qualification and final publication. Immutable runtime stage only; full signed installer qualification precedes catalog and discovery publication. No customer node installation."
+    ]
+  }
+}
