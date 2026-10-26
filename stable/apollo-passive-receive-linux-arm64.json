@@ -1,17 +1,17 @@
 {
   "schema_version": "apollo-stable-release-v2",
-  "minimum_pi_updater_version": "1.0.98",
+  "minimum_pi_updater_version": "1.0.102",
   "product_id": "apollo-passive-receive",
   "platform": "linux",
   "architecture": "arm64",
-  "version": "2.3.141",
-  "build": 354,
-  "source_commit": "6df583e57cf908263361d1a67a4dca39c21b66c5",
-  "published_at": "2026-10-24T18:58:03Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.141-build.354",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.141-build.354/ApolloPassiveReceive-2.3.141-build.354-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.3.141-build.354-linux-arm64.zip",
-  "byte_size": 24445344,
-  "sha256": "7042c555f5ff510070e0027c51ca69b953f2e8ec73b9201770bc872017c95c47",
-  "short_release_notes": "Requires receiver identification and owner-confirmed location submission before Pi setup is complete. Verifies the server received both, resumes existing incomplete registrations without replacing their identity, and reports the actual packaged build. Preserves saved receiver settings, credentials, location, reporting preferences and administrator approval requirements."
+  "version": "2.3.152",
+  "build": 365,
+  "source_commit": "9459788cb3b4e3b8ee2565c78c4435c12b1783a2",
+  "published_at": "2026-10-26T18:42:47Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.152-build.365",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.152-build.365/ApolloPassiveReceive-2.3.152-build.365-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.152-build.365-linux-arm64.zip",
+  "byte_size": 24484862,
+  "sha256": "315c45a023d5317d4779a45e1250b31cb086d07a5088bbae3307dab0e1717a68",
+  "short_release_notes": "Requires signed updater 1.0.102; use the complete Pi installer to update both components. Includes guarded application restart-loop recovery, bounded receiver recovery, privacy controls and receive diagnostics. Preserves registration, credentials, location, receiver settings and reporting choices. Exact installer upgrade, retry, reboot, check-ins and all configured receiver windows were qualified on the owned RTL bench. Live RF reporting and other hardware qualification remain separate."
 }
