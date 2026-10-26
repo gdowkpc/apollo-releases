@@ -1,0 +1,48 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.152",
+  "build": 365,
+  "source_commit": "9459788cb3b4e3b8ee2565c78c4435c12b1783a2",
+  "allocation_pr": "https://github.com/gdowkpc/apollo/pull/860",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.152-build.365-linux-arm64.zip",
+    "sha256": "315c45a023d5317d4779a45e1250b31cb086d07a5088bbae3307dab0e1717a68",
+    "bytes": 24484862,
+    "manifest_sha256": "7026426feb52cc0ea7e739c9825387c86fed1eb6b6c22a93c429c461d3be1352",
+    "principal_sha256": "75a7ca4fbdb904cabe44bd93041d66a50aa0d06d3c15a006e4ad7d97fe579273",
+    "architecture": "aarch64"
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reproducible_packages": true,
+    "reference_updater_version": "1.0.99",
+    "required_clean_and_legacy_target_state_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_universal_closure_passed": true,
+    "packaged_tone_diagnostics_passed": 7,
+    "airspy_serial_tests_passed": 79,
+    "root_recovery_passed": 165,
+    "source_tests_passed": 810,
+    "source_tests_skipped": 4,
+    "source_skip_reason": "Three Windows direct-RTL cases and one Linux x64-only case.",
+    "fixture_correction": "Initial runtime run: 809 pass, one stale fixture fail and four platform skips. Only fixture dependency changed; all three focused cases then passed on Windows and ARM64. Unaffected results are retained; raw failure preserved. One new source-layout serializer case was also invoked incorrectly in the packaged Airspy subtree; seven packaged checks passed and all79 source Airspy cases passed with that case in its correct layout.",
+    "installer_root_custody_passed": 9,
+    "gateway_root_custody_passed": 10,
+    "retained_evidence_archive_sha256": "ac85f8ef28a4c7a7c98ef3b4f0111a3731604ac6a7aa7885e95fac2b8bcd0567"
+  },
+  "independent_audit": {
+    "files": 206,
+    "modes": 206,
+    "protected_source_blobs": 59,
+    "principal_arm64": true,
+    "native_inventory_sha256": "09d45d4e4f0b4da59ba9012ea57c06c1c5f0bd932e0b65a44156a9d6b2e4ff74",
+    "builder_protected_state_unchanged": true
+  },
+  "limits": [
+    "Immutable application stage enables full signed updater102 installer qualification. Download and update-discovery pointers stay held until exact-installer qualification.",
+    "Native components unchanged from qualified inventory09d45d4e4f0b4da59ba9012ea57c06c1c5f0bd932e0b65a44156a9d6b2e4ff74; no SDK or native rebuild.",
+    "No new other-receiver field, live RF reporting or USB interruption qualification claimed.",
+    "No customer Pi contact or deployment."
+  ]
+}
