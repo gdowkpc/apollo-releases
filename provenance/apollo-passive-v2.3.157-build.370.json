@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.157-build.370",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "123d21390cdeaf74118fe66e5daa90b92738ec28"
+  },
+  "release": {
+    "version": "2.3.157",
+    "build": 370,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.157-build.370-linux-arm64.zip",
+    "byte_size": 24500582,
+    "sha256": "13bfb2e6faf6bc2811d49fe0ee0868ec01381452d4e43614efed85b93d06df8f",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen Build370 source123d21390cdeaf74118fe66e5daa90b92738ec28; merged allocation PR879. Includes Windows recovery PR867, RSP1B anchor-timeout PR850, tone-tail PR873, durable failure history PR876 and consecutive scan evidence PR878.",
+      "Package review: qualifications/apollo-passive-v2.3.157-build.370.package.json; SHA256 49b83a959ece1eea246a385d4849e86d5d721268e3d8f5187ae341e75d545bfb.",
+      "Physical ARM64 package workflow40441302871 passed exact ZIP with signed updater1.0.102: clean/legacy convergence2/2, universal closure1/1, service-user readability1/1 and native packaged processing3/3 plus embedded RF-health3/3; zero skips in those groups.",
+      "Two retained byte-identical emulated ARM64 builds; physical ARM64 execution qualified separately. Unchanged native inventory09d45d4e4f0b4da59ba9012ea57c06c1c5f0bd932e0b65a44156a9d6b2e4ff74.",
+      "Owner authorized qualification and public release in the publication task. Runtime staging only; exact complete-installer onboarding qualification precedes catalog/discovery. RF reporting and other receiver qualification remain separate."
+    ]
+  }
+}
