@@ -1,0 +1,74 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.158",
+  "build": 371,
+  "source_commit": "e6a53ee5d53cb70dddb14d741a36f7e2a52acb4f",
+  "runtime_pr": "https://github.com/gdowkpc/apollo/pull/884",
+  "allocation_pr": "https://github.com/gdowkpc/apollo/pull/885",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.158-build.371-linux-arm64.zip",
+    "sha256": "d8a29672e407809de444d9c41c7d0a08bf52fd2dd564d3bb18d7db4236c2f4f1",
+    "bytes": 24502627,
+    "manifest_sha256": "1cf99370c95d5b7ab321de4ebc5a3e0dbb02d50375be5eb4c4a921980a445ec5",
+    "principal_sha256": "147dd3e9eea63623d2a5a50a1f475485302234cff6d649757a0382e7e8eccb4f",
+    "architecture": "aarch64"
+  },
+  "build_evidence": {
+    "reproducible_packages": true,
+    "packaging_host": "Linux x86_64 with approved ARM64 runtime input",
+    "native_inventory_rebuilt": false,
+    "source_tests": {
+      "windows": {
+        "passed": 202,
+        "skipped": 4,
+        "failed": 0
+      },
+      "linux_frozen_source": {
+        "passed": 111,
+        "skipped": 0,
+        "failed": 0
+      }
+    },
+    "source_test_scope": "Focused runtime, spur lifecycle and shared regression groups; platform-only skips are explicit."
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reference_updater_version": "1.0.102",
+    "required_clean_and_legacy_target_state_passed": true,
+    "packaged_universal_closure_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "workflow_run_id": 40529103744,
+    "workflow_url": "https://github.com/gdowkpc/apollo/actions/runs/40529103744",
+    "qualification_source_sha": "e6a53ee5d53cb70dddb14d741a36f7e2a52acb4f",
+    "frozen_application_source_sha": "e6a53ee5d53cb70dddb14d741a36f7e2a52acb4f",
+    "qualification_log_sha256": "f7d82ec84248908b575ab7238d40b6d4ba61ccc60f8352956d6f68f96a97e6f1",
+    "required_test_totals": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "packaged_spur_probe": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "add_applied_before_acknowledgment": true,
+    "offline_restart_retained_saved_snapshot": true,
+    "undo_applied_and_acknowledged": true,
+    "manual_ignores_and_settings_preserved": true,
+    "result_sha256": "d63cc02efcc3648856d5f48acc4fec8d0bc0ebd45aad292500eb66f4114cabf7",
+    "fixture_correction": "First probe stopped before application launch because sandbox could not traverse a staging parent with mode0700. Only staging directory traversal mode was corrected; retry used unchanged ZIP. Both attempts retained."
+  },
+  "independent_audit": {
+    "files": 208,
+    "principal_arm64": true,
+    "native_inventory_sha256": "09d45d4e4f0b4da59ba9012ea57c06c1c5f0bd932e0b65a44156a9d6b2e4ff74",
+    "retained_zip_hash_reverified": true
+  },
+  "limits": [
+    "Manual immutable application stage only. Complete installer, public download catalog and stable discovery activation are separately gated.",
+    "Isolated package/control tests do not establish fresh physical RF reception or production delivery.",
+    "Customer node unchanged; owner will run separately prepared updater command."
+  ]
+}
