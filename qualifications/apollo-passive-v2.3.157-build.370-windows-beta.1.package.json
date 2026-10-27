@@ -1,0 +1,47 @@
+{
+  "schema_version": "apollo-windows-manual-beta-qualification-review-v1",
+  "version": "2.3.157",
+  "build": 370,
+  "source_commit": "123d21390cdeaf74118fe66e5daa90b92738ec28",
+  "channel": "manual-beta",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.157-build.370-windows-x64.zip",
+    "sha256": "8c8051231da1be6f4a5217669ee52aeb38a052f00c210660407b64e755617d54",
+    "bytes": 53741495,
+    "principal_sha256": "97a165a5c2bdcc19eda94c781804ded74404d4f26c95e8e1d6181d1a0d5c73d8",
+    "architecture": "x64",
+    "inventory_files": 131
+  },
+  "qualification": {
+    "completed_utc": "2026-10-27T04:03:11.6188888Z",
+    "owned_physical_windows_host": true,
+    "normal_boot_service_install": true,
+    "exact_package_retry": true,
+    "real_reboot": true,
+    "rollback_build": 366,
+    "return_to_build": 370,
+    "four_scan_windows_healthy": true,
+    "five_protected_files_hash_preserved": true,
+    "recovery_task_security_and_device_guards_preserved": true,
+    "controlled_device_restart": {
+      "baseline": "healthy",
+      "production_component_functions": true,
+      "post_probe": "samples_restored",
+      "automatic_fault_escalation_exercised": false
+    },
+    "noaa_native_sample_readiness": {
+      "passed_channels": 7,
+      "failed_channels": 0,
+      "zero_sample_streams": 0,
+      "transport_failures": 0,
+      "station_reception_qualified": false
+    },
+    "independent_final_verification": true
+  },
+  "limits": [
+    "Manual portable beta ZIP; existing Windows stable update descriptor remains unchanged.",
+    "Natural automatic zero-sample fault escalation and fresh RF-to-server delivery remain unqualified.",
+    "NOAA check proves sample/runtime readiness only; it does not identify an on-air station or qualify calibration.",
+    "No customer nodes contacted or deployed."
+  ]
+}
