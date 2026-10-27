@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.158-build.371",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e6a53ee5d53cb70dddb14d741a36f7e2a52acb4f"
+  },
+  "release": {
+    "version": "2.3.158",
+    "build": 371,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.158-build.371-linux-arm64.zip",
+    "byte_size": 24502627,
+    "sha256": "d8a29672e407809de444d9c41c7d0a08bf52fd2dd564d3bb18d7db4236c2f4f1",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Frozen source e6a53ee5d53cb70dddb14d741a36f7e2a52acb4f; RTL managed spur lifecycle PR884 and allocation PR885. Includes merged protected KA9Q live-confirm timeout fix PR883.",
+      "Package review: qualifications/apollo-passive-v2.3.158-build.371.package.json; SHA256 d616d0fb2e8cc258b58504a7ac394a2682ad6aa1aba60d3e276951b26a72c691.",
+      "Physical ARM64 workflow40529103744 passed exact ZIP with production-signed updater1.0.102: clean/legacy convergence, package closure, RTL service-user readability and native packaged pipeline/RF-health;10 passed,0 failed,0 skipped.",
+      "Actual ARM64 packaged runtime passed isolated add/apply/ack, offline restart and undo/ack with settings preserved. Probe result SHA256 d63cc02efcc3648856d5f48acc4fec8d0bc0ebd45aad292500eb66f4114cabf7.",
+      "Two byte-identical packages using unchanged public Build370 native inputs. Manual application stage only; no complete installer, catalog/stable promotion, customer deployment or fresh RF claim."
+    ]
+  }
+}
