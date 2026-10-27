@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "123d21390cdeaf74118fe66e5daa90b92738ec28"
+  },
+  "target": {
+    "version": "2.3.157",
+    "build": 370,
+    "source_commit": "123d21390cdeaf74118fe66e5daa90b92738ec28",
+    "release_tag": "apollo-passive-v2.3.157-build.370",
+    "sha256": "13bfb2e6faf6bc2811d49fe0ee0868ec01381452d4e43614efed85b93d06df8f"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.157-build.370-updater.1.0.102-linux-arm64.zip",
+    "bytes": 341990,
+    "sha256": "e48cdbc8e9b885b5f6b076987199b8492c99e42c83c4bfd908cba9a4acf2c02e"
+  },
+  "updater": {
+    "version": "1.0.102",
+    "signed_source_commit": "55e338cb259132ac3481c76f2e37115ccbc36c9b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.102-linux-arm64.zip": {
+        "sha256": "56b55d005321d9be273e3e95cad7e5e8f1ea059ac6b862560b80eacfa1498f82",
+        "bytes": 318670
+      },
+      "ApolloUniversalPiUpdater-1.0.102.authority.json": {
+        "sha256": "b999ef3e4f627e7135d1a07baf0baf4b24bab7af78f6ec1e8ac65d24aef6a9cd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.102.controller-capsule.json": {
+        "sha256": "b4ff7d86e60f6620d1c74d63bde948509b57a8867033edc7bed9910377ea2a17",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.157-build.370-updater.1.0.102",
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.157-build.370-updater.1.0.102.onboarding.json",
+    "sha256": "dd52b304c84ddb38be07bee2775dd26b25492625dc02b81654a2a72a222fdd93"
+  },
+  "qualification": {
+    "scope": "Exact complete-installer installation and retry on the registered owned RTL bench preserved protected node state and passed a real reboot, fresh authenticated check-ins and three sustained processing samples across all seven configured RF windows on each boot. All six receiver error counters remained unchanged. The matching isolated owner setup/approval tests passed 57 server checks and the application tests. This is installer_onboarding qualification; live RF reporting and other receiver hardware qualification remain separate. Earlier private forward-install evidence is retained separately; this run exercises the canonical public installer against the same frozen target."
+  }
+}
