@@ -1,0 +1,59 @@
+{
+  "schema_version": "apollo-arm64-package-qualification-review-v1",
+  "version": "2.3.157",
+  "build": 370,
+  "source_commit": "123d21390cdeaf74118fe66e5daa90b92738ec28",
+  "allocation_pr": "https://github.com/gdowkpc/apollo/pull/879",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.157-build.370-linux-arm64.zip",
+    "sha256": "13bfb2e6faf6bc2811d49fe0ee0868ec01381452d4e43614efed85b93d06df8f",
+    "bytes": 24500582,
+    "manifest_sha256": "e4e28be3f0bd8f2a104b6a6bc6fb64656bf4964ae56fcd5405335fff34c08f9a",
+    "principal_sha256": "5b5eb4eeb1ac6961148870b1ec1677d29daf94b3073ae784b87f070a399ec917",
+    "architecture": "aarch64"
+  },
+  "build_evidence": {
+    "reproducible_packages": true,
+    "application_built_under_emulation": true,
+    "native_inventory_rebuilt": false,
+    "retained_source_tests": {
+      "windows": {
+        "passed": 261,
+        "skipped": 14,
+        "failed": 0
+      },
+      "linux": {
+        "passed": 266,
+        "skipped": 9,
+        "failed": 0
+      }
+    },
+    "source_test_scope": "Retained private Build370 source/package qualification; skips remain explicit, not passes."
+  },
+  "native_qualification": {
+    "architecture": "aarch64",
+    "emulated": false,
+    "reference_updater_version": "1.0.102",
+    "required_clean_and_legacy_target_state_passed": true,
+    "packaged_universal_closure_passed": true,
+    "service_user_native_readability_passed": true,
+    "packaged_native_pipeline_passed": true,
+    "workflow_run_id": 40441302871,
+    "workflow_url": "https://github.com/gdowkpc/apollo/actions/runs/40441302871",
+    "qualification_source_sha": "51120510d0b82124686bd04847369c7fe98bc63d",
+    "frozen_application_source_sha": "123d21390cdeaf74118fe66e5daa90b92738ec28",
+    "qualification_log_sha256": "845e5737f2b50f96a62a4fe7aee4e23974fc206c47f5763c3731ac6ab6625fdf",
+    "fixture_correction": "First run40440873469 failed because disposable systemd omitted updater102 structured state. Only test fixtures changed; run40441302871 passed with exact unchanged ZIP. No runtime or signed-updater bypass."
+  },
+  "independent_audit": {
+    "files": 208,
+    "principal_arm64": true,
+    "native_inventory_sha256": "09d45d4e4f0b4da59ba9012ea57c06c1c5f0bd932e0b65a44156a9d6b2e4ff74",
+    "retained_zip_hash_reverified": true
+  },
+  "limits": [
+    "Immutable application stage only. Complete signed installer onboarding qualification precedes download and stable discovery promotion.",
+    "No new other-receiver field, live RF reporting, automatic zero-sample recovery or USB fault qualification claimed.",
+    "No customer node contact or deployment."
+  ]
+}
