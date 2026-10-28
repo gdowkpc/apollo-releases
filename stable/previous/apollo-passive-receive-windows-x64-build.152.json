@@ -1,0 +1,16 @@
+{
+  "schema_version": "apollo-stable-release-v1",
+  "product_id": "apollo-passive-receive",
+  "platform": "windows",
+  "architecture": "x64",
+  "version": "2.1.4",
+  "build": 152,
+  "source_commit": "4f08a0258d67de2ed80003e9bd4cb2b45d94de2c",
+  "published_at": "2026-09-12T03:15:00Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.1.4-build.152",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.1.4-build.152/ApolloPassiveReceive-2.1.4-build.152-windows-x64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.1.4-build.152-windows-x64.zip",
+  "byte_size": 15020018,
+  "sha256": "ee5cdcb7038a1a1425c6fffb084a33d19eb3eb2e5e730adcdae20a436ec6d9b1",
+  "short_release_notes": "Windows dashboard reliability release: live views recover from temporary local-service interruptions without collapsing operator state, routine provisioning checks reuse cached status, and open technical details remain open across refreshes."
+}
