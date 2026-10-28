@@ -1,0 +1,62 @@
+{
+  "schema_version": "apollo-windows-stable-qualification-review-v1",
+  "version": "2.3.162",
+  "build": 375,
+  "source_commit": "d8ce77023d4c1bbdaf0815d99c283bc1bc7eb344",
+  "channel": "stable",
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.162-build.375-windows-x64.zip",
+    "sha256": "845dc566aeb4d12ba39d589e6fd9a68eb3f3ed3909cebc3ba852ba13545fffca",
+    "bytes": 53745555,
+    "principal_sha256": "a3e0b89ef5ce4acd3a9420b4f83d69022135a1283dd2feedfcc633c240a00703",
+    "architecture": "x64",
+    "inventory_files": 131,
+    "inventory_sha256": "36713db63787af029277687f7ae3a05dc30dfbe6fcb6470c2edb6b9248f73ab3"
+  },
+  "qualification": {
+    "exact_inventory": true,
+    "extraction_byte_for_byte": true,
+    "embedded_identity_and_provenance": true,
+    "rtl_runtime_verified": true,
+    "installer_compiler_version": "6.7.3",
+    "isolated_packaged_startup": true,
+    "source_tests_passed": 413,
+    "source_tests_skipped": 2,
+    "registry_tests_passed": 4,
+    "owned_physical_normal_install": true,
+    "owned_physical_sampling": {
+      "four_ranges_fresh": true,
+      "all_four_ranges_advanced": true,
+      "observed_interval_ms": 150560,
+      "additional_successful_sweeps": 21,
+      "new_sweep_failures": 0,
+      "sender": "ready",
+      "spool_depth": 0
+    },
+    "protected_state_hashes_preserved_after_install": true,
+    "exact_device_recovery_task_security_preserved": true,
+    "scripted_health_gate": "invalid_harness_utc_local_comparison; independent candidate and rollback checks recorded separately",
+    "independent_utc_correct_physical_evidence": true,
+    "normal_rollback_to370_started": true,
+    "rollback_protected_hashes_preserved": true,
+    "rollback_receiver_readiness": "independently_verified_healthy_all_four_ranges_advancing",
+    "normal_rollback_to370_verified_independently": true,
+    "skipped_cases": [
+      "Immutable historical Build103 ZIP fixture unavailable",
+      "Patched pinned native-code fixture requires its exact native source checkout"
+    ]
+  },
+  "limits": [
+    "Scripted post-activation health gate was invalidated by a local-versus-UTC timestamp comparison; independent correctly timed physical observations are reported separately.",
+    "Fresh Build375 RF-to-server delivery was not observed during this bounded trial; Build370 delivery proof remains historical.",
+    "Repeated clean zero-sample diagnosis and automatic fault escalation remain unqualified.",
+    "No reboot, fault injection or customer-node deployment occurred."
+  ],
+  "source_integration": {
+    "pull_request": 898,
+    "merge_commit": "5c48a7c099319448696f549df8ed5320ba9fa196",
+    "head_commit": "0f3f3174db37927819d964b6a4abd68ae8c7badc",
+    "required_checks_passed": 9,
+    "frozen_source_is_ancestor": true
+  }
+}
