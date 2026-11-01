@@ -1,0 +1,38 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.179-build.392",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "28282e9af093ca220ec7ca191c6b3bbcd29de912"
+  },
+  "release": {
+    "version": "2.3.179",
+    "build": 392,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.179-build.392-linux-arm64.zip",
+    "byte_size": 24668227,
+    "sha256": "599ab9aa0eb35d4fdc9f4bd2ce08f55ddd98e876c728ac7828ae45ff6d68e996",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Application beta scope: exact ARM64 package, offline workers, saved recording and receiver-profile file closure; no complete-installer or stable-discovery promotion.",
+      "Reviewed decoder PR967; identity PR972; packaged verifier correction and successor allocation PR973. Source security run41268843582 passed all required jobs.",
+      "Exact extracted executable ran packaged DMR and PCM worker self-checks under native ARM64 Node18.5.0; 400ms DMR deadline and eight-request limit unchanged.",
+      "Hash-pinned saved 16kHz recording replay through packaged decoder/worker recovered CC1 from 13 exact words with zero corrections; first-window conflict remained inconclusive. This is derived listening audio, not restored raw discriminator.",
+      "Every packaged receiver profile closed over its declared files and external prerequisites: 1 selected test passed, zero failures or skips. Other receiver RF qualification remains separate.",
+      "Ed25519 update manifest binds the exact archive; SHA256 939401e813c40d482ea8d534593b1af61fda24196874e88f03e3a058ac33656b.",
+      "Package qualification: qualifications/apollo-passive-v2.3.179-build.392.package.json; SHA256 bdc98765e0e276f130a6d6131881c7a8a314aa2b1ba6feb16277a4a8a5de3146. Fresh RF verification follows the authorized existing-node installation."
+    ]
+  }
+}
