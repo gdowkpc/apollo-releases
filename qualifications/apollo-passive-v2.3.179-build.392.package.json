@@ -1,0 +1,45 @@
+{
+  "schema": "apollo-application-beta-package-qualification-v1",
+  "version": "2.3.179",
+  "build": 392,
+  "source_commit": "28282e9af093ca220ec7ca191c6b3bbcd29de912",
+  "artifact": {
+    "filename": "ApolloPassiveReceive-2.3.179-build.392-linux-arm64.zip",
+    "bytes": 24668227,
+    "sha256": "599ab9aa0eb35d4fdc9f4bd2ce08f55ddd98e876c728ac7828ae45ff6d68e996"
+  },
+  "principal_sha256": "5c1c34edc148b836235f925633c1487d53ab65c97b22a07dab9a8a32141123fe",
+  "platform": "linux",
+  "architecture": "arm64",
+  "runtime": {
+    "node": "v18.5.0",
+    "packaged_executable": true
+  },
+  "qualification_scope": "offline_application_beta",
+  "dmr_packaged_worker_passed": true,
+  "pcm_packaged_worker_passed": true,
+  "packaged_profile_verifier_passed": true,
+  "receiver_profile_closure": {
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "saved_recording": {
+    "sha256": "86fda2422e4b7cb43471a96bbce98b699171a6db40743b36e1b1291d111e6bfb",
+    "color_code": 1,
+    "exact_words": 13,
+    "corrected_bits": 0,
+    "first_window_conflict_preserved": true,
+    "original_discriminator_restored": false
+  },
+  "update_manifest_sha256": "939401e813c40d482ea8d534593b1af61fda24196874e88f03e3a058ac33656b",
+  "fresh_rf_qualified": false,
+  "complete_installer_qualified": false,
+  "stable_discovery_changed": false,
+  "source_prs": [
+    967,
+    972,
+    973
+  ],
+  "source_security_run": 41268843582
+}
