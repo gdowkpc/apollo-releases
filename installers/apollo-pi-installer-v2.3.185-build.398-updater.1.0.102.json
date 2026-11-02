@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "55e4a3d258b5335bf214919ce7ada0e1453993cc"
+  },
+  "target": {
+    "version": "2.3.185",
+    "build": 398,
+    "source_commit": "55e4a3d258b5335bf214919ce7ada0e1453993cc",
+    "release_tag": "apollo-passive-v2.3.185-build.398",
+    "sha256": "5011ef53606fe65453946ba0197ecb0f92e510a95915996e6efe5dc746f75eb2"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.185-build.398-updater.1.0.102-linux-arm64.zip",
+    "bytes": 342123,
+    "sha256": "02fbc2f405f57e2a04228ccd6bbe2e82de485ceb433b0ea954fb4c83fab52a07"
+  },
+  "updater": {
+    "version": "1.0.102",
+    "signed_source_commit": "55e338cb259132ac3481c76f2e37115ccbc36c9b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.102-linux-arm64.zip": {
+        "sha256": "56b55d005321d9be273e3e95cad7e5e8f1ea059ac6b862560b80eacfa1498f82",
+        "bytes": 318670
+      },
+      "ApolloUniversalPiUpdater-1.0.102.authority.json": {
+        "sha256": "b999ef3e4f627e7135d1a07baf0baf4b24bab7af78f6ec1e8ac65d24aef6a9cd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.102.controller-capsule.json": {
+        "sha256": "b4ff7d86e60f6620d1c74d63bde948509b57a8867033edc7bed9910377ea2a17",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.185-build.398-updater.1.0.102",
+  "qualification": {
+    "scope": "Exact complete-installer installation and retry on the registered owned RTL bench preserved protected node state, passed a real reboot, fresh authenticated check-ins, and three sustained processing samples across both configured RF windows on each boot. Matching isolated onboarding tests passed 57 server checks and 83 application tests. Reporting was temporarily enabled with owner authorization and restored off afterward. Scope is installer_onboarding; full live RF reporting qualification remains pending. Earlier failed live-RF attempts remain preserved. Native exact-package run41393458096 passed all10 tests with zero failures/skips."
+  },
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102.onboarding.json",
+    "sha256": "2fc5ff8e015cc57a51c040378652d52bd21f97756b37276a3e8f9a281ba5fb9e"
+  }
+}
