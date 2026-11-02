@@ -1,0 +1,46 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v2",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "28282e9af093ca220ec7ca191c6b3bbcd29de912"
+  },
+  "target": {
+    "version": "2.3.179",
+    "build": 392,
+    "source_commit": "28282e9af093ca220ec7ca191c6b3bbcd29de912",
+    "release_tag": "apollo-passive-v2.3.179-build.392",
+    "sha256": "599ab9aa0eb35d4fdc9f4bd2ce08f55ddd98e876c728ac7828ae45ff6d68e996"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.179-build.392-updater.1.0.102-linux-arm64.zip",
+    "bytes": 342116,
+    "sha256": "5c6764299651726d57286cf4142066963d46a285877e5a842882c8e011cd263a"
+  },
+  "updater": {
+    "version": "1.0.102",
+    "signed_source_commit": "55e338cb259132ac3481c76f2e37115ccbc36c9b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.102-linux-arm64.zip": {
+        "sha256": "56b55d005321d9be273e3e95cad7e5e8f1ea059ac6b862560b80eacfa1498f82",
+        "bytes": 318670
+      },
+      "ApolloUniversalPiUpdater-1.0.102.authority.json": {
+        "sha256": "b999ef3e4f627e7135d1a07baf0baf4b24bab7af78f6ec1e8ac65d24aef6a9cd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.102.controller-capsule.json": {
+        "sha256": "b4ff7d86e60f6620d1c74d63bde948509b57a8867033edc7bed9910377ea2a17",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.179-build.392-updater.1.0.102",
+  "qualification": {
+    "scope": "Exact complete-installer upgrade and retry on the registered owned RTL bench preserved protected node state, passed an actual reboot, fresh authenticated check-ins, real RF delivery and three sustained processing samples across both configured windows on each boot, with no new receiver errors. Bench preparation repaired an absent canonical updater boot unit from the authenticated predecessor and restored its previously active watcher; failed attempts remain retained. Reporting was temporarily enabled with owner authorization and restored off after the signed run. Airspy R2 live reception and server delivery were separately verified; fresh recovered DMR color-code evidence remains packaged replay rather than a new on-air recovery claim. Native exact-package gate run 41374874670 passed 10 tests with zero failures/skips."
+  },
+  "live_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.179-build.392-updater.1.0.102.live.json",
+    "sha256": "0d73a7211dbf3cfada4546eca4e705305625335df8d6533742c25f6288c42188"
+  }
+}

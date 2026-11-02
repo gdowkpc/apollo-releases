@@ -32,7 +32,9 @@
       "Hash-pinned saved 16kHz recording replay through packaged decoder/worker recovered CC1 from 13 exact words with zero corrections; first-window conflict remained inconclusive. This is derived listening audio, not restored raw discriminator.",
       "Every packaged receiver profile closed over its declared files and external prerequisites: 1 selected test passed, zero failures or skips. Other receiver RF qualification remains separate.",
       "Ed25519 update manifest binds the exact archive; SHA256 939401e813c40d482ea8d534593b1af61fda24196874e88f03e3a058ac33656b.",
-      "Package qualification: qualifications/apollo-passive-v2.3.179-build.392.package.json; SHA256 bdc98765e0e276f130a6d6131881c7a8a314aa2b1ba6feb16277a4a8a5de3146. Fresh RF verification follows the authorized existing-node installation."
+      "Package qualification: qualifications/apollo-passive-v2.3.179-build.392.package.json; SHA256 bdc98765e0e276f130a6d6131881c7a8a314aa2b1ba6feb16277a4a8a5de3146. Fresh RF verification follows the authorized existing-node installation.",
+      "Stable qualification: signed full live RTL installer attestation qualifications/apollo-pi-installer-v2.3.179-build.392-updater.1.0.102.live.json; SHA256 0d73a7211dbf3cfada4546eca4e705305625335df8d6533742c25f6288c42188. Exact complete installer installation, retry, reboot, protected-state preservation and fresh real reports passed on both boots.",
+      "Native exact-package qualification run41374874670: 10 passed, zero failures/skips with production-signed updater1.0.102. Separate owned Airspy R2 checks verified the exact392 executable, unchanged protected state, all five windows and fresh server delivery; no fresh recovered DMR color code is claimed."
     ]
   }
 }
