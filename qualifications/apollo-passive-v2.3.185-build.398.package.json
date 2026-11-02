@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "scope": "exact_extracted_ARM64_workers_and_stable_identity",
+  "build": 398,
+  "version": "2.3.185",
+  "source_commit": "55e4a3d258b5335bf214919ce7ada0e1453993cc",
+  "release_channel": "stable",
+  "artifact_sha256": "5011ef53606fe65453946ba0197ecb0f92e510a95915996e6efe5dc746f75eb2",
+  "principal_sha256": "b0d3bfac27c45cf6220db60325dbaf5efa1685e9e14fec0b177b7adbd2fc6855",
+  "dmr_worker_passed": true,
+  "pcm_worker_passed": true,
+  "verifier": {
+    "passed": true,
+    "scope": "offline_synthetic_only",
+    "profile_sha256": "38fe8e585f86612397614b97ee8f9b9f8f9ef7a5387ccadcb5c7757bf2471fef",
+    "artifact_execution_proven": false,
+    "fresh_rf_qualified": false
+  },
+  "dmr_runtime": {
+    "node": "v18.5.0",
+    "arch": "arm64",
+    "packaged": true
+  },
+  "logs": {
+    "dmr.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "identity.stdout": "548b973a388b9b6a32516204401f17ba8d6c300aef6a25c72b508abf62e1a6b4",
+    "pcm.stdout": "2cbd879aab99ac8591982bc607df04e66ba4cd4b25c270e4231a9c576894131a",
+    "dmr.stdout": "ead93803ea03ae96ed9409410d6bbf02e65f616731640c05ffcede856c393ee5",
+    "pcm.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "identity.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "completed_utc": "2026-11-02T05:24:41.441154+00:00",
+  "native_workflow_run": 41393458096,
+  "native_tests": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  "fresh_rf_qualified": false,
+  "complete_installer_qualified": false,
+  "stable_discovery_changed": false
+}
