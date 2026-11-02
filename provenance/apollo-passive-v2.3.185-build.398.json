@@ -26,12 +26,13 @@
   "qualification": {
     "status": "qualified",
     "evidence_references": [
-      "Application package qualification only; complete-installer physical qualification and stable discovery promotion follow this immutable staging release.",
+      "Exact application package qualification is supplemented by the signed v3 complete-installer onboarding receipt. Full live RF reporting qualification remains pending; no RF report claim is inferred from onboarding tests or quiet processing.",
       "Source allocation PR997 passed all six required jobs. Frozen source55e4a3d258b5335bf214919ce7ada0e1453993cc contains the current392/397 lineage and embeds stable in its registry, manifest, integrity seal and actual executable identity.",
       "Native exact-package run41393458096 passed all10 tests with zero failures/skips: clean/legacy convergence, profile closure, RSP1B loading, RTL service-user inventory and source/embedded native KA9Q processing.",
       "Actual extracted ARM64 executable passed DMR and PCM worker qualification under embedded Node18.5.0; packaged profile verifier passed offline synthetic scope only, without fresh RF credit.",
       "Archive24690524bytes SHA2565011ef53606fe65453946ba0197ecb0f92e510a95915996e6efe5dc746f75eb2; principal SHA256b0d3bfac27c45cf6220db60325dbaf5efa1685e9e14fec0b177b7adbd2fc6855.",
-      "Existing private RFOne grants and hardware-specific holds are unchanged. No directory/promotion-policy changes."
+      "Existing private RFOne grants and hardware-specific holds are unchanged. No directory/promotion-policy changes.",
+      "Signed installer_onboarding evidence: qualifications/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102.onboarding.json SHA256 2fc5ff8e015cc57a51c040378652d52bd21f97756b37276a3e8f9a281ba5fb9e. Exact install/retry/state preservation/reboot/check-ins and three samples across both windows per boot; 57 server and83 application tests. Reporting restored off."
     ]
   }
 }

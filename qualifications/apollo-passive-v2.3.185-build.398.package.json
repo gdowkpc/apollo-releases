@@ -38,6 +38,11 @@
     "skipped": 0
   },
   "fresh_rf_qualified": false,
-  "complete_installer_qualified": false,
-  "stable_discovery_changed": false
+  "complete_installer_qualified": true,
+  "stable_discovery_changed": false,
+  "complete_installer_qualification_scope": "installer_onboarding",
+  "complete_installer_evidence": {
+    "path": "qualifications/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102.onboarding.json",
+    "sha256": "2fc5ff8e015cc57a51c040378652d52bd21f97756b37276a3e8f9a281ba5fb9e"
+  }
 }
