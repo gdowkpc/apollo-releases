@@ -70,3 +70,13 @@ for(const [name,mutate]of Object.entries({
  'unscoped extra claim':f=>f.record.rf_qualified=true
 }))test('record rejects '+name,()=>withFixture(f=>{save(f);mutate(f);fs.writeFileSync(path.join(f.root,f.relative),JSON.stringify(f.record));assert.throws(()=>main.validateRecord(f.record,f.relative,f.root,f.policy),/pi_installer_maintenance_/);}));
 test('unrelated installer or altered archive cannot be published under this scope',()=>withFixture(f=>{save(f);fs.appendFileSync(f.archive,'changed');assert.throws(()=>prepare(f.root,f.record.release_tag,f.archive),/bytes_mismatch/);}));
+
+test('a later explicitly reviewed maintenance revision still inherits the original full qualification',()=>withFixture(f=>{
+ const oldRelative=f.relative,allowed=f.policy.installer_maintenance_revisions[oldRelative];
+ f.record.installer_revision=4;f.record.release_tag=f.record.release_tag.replace('revision.3','revision.4');
+ f.record.installer.filename=f.record.installer.filename.replace('revision.3','revision.4');
+ f.relative='installers/'+f.record.release_tag+'.json';
+ f.record.maintenance_qualification.path='qualifications/'+f.record.release_tag+'.maintenance.json';
+ f.policy.installer_maintenance_revisions={[f.relative]:allowed};save(f);
+ assert.equal(main.validateRecord(f.record,f.relative,f.root,f.policy).scope,m.SCOPE);
+}));

@@ -58,7 +58,7 @@ function validateRecord(record,relative,root,policy,helpers){
  const checked=helpers.validateRecord(prior,inherited.record_path,root,policy);
  gate(!checked.held&&['installer_onboarding','live_rf'].includes(checked.scope),'baseline_not_fully_qualified');
  gate(equal(record.target,prior.target)&&equal(record.updater,prior.updater),'runtime_changed');
- gate(record.installer_revision===(prior.installer_revision||1)+1,'revision');
+ gate(Number.isSafeInteger(record.installer_revision)&&record.installer_revision>(prior.installer_revision||1),'revision');
  const e=helpers.expectedRelease(record),tag='apollo-pi-installer-v'+e.version+'-build.'+e.build+'-updater.'+e.updater_version+'-revision.'+record.installer_revision;
  gate(record.release_tag===tag&&relative==='installers/'+tag+'.json'&&record.installer.filename==='Apollo-Pi-Installer-'+e.version+'-build.'+e.build+'-updater.'+e.updater_version+'-revision.'+record.installer_revision+'-linux-arm64.zip','identity');
  const ref=record.maintenance_qualification;
