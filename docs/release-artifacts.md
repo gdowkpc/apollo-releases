@@ -16,7 +16,7 @@ Each record uses the strict `apollo-github-release-provenance-v1` contract,
 including public-release repository identity, source commit, tag, platform,
 architecture, package filename, byte size, SHA-256, and qualification evidence.
 
-The sole `0.0.0-fixture.1` record is a nonproduction resolver fixture.  It is
-not an installable Apollo release and contains no runtime payload.  It exists
-only to qualify the live GitHub API/download behavior while Apollo node source
-still has no production release-repository pin.
+The `0.0.0-fixture.1` record is a nonproduction resolver fixture, not an
+installable Apollo release. It contains no runtime payload and exists only to
+test GitHub API and download resolution. For installation, follow the public
+downloads page rather than fixture records.
