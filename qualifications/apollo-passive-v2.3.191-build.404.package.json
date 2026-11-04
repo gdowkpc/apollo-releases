@@ -70,5 +70,26 @@
   "recovery_files_unchanged_from_physical403": 6,
   "fresh_rf_qualified": false,
   "complete_installer_qualified": false,
-  "stable_discovery_changed": false
+  "stable_discovery_changed": false,
+  "registered_installer_onboarding_qualified": true,
+  "complete_installer_publication_hold": "independent_exact_installer_fresh_card_gate_pending",
+  "registered_installer_onboarding": {
+    "installer": {
+      "filename": "Apollo-Pi-Installer-2.3.191-build.404-updater.1.0.116-linux-arm64.zip",
+      "bytes": 356623,
+      "sha256": "fcc7ea79f11083076768e1bd4179555f7a7216084ffaab9726524c3e69cac606"
+    },
+    "evidence": {
+      "path": "qualifications/apollo-pi-installer-v2.3.191-build.404-updater.1.0.116.onboarding.json",
+      "sha256": "6c7fa9359764fa6ebce34d4661dfc1acf04bd835185399e2983ecb153fea3866"
+    },
+    "normal_private403_to_public404_forward_upgrade": true,
+    "protected_state_preserved": true,
+    "actual_reboot": true,
+    "samples_per_boot": 3,
+    "configured_windows": 2,
+    "fresh_authenticated_checkins": true,
+    "reporting_restored_off": true,
+    "live_rf_reporting_qualified": false
+  }
 }
