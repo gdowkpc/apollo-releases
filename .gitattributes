@@ -3,3 +3,5 @@ qualifications/*.live.json -text whitespace=cr-at-eol
 qualifications/*.onboarding.json -text whitespace=cr-at-eol
 qualifications/*.bridge.json -text whitespace=cr-at-eol
 qualifications/pi-updater-inventory-*.json -text whitespace=cr-at-eol
+
+qualifications/*.maintenance.json -text whitespace=cr-at-eol

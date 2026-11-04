@@ -130,6 +130,8 @@ function expectedRelease(record) {
 function validateRecord(record, relative, root, policy) {
   const bytes = read(root, relative);
   if (policy.held_installer_sha256_lf?.[relative] === hash(bytes.toString("utf8").replace(/\r\n/g,"\n"))) return {held: true, record};
+  if (record.schema_version === "apollo-pi-installer-distribution-v4")
+    return require("./validate_pi_installer_maintenance").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
   const onboarding = record.schema_version === "apollo-pi-installer-distribution-v3";
   requireGate((onboarding || record.schema_version === "apollo-pi-installer-distribution-v2") && record.publication_status === "qualified", "installer_contract");
   if (onboarding) requireGate(record.qualification_scope === "installer_onboarding"

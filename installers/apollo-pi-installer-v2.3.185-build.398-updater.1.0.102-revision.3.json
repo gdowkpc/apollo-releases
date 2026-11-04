@@ -1,0 +1,56 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v4",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "f03a46c96a653b7822ae18c3355b4e91d762142b"
+  },
+  "target": {
+    "version": "2.3.185",
+    "build": 398,
+    "source_commit": "55e4a3d258b5335bf214919ce7ada0e1453993cc",
+    "release_tag": "apollo-passive-v2.3.185-build.398",
+    "sha256": "5011ef53606fe65453946ba0197ecb0f92e510a95915996e6efe5dc746f75eb2"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.185-build.398-updater.1.0.102-revision.3-linux-arm64.zip",
+    "bytes": 352176,
+    "sha256": "41278066c106c4311b381b06a0543680cb73be67526d4092d1f92b4977468a17"
+  },
+  "updater": {
+    "version": "1.0.102",
+    "signed_source_commit": "55e338cb259132ac3481c76f2e37115ccbc36c9b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.102-linux-arm64.zip": {
+        "sha256": "56b55d005321d9be273e3e95cad7e5e8f1ea059ac6b862560b80eacfa1498f82",
+        "bytes": 318670
+      },
+      "ApolloUniversalPiUpdater-1.0.102.authority.json": {
+        "sha256": "b999ef3e4f627e7135d1a07baf0baf4b24bab7af78f6ec1e8ac65d24aef6a9cd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.102.controller-capsule.json": {
+        "sha256": "b4ff7d86e60f6620d1c74d63bde948509b57a8867033edc7bed9910377ea2a17",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.185-build.398-updater.1.0.102-revision.3",
+  "qualification": {
+    "scope": "Installer-only maintenance: identical previously qualified Build398 application and updater1.0.102 payloads. Exact installer install, retry, unchanged configuration bytes, real reboot, services, browser and SSH diagnostics passed on the existing owned unenrolled Pi without a receiver. Earlier signed application/updater qualification is retained unchanged. No new fresh-card, registered-node, backend check-in or RF qualification is claimed."
+  },
+  "qualification_scope": "installer_maintenance",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "installer_revision": 3,
+  "inherited_qualification": {
+    "record_path": "installers/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102-revision.2.json",
+    "record_sha256_lf": "6dd83c07ac1f665200b1f32ab2fa85942f9112ae7ba3620c7a59365a2a458812"
+  },
+  "maintenance_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102-revision.3.maintenance.json",
+    "sha256": "1bccec411edb642577fc6f6e319ce3f80f1d21a1f92103814f74497c8fdc063a"
+  }
+}
