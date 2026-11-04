@@ -26,9 +26,9 @@ function validateEvidence(envelope,expected,baseline,policy,now=Date.now()){
  let config,boot;
  for(const name of ['before','after_retry','after_reboot']){
   const s=p.states[name];
-  gate(exact(s,['collected_at','version','build','updater_version','configuration_sha256','boot_fingerprint','setup_required','registered_credential_present','units']),'state_fields');
+  gate(exact(s,['collected_at','version','build','updater_version','configuration_sha256','boot_fingerprint','setup_required','registered_credential_present','node_agent_state','units']),'state_fields');
   gate(time(s.collected_at)>=start&&time(s.collected_at)<=end&&s.version===expected.version&&s.build===expected.build&&s.updater_version===expected.updater_version,'state_identity');
-  gate(hex(s.configuration_sha256)&&hex(s.boot_fingerprint)&&s.setup_required===true&&s.registered_credential_present===false,'unenrolled_state');
+  gate(hex(s.configuration_sha256)&&hex(s.boot_fingerprint)&&s.setup_required===true&&s.registered_credential_present===false&&s.node_agent_state==='registration_required','unenrolled_state');
   gate(exact(s.units,UNITS)&&UNITS.every(n=>s.units[n]==='active'),'units');
   if(!config){config=s.configuration_sha256;boot=s.boot_fingerprint;}
   gate(config===s.configuration_sha256,'configuration_changed');

@@ -23,7 +23,7 @@ function fixture(){
  policy.allowed_qualification_scopes=[...new Set([...policy.allowed_qualification_scopes,m.SCOPE])];policy.trusted_keys.fixture=publicKey.export({type:'spki',format:'pem'});
  policy.installer_maintenance_revisions={[relative]:{installer_sha256:record.installer.sha256,installer_bytes:record.installer.bytes,launcher_source_commit:record.launcher_source.commit,prior_record_path:oldPath,prior_record_sha256_lf:record.inherited_qualification.record_sha256_lf}};
  const now=Date.now(),start=now-120000,at=n=>new Date(start+n).toISOString();
- const state=(n,boot)=>({collected_at:at(n),version:record.target.version,build:record.target.build,updater_version:record.updater.version,configuration_sha256:h('config'),boot_fingerprint:h(boot),setup_required:true,registered_credential_present:false,units:Object.fromEntries(m.UNITS.map(n=>[n,'active']))});
+ const state=(n,boot)=>({collected_at:at(n),version:record.target.version,build:record.target.build,updater_version:record.updater.version,configuration_sha256:h('config'),boot_fingerprint:h(boot),setup_required:true,registered_credential_present:false,node_agent_state:'registration_required',units:Object.fromEntries(m.UNITS.map(n=>[n,'active']))});
  const payload={schema_version:m.SCHEMA,scope:m.SCOPE,release:main.expectedRelease(record),baseline:clone(record.inherited_qualification),started_at:at(0),completed_at:at(110000),lab:{role:'owned-unenrolled-pi',registered:false,receiver_attached:false},states:{before:state(1000,'old'),after_retry:state(30000,'old'),after_reboot:state(90000,'new')},checks:{install_exit_code:0,retry_exit_code:0,invalid_argument_exit_code:1,ssh_support_summary:true,browser_after_reboot:true,post_boot_service_errors:0},comparison:{sha256:h('comparison'),activation_logic_unchanged:true,target_metadata_identical:true,updater_payloads_identical:true},evidence:Object.fromEntries(['before','after_retry','after_reboot','install_log','retry_log','diagnostic_log','journal','physical_report','target_comparison','browser_log','report_file'].map(n=>[n,h(n)])),limitations:{fresh_card_tested:false,registered_node_tested:false,receiver_rf_tested:false,backend_checkins_tested:false}};
  return {root,record,relative,archive,policy,payload,now};
 }
@@ -36,6 +36,7 @@ const invalid={
  'registered node relabeled':p=>p.lab.registered=true,
  'receiver attached':p=>p.lab.receiver_attached=true,
  'credential created':p=>p.states.after_reboot.registered_credential_present=true,
+ 'pending enrollment cannot be called unenrolled':p=>p.states.before.node_agent_state='approval_pending',
  'wrong installed build':p=>p.states.after_retry.build++,
  'wrong updater':p=>p.states.after_reboot.updater_version='9.9.9',
  'configuration changed':p=>p.states.after_retry.configuration_sha256=h('changed'),

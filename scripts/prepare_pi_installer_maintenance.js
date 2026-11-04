@@ -26,7 +26,7 @@ function prepare(root,record,archive,priorArchive,evidenceRoot,python='python3')
  insist(data.browser_log.toString().includes('Version '+record.target.version+' / Build '+record.target.build)&&data.browser_log.toString().includes('Connect to RepeaterBook'),'browser_log');
  insist(data.diagnostic_log.toString().includes('--- Copy these support details ---')&&data.diagnostic_log.toString().includes('Using SSH?'),'ssh_summary');
  const states={};for(const name of ['before','after_retry','after_reboot']){
-  const raw=JSON.parse(data[name]);states[name]={collected_at:fs.statSync(path.join(evidenceRoot,filenames[name])).mtime.toISOString(),version:raw.version,build:raw.build,updater_version:raw.updater,configuration_sha256:raw.configuration_sha256,boot_fingerprint:hash(raw.boot_id),setup_required:raw.setup_required,registered_credential_present:raw.registered_credential_present,units:raw.units};
+  const raw=JSON.parse(data[name]);states[name]={collected_at:fs.statSync(path.join(evidenceRoot,filenames[name])).mtime.toISOString(),version:raw.version,build:raw.build,updater_version:raw.updater,configuration_sha256:raw.configuration_sha256,boot_fingerprint:hash(raw.boot_id),setup_required:raw.setup_required,registered_credential_present:raw.registered_credential_present,node_agent_state:raw.node_agent_state,units:raw.units};
  }
  const baseline={record_path:allow.prior_record_path,record_sha256_lf:hash(priorBytes.toString().replace(/\r\n/g,'\n'))};
  const expected=require('./validate_pi_live_qualification').expectedRelease(record);
