@@ -1,22 +1,19 @@
-# apollo-releases
+# Apollo for RepeaterBook
 
-Future complete Pi installers and stable promotions require the
-[signed owned-bench publication gate](docs/pi-live-qualification.md).
+Apollo listens for local radio activity using your receiver and contributes
+observations to RepeaterBook after setup and approval.
 
-Public, GitHub-authoritative provenance and immutable downloadable artifacts
-for Apollo Passive Receive managed releases.
+## Get started
 
-This repository contains no node credentials, private source, signing keys, or
-production configuration.  A production release is valid only when its
-reviewed provenance record, lightweight `apollo-passive-v*` tag, immutable
-GitHub Release, and ZIP asset agree exactly.
+Download Apollo for your platform from the
+[official Apollo downloads page](https://www.repeaterbooklive.com/apollo/downloads/).
 
-`provenance/*.json` is checked by the required `provenance-validation` workflow.
-Each record uses the strict `apollo-github-release-provenance-v1` contract,
-including public-release repository identity, source commit, tag, platform,
-architecture, package filename, byte size, SHA-256, and qualification evidence.
+For a Raspberry Pi, choose the complete installer ZIP and follow the
+[Pi installation guide](docs/pi-install.md). You do not need to install Node.js
+or nvm first. The guide covers installing, opening Apollo, and getting help if
+setup stops. Check the download's receiver support before starting; RSP2 support
+is not yet qualified.
 
-The sole `0.0.0-fixture.1` record is a nonproduction resolver fixture.  It is
-not an installable Apollo release and contains no runtime payload.  It exists
-only to qualify the live GitHub API/download behavior while Apollo node source
-still has no production release-repository pin.
+This repository stores public downloads and their verification records.
+[Release engineering and artifact verification](docs/release-artifacts.md)
+are documented separately for maintainers.
