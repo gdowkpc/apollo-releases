@@ -25,8 +25,9 @@ class StaticPrints(ast.NodeTransformer):
         return self.generic_visit(node)
 
 class DiagnosticHook(ast.NodeTransformer):
-    def visit_If(self,node):
-        return None if DUMP(node)==DUMP(HOOK) else self.generic_visit(node)
+    def visit_ExceptHandler(self,node):
+        node.body=[self.visit(n) for n in node.body if DUMP(n)!=DUMP(HOOK)]
+        return node
 
 
 def compare(before,after):

@@ -37,7 +37,7 @@ function validateEvidence(envelope,expected,baseline,policy,now=Date.now()){
  gate(time(p.states.before.collected_at)<time(p.states.after_retry.collected_at)&&time(p.states.after_retry.collected_at)<time(p.states.after_reboot.collected_at),'state_order');
  gate(exact(p.checks,['install_exit_code','retry_exit_code','invalid_argument_exit_code','ssh_support_summary','browser_after_reboot','post_boot_service_errors'])&&p.checks.install_exit_code===0&&p.checks.retry_exit_code===0&&p.checks.invalid_argument_exit_code===1&&p.checks.ssh_support_summary===true&&p.checks.browser_after_reboot===true&&p.checks.post_boot_service_errors===0,'checks');
  gate(exact(p.comparison,['sha256','activation_logic_unchanged','target_metadata_identical','updater_payloads_identical'])&&hex(p.comparison.sha256)&&p.comparison.activation_logic_unchanged===true&&p.comparison.target_metadata_identical===true&&p.comparison.updater_payloads_identical===true,'comparison');
- const names=['before','after_retry','after_reboot','install_log','retry_log','diagnostic_log','journal','physical_report','target_comparison'];
+ const names=['before','after_retry','after_reboot','install_log','retry_log','diagnostic_log','journal','physical_report','target_comparison','browser_log','report_file'];
  gate(exact(p.evidence,names)&&names.every(n=>hex(p.evidence[n])),'evidence_hashes');
  gate(exact(p.limitations,['fresh_card_tested','registered_node_tested','receiver_rf_tested','backend_checkins_tested'])&&Object.values(p.limitations).every(v=>v===false),'scope_inflation');
  return p;
