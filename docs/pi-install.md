@@ -49,6 +49,9 @@ Copy this entire line, paste it into that window, and press **Enter**:
 sudo python3 install.py --apply
 ```
 
+To paste into Terminal, right-click and choose **Paste**, or press
+**Ctrl+Shift+V**. Normal Ctrl+V may not paste in a Linux terminal.
+
 If a password is requested, use the password you created for the Pi. **Nothing
 appears while you type the password**; that is normal. Press Enter when finished.
 This is your Pi password, not your RepeaterBook password.
