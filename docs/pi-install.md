@@ -9,9 +9,11 @@ registration and settings; do not start over by reimaging it.
 Use the operating system listed on the
 [Apollo download page](https://www.repeaterbooklive.com/apollo/downloads/#platform-raspberry-pi):
 currently **64-bit Raspberry Pi OS based on Debian 13 (Trixie)**, with Python 3.
-A 32-bit operating system cannot run this installer. Keep power, internet and
-your supported receiver connected. Check the exact receiver model on the download
-card; support for one model does not mean every model from that maker is supported.
+A 32-bit operating system cannot run this installer. Keep power and internet
+connected. **You can install Apollo without a receiver connected.** Apollo will
+show the receiver setup checklist until you connect supported hardware later.
+Check the exact receiver model on the download card before connecting one;
+support for one model does not mean every model from that maker is supported.
 
 You do not need to install Node.js, npm or nvm. Apollo installs its missing system
 packages. If you already use nvm, keep it; Apollo's background services use system
@@ -48,6 +50,9 @@ Copy this entire line, paste it into that window, and press **Enter**:
 ```sh
 sudo python3 install.py --apply
 ```
+
+To paste into Terminal, right-click and choose **Paste**, or press
+**Ctrl+Shift+V**. Normal Ctrl+V may not paste in a Linux terminal.
 
 If a password is requested, use the password you created for the Pi. **Nothing
 appears while you type the password**; that is normal. Press Enter when finished.
