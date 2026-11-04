@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.191-build.404",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "37a40043f8c0ba385f85b77b9654936a87f5721b"
+  },
+  "release": {
+    "version": "2.3.191",
+    "build": 404,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.191-build.404-linux-arm64.zip",
+    "byte_size": 24710247,
+    "sha256": "2e5e1d283d7638b2f8cbf6471d1ff748966d246567473a8ebaedbafddc4d8fa5",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Runtime-only staging release. Complete-installer qualification and portal/stable discovery promotion remain separate gates. No new fresh-RF or customer installation claim.",
+      "Frozen stable source 37a40043f8c0ba385f85b77b9654936a87f5721b built once on apollo-builder; source254 plus packaging60 checks passed with six expected custody skips. Exact packaged recovery53/53, embedded DMR/PCM/NOAA workers, HTTP diagnostics and DMR artifact compatibility passed.",
+      "Exact-package native run41918155680 passed10/10 with zero failures/skips: clean/legacy convergence, profile closure, non-root RTL inventory and synthetic native processing in source and embedded test executables. Qualification source f8505780dd578ede4fbe68776e43cd86096e1f6a changes workflow/tests only after frozen source.",
+      "All six recovery/watchdog files match physical predecessor403. Owned Node13 remote port-power tests proved one guarded reboot after930 seconds, durable no-loop latch across reboot/watcher restart and later local port recovery with host reboot disabled. Mechanical unplug and physical network-outage tests were not performed.",
+      "Host reboots remain off by default for shared hosts, including AllStar. Public release preserves configured reporting preferences and existing server authorization. Private receiver grants and receiver-specific holds remain separate.",
+      "Package qualification: qualifications/apollo-passive-v2.3.191-build.404.package.json; exact ZIP SHA256 2e5e1d283d7638b2f8cbf6471d1ff748966d246567473a8ebaedbafddc4d8fa5; principal ae800fcdcb740e5986a94168ebaa678fc85526ea5b0d08d510af9707c92cda54."
+    ]
+  }
+}
