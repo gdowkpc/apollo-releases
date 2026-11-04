@@ -33,3 +33,11 @@ requires its own exact-artifact signed qualification and publication record;
 an earlier installer's evidence cannot qualify different bytes. Revisions do
 not replace published assets, change application build ordering, or relax any
 installation, preservation, reboot, check-in or receiver-progress requirement.
+
+## Installer-only maintenance
+
+An explicitly allowlisted installer-only revision with identical application and
+all updater payloads may use [installer-maintenance qualification](pi-installer-maintenance-qualification.md).
+It has a separate signed receipt and inherits an unchanged fully qualified
+predecessor record. It does not claim new fresh-card, registration, backend or RF
+qualification and cannot authorize a new runtime release.

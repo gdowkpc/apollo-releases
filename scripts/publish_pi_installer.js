@@ -23,7 +23,10 @@ function publish(root,tag,archive) {
   if(reference.object?.type!=="commit"||reference.object.sha!==main)throw Error("reviewed_lightweight_tag_required");
   // Qualification and exact bytes are checked before any GitHub mutation.
   const onboarding = prepared.record.qualification_scope === "installer_onboarding";
-  const notes = onboarding
+  const maintenance = prepared.record.qualification_scope === "installer_maintenance";
+  const notes = maintenance
+    ? `Installer-maintenance qualification: identical already-qualified application/updater; exact installer installation, retry, preserved configuration, SSH support details, reboot and browser access on an owned unenrolled Pi without a receiver. No new fresh-card, registered-node, backend check-in or RF qualification is claimed. Signed proof: ${prepared.record.maintenance_qualification.path}`
+    : onboarding
     ? `Qualified exact installer installation, retry, preserved node state, reboot readiness, authenticated check-ins and tested one-approval onboarding. Live RF reporting qualification remains pending. Signed qualification: ${prepared.record.onboarding_qualification.path}`
     : `Qualified owned RTL bench installation, retry, authenticated check-ins, real report delivery, reboot and every configured RF window. Signed qualification: ${prepared.record.live_qualification.path}`;
   run(["gh","release","create",tag,prepared.archive,"--repo",REPOSITORY,"--draft","--verify-tag","--latest=false",

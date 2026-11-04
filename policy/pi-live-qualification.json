@@ -1,6 +1,11 @@
 {
   "schema_version": "apollo-pi-live-qualification-policy-v1",
-  "allowed_qualification_scopes": ["live_rf", "installer_onboarding", "dashboard_bridge_compatibility"],
+  "allowed_qualification_scopes": [
+    "live_rf",
+    "installer_onboarding",
+    "dashboard_bridge_compatibility",
+    "installer_maintenance"
+  ],
   "trusted_keys": {
     "owned-rtl-lab-3bf54ad6d4986de4": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAXw2NFtJJWZVkpdAVmTfaO4psdmtCNmuAqwYDfDb+P8I=\n-----END PUBLIC KEY-----\n"
   },
@@ -12,5 +17,14 @@
     "installers/apollo-pi-installer-v2.3.79-build.292-updater.1.0.83.json": "302b22bcc1c64646a0b2c8176c1a24cc1d3b2f773b6aaaaf247181422dbea2af"
   },
   "held_stable_fingerprint": "1dae4e1dde18290c90d98c4461f62eca66a97133696ab582484ad810ac5f356c",
-  "required_lab_role": "owned-rtl-bench"
+  "required_lab_role": "owned-rtl-bench",
+  "installer_maintenance_revisions": {
+    "installers/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102-revision.3.json": {
+      "installer_sha256": "41278066c106c4311b381b06a0543680cb73be67526d4092d1f92b4977468a17",
+      "installer_bytes": 352176,
+      "launcher_source_commit": "f03a46c96a653b7822ae18c3355b4e91d762142b",
+      "prior_record_path": "installers/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102-revision.2.json",
+      "prior_record_sha256_lf": "6dd83c07ac1f665200b1f32ab2fa85942f9112ae7ba3620c7a59365a2a458812"
+    }
+  }
 }
