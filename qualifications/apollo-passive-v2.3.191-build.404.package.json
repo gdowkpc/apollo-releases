@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "scope": "exact_extracted_ARM64_workers_recovery_diagnostics_and_native_target_state",
+  "version": "2.3.191",
+  "build": 404,
+  "source_commit": "37a40043f8c0ba385f85b77b9654936a87f5721b",
+  "release_channel": "stable",
+  "production_reporting": "production_review",
+  "artifact_sha256": "2e5e1d283d7638b2f8cbf6471d1ff748966d246567473a8ebaedbafddc4d8fa5",
+  "artifact_bytes": 24710247,
+  "principal_sha256": "ae800fcdcb740e5986a94168ebaa678fc85526ea5b0d08d510af9707c92cda54",
+  "native_inventory_sha256": "f51c18f63b9ff322a06ebcbee7611f2156e15acc39e96a59a0bd1cf85d5bf992",
+  "source_tests": {
+    "pass": 254,
+    "expected_skips": 3
+  },
+  "portable_tests": {
+    "pass": 60,
+    "expected_skips": 3
+  },
+  "exact_recovery_tests": {
+    "pass": 53,
+    "fail": 0,
+    "skipped": 0
+  },
+  "offline_workers": {
+    "--qualify-dmr-worker": {
+      "passed": true,
+      "runtime": {
+        "node": "v18.5.0",
+        "arch": "arm64",
+        "packaged": true
+      },
+      "scope": "offline_synthetic_workers_only"
+    },
+    "--qualify-pcm-worker": {
+      "passed": true,
+      "runtime": {
+        "node": "v18.5.0",
+        "arch": "arm64",
+        "packaged": true
+      },
+      "scope": "offline_synthetic_workers_only"
+    },
+    "--qualify-noaa": {
+      "passed": true,
+      "runtime": {
+        "node": "v18.5.0",
+        "arch": "arm64",
+        "packaged": true
+      },
+      "scope": "offline_synthetic_noaa_only"
+    }
+  },
+  "diagnostics": {
+    "shared_host_reboot_disabled": true,
+    "fresh_recovery_guard_visible": true,
+    "stale_recovery_status_unavailable": true,
+    "support_report_includes_guard": true,
+    "environment_canary_omitted": true
+  },
+  "native_workflow_run": 41918155680,
+  "native_workflow_source": "f8505780dd578ede4fbe68776e43cd86096e1f6a",
+  "native_tests": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  "recovery_files_unchanged_from_physical403": 6,
+  "fresh_rf_qualified": false,
+  "complete_installer_qualified": false,
+  "stable_discovery_changed": false
+}
