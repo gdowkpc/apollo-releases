@@ -69,10 +69,10 @@
   },
   "recovery_files_unchanged_from_physical403": 6,
   "fresh_rf_qualified": false,
-  "complete_installer_qualified": false,
+  "complete_installer_qualified": true,
   "stable_discovery_changed": false,
   "registered_installer_onboarding_qualified": true,
-  "complete_installer_publication_hold": "independent_exact_installer_fresh_card_gate_pending",
+  "complete_installer_publication_hold": null,
   "registered_installer_onboarding": {
     "installer": {
       "filename": "Apollo-Pi-Installer-2.3.191-build.404-updater.1.0.116-linux-arm64.zip",
@@ -91,5 +91,19 @@
     "fresh_authenticated_checkins": true,
     "reporting_restored_off": true,
     "live_rf_reporting_qualified": false
+  },
+  "fresh_card_qualified": false,
+  "fresh_card_exception": {
+    "scope": "exact_installer_only",
+    "owner_approval_date": "2026-11-05",
+    "source_pr": 1026,
+    "approved_head": "e70de6f64ae3a140a2da4c86b01b6aca7be43d11",
+    "installer_sha256": "fcc7ea79f11083076768e1bd4179555f7a7216084ffaab9726524c3e69cac606",
+    "reference": "docs/pi404-node13-publication-exception.md",
+    "unperformed": [
+      "clean_os_prerequisite_installation",
+      "fresh_unenrolled_setup",
+      "beginner_fresh_install_browser_exercise"
+    ]
   }
 }

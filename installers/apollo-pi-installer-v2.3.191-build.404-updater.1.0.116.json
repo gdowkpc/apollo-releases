@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "37a40043f8c0ba385f85b77b9654936a87f5721b"
+  },
+  "target": {
+    "version": "2.3.191",
+    "build": 404,
+    "source_commit": "37a40043f8c0ba385f85b77b9654936a87f5721b",
+    "release_tag": "apollo-passive-v2.3.191-build.404",
+    "sha256": "2e5e1d283d7638b2f8cbf6471d1ff748966d246567473a8ebaedbafddc4d8fa5"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.191-build.404-updater.1.0.116-linux-arm64.zip",
+    "bytes": 356623,
+    "sha256": "fcc7ea79f11083076768e1bd4179555f7a7216084ffaab9726524c3e69cac606"
+  },
+  "updater": {
+    "version": "1.0.116",
+    "signed_source_commit": "7b04aff8c50624e2842b7302af875434a16aa06b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.116-linux-arm64.zip": {
+        "sha256": "f9cdb7bb1e6be352f69866823d0b7c9a17457c0d2eac92e5fe2cd15558446ac7",
+        "bytes": 323224
+      },
+      "ApolloUniversalPiUpdater-1.0.116.authority.json": {
+        "sha256": "187d8080cca65d914c23a306e6bdd9d78660762be64dde15b883827ac6b24ccd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.116.controller-capsule.json": {
+        "sha256": "7b50819591506b9b49b50514bef621f6a726421091bf3bcb541eafca412d8118",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.191-build.404-updater.1.0.116",
+  "qualification": {
+    "scope": "Exact registered Node13 install/retry, protected state preservation, actual reboot, fresh authenticated check-ins and three timed processing samples across both configured windows on each boot passed; signed receipt retained unchanged. Reporting restored off. Owner-approved release-specific fresh-card exception: clean-OS prerequisites, fresh unenrolled setup and beginner fresh-install tests were not performed. No live RF reporting claim. Frozen installer fcc7ea79f11083076768e1bd4179555f7a7216084ffaab9726524c3e69cac606 and signed updater1.0.116 unchanged. Exception: docs/pi404-node13-publication-exception.md."
+  },
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.191-build.404-updater.1.0.116.onboarding.json",
+    "sha256": "6c7fa9359764fa6ebce34d4661dfc1acf04bd835185399e2983ecb153fea3866"
+  }
+}
