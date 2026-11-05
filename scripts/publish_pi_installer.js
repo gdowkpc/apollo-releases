@@ -27,7 +27,7 @@ function publish(root,tag,archive) {
   const notes = maintenance
     ? `Installer-maintenance qualification: identical already-qualified application/updater; exact installer installation, retry, preserved configuration, SSH support details, reboot and browser access on an owned unenrolled Pi without a receiver. No new fresh-card, registered-node, backend check-in or RF qualification is claimed. Signed proof: ${prepared.record.maintenance_qualification.path}`
     : onboarding
-    ? `Qualified exact installer installation, retry, preserved node state, reboot readiness, authenticated check-ins and tested one-approval onboarding. Live RF reporting qualification remains pending. Signed qualification: ${prepared.record.onboarding_qualification.path}`
+    ? `Qualified exact installer installation, retry, preserved node state, reboot readiness, authenticated check-ins and tested one-approval onboarding. Live RF reporting qualification remains pending. Signed qualification: ${prepared.record.onboarding_qualification.path}. Scope and limits: ${prepared.record.qualification.scope}`
     : `Qualified owned RTL bench installation, retry, authenticated check-ins, real report delivery, reboot and every configured RF window. Signed qualification: ${prepared.record.live_qualification.path}`;
   run(["gh","release","create",tag,prepared.archive,"--repo",REPOSITORY,"--draft","--verify-tag","--latest=false",
     "--title",`Apollo Pi ${prepared.record.target.version} / Build ${prepared.record.target.build}`,
