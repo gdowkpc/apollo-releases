@@ -42,3 +42,15 @@ It inherits only the frozen revision2 record. Physical evidence was collected on
 the existing no-receiver Pi; another fresh-card run was explicitly deferred by
 the owner. The public record and deterministic release notes must preserve those
 limits. No receiver must be connected just to install Apollo.
+
+## Revision 4 beginner guidance
+
+Revision 4 retains the frozen revision-2 application and updater baseline. The
+comparison additionally admits only the exact reviewed newer-build help return
+and conditional error-print block from source 9e87834b14c99b86e8b6f911fd66ce6f7ca672e2.
+It does not ignore arbitrary print expressions, operations or predicates.
+Changing the help text, adding an operation, changing a target/payload, or moving
+the handler into the success path still fails. The exact archive remains bound
+by its policy SHA-256 and byte count. Fresh-card, registered-node, backend and RF
+claims remain false; the dashboard application change is outside this installer
+maintenance receipt and is not delivered by this unchanged Build398 payload.
