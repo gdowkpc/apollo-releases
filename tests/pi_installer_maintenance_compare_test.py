@@ -57,4 +57,28 @@ class MaintenanceComparisonTests(unittest.TestCase):
   success="\nif (sys.platform.startswith('linux') and hasattr(os,'geteuid') and os.geteuid()==0 and any(mode in sys.argv[1:] for mode in ('--apply','--repair-gateway'))):\n write_support_report(code)\n"
   with self.assertRaisesRegex(RuntimeError,'global_or_dispatch_changed'):self.compare(NEW+success)
 
+ def test_exact_newer_error_help_is_allowed(self):
+  old=globals()['OLD'];new=globals()['NEW']
+  try:
+   globals()['OLD']=old.replace('def main():','def failure_help(code): return "generic"\ndef main():')
+   reviewed='if code == "pi_installer_not_newer":\n  return '+repr(c.NEWER_HELP.body[0].value.value)+'\n '
+   globals()['NEW']=new.replace('def main():','def failure_help(code):\n '+reviewed+'return "generic"\ndef main():')
+   self.assertTrue(self.compare(globals()['NEW'])['activation_logic_unchanged'])
+   with self.assertRaisesRegex(RuntimeError,'activation_changed'):
+    self.compare(globals()['NEW'].replace('Keep it;','Bypass it;'))
+  finally:globals()['OLD']=old;globals()['NEW']=new
+ def test_exact_error_retry_guidance_is_allowed_but_operations_are_rejected(self):
+  old=globals()['OLD'];new=globals()['NEW']
+  try:
+   import ast
+   prior=ast.unparse(c.OLD_RETRY);reviewed=ast.unparse(c.NEWER_RETRY)
+   globals()['OLD']=old.replace('  print(code)','  '+prior)
+   candidate=new.replace('  print(code)','\n'.join('  '+line for line in reviewed.splitlines()))
+   self.assertTrue(self.compare(candidate)['activation_logic_unchanged'])
+   with self.assertRaisesRegex(RuntimeError,'global_or_dispatch_changed'):
+    self.compare(candidate.replace('No downgrade was performed.','Downgrade accepted.'))
+   with self.assertRaisesRegex(RuntimeError,'global_or_dispatch_changed'):
+    self.compare(candidate.replace('  else:\n','  else:\n      activate()\n'))
+  finally:globals()['OLD']=old;globals()['NEW']=new
+
 if __name__=='__main__':unittest.main()
