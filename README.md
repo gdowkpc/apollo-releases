@@ -9,7 +9,7 @@ Download Apollo for your platform from the
 [official Apollo downloads page](https://www.repeaterbooklive.com/apollo/downloads/).
 
 For a Raspberry Pi, choose the complete installer ZIP and follow the
-[Pi installation guide](docs/pi-install.md). You do not need to install Node.js
+[Pi installation guide](https://www.repeaterbooklive.com/apollo/downloads/pi-install.php). You do not need to install Node.js
 or nvm first. The guide covers installing, opening Apollo, and getting help if
 setup stops. Check the download's receiver support before starting; RSP2 support
 is not yet qualified.
