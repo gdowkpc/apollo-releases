@@ -1,17 +1,17 @@
 {
   "schema_version": "apollo-stable-release-v2",
-  "minimum_pi_updater_version": "1.0.102",
+  "minimum_pi_updater_version": "1.0.116",
   "product_id": "apollo-passive-receive",
   "platform": "linux",
   "architecture": "arm64",
-  "version": "2.3.185",
-  "build": 398,
-  "source_commit": "55e4a3d258b5335bf214919ce7ada0e1453993cc",
-  "published_at": "2026-11-02T17:15:52.371Z",
-  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.185-build.398",
-  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.185-build.398/ApolloPassiveReceive-2.3.185-build.398-linux-arm64.zip",
-  "artifact_filename": "ApolloPassiveReceive-2.3.185-build.398-linux-arm64.zip",
-  "byte_size": 24690524,
-  "sha256": "5011ef53606fe65453946ba0197ecb0f92e510a95915996e6efe5dc746f75eb2",
-  "short_release_notes": "Build 398 shows stable in the app. Requires signed updater 1.0.102; use the complete Pi installer. Exact-package native and worker checks passed. Signed installer/onboarding qualification covers installation, retry, preserved state, actual reboot, fresh authenticated check-ins, sustained processing across both configured RF windows and matching onboarding tests. Full live RF reporting qualification remains pending; other receiver hardware qualification stays separate."
+  "version": "2.3.191",
+  "build": 404,
+  "source_commit": "37a40043f8c0ba385f85b77b9654936a87f5721b",
+  "published_at": "2026-11-04T22:11:40Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.191-build.404",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.191-build.404/ApolloPassiveReceive-2.3.191-build.404-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.191-build.404-linux-arm64.zip",
+  "byte_size": 24710247,
+  "sha256": "2e5e1d283d7638b2f8cbf6471d1ff748966d246567473a8ebaedbafddc4d8fa5",
+  "short_release_notes": "Guarded RTL receiver recovery and current diagnostics. Host reboots remain disabled by default, including shared AllStar hosts; network outages do not request host reboots. Exact installer upgrade/retry, settings preservation, reboot and registered onboarding passed on Node13. Owner-approved exception: fresh-card/clean-OS installation and beginner testing were not performed for this installer. Live RF reporting qualification remains separate."
 }
