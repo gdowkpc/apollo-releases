@@ -1,0 +1,37 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.198-build.411",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c"
+  },
+  "release": {
+    "version": "2.3.198",
+    "build": 411,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.198-build.411-linux-arm64.zip",
+    "byte_size": 24734272,
+    "sha256": "9675b1deb5ddf377b358249f71978d8b6758c7eb76d4f78f44fecfa534cf546b",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Runtime-only staging to enable exact complete-installer qualification. Physical fresh-card installation, retry/reboot, beginner usability, production socket lifecycle, live RF/reporting and general deployment readiness remain unqualified. No public installer, portal/catalog or stable-discovery promotion.",
+      "Frozen source bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c built once on apollo-builder. Exact235-entry package, source173 checks, compiled synthetic workers/HTTP and extracted update9/privacy12 cases passed with zero observation/audio sends. No rebuild or relabel.",
+      "Exact-package native run42281043396 at frozen source passed10/10, zero failures/skips: clean/legacy convergence, profile closure, non-root RTL inventory and isolated native processing in source and embedded executables. Installer/gateway run42241166181 passed154+10 tests, no skips.",
+      "Signed fixture run42297561214 passed independently reviewed bounded synthetic root/resource qualification: response0.5567seconds; conservative kernel peaks104398848bytes/7tasks below384MiB/8tasks/8seconds; no OOM/PID denial; cleanup passed. This is not production socket lifecycle or hardware qualification.",
+      "Separate builder health monitor failed on historical power flags0x50000; sampled active bits0. Timing/cause unknown. Evidence retained; no reset. Overall release readiness remains incomplete. This record qualifies only the stated runtime staging scope.",
+      "Package qualification: qualifications/apollo-passive-v2.3.198-build.411.package.json. ZIP SHA2569675b1deb5ddf377b358249f71978d8b6758c7eb76d4f78f44fecfa534cf546b; principal ed160bba5cc758e19a85094881a7ae8bbab2a14bd582eb56d2bbdabd987df654."
+    ]
+  }
+}
