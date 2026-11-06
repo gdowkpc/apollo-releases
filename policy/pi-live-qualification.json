@@ -4,7 +4,8 @@
     "live_rf",
     "installer_onboarding",
     "dashboard_bridge_compatibility",
-    "installer_maintenance"
+    "installer_maintenance",
+    "fresh_install"
   ],
   "trusted_keys": {
     "owned-rtl-lab-3bf54ad6d4986de4": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAXw2NFtJJWZVkpdAVmTfaO4psdmtCNmuAqwYDfDb+P8I=\n-----END PUBLIC KEY-----\n"
@@ -32,6 +33,24 @@
       "launcher_source_commit": "9e87834b14c99b86e8b6f911fd66ce6f7ca672e2",
       "prior_record_path": "installers/apollo-pi-installer-v2.3.185-build.398-updater.1.0.102-revision.2.json",
       "prior_record_sha256_lf": "6dd83c07ac1f665200b1f32ab2fa85942f9112ae7ba3620c7a59365a2a458812"
+    }
+  },
+  "fresh_install_releases": {
+    "installers/apollo-pi-installer-v2.3.198-build.411-updater.1.0.116.json": {
+      "release": {
+        "version": "2.3.198",
+        "build": 411,
+        "source_commit": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c",
+        "application_sha256": "9675b1deb5ddf377b358249f71978d8b6758c7eb76d4f78f44fecfa534cf546b",
+        "updater_version": "1.0.116",
+        "updater_sha256": "f9cdb7bb1e6be352f69866823d0b7c9a17457c0d2eac92e5fe2cd15558446ac7",
+        "installer_sha256": "7942b7451d60a8aa7fdb3945b04d6451fcf244820f1eedad52b79a27c753d55e",
+        "installer_bytes": 356271
+      },
+      "launcher_source_commit": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c",
+      "evidence_sha256": "c2518724fd42f2c47af4d5fa2b4d21230bf8e2361f8492e09599100347feae69",
+      "updater_record_path": "installers/apollo-pi-installer-v2.3.191-build.404-updater.1.0.116.json",
+      "updater_record_sha256_lf": "a222722cc12e842b30565e71341f683de15495e6b1c2c69a9435d8829eaaecab"
     }
   }
 }
