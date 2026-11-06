@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "scope": "runtime_only_staging_exact_frozen_ARM64_package_native_and_bounded_synthetic_root",
+  "version": "2.3.198",
+  "build": 411,
+  "source_commit": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c",
+  "artifact_sha256": "9675b1deb5ddf377b358249f71978d8b6758c7eb76d4f78f44fecfa534cf546b",
+  "artifact_bytes": 24734272,
+  "principal_sha256": "ed160bba5cc758e19a85094881a7ae8bbab2a14bd582eb56d2bbdabd987df654",
+  "manifest_sha256": "559cdba92e45006ff9031384b1cbaacc1d84bacd00d4b300e3bc9d841445d1ca",
+  "native_inventory_sha256": "f51c18f63b9ff322a06ebcbee7611f2156e15acc39e96a59a0bd1cf85d5bf992",
+  "source_tests": {
+    "pass": 173,
+    "fail": 0,
+    "skipped": 0
+  },
+  "exact_package": {
+    "entries_verified": 235,
+    "compiled_offline_workers": [
+      "DMR",
+      "PCM",
+      "NOAA"
+    ],
+    "normal_compiled_HTTP_startup": true,
+    "scope": "isolated_unsigned_package_and_actual_extracted_feature_checks; not physical RF or signed root-resource proof"
+  },
+  "extracted_feature_cases": {
+    "automatic_update": 9,
+    "privacy": 12,
+    "skipped": 0,
+    "observation_sends": 0,
+    "audio_sends": 0
+  },
+  "native_workflow_run": 42281043396,
+  "native_workflow_source": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c",
+  "native_tests": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  "private_signature_validation": {
+    "passed": true,
+    "authority_sha256": "2ffaa97c4baece3c9931d45f7f0b3acde068d324f62bfe72bf6774f2c2963cc0",
+    "fresh_install_authority": false,
+    "note": "Private signature is not repurposed for fresh installation. Runtime publication uses ordinary immutable GitHub release authority."
+  },
+  "experimental_root_measurement": {
+    "qualified": true,
+    "status": "PASS_BOUNDED_SYNTHETIC",
+    "install_policy": "inactive_disabled",
+    "root_key_provisioning_authorized": false,
+    "production_readiness_qualified": false,
+    "signature_response_verified": true,
+    "elapsed_seconds": 0.5567093530000875,
+    "workflow_run": 42297561214,
+    "memory_peak_bytes": 104398848,
+    "tasks_peak": 7,
+    "measurement_scope": "Conservative kernel upper bounds including main, serial postcollector and its systemctl child; no isolated-main peak claim",
+    "independent_review_sha256": "302927a08247a21362ee8dba70cd59e5fc9d0673aaae024ea7d6de615591efeb"
+  },
+  "complete_installer_qualified": false,
+  "fresh_card_qualified": false,
+  "beginner_fresh_flow_qualified": false,
+  "live_rf_reporting_qualified": false,
+  "server_acceptance_qualified": false,
+  "stable_discovery_changed": false,
+  "download_catalog_changed": false,
+  "installer_candidate": {
+    "bytes": 356271,
+    "sha256": "7942b7451d60a8aa7fdb3945b04d6451fcf244820f1eedad52b79a27c753d55e",
+    "updater": "1.0.116",
+    "reproducible": true,
+    "bootstrap_verify_only": true,
+    "physical_installation": false
+  },
+  "publication_scope": "Application runtime staging only for dedicated fresh-card qualification. No complete-installer publication, portal/catalog or stable discovery promotion, production enrollment/reporting, receiver/root-key provisioning or existing-card deployment.",
+  "completed_runtime_native_and_offline_gates_passed": true,
+  "overall_release_readiness": "FAIL_INCOMPLETE",
+  "separate_builder_health_qualifier": {
+    "status": "HEALTH_MONITOR_FAILED_RETAINED",
+    "service": "apollo-builder-health.service",
+    "raw_power_flags": "0x50000",
+    "sampled_active_bits": 0,
+    "historical_flags": "Undervoltage and throttling have occurred; timing/cause not established",
+    "temperature_C": 54.9,
+    "no_health_reset_or_power_change": true,
+    "unrestricted_builder_health_qualified": false,
+    "required_owner_input_for_completed_fixture_work": "none"
+  }
+}
