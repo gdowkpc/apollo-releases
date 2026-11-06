@@ -1,0 +1,51 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v5",
+  "publication_status": "qualified",
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c"
+  },
+  "target": {
+    "version": "2.3.198",
+    "build": 411,
+    "source_commit": "bcfca2de1ef27ff66c6eb7d0caaa12cd1c72575c",
+    "release_tag": "apollo-passive-v2.3.198-build.411",
+    "sha256": "9675b1deb5ddf377b358249f71978d8b6758c7eb76d4f78f44fecfa534cf546b"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.198-build.411-updater.1.0.116-linux-arm64.zip",
+    "bytes": 356271,
+    "sha256": "7942b7451d60a8aa7fdb3945b04d6451fcf244820f1eedad52b79a27c753d55e"
+  },
+  "updater": {
+    "version": "1.0.116",
+    "signed_source_commit": "7b04aff8c50624e2842b7302af875434a16aa06b",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.116-linux-arm64.zip": {
+        "sha256": "f9cdb7bb1e6be352f69866823d0b7c9a17457c0d2eac92e5fe2cd15558446ac7",
+        "bytes": 323224
+      },
+      "ApolloUniversalPiUpdater-1.0.116.authority.json": {
+        "sha256": "187d8080cca65d914c23a306e6bdd9d78660762be64dde15b883827ac6b24ccd",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.116.controller-capsule.json": {
+        "sha256": "7b50819591506b9b49b50514bef621f6a726421091bf3bcb541eafca412d8118",
+        "bytes": 6657
+      }
+    }
+  },
+  "release_tag": "apollo-pi-installer-v2.3.198-build.411-updater.1.0.116",
+  "qualification": {
+    "scope": "Exact fresh Pi3B+ card: clean-OS prerequisite installation, normal public application authority, receiver-free install, retry with configuration bytes/ownership/mode preservation, actual reboot with automatic services, and Windows HTTP dashboard identity passed over Wi-Fi. No registered-node recovery, backend check-in, live RF/reporting, or uncoached beginner-flow claim. Builder sustained-load cooling remains a separate unresolved failed gate."
+  },
+  "qualification_scope": "fresh_install",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "fresh_install_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.198-build.411-updater.1.0.116.fresh-install.json",
+    "sha256": "c2518724fd42f2c47af4d5fa2b4d21230bf8e2361f8492e09599100347feae69"
+  }
+}

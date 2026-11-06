@@ -130,6 +130,8 @@ function expectedRelease(record) {
 function validateRecord(record, relative, root, policy) {
   const bytes = read(root, relative);
   if (policy.held_installer_sha256_lf?.[relative] === hash(bytes.toString("utf8").replace(/\r\n/g,"\n"))) return {held: true, record};
+  if (record.schema_version === "apollo-pi-installer-distribution-v5")
+    return require("./validate_pi_fresh_install").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
   if (record.schema_version === "apollo-pi-installer-distribution-v4")
     return require("./validate_pi_installer_maintenance").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
   const onboarding = record.schema_version === "apollo-pi-installer-distribution-v3";
@@ -157,6 +159,7 @@ function validateRecord(record, relative, root, policy) {
   (onboarding ? validateOnboardingEvidence : validateEvidence)(JSON.parse(evidence), expected, policy);
   return {held: false, record, scope: onboarding ? "installer_onboarding" : "live_rf"};
 }
+function stableInstallerEligible(v) { return !v.held && ["live_rf", "installer_onboarding", "installer_maintenance"].includes(v.scope); }
 function validateRepository(root = ROOT) {
   const policy = JSON.parse(read(root,"policy/pi-live-qualification.json"));
   requireGate(policy.required_lab_role === "owned-rtl-bench" && Object.keys(policy.trusted_keys || {}).length > 0, "trust_policy");
@@ -166,7 +169,7 @@ function validateRepository(root = ROOT) {
   const bridges = validateBridgeRepository(root,policy,validated);
   const stable = JSON.parse(read(root,"stable/apollo-passive-receive-linux-arm64.json"));
   if (fingerprint(stable) !== policy.held_stable_fingerprint) {
-    requireGate(validated.some(v => !v.held && v.record.target?.build === stable.build
+    requireGate(validated.some(v => stableInstallerEligible(v) && v.record.target?.build === stable.build
       && v.record.target?.source_commit === stable.source_commit && v.record.target?.sha256 === stable.sha256
       && v.record.target?.version === stable.version && v.record.updater?.version === stable.minimum_pi_updater_version)
       || bridges.some(v=>v.record.release.build===stable.build && v.record.release.source_commit===stable.source_commit
@@ -179,4 +182,4 @@ if (require.main === module) {
   try { console.log("pi-live-qualification: PASS " + JSON.stringify(validateRepository())); }
   catch (error) { console.error(error.message); process.exitCode = 1; }
 }
-module.exports = {DOMAIN, ONBOARDING_DOMAIN, ERRORS, hash, fingerprint, validateEvidence, validateOnboardingEvidence, expectedRelease, validateRecord, validateRepository};
+module.exports = {DOMAIN, ONBOARDING_DOMAIN, ERRORS, hash, fingerprint, validateEvidence, validateOnboardingEvidence, expectedRelease, validateRecord, stableInstallerEligible, validateRepository};

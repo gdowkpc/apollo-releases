@@ -23,8 +23,11 @@ function publish(root,tag,archive) {
   if(reference.object?.type!=="commit"||reference.object.sha!==main)throw Error("reviewed_lightweight_tag_required");
   // Qualification and exact bytes are checked before any GitHub mutation.
   const onboarding = prepared.record.qualification_scope === "installer_onboarding";
+  const fresh = prepared.record.qualification_scope === "fresh_install";
   const maintenance = prepared.record.qualification_scope === "installer_maintenance";
-  const notes = maintenance
+  const notes = fresh
+    ? "Fresh-card installation-only qualification: exact installer clean-OS installation, retry, preserved configuration, actual reboot and Windows HTTP dashboard passed on an owned unenrolled Pi3B+ over Wi-Fi without a receiver. No registered-node, backend, live RF/reporting or uncoached-usability claim. Builder cooling remains a separate unresolved item. Signed proof: " + prepared.record.fresh_install_qualification.path
+    : maintenance
     ? `Installer-maintenance qualification: identical already-qualified application/updater; exact installer installation, retry, preserved configuration, SSH support details, reboot and browser access on an owned unenrolled Pi without a receiver. No new fresh-card, registered-node, backend check-in or RF qualification is claimed. Signed proof: ${prepared.record.maintenance_qualification.path}`
     : onboarding
     ? `Qualified exact installer installation, retry, preserved node state, reboot readiness, authenticated check-ins and tested one-approval onboarding. Live RF reporting qualification remains pending. Signed qualification: ${prepared.record.onboarding_qualification.path}. Scope and limits: ${prepared.record.qualification.scope}`
