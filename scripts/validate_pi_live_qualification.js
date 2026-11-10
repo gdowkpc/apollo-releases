@@ -134,6 +134,8 @@ function validateRecord(record, relative, root, policy) {
     return require("./validate_pi_fresh_install").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
   if (record.schema_version === "apollo-pi-installer-distribution-v4")
     return require("./validate_pi_installer_maintenance").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
+  if (record.schema_version === "apollo-pi-installer-owner-exception-v1")
+    return require("./validate_pi416_owner_exception").validateRecord(record,relative,root,policy,{read});
   const onboarding = record.schema_version === "apollo-pi-installer-distribution-v3";
   requireGate((onboarding || record.schema_version === "apollo-pi-installer-distribution-v2") && record.publication_status === "qualified", "installer_contract");
   if (onboarding) requireGate(record.qualification_scope === "installer_onboarding"
@@ -159,7 +161,7 @@ function validateRecord(record, relative, root, policy) {
   (onboarding ? validateOnboardingEvidence : validateEvidence)(JSON.parse(evidence), expected, policy);
   return {held: false, record, scope: onboarding ? "installer_onboarding" : "live_rf"};
 }
-function stableInstallerEligible(v) { return !v.held && ["live_rf", "installer_onboarding", "installer_maintenance"].includes(v.scope); }
+function stableInstallerEligible(v) { return !v.held && ["live_rf", "installer_onboarding", "installer_maintenance", "owner_release_exception"].includes(v.scope); }
 function validateRepository(root = ROOT) {
   const policy = JSON.parse(read(root,"policy/pi-live-qualification.json"));
   requireGate(policy.required_lab_role === "owned-rtl-bench" && Object.keys(policy.trusted_keys || {}).length > 0, "trust_policy");
