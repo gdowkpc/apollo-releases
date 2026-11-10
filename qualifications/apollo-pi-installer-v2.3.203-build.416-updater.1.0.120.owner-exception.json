@@ -1,0 +1,35 @@
+{
+  "schema_version": "apollo-owner-release-exception-v1",
+  "release_build": 416,
+  "authorized_at": "2026-11-10T03:59:01.842Z",
+  "owner_instruction": "I know it’s not fully qualified, but if this solves bugs from previous builds, let’s deploy it",
+  "owner_scope": "Publish Pi downloads and enable automatic updates",
+  "qualification_complete": false,
+  "scope": [
+    "pi_installer_publication",
+    "pi_image_publication",
+    "pi_stable_discovery"
+  ],
+  "completed": [
+    "managed 411 to 416 private qualification and 30-minute RTL run recorded in application provenance",
+    "recovered fresh-card installation completed",
+    "empty and receiver-attached reboot",
+    "RTL discovery and NOAA readiness 7/7",
+    "10-minute scan: 41/41 fresh-window checks, 38 accepted captures, 19 cycles, no scan failures",
+    "three retained 2.5-second continuous PCM captures",
+    "installed inventory verification"
+  ],
+  "incomplete": [
+    "untouched-image first boot",
+    "fresh registered onboarding and report delivery for this exact installer",
+    "CTCSS accuracy; independent confidence withheld",
+    "all other receiver and platform qualification"
+  ],
+  "evidence_artifacts": [
+    "pi-image416-fresh-20261109/qualification-state.json",
+    "rf-sustained-1794275434084/summary.json",
+    "attached-reboot-1794277887181/qualification-result.json",
+    "continued-qualification-1794282806083/qualification-result.json"
+  ],
+  "release_notes": "Owner-authorized Build 416 bug-fix release. Includes local multicast command isolation and stable KA9Q tune retries. Pi 3B+ RTL-SDR recovered installation, reboot, receiver discovery and sustained scanning passed. Pristine image first boot, registered fresh-install/reporting, tone accuracy and other receiver models are not fully qualified. Existing package authentication, receiver health and rollback gates remain enforced."
+}

@@ -5,3 +5,5 @@ qualifications/*.bridge.json -text whitespace=cr-at-eol
 qualifications/pi-updater-inventory-*.json -text whitespace=cr-at-eol
 
 qualifications/*.maintenance.json -text whitespace=cr-at-eol
+
+qualifications/*.fresh-install.json -text whitespace=cr-at-eol

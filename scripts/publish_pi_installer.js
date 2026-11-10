@@ -11,9 +11,9 @@ function prepare(root, tag, archive) {
   const resolved=path.resolve(archive), stat=fs.lstatSync(resolved);
   if(!stat.isFile()||stat.isSymbolicLink()||path.basename(resolved)!==record.installer.filename
       ||stat.size!==record.installer.bytes||hash(fs.readFileSync(resolved))!==record.installer.sha256) throw Error("qualified_installer_bytes_mismatch");
-  return {record,recordBytes,relative,archive:resolved};
+  return {record,recordBytes,relative,archive:resolved,ownerException:validated.owner_exception};
 }
-function run(args,root) { return cp.execFileSync(args[0],args.slice(1),{cwd:root,encoding:"utf8",stdio:["ignore","pipe","pipe"],maxBuffer:1024*1024}).trim(); }
+function run(args,root) { return cp.execFileSync(args[0],args.slice(1),{cwd:root,encoding:"utf8",stdio:["ignore","pipe","pipe"],maxBuffer:1024*1024,windowsHide:true}).trim(); }
 function publish(root,tag,archive) {
   const prepared=prepare(root,tag,archive);
   if(run(["git","status","--porcelain"],root)!=="")throw Error("clean_reviewed_checkout_required");
@@ -25,7 +25,7 @@ function publish(root,tag,archive) {
   const onboarding = prepared.record.qualification_scope === "installer_onboarding";
   const fresh = prepared.record.qualification_scope === "fresh_install";
   const maintenance = prepared.record.qualification_scope === "installer_maintenance";
-  const notes = fresh
+  const notes = prepared.ownerException ? prepared.ownerException.release_notes : fresh
     ? "Fresh-card installation-only qualification: exact installer clean-OS installation, retry, preserved configuration, actual reboot and Windows HTTP dashboard passed on an owned unenrolled Pi3B+ over Wi-Fi without a receiver. No registered-node, backend, live RF/reporting or uncoached-usability claim. Builder cooling remains a separate unresolved item. Signed proof: " + prepared.record.fresh_install_qualification.path
     : maintenance
     ? `Installer-maintenance qualification: identical already-qualified application/updater; exact installer installation, retry, preserved configuration, SSH support details, reboot and browser access on an owned unenrolled Pi without a receiver. No new fresh-card, registered-node, backend check-in or RF qualification is claimed. Signed proof: ${prepared.record.maintenance_qualification.path}`
