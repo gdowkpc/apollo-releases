@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.203-build.416",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "5e69848dc87cccdabbdb409b1cef9b07e9314b6e"
+  },
+  "release": {
+    "version": "2.3.203",
+    "build": 416,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.203-build.416-linux-arm64.zip",
+    "byte_size": 25360933,
+    "sha256": "5604de574f6c64deb0be938831c70a2ae32f77b989044be12dfe0c8435cc84d2",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Runtime staging for dedicated fresh-card qualification only. Complete-installer fresh install, image first boot, public catalog and stable discovery remain unqualified and unchanged.",
+      "Frozen ARM64 source 5e69848dc87cccdabbdb409b1cef9b07e9314b6e; exact ZIP retained unchanged from signed private qualification. Native command-safety 19 tests and root target-state 71 tests passed.",
+      "Private signing run42714283253 and updater1.0.120 signing run42717269059 passed. Managed Build411 to416 installation, clean reboot and 30-minute physical Pi3B+ RTL-SDR test passed:121/121 healthy observations,102 sweeps,zero restarts or refresh failures.",
+      "Manual private-installer signature/payload verification and same-version retry passed, preserving settings and receiver invocation. This is not fresh-install evidence.",
+      "Qualification: qualifications/apollo-passive-v2.3.203-build.416.package.json. Source record: gdowkpc/apollo docs/qualification/rtl-local-command-isolation-build416.md at f4a83ecb88c1281fe56e4140c48d6aa468930ca0."
+    ]
+  }
+}
