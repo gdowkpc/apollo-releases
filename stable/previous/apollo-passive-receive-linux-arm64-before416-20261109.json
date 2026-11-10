@@ -1,0 +1,17 @@
+{
+  "schema_version": "apollo-stable-release-v2",
+  "minimum_pi_updater_version": "1.0.116",
+  "product_id": "apollo-passive-receive",
+  "platform": "linux",
+  "architecture": "arm64",
+  "version": "2.3.191",
+  "build": 404,
+  "source_commit": "37a40043f8c0ba385f85b77b9654936a87f5721b",
+  "published_at": "2026-11-04T22:11:40Z",
+  "release_page_url": "https://github.com/gdowkpc/apollo-releases/releases/tag/apollo-passive-v2.3.191-build.404",
+  "artifact_download_url": "https://github.com/gdowkpc/apollo-releases/releases/download/apollo-passive-v2.3.191-build.404/ApolloPassiveReceive-2.3.191-build.404-linux-arm64.zip",
+  "artifact_filename": "ApolloPassiveReceive-2.3.191-build.404-linux-arm64.zip",
+  "byte_size": 24710247,
+  "sha256": "2e5e1d283d7638b2f8cbf6471d1ff748966d246567473a8ebaedbafddc4d8fa5",
+  "short_release_notes": "Guarded RTL receiver recovery and current diagnostics. Host reboots remain disabled by default, including shared AllStar hosts; network outages do not request host reboots. Exact installer upgrade/retry, settings preservation, reboot and registered onboarding passed on Node13. Owner-approved exception: fresh-card/clean-OS installation and beginner testing were not performed for this installer. Live RF reporting qualification remains separate."
+}
