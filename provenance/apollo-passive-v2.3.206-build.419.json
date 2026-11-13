@@ -1,0 +1,36 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.206-build.419",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "e1a93a3dbedc9264acbdcabe8dfc8f40e8869ad6"
+  },
+  "release": {
+    "version": "2.3.206",
+    "build": 419,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.206-build.419-linux-arm64.zip",
+    "byte_size": 24737794,
+    "sha256": "71b5c609a236e9fe6fcb849fcf1ba72e4a4b3f130a2db035a19aa686bac72889",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Owner authorized deployment on 2026-11-13 despite incomplete qualification. Exact package checks and owned RTL Pi managed upgrade/reboot passed; continued RF/tone and fresh reporting qualification remain in progress.",
+      "Source fix PR1070; exact ARM64 clean/historical convergence run43058701182 passed. Packaged PCM and all72 packaged DMR checks passed. Native receiver inventory unchanged.",
+      "Production private signing run43436586754; authenticated Build418-to419 transaction and clean reboot passed with identity, credentials and receiver settings preserved. Nine of nine RF windows fresh.",
+      "First49 minutes after reboot:227 captures,zero unhealthy samples or RF faults;7 of8 tone captures successful. Short sample; no months-long reliability or complete tone/mode accuracy claim.",
+      "Fresh-card installer and image first boot are not yet qualified. Complete public installer, image and stable discovery are separate publication steps."
+    ]
+  }
+}
