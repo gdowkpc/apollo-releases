@@ -1,0 +1,19 @@
+{
+  "schema_version": "apollo-pi-image-distribution-v1",
+  "publication_status": "owner_authorized_exception",
+  "version": "2.3.206",
+  "build": 419,
+  "filename": "Apollo-Pi-2.3.206-build.419-headless-arm64.img.xz",
+  "bytes": 679114756,
+  "sha256": "a9f378c88cf0706ed9c5df837fea0739228b112501d7679cf9730498a0198100",
+  "release_tag": "apollo-pi-image-v2.3.206-build.419",
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.206-build.419-updater.1.0.120-linux-arm64.zip",
+    "bytes": 360478,
+    "sha256": "75541968b31725995ef6576e47e3fbd4ebfa57d7e99f2cdaf3c5ef1a0ab596d1"
+  },
+  "qualification_exception": {
+    "path": "qualifications/apollo-pi-installer-v2.3.206-build.419-updater.1.0.120.owner-exception.json",
+    "sha256": "c13fa9b7a22a143d858584fa14f10ca2aa9e0b0ee73aaa263ab8cfa76f8a78ff"
+  }
+}
