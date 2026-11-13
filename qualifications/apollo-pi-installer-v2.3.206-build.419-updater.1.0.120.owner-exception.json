@@ -1,0 +1,28 @@
+{
+  "schema_version": "apollo-owner-release-exception-v1",
+  "release_build": 419,
+  "authorized_at": "2026-11-13T14:58:29.404Z",
+  "owner_instruction": "Deploy",
+  "owner_scope": "Deploy Build419 Pi downloads and automatic updates; continue qualification",
+  "qualification_complete": false,
+  "scope": [
+    "pi_installer_publication",
+    "pi_image_publication",
+    "pi_stable_discovery"
+  ],
+  "completed": [
+    "Exact ARM64 PCM and72 DMR checks",
+    "Clean/historical convergence workflow43058701182",
+    "Signed418-to419 managed upgrade with preserved node state",
+    "Clean reboot and9/9 fresh RF windows",
+    "Initial49-minute soak:227 captures,zero RF faults,7of8 tone capture successes",
+    "Fresh RepeaterBook accepted observation124320 after upgrade and reboot"
+  ],
+  "incomplete": [
+    "Full24-hour Build419 RF/tone comparison",
+    "Pristine SD-image first boot",
+    "Fresh installer registered onboarding",
+    "Full tone and mode accuracy and other receivers"
+  ],
+  "release_notes": "Owner-authorized Build 419 bug-fix release. Captures native audio earlier to improve short-signal tone evidence, while retaining measured-duration and continuity requirements. Pi 3B+ RTL-SDR managed upgrade, preserved state, reboot and all RF windows passed; a fresh RepeaterBook report was accepted. The 24-hour comparison, pristine image first boot, full tone/mode accuracy and other receiver models are not fully qualified. Authentication, receiver-health and rollback checks remain enforced."
+}

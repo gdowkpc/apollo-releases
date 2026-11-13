@@ -1,0 +1,39 @@
+{
+  "schema_version": "apollo-pi-installer-owner-exception-v1",
+  "publication_status": "owner_authorized_exception",
+  "qualification_scope": "owner_release_exception",
+  "release_tag": "apollo-pi-installer-v2.3.206-build.419-updater.1.0.120",
+  "target": {
+    "version": "2.3.206",
+    "build": 419,
+    "source_commit": "e1a93a3dbedc9264acbdcabe8dfc8f40e8869ad6",
+    "release_tag": "apollo-passive-v2.3.206-build.419",
+    "sha256": "71b5c609a236e9fe6fcb849fcf1ba72e4a4b3f130a2db035a19aa686bac72889"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.206-build.419-updater.1.0.120-linux-arm64.zip",
+    "bytes": 360478,
+    "sha256": "75541968b31725995ef6576e47e3fbd4ebfa57d7e99f2cdaf3c5ef1a0ab596d1"
+  },
+  "updater": {
+    "version": "1.0.120",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.120-linux-arm64.zip": {
+        "sha256": "45ed506a5d69f1502bbb552b7002335c005ac63dbe07a9d670282812221e2f95",
+        "bytes": 327443
+      },
+      "ApolloUniversalPiUpdater-1.0.120.authority.json": {
+        "sha256": "9499c4b1dc593b1ac646d167c8dce65a4bbf0319eebb5b628f59d905760dba25",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.120.controller-capsule.json": {
+        "sha256": "bedaea10c666324f7dcbffd499851b9f000bc6aeac047c1519fbd3ca90a9830d",
+        "bytes": 6657
+      }
+    }
+  },
+  "owner_exception": {
+    "path": "qualifications/apollo-pi-installer-v2.3.206-build.419-updater.1.0.120.owner-exception.json",
+    "sha256": "c13fa9b7a22a143d858584fa14f10ca2aa9e0b0ee73aaa263ab8cfa76f8a78ff"
+  }
+}
