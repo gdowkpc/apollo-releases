@@ -134,7 +134,9 @@ function validateRecord(record, relative, root, policy) {
     return require("./validate_pi_fresh_install").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
   if (record.schema_version === "apollo-pi-installer-distribution-v4")
     return require("./validate_pi_installer_maintenance").validateRecord(record,relative,root,policy,{read,expectedRelease,validateRecord});
-  if (record.schema_version === "apollo-pi-installer-owner-exception-v1")
+  // Build 404 requires the v3 qualified wire fields. Owner exceptions still
+  // require the exact pinned record and existing exception evidence.
+  if (record.schema_version === "apollo-pi-installer-owner-exception-v1" || record.qualification_scope === "owner_release_exception")
     return require("./validate_pi416_owner_exception").validateRecord(record,relative,root,policy,{read});
   const onboarding = record.schema_version === "apollo-pi-installer-distribution-v3";
   requireGate((onboarding || record.schema_version === "apollo-pi-installer-distribution-v2") && record.publication_status === "qualified", "installer_contract");
