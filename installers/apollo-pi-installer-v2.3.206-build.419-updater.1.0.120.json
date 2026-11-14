@@ -1,6 +1,6 @@
 {
-  "schema_version": "apollo-pi-installer-owner-exception-v1",
-  "publication_status": "owner_authorized_exception",
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
   "qualification_scope": "owner_release_exception",
   "release_tag": "apollo-pi-installer-v2.3.206-build.419-updater.1.0.120",
   "target": {

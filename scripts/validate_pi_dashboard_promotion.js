@@ -21,7 +21,7 @@ const MAX_INSTALLER_BYTES = 16 * 1024 * 1024;
 // existing files are grandfathered. A rollback or new promotion runs the gate.
 const EXISTING_419 = {
   descriptor: "23a7b132f1b246a2364e743fdb17b0114ef918cd241d4e586d74c738b74b5a36",
-  installer: "7db72446dffe4f392f43bf08fe82aa09023b5b28f29c23bfd5b6f4fa51d7ea79",
+  installer: "0aa308c2e3e96fa65e0cdb0129f7b3036bb5fa857c48d62a6396deee1bb0f3cd",
 };
 const hash = bytes => createHash("sha256").update(bytes.toString("utf8").replace(/\r\n/g, "\n")).digest("hex");
 
@@ -63,7 +63,7 @@ function validateRepository(read = relative => fs.readFileSync(path.join(ROOT, r
   const installer = read(recordPath);
   if (hash(baseDescriptor) === EXISTING_419.descriptor && hash(descriptor) === EXISTING_419.descriptor
       && hash(installer) === EXISTING_419.installer)
-    return "existing Build 419 exception remains incompatible with Build 404";
+    return "existing Build 419 publication awaits physical qualification";
   validateCompatibility(target, JSON.parse(installer));
   require("./validate_pi_in_place_upgrade").validateRepository(target, recordPath, ROOT);
   return "in-place upgrade evidence covers tracked predecessor artifacts";

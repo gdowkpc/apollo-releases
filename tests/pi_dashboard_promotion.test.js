@@ -12,11 +12,13 @@ const target = {
 };
 
 test("Build 404 rejects the Build 419 installer exception when it needs the newer updater", () => {
-  assert.throws(() => validateCompatibility(target, record), /would strand Build 404/);
+  const previous = { ...record, schema_version: "apollo-pi-installer-owner-exception-v1",
+    publication_status: "owner_authorized_exception" };
+  assert.throws(() => validateCompatibility(target, previous), /would strand Build 404/);
 });
 
 test("a matching qualified installer record satisfies the Build 404 metadata checks", () => {
-  const qualified = { ...record, schema_version: "apollo-pi-installer-distribution-v3", publication_status: "qualified" };
+  const qualified = record;
   assert.doesNotThrow(() => validateCompatibility(target, qualified));
   assert.throws(() => validateCompatibility(target, { ...qualified, target: { ...record.target, sha256: "a".repeat(64) } }), /would strand/);
   assert.throws(() => validateCompatibility(target, { ...qualified, updater: { version: record.updater.version } }), /payload metadata/);

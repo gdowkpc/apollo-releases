@@ -27,7 +27,7 @@ jobs:
       - run: node scripts/validate_pi_dashboard_promotion.js
         env:
           PI_PROMOTION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
-      - run: node --test tests/pi_live_qualification.test.js tests/pi_installer_maintenance.test.js tests/pi_fresh_install.test.js tests/pi416_owner_exception.test.js
+      - run: node --test tests/pi_live_qualification.test.js tests/pi_installer_maintenance.test.js tests/pi_fresh_install.test.js tests/pi416_owner_exception.test.js tests/pi419_owner_exception.test.js
       - run: python3 -B -m unittest discover -s tests -p 'pi_installer_maintenance_compare_test.py'
       - run: node --test tests/pi_bridge_compatibility_proposal.test.js tests/pi_bridge_repository.test.js tests/pi_updater_inventory_collector.test.js
       - run: node --test tests/pi_bridge_v2.test.js tests/pi_dashboard_delivery_probe.test.js
