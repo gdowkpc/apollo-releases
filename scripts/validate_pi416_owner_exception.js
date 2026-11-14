@@ -2,7 +2,7 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const RECORD='installers/apollo-pi-installer-v2.3.203-build.416-updater.1.0.120.json';
 const RECORD_SHA='5faeec83911b58a42365ba473efe376e206bfed6fa5540680410c21b3ec314d5';
-const APPROVED = new Map([[RECORD, RECORD_SHA], ['installers/apollo-pi-installer-v2.3.206-build.419-updater.1.0.120.json', '7db72446dffe4f392f43bf08fe82aa09023b5b28f29c23bfd5b6f4fa51d7ea79']]);
+const APPROVED = new Map([[RECORD, RECORD_SHA], ['installers/apollo-pi-installer-v2.3.206-build.419-updater.1.0.120.json', '0aa308c2e3e96fa65e0cdb0129f7b3036bb5fa857c48d62a6396deee1bb0f3cd']]);
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 function validateRecord(record,relative,root,policy,{read}) {
  if(!APPROVED.has(relative) || sha(read(root,relative).toString('utf8').replace(/\r\n/g,'\n'))!==APPROVED.get(relative)) throw Error('owner_exception_not_exact_416_record');
