@@ -15,12 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: 22
       - run: node scripts/validate_provenance.js
       - run: node --test tests/pi_updater_requirement.test.js
       - run: node scripts/validate_pi_updater_requirement.js
+      - run: node --test tests/pi_dashboard_promotion.test.js
+      - run: node scripts/validate_pi_dashboard_promotion.js
+        env:
+          PI_PROMOTION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
       - run: node --test tests/pi_live_qualification.test.js tests/pi_installer_maintenance.test.js tests/pi_fresh_install.test.js tests/pi416_owner_exception.test.js
       - run: python3 -B -m unittest discover -s tests -p 'pi_installer_maintenance_compare_test.py'
       - run: node --test tests/pi_bridge_compatibility_proposal.test.js tests/pi_bridge_repository.test.js tests/pi_updater_inventory_collector.test.js
