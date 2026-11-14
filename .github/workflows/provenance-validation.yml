@@ -23,7 +23,7 @@ jobs:
       - run: node scripts/validate_provenance.js
       - run: node --test tests/pi_updater_requirement.test.js
       - run: node scripts/validate_pi_updater_requirement.js
-      - run: node --test tests/pi_dashboard_promotion.test.js
+      - run: node --test tests/pi_dashboard_promotion.test.js tests/pi_in_place_upgrade.test.js
       - run: node scripts/validate_pi_dashboard_promotion.js
         env:
           PI_PROMOTION_BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}

@@ -59,15 +59,14 @@ function validateRepository(read = relative => fs.readFileSync(path.join(ROOT, r
   const target = JSON.parse(descriptor);
   if (validate(target, tag => JSON.parse(read(`provenance/${tag}.json`))).held_legacy)
     return "unchanged legacy target";
-  if (target.build <= BASELINE.build || compare(BASELINE.updater, target.minimum_pi_updater_version) >= 0)
-    return "installed updater meets minimum or target is not newer";
   const recordPath = `installers/${installerTag(target)}.json`;
   const installer = read(recordPath);
   if (hash(baseDescriptor) === EXISTING_419.descriptor && hash(descriptor) === EXISTING_419.descriptor
       && hash(installer) === EXISTING_419.installer)
     return "existing Build 419 exception remains incompatible with Build 404";
   validateCompatibility(target, JSON.parse(installer));
-  return "installer metadata accepted by Build 404";
+  require("./validate_pi_in_place_upgrade").validateRepository(target, recordPath, ROOT);
+  return "in-place upgrade evidence covers tracked predecessor artifacts";
 }
 
 if (require.main === module) {
