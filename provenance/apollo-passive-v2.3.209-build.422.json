@@ -1,0 +1,33 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.209-build.422",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "9f2aa18a3ae1ae931b0a05d156f0906ef988fcf7"
+  },
+  "release": {
+    "version": "2.3.209",
+    "build": 422,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.209-build.422-linux-arm64.zip",
+    "byte_size": 24743630,
+    "sha256": "968ddf71d1077abfe24bc9891486ec25de37ab8fc9b7980ca8aa09b15393448d",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact ARM64 archive passed target-state convergence in Apollo Actions run 43638411636, including the retained Build 191 predecessor fixture and packaged KA9Q RF health. Packaged DMR compatibility passed.",
+      "Private signed Build 421 to 422 upgrade on an RTL-SDR Pi 3B+ preserved scan settings and resumed scanning after reboot. Public installer and registered upgrade verification are pending."
+    ]
+  }
+}
