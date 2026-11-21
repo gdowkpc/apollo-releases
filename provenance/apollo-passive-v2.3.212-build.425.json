@@ -1,0 +1,33 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.212-build.425",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "608ed3b966ef573a6d90ce85412730c51d50b96e"
+  },
+  "release": {
+    "version": "2.3.212",
+    "build": 425,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.212-build.425-linux-arm64.zip",
+    "byte_size": 24751583,
+    "sha256": "5011a017727fd4807cb783e19bfc8f70c4885d51f1341ebf9fc24a43d9a69911",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact ARM64 archive passed packaged target-state convergence on apollo-builder in Apollo Actions run 44786903595, including historical upgrade and packaged receiver-health fixtures. Exact ZIP passed packaged DMR compatibility.",
+      "Owned RTL-SDR Pi 3B+ passed a signed private Build 419 to 425 update and rollback to the exact Build 419 package using Universal Pi updater 1.0.126. Receiver configuration was preserved and all seven 2 m/70 cm scan windows returned fresh samples on both builds with reporting off. Public delivery with updater 1.0.120 is pending."
+    ]
+  }
+}
