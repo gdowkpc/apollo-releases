@@ -1,0 +1,33 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.215-build.428",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "2123c4c8bdc9eee5d78d2f41c04bcb55f7ebec7d"
+  },
+  "release": {
+    "version": "2.3.215",
+    "build": 428,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.215-build.428-linux-arm64.zip",
+    "byte_size": 25384395,
+    "sha256": "d1c44dc6e5c0ac57186bb93ac46f68d30b21b1b538b21f3eff0cc57e04f0f869",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact ARM64 ZIP passed packaged target-state qualification on apollo-builder in Actions run 45052812579.",
+      "Registered RTL bench resumed scanning all seven configured windows and delivered a live observation after reboot on Build 428. Bench-specific installer was used."
+    ]
+  }
+}
