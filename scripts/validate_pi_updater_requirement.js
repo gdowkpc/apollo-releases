@@ -43,4 +43,4 @@ if(require.main===module) {
   try { const result=validate(JSON.parse(fs.readFileSync(path.join(ROOT,"stable/apollo-passive-receive-linux-arm64.json"),"utf8")));console.log("pi-updater-requirement: PASS "+(result.held_legacy?"unchanged held v1 target":"v2 minimum "+result.minimum_pi_updater_version)); }
   catch(error) { console.error(error.message);process.exitCode=1; }
 }
-module.exports={validate,fingerprint,MINIMUM};
+module.exports={validate,fingerprint,compare,MINIMUM};
