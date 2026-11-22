@@ -1,0 +1,33 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.214-build.427",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "4a1179de0f437221070074db516bdd112c2b915f"
+  },
+  "release": {
+    "version": "2.3.214",
+    "build": 427,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.214-build.427-linux-arm64.zip",
+    "byte_size": 25383306,
+    "sha256": "5b9a7d6f7da53b39097085def13476bffcd405deb0eca7d169e9ad53c159142f",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact ARM64 ZIP passed Apollo packaged target-state qualification on apollo-builder in Actions run 45047395308. The extracted executable served the dashboard over loopback.",
+      "Pi receiver detection, credential check-in and recovery tests passed on ARM64. Registered physical bench qualification for stable update discovery is pending."
+    ]
+  }
+}
