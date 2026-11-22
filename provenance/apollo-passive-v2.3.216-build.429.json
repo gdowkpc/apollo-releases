@@ -1,0 +1,33 @@
+{
+  "schema_version": "apollo-github-release-provenance-v1",
+  "release_repository": {
+    "full_name": "gdowkpc/apollo-releases",
+    "repository_id": 1334398301,
+    "owner_login": "gdowkpc",
+    "owner_id": 3979668
+  },
+  "release_tag": "apollo-passive-v2.3.216-build.429",
+  "source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "2f1df96a1d80ad9de2dda0aec2796a4d8067713f"
+  },
+  "release": {
+    "version": "2.3.216",
+    "build": 429,
+    "platform": "linux",
+    "architecture": "arm64"
+  },
+  "package": {
+    "filename": "ApolloPassiveReceive-2.3.216-build.429-linux-arm64.zip",
+    "byte_size": 25384593,
+    "sha256": "cca559eb62bf3993acd7c4ec7737e144b1ef3f24d17ce75e6394cc83170af4e0",
+    "package_type": "portable_zip"
+  },
+  "qualification": {
+    "status": "qualified",
+    "evidence_references": [
+      "Exact ARM64 ZIP passed packaged target-state qualification on apollo-builder in Actions run 45078055797.",
+      "Registered identity preservation and legacy mode repair passed the target-state convergence regression suite."
+    ]
+  }
+}
