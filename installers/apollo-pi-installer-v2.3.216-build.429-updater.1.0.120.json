@@ -1,0 +1,52 @@
+{
+  "schema_version": "apollo-pi-installer-distribution-v3",
+  "publication_status": "qualified",
+  "release_tag": "apollo-pi-installer-v2.3.216-build.429-updater.1.0.120",
+  "target": {
+    "version": "2.3.216",
+    "build": 429,
+    "source_commit": "2f1df96a1d80ad9de2dda0aec2796a4d8067713f",
+    "release_tag": "apollo-passive-v2.3.216-build.429",
+    "sha256": "cca559eb62bf3993acd7c4ec7737e144b1ef3f24d17ce75e6394cc83170af4e0"
+  },
+  "installer": {
+    "filename": "Apollo-Pi-Installer-2.3.216-build.429-updater.1.0.120-linux-arm64.zip",
+    "bytes": 362381,
+    "sha256": "ba1d3cfaea2fd48b20caf724432ca69e78a3f966439b6e1c234e44f4d65f177b"
+  },
+  "updater": {
+    "version": "1.0.120",
+    "unchanged_asset_hashes": {
+      "ApolloUniversalPiUpdater-1.0.120-linux-arm64.zip": {
+        "sha256": "45ed506a5d69f1502bbb552b7002335c005ac63dbe07a9d670282812221e2f95",
+        "bytes": 327443
+      },
+      "ApolloUniversalPiUpdater-1.0.120.authority.json": {
+        "sha256": "9499c4b1dc593b1ac646d167c8dce65a4bbf0319eebb5b628f59d905760dba25",
+        "bytes": 1171
+      },
+      "ApolloUniversalPiUpdater-1.0.120.controller-capsule.json": {
+        "sha256": "bedaea10c666324f7dcbffd499851b9f000bc6aeac047c1519fbd3ca90a9830d",
+        "bytes": 6657
+      }
+    },
+    "signed_source_commit": "70bef2fae31dc3b65684b68e240f40c01b732d8c"
+  },
+  "launcher_source": {
+    "repository": "gdowkpc/apollo",
+    "commit": "2f1df96a1d80ad9de2dda0aec2796a4d8067713f"
+  },
+  "qualification_scope": "installer_onboarding",
+  "live_rf_reporting": {
+    "qualified": false,
+    "reason": "separate_live_rf_qualification_required"
+  },
+  "qualification": {
+    "scope": "Exact signed installer installation and retry on an owned registered Raspberry Pi 5 with RTL-SDR, preserved protected state, authenticated check-ins, full reboot, and sustained scans across all configured windows on both boots. Disposable one-approval onboarding tests used matching merged RepeaterBook fixtures and exact application source. The preceding signed registered Build 425 to 429 upgrade and reboot are recorded separately. Live RF reporting, clean-card first boot and Pi Zero-specific operation remain pending.",
+    "collector_source_commit": "7469c6409591f21aecddfefea591c8fef5feb08c"
+  },
+  "onboarding_qualification": {
+    "path": "qualifications/apollo-pi-installer-v2.3.216-build.429-updater.1.0.120.onboarding.json",
+    "sha256": "7632ee811d3bff468a4c315fca15ccb0117feb8a8843582185cb904ca7f89e9e"
+  }
+}
